@@ -42,12 +42,6 @@ d3.json("data.json", function(error, data) {
       d3
         .axisLeft(y)
     )
-    .append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 6)
-    .attr("dy", "0.71em")
-    .attr("text-anchor", "end")
-    .attr("fill", "#5D6971");
 
   g.selectAll(".bar")
     .data(data)
@@ -67,7 +61,6 @@ d3.json("data.json", function(error, data) {
       return "lightblue"
     })
     .on("mouseenter", function(d) {
-    console.log("enter")
       var str = "<img class=\"image\" src=\"" + d.img + "\"/>";
       tooltip
         .style("left", d3.event.pageX - 50 + "px")

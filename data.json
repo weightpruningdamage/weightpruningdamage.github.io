@@ -1,4 +1,17 @@
 [
-    {"txt" : "regional", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
-    {"txt" : "national", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"}
-]
+    {"txt" : "dog", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
+    {"txt" : "cat", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+    {"txt" : "cat2", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+      {"txt" : "dog2", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
+    {"txt" : "cat1", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+    {"txt" : "cat12", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+      {"txt" : "dog3", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
+    {"txt" : "cat2", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+    {"txt" : "cat22", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+      {"txt" : "dog4", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
+    {"txt" : "cat3", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+    {"txt" : "cat32", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+      {"txt" : "dog5", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
+    {"txt" : "cat4", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+    {"txt" : "cat42", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
+    {"txt" : "cat43", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"}]
