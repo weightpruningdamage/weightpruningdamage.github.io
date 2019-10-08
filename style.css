@@ -30,4 +30,6 @@ h1 {
   padding: 14px;
   text-align: center;
 }
-
+.image {
+  width: 300px;
+}

@@ -30,9 +30,7 @@ d3.json("data.json", function(error, data) {
   );
   y.domain([
     0,
-    d3.max(data, function(d) {
-      return d.value;
-    })
+    1,
   ]);
 
   g.append("g")
@@ -46,9 +44,6 @@ d3.json("data.json", function(error, data) {
       d3
         .axisLeft(y)
         .ticks(5)
-        .tickFormat(function(d) {
-          return parseInt(d / 1000) + "K";
-        })
         .tickSizeInner([-width])
     )
     .append("text")
@@ -75,15 +70,15 @@ d3.json("data.json", function(error, data) {
     .attr("fill", function(d) {
       return colours(d.txt);
     })
-    .on("mouseover", function(d) {
-      var str = "<img src=" + d.img + "/>";
+    .on("mouseenter", function(d) {
+      var str = "<img class=\"image\" src=\"" + d.img + "\"/>";
       tooltip
         .style("left", d3.event.pageX - 50 + "px")
         .style("top", d3.event.pageY - 70 + "px")
         .style("display", "inline-block")
         .html(str)
     })
-    .on("mouseout", function(d) {
+    .on("mouseleave", function(d) {
       tooltip.style("display", "none");
     });
 });
