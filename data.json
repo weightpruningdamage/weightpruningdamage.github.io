@@ -1,4 +1,4 @@
 [
-    {"txt" : "some text", "img": "assets/cat.jpg"},
-    {"txt" : "blah", "img": "assets/dog.jpg"}
+    {"txt" : "regional", "value": 190000, "img": "assets/cat.jpg"},
+    {"txt" : "national", "value": 250000, "img": "assets/dog.jpg"}
 ]

@@ -25,7 +25,7 @@ d3.json("data.json", function(error, data) {
 
   x.domain(
     data.map(function(d) {
-      return d.area;
+      return d.txt;
     })
   );
   y.domain([
@@ -63,7 +63,7 @@ d3.json("data.json", function(error, data) {
     .enter()
     .append("rect")
     .attr("x", function(d) {
-      return x(d.area);
+      return x(d.txt);
     })
     .attr("y", function(d) {
       return y(d.value);
@@ -73,15 +73,16 @@ d3.json("data.json", function(error, data) {
       return height - y(d.value);
     })
     .attr("fill", function(d) {
-      return colours(d.area);
+      return colours(d.txt);
     })
-    /*.on("mousemove", function(d) {
+    .on("mouseover", function(d) {
+      var str = "<img src=" + d.img + "/>";
       tooltip
         .style("left", d3.event.pageX - 50 + "px")
         .style("top", d3.event.pageY - 70 + "px")
         .style("display", "inline-block")
-        .html(d.txt + "<br>" + "£" + d.img);
-    })*/
+        .html(str)
+    })
     .on("mouseout", function(d) {
       tooltip.style("display", "none");
     });
