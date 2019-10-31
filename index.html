@@ -385,10 +385,10 @@
             The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
             however there is little scientific consensus on what exactly is lost. <p> 
             
-            <p> What happens when we ask what is lost when we prune a deep neural network? The earliest deep neural network pruning methods, with names such as "Optimal Brain Damage", were heavily
-            motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. There are now many different pruning methods to choose from, and this research effort has demonstrated a remarkable ability to sparsify a model
-            to a fraction of the original weights while giving up minimal test-set accuracy. <p>
-              
+            <p> What happens when we ask what is lost when we prune a deep neural network? The earliest deep neural network pruning methods, with names such as <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a>, were heavily
+            motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. There are now many different pruning methods to choose from [1,2,3,4,5,6,7,8,9], and this research effort has demonstrated a remarkable ability to sparsify a model
+            to a fraction of the original weights while giving up minimal test-set accuracy. In this work, we go beyond evaluating the trade-offs incurred by pruning simply in terms of test-set accuracy and ask are certain types of examples or classes disproportionately affected by pruning?<p>
+         <h4>Going beyond test-set accuracy to measure the disparate impact of model purning has real world implications.</h4>     
              <p> Many of the most promising use cases for compressed models occur in sensitive domains, such as improving access to 
               health care by using machine learning driven diagnostics on mobile phones. Pruned or compressed models are 
               frequently favored for deploying deep neural networks onto devices because reducing the number of network weights
@@ -406,7 +406,7 @@
           disproportionately and systematically impacted by the introduction of sparsity.
 in a statistically significant way.
 The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
-              are more challenging for both sparse and non </p>
+              are more challenging for both sparse and non-sparse </p>
         <p> 
         </p>
         <p style="margin-top: 2em">
@@ -429,11 +429,10 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
         </p>
       </div>
       <div class="description" style="margin-top: 3em">
-        <h3>How does pruning impact robustness such as sensitivity to image corruptions (blur, noise, contrast) and adversarial examples?</h3>
-        <p>The SmoothGrad technique augments other sensitivity techniques.
-          With this release, we have provided implementations of several sensitivity 
-          techniques and their SmoothGrad counterparts. This is not comprehensive, 
-          and we are accepting pull requests to add new methods!</p>
+        <h3>How does pruning impact robustness such as sensitivity to image corruptions
+          (blur, noise, contrast) and adversarial examples?</h3>
+        <p>
+        </p>
         <p>
           Below, we show vanilla gradients, <a href="">Integrated gradients</a>, and <a href="">Guided Backpropagation</a> as they apply to 200 randomly chosen images from the <a href="http://www.image-net.org/">ImageNet dataset</a> using the <a href="https://arxiv.org/abs/1512.00567">Inception V3 model</a>.
         </p>
