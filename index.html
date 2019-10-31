@@ -381,20 +381,17 @@
       <h3>What is lost when we prune deep neural networks?</h3>
       <div class="description">
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
-            Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections that are most useful for the environment
-  . Despite losing 50 % of all synapses between age two and ten, the brain continues to function.
+            Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections that are most useful for the environment. Despite losing 50 % of all synapses between age two and ten, the brain continues to function.
             The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
-            however there is little scientific consensus on \emph{what} exactly is lost.
+            however there is little scientific consensus on what exactly is lost. Certain aspects of deep neural networks 
 
 In this work, we ask what is lost when we prune a deep neural network.
             Work on pruning deep neural networks has demonstrated a remarkable ability to sparsify a model
             to a fraction of the original weights while giving up minimal test-set accuracy.
           
 Are certain types of examples or classes disproportionately affected by pruning?
-How does pruning impact robustness such as sensitivity to image corruptions (blur, noise, contrast) and adversarial examples?}
-\end{itemize}
+How does pruning impact robustness such as sensitivity to image corruptions (blur, noise, contrast) and adversarial examples?
 
-% compared to a non-sparse model (with an addition $22.56$ million weights). 
 
 Answers for these question can provide intuition
 into the role of additional capacity in deep neural networks and, perhaps more important, provide a principled framework for articulating the trade-offs incurred by compressing deep neural networks. Many of the most promising use cases for compressed models occur in sensitive domains, such as improving access to health care by using machine learning driven diagnostics on mobile phones \citep{2017Andre}. Pruned or compressed models are frequently favored for deploying deep neural networks onto devices because reducing the number of network weights lowers energy consumption, memory footprint, and latency \citep{Reagen_7551399, 7551407Chen, fisher-pruning, wavernn, lpcnet}. For tasks where incorrect predictions can harm human welfare, it is critical that we understand when a machine learning model is qualified to make decisions on real world inputs. To our knowledge, this is the first work to shed light on the trade-offs pruning incurs by considering new measures beyond test accuracy. 
