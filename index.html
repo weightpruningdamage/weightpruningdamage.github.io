@@ -383,20 +383,29 @@
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
             Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections that are most useful for the environment. Despite losing 50 % of all synapses between age two and ten, the brain continues to function.
             The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
-            however there is little scientific consensus on what exactly is lost. Certain aspects of deep neural networks have drawn heavy inspiration from the brain.
-            Deep neural model compression is one such example, where there has been a 
-
-In this work, we ask what is lost when we prune a deep neural network.
-            Work on pruning deep neural networks has demonstrated a remarkable ability to sparsify a model
+            however there is little scientific consensus on what exactly is lost. <p> 
+            
+            <p>What happens when we ask what is lost when we prune a deep neural network? The earliest deep neural network pruning methods, with names such as "Optimal Brain Damage", were heavily
+            motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. There are now many different pruning methods to choose from, and this research effort has demonstrated a remarkable ability to sparsify a model
             to a fraction of the original weights while giving up minimal test-set accuracy. 
+              
+              
+
+In this work, 
+            Work on pruning deep neural networks 
 
 Answers for these question can provide intuition
-into the role of additional capacity in deep neural networks and, perhaps more important, provide a principled framework for articulating the trade-offs incurred by compressing deep neural networks. Many of the most promising use cases for compressed models occur in sensitive domains, such as improving access to health care by using machine learning driven diagnostics on mobile phones \citep{2017Andre}. Pruned or compressed models are frequently favored for deploying deep neural networks onto devices because reducing the number of network weights lowers energy consumption, memory footprint, and latency \citep{Reagen_7551399, 7551407Chen, fisher-pruning, wavernn, lpcnet}. For tasks where incorrect predictions can harm human welfare, it is critical that we understand when a machine learning model is qualified to make decisions on real world inputs. To our knowledge, this is the first work to shed light on the trade-offs pruning incurs by considering new measures beyond test accuracy. 
+into the role of additional capacity in deep neural networks and, perhaps more important, provide a principled framework for articulating the trade-offs
+            incurred by compressing deep neural networks. 
+              Many of the most promising use cases for compressed models occur in sensitive domains, such as improving access to 
+              health care by using machine learning driven diagnostics on mobile phones \citep{2017Andre}. Pruned or compressed models are 
+              frequently favored for deploying deep neural networks onto devices because reducing the number of network weights lowers energy consumption, memory footprint, and latency \citep{Reagen_7551399, 7551407Chen, fisher-pruning, wavernn, lpcnet}. For tasks where incorrect predictions can harm human welfare, it is critical that we understand when a machine learning model is qualified to make decisions on real world inputs. To our knowledge, this is the first work to shed light on the trade-offs pruning incurs by considering new measures beyond test accuracy. 
 
 The primary findings of our work can be summarized as follows:
 pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.
 in a statistically significant way.
-The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both sparse and non  </p>
+The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
+              are more challenging for both sparse and non  </p>
       </div>
       <h3>Are certain types of examples or classes disproportionately affected by pruning?</h3>
       </div>
