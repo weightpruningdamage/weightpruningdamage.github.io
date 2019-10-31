@@ -383,33 +383,27 @@
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
             Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections that are most useful for the environment. Despite losing 50 % of all synapses between age two and ten, the brain continues to function.
             The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
-            however there is little scientific consensus on what exactly is lost. Certain aspects of deep neural networks have drawn heavy inspiration from the brain. One of these is 
+            however there is little scientific consensus on what exactly is lost. Certain aspects of deep neural networks have drawn heavy inspiration from the brain.
+            Deep neural model compression is one such example, where there has been a 
 
 In this work, we ask what is lost when we prune a deep neural network.
             Work on pruning deep neural networks has demonstrated a remarkable ability to sparsify a model
-            to a fraction of the original weights while giving up minimal test-set accuracy.
-          
-Are certain types of examples or classes disproportionately affected by pruning?
-How does pruning impact robustness such as sensitivity to image corruptions (blur, noise, contrast) and adversarial examples?
-
+            to a fraction of the original weights while giving up minimal test-set accuracy. 
+            
+            
 
 Answers for these question can provide intuition
 into the role of additional capacity in deep neural networks and, perhaps more important, provide a principled framework for articulating the trade-offs incurred by compressing deep neural networks. Many of the most promising use cases for compressed models occur in sensitive domains, such as improving access to health care by using machine learning driven diagnostics on mobile phones \citep{2017Andre}. Pruned or compressed models are frequently favored for deploying deep neural networks onto devices because reducing the number of network weights lowers energy consumption, memory footprint, and latency \citep{Reagen_7551399, 7551407Chen, fisher-pruning, wavernn, lpcnet}. For tasks where incorrect predictions can harm human welfare, it is critical that we understand when a machine learning model is qualified to make decisions on real world inputs. To our knowledge, this is the first work to shed light on the trade-offs pruning incurs by considering new measures beyond test accuracy. 
 
 The primary findings of our work can be summarized as follows:
-\begin{enumerate}
-% \itemsep0em
-\item \label{itm:first} \textit{Pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.
-%in a statistically significant way.
-}.
-\item \label{itm:second} \textit{The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both sparse and non-sparse models to classify.}
-\item \label{itm:third} \textit{Pruning makes deep neural networks less robust to natural adversarial examples and common image perturbations (such as blur, fog and contrast).}
-\end{enumerate}
-            
-            
-            When a machine learning model makes a prediction, often times we would like to determine which features of the input (pixels, for images) were important for the prediction. If the model makes a misprediction, we might want to know which features contributed to the misclassification. We can visualize the feature importance mask as a grayscale image with the same dimensions as the original image with brightness corresponding to importance of the pixel.</p>
+pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.
+in a statistically significant way.
+The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both sparse and non-sparse models to classify.
+Pruning makes deep neural networks less robust to natural adversarial examples and common image perturbations (such as blur, fog and contrast)
+
+When a machine learning model makes a prediction, often times we would like to determine which features of the input (pixels, for images) were important for the prediction. If the model makes a misprediction, we might want to know which features contributed to the misclassification. We can visualize the feature importance mask as a grayscale image with the same dimensions as the original image with brightness corresponding to importance of the pixel.</p>
       </div>
-      <h3>Computing sensitivity</h3>
+      <h3>Are certain types of examples or classes disproportionately affected by pruning?</h3>
       <div class="description">
         <p>There are many techniques to compute a sensitivity mask for an image for a particular prediction. The simplest approach is to take the gradient of a class prediction neuron with respect to the input pixels. This tells us how much a small change to each pixel would affect the prediction. Visually, this mask tends to be noisy.</p>
         <p>The SmoothGrad technique often significantly denoises this sensitivity mask. This technique adds pixel-wise Gaussian noise to many copies of the image, and simply averages the resulting gradients.</p>
@@ -433,7 +427,7 @@ The primary findings of our work can be summarized as follows:
         </p>
       </div>
       <div class="description" style="margin-top: 3em">
-        <h3>Augmenting other methods</h3>
+        <h3>How does pruning impact robustness such as sensitivity to image corruptions (blur, noise, contrast) and adversarial examples?</h3>
         <p>The SmoothGrad technique augments other sensitivity techniques. With this release, we have provided implementations of several sensitivity techniques and their SmoothGrad counterparts. This is not comprehensive, and we are accepting pull requests to add new methods!</p>
         <p>
           Below, we show vanilla gradients, <a href="">Integrated gradients</a>, and <a href="">Guided Backpropagation</a> as they apply to 200 randomly chosen images from the <a href="http://www.image-net.org/">ImageNet dataset</a> using the <a href="https://arxiv.org/abs/1512.00567">Inception V3 model</a>.
