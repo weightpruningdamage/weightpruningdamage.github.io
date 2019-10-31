@@ -1,9 +1,9 @@
 <html>
 <head>
-  <title>SmoothGrad</title>
+  <title>PIE: Pruning Identified Exemplars</title>
   <meta property="og:type" content="article"/>
   <meta property="og:title" content="PIE: Pruning Identified Exemplars"/>
-  <meta property="og:description" content="Removing noise by adding noise">
+  <meta property="og:description" content="Measuring the Disparate Impact of Model Pruning">
   <meta property="og:url" content="http://pair-code.github.io/saliency/"/>
   <meta property="og:image" content="http://pair-code.github.io/saliency/images/preview.png"/>
 
@@ -371,13 +371,14 @@
             </a>
           </div>
         </div>
-        <div class="title"><h1>PIE: Pruning Identified Exemplars</h1></div>
-        <div class="authors">Sara Hooker, Nikhil Thorat, , Andrea Frome</div>
-        <div class="team-link"><a href="https://research.google.com/bigpicture/">Google Big Picture</a></div>
+        <div class="title"><h2>Selective Brain Damage: Measuring the Disparate Impact of Model Compression</h2></div>
+        </div>
+        <div class="authors">Sara Hooker, Yann Dauphine ,Aaron Courville ,Andrea Frome</div>
+        <div class="team-link"><a href="https://research.google.com/">Google Brain</a>, class="team-link"><a href="https://research.google.com/">Google Brain</a></div>
       </div>
     </div>
     <div class="descriptions">
-      <h3>What is a sensitivity mask?</h3>
+      <h3>What is lost when we prune deep neural networks?</h3>
       <div class="description">
           <p>When a machine learning model makes a prediction, often times we would like to determine which features of the input (pixels, for images) were important for the prediction. If the model makes a misprediction, we might want to know which features contributed to the misclassification. We can visualize the feature importance mask as a grayscale image with the same dimensions as the original image with brightness corresponding to importance of the pixel.</p>
       </div>
