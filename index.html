@@ -171,7 +171,7 @@
     }
 
     .cover h3 {
-      font-size: 30px;
+      font-size: 25px;
       letter-spacing: 0.05em;
       font-weight: 500;
     }
@@ -187,11 +187,11 @@
 
     .authors {
       margin-top: -40px;
-      font-size: 15px;
+      font-size: 18px;
     }
 
     .team-link {
-      margin-top: 5px;
+      margin-top: 10px;
     }
     .team-link a {
       font-size: 15px;
@@ -367,13 +367,13 @@
           </div>
           <div class="paper-icon" style="margin-left: 20px">
             <a href="https://github.com/google-research/google-research/tree/master/pruning_identified_exemplars">
-              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fcode_icon.png?v=1572559736485" style="width: 100px"/><br>Code
+              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fcode_icon.png?v=1572562103868" style="width: 100px"/><br>Code
             </a>
           </div>
         </div>
         <div class="title"><h2>Selective Brain Damage: Measuring the Disparate Impact of Model Compression</h2></div>
         </div>
-        <div class="authors">Sara Hooker, Yann Dauphine ,Aaron Courville ,Andrea Frome</div>
+        <div class="authors">Sara Hooker, Yann Dauphine, Aaron Courville, Andrea Frome</div>
         <div class="team-link"><a href="https://research.google.com/">Google Brain</a></div> 
       </div>
     </div>
@@ -389,8 +389,6 @@
 In this work, we ask what is lost when we prune a deep neural network.
             Work on pruning deep neural networks has demonstrated a remarkable ability to sparsify a model
             to a fraction of the original weights while giving up minimal test-set accuracy. 
-            
-            
 
 Answers for these question can provide intuition
 into the role of additional capacity in deep neural networks and, perhaps more important, provide a principled framework for articulating the trade-offs incurred by compressing deep neural networks. Many of the most promising use cases for compressed models occur in sensitive domains, such as improving access to health care by using machine learning driven diagnostics on mobile phones \citep{2017Andre}. Pruned or compressed models are frequently favored for deploying deep neural networks onto devices because reducing the number of network weights lowers energy consumption, memory footprint, and latency \citep{Reagen_7551399, 7551407Chen, fisher-pruning, wavernn, lpcnet}. For tasks where incorrect predictions can harm human welfare, it is critical that we understand when a machine learning model is qualified to make decisions on real world inputs. To our knowledge, this is the first work to shed light on the trade-offs pruning incurs by considering new measures beyond test accuracy. 
@@ -398,12 +396,11 @@ into the role of additional capacity in deep neural networks and, perhaps more i
 The primary findings of our work can be summarized as follows:
 pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.
 in a statistically significant way.
-The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both sparse and non-sparse models to classify.
-Pruning makes deep neural networks less robust to natural adversarial examples and common image perturbations (such as blur, fog and contrast)
-
-When a machine learning model makes a prediction, often times we would like to determine which features of the input (pixels, for images) were important for the prediction. If the model makes a misprediction, we might want to know which features contributed to the misclassification. We can visualize the feature importance mask as a grayscale image with the same dimensions as the original image with brightness corresponding to importance of the pixel.</p>
+The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both sparse and non  </p>
       </div>
       <h3>Are certain types of examples or classes disproportionately affected by pruning?</h3>
+      </div>
+      <h3>Why are certain images more impacted by pruning?</h3>
       <div class="description">
         <p>There are many techniques to compute a sensitivity mask for an image for a particular prediction. The simplest approach is to take the gradient of a class prediction neuron with respect to the input pixels. This tells us how much a small change to each pixel would affect the prediction. Visually, this mask tends to be noisy.</p>
         <p>The SmoothGrad technique often significantly denoises this sensitivity mask. This technique adds pixel-wise Gaussian noise to many copies of the image, and simply averages the resulting gradients.</p>
