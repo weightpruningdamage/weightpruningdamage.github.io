@@ -385,34 +385,30 @@
             The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
             however there is little scientific consensus on what exactly is lost. <p> 
             
-            <p>What happens when we ask what is lost when we prune a deep neural network? The earliest deep neural network pruning methods, with names such as "Optimal Brain Damage", were heavily
+            <p> What happens when we ask what is lost when we prune a deep neural network? The earliest deep neural network pruning methods, with names such as "Optimal Brain Damage", were heavily
             motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. There are now many different pruning methods to choose from, and this research effort has demonstrated a remarkable ability to sparsify a model
-            to a fraction of the original weights while giving up minimal test-set accuracy. 
+            to a fraction of the original weights while giving up minimal test-set accuracy. <p>
               
-              
+             <p> Many of the most promising use cases for compressed models occur in sensitive domains, such as improving access to 
+              health care by using machine learning driven diagnostics on mobile phones. Pruned or compressed models are 
+              frequently favored for deploying deep neural networks onto devices because reducing the number of network weights
+               lowers energy consumption, memory footprint and latency. For tasks where incorrect predictions can harm human welfare, it is critical that we understand 
+              when a machine learning model is qualified to make decisions on real world inputs. 
+              To our knowledge, this is the first work to shed light on the trade-offs pruning
+              incurs by considering new measures beyond test accuracy. <p>
 
-In this work, 
-            Work on pruning deep neural networks 
-
-Answers for these question can provide intuition
-into the role of additional capacity in deep neural networks and, perhaps more important, provide a principled framework for articulating the trade-offs
-            incurred by compressing deep neural networks. 
-              Many of the most promising use cases for compressed models occur in sensitive domains, such as improving access to 
-              health care by using machine learning driven diagnostics on mobile phones \citep{2017Andre}. Pruned or compressed models are 
-              frequently favored for deploying deep neural networks onto devices because reducing the number of network weights lowers energy consumption, memory footprint, and latency \citep{Reagen_7551399, 7551407Chen, fisher-pruning, wavernn, lpcnet}. For tasks where incorrect predictions can harm human welfare, it is critical that we understand when a machine learning model is qualified to make decisions on real world inputs. To our knowledge, this is the first work to shed light on the trade-offs pruning incurs by considering new measures beyond test accuracy. 
-
-The primary findings of our work can be summarized as follows:
-pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.
-in a statistically significant way.
-The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
-              are more challenging for both sparse and non  </p>
+The primary findings of our work can be summarize </p>
       </div>
       <h3>Are certain types of examples or classes disproportionately affected by pruning?</h3>
       </div>
       <h3>Why are certain images more impacted by pruning?</h3>
       <div class="description">
-        <p>There are many techniques to compute a sensitivity mask for an image for a particular prediction. The simplest approach is to take the gradient of a class prediction neuron with respect to the input pixels. This tells us how much a small change to each pixel would affect the prediction. Visually, this mask tends to be noisy.</p>
-        <p>The SmoothGrad technique often significantly denoises this sensitivity mask. This technique adds pixel-wise Gaussian noise to many copies of the image, and simply averages the resulting gradients.</p>
+        <p> Pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.
+in a statistically significant way.
+The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
+              are more challenging for both sparse and non </p>
+        <p> 
+        </p>
         <p style="margin-top: 2em">
           <div class="imgs-container">
             <div class="img-container"></div>
@@ -434,12 +430,17 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
       </div>
       <div class="description" style="margin-top: 3em">
         <h3>How does pruning impact robustness such as sensitivity to image corruptions (blur, noise, contrast) and adversarial examples?</h3>
-        <p>The SmoothGrad technique augments other sensitivity techniques. With this release, we have provided implementations of several sensitivity techniques and their SmoothGrad counterparts. This is not comprehensive, and we are accepting pull requests to add new methods!</p>
+        <p>The SmoothGrad technique augments other sensitivity techniques.
+          With this release, we have provided implementations of several sensitivity 
+          techniques and their SmoothGrad counterparts. This is not comprehensive, 
+          and we are accepting pull requests to add new methods!</p>
         <p>
           Below, we show vanilla gradients, <a href="">Integrated gradients</a>, and <a href="">Guided Backpropagation</a> as they apply to 200 randomly chosen images from the <a href="http://www.image-net.org/">ImageNet dataset</a> using the <a href="https://arxiv.org/abs/1512.00567">Inception V3 model</a>.
         </p>
         <p style="margin-bottom: 2em">
-          When the model makes a mistake, we show the row with a light red background and give the option to choose which mask to visualize - label or the prediction. Often times you can see why the model made a mistake!
+          When the model makes a mistake, we show the row with a light
+          red background and give the option to choose which mask to visualize -
+          label or the prediction. Often times you can see why the model made a mistake!
         </p>
       </div>
     </div>
