@@ -385,7 +385,7 @@
             that are most useful for the environment.
             Despite losing 50 % of all synapses between age two and ten, the brain continues to function.
             The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
-            however there is little scientific consensus on what exactly is lost. <p> 
+            however there is little scientific consensus on what exactly is lost [1]. <p> 
             
             <p> What happens when we ask what is lost when we prune a deep neural network? The earliest deep neural network pruning methods, with names such as <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a>, were heavily
             motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. There are now many different pruning methods to choose from [1,2,3,4,5,6,7,8,9], and this research effort has demonstrated a remarkable ability to sparsify a model
@@ -395,7 +395,7 @@
               Comparing only top-1 model accuracy between a baseline and a pruned model amounts to assuming that class accuracies are expected to maintain their relative relationships to the top-1 model accuracy before and after pruning. In this work, we consider 
           whether this is a valid assumption. Is relative performance unaltered 
           by pruning or are some classes and images impacted more than others?<p>
-         <h4>Measuring the disparate impact of model purning has real world implications.</h4>     
+         <h4>Measuring the disparate impact of model pruning has real world implications.</h4>     
              <p> Many of the most promising use cases for compressed models occur in sensitive domains,such as improving access to 
               health care by using machine learning driven diagnostics on mobile phones. Pruned or compressed models are 
               frequently favored for deploying deep neural networks onto devices because reducing the number of network weights
@@ -406,13 +406,24 @@
       <div class="descriptions">
       <h3>Are certain types of examples or classes disproportionately affected by pruning?</h3>
       <div class="description">
+        <h4>Class Level Pruning Impact</h4>
+        
+        <h4>Impact on Individual Images</h4>
         <p><p>
       <div class="description">
       <h3>Why are certain images more impacted by pruning?</h3>
+        
+        At every level of sparsity, for both CIFAR-10 and ImageNet we identify
+        a subset of PIE images. At $10 \%$ and $90 \%$ sparsity, we classify
+        $3.34 \%$ and $10.27 \%$ of all ImageNet test-set images respectively as PIEs. 
+        For CIFAR-10, PIEs constitute $0.97 \%$ and $2.16 \%$ of the test set at $10 \%$
+        and $90 \%$ sparsity. 
+
+        
       <div class="description">
         <p> Pruning has a non-uniform impact across classes; a fraction of classes are 
           disproportionately and systematically impacted by the introduction of sparsity.
-in a statistically significant way.
+          in a statistically significant way.
 The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
               are more challenging for both sparse and non-sparse </p>
         <p> 
