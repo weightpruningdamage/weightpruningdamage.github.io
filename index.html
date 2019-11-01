@@ -409,15 +409,13 @@
         <h4>Class Level Pruning Impact</h4>
         
         <h4>Impact on Individual Images</h4>
-        <p><p>
-      <div class="description">
-      <h3>Why are certain images more impacted by pruning?</h3>
-        
-        At every level of sparsity, for both CIFAR-10 and ImageNet we identify
+       <p> At every level of sparsity, for both CIFAR-10 and ImageNet we identify
         a subset of PIE images. At $10 \%$ and $90 \%$ sparsity, we classify
         $3.34 \%$ and $10.27 \%$ of all ImageNet test-set images respectively as PIEs. 
-        For CIFAR-10, PIEs constitute $0.97 \%$ and $2.16 \%$ of the test set at $10 \%$
-        and $90 \%$ sparsity. 
+        For CIFAR-10, PIEs constitute 0.97% and $2.16 \%$ of the test set at $10 \%$
+        and $90 \%$ sparsity. <p>
+        
+      
 
         
       <div class="description">
@@ -425,7 +423,9 @@
           disproportionately and systematically impacted by the introduction of sparsity.
           in a statistically significant way.
 The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
-              are more challenging for both sparse and non-sparse </p>
+              are more challenging for both sparse and non-sparse
+         suggests that these hard-to-generalize-to images tend to be of lower image quality, mislabelled, entail abstract representations, require fine-grained classification or depict atypical class examples. We conducted a limited human study to inspect a random sample of $1200$ PIE and non-PIE ImageNet images.  We broadly group the properties we codify as indicative of 1) the exemplar being challenging or 2) the task being ill-specified. We introduce these groupings below (after each bucket we report the percentage of PIEs and non-PIEs in each category 
+          as a fraction of total PIEs and non-PIE codified):</p>
         <p> 
         </p>
         <p style="margin-top: 2em">
