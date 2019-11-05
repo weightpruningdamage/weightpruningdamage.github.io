@@ -756,7 +756,46 @@ figcaption,
               These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions.
           
             <p> However, it is equally unclear what exactly we give up when we prune a deep neural network. The cost to top-1 accuracy appears minimal if it is spread uniformally across all classes, but what if the cost is concentrated in a few classes? What makes performance on certain classes and images more or less ``forgettable'' as sparsity is introduced?
-<!--             
+
+                      <figure id="fv-vs-attribution" class="grid" style="">
+  <div>
+    <div class="images">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F51_vase_vase_pot.png?v=1572924624884">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F365_castle_castle_monastery.png?v=1572924345160"/>
+    </div>
+    <figcaption>
+      <strong>Feature visualization</strong> answers questions about what a network — or parts of a network — are looking for by generating examples.
+    </figcaption>
+    <figcaption>
+      <strong>Feature visualization</strong> answers questions about what a network — or parts of a network — are looking for by generating examples.
+    </figcaption>
+  </div>
+  <div>
+    <div class="images">
+      </div>
+    <figcaption>
+    <strong>Attribution</strong>   
+    <figcaption>
+  </div>
+  <div>
+    <div class="images">
+      <img src="images/attribution-2.jpg" style="">
+      /div>
+    <figcaption>
+    <strong>Attribution</strong>   
+        <figcaption>
+</div>
+    <figcaption>
+    <strong>Attribution</strong>   
+        <figcaption>
+       <img src="images/attribution-2.jpg" style="">
+            </div>
+    <figcaption>
+    <strong>Attribution</strong>   
+        <figcaption>
+  </div>
+</figure>
+              <!--             
    
 Where does the small degradation in accuracy come from? Are some classes and images impacted more than others? -->
 <!--               While the cost to aggregate metrics such as top-1 accuracy is minimal, is the impact across classes and images uniform? -->
@@ -800,29 +839,22 @@ Where does the small degradation in accuracy come from? Are some classes and ima
   <div>
     <div class="images">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F365_castle_castle_monastery.png?v=1572924345160"/>
-
-      <img src="images/attribution-2.jpg" style="">
-    </div>
+  </div>
     <figcaption>
-    <strong>Attribution</strong>
-      <d-footnote>
-        As a young field, neural network interpretability does not yet have standardized terminology.
-        Attribution has gone under many different names in the literature — including “feature visualization”! — but recent work seems to prefer terms like “attribution” and “saliency maps”
-      </d-footnote>
-    studies what part of an example is responsible for the network activating a particular way.
-      </d-footnote>
+    <strong>Attribution</strong>   
         <figcaption>
-        </d-footnote>
-    studies what part of an example is responsible for the network activating a particular way.
-    </d-footnote>
+      <img src="images/attribution-2.jpg" style="">
+</div>
+    <figcaption>
+    <strong>Attribution</strong>   
         <figcaption>
-      </d-footnote>
-    studies what part of an example is responsible for the network activating a particular way.
-          </d-footnote>
-    </figcaption>
+       <img src="images/attribution-2.jpg" style="">
+            </div>
+    <figcaption>
+    <strong>Attribution</strong>   
+        <figcaption>
   </div>
 </figure>
-        
         <h4>Impact on Individual Images</h4>
        <p>  <p>
         
