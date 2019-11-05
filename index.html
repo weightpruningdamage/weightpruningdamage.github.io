@@ -160,6 +160,72 @@
         width: 970px;
       }
     }
+    
+    d-byline {
+  contain: style;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+  line-height: 1.8em;
+  padding: 1.5rem 0;
+  min-height: 1.8em;
+}
+
+
+d-byline .byline {
+  grid-template-columns: 1fr 1fr;
+  grid-column: text;
+}
+
+@media(min-width: 768px) {
+  d-byline .byline {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+d-byline .authors-affiliations {
+  grid-column-end: span 2;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1em;
+}
+
+@media(min-width: 768px) {
+  d-byline .authors-affiliations {
+    margin-bottom: 0;
+  }
+}
+
+d-byline h3 {
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+d-byline p {
+  margin: 0;
+}
+
+d-byline a,
+d-article d-byline a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+d-article d-byline a:hover {
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+d-byline p.author {
+  font-weight: 500;
+}
+
+d-byline .affiliations {
+
+}
 
     .cover h1 {
       font-family: "Roboto", "Gotham A", "Gotham B";
@@ -255,9 +321,10 @@
       text-align: center;
       font-weight: bold;
       font-size: 14px;
-      padding-right: 10px;
+      padding-right: 8px;
       display: table-cell;
-      width: 33%;
+      width: 8%;
+      height: 100%;
     }
 
     #headers.fixed-header {
@@ -361,6 +428,7 @@
     .show-mispred tr.incorrect-row {
       display: table-row !important;
     }
+    
   </style>
 </head>
 <body>
@@ -377,13 +445,14 @@
             <a href="https://github.com/google-research/google-research/tree/master/pruning_identified_exemplars">
               <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fcode_icon.png?v=1572562103868" style="width: 100px"/><br>Code
             </a>
-          </div>
+          </div>    
         </div>
         <div class="title"><h2>Selective Brain Damage: Measuring the Disparate Impact of Model Compression</h2></div>
         </div>
         <div class="authors">Sara Hooker, Yann Dauphine, Aaron Courville, Andrea Frome</div>
       <div class="institutions">Google Brain, MILA </div>
       </div>
+    
     <div class="descriptions">
        <p> add note here saying this template was made available by James Wexler <p> 
       <h3>What is lost when we prune deep neural networks?</h3>
