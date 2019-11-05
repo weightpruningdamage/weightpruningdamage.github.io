@@ -1,3 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><script>
+window.addEventListener('WebComponentsReady', function() {
+  console.warn('WebComponentsReady');
+  const loaderTag = document.createElement('script');
+  loaderTag.src = 'https://distill.pub/template.v2.js';
+  document.head.insertBefore(loaderTag, document.head.firstChild);
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.17/webcomponents-loader.js"></script>  
+
+
 <html>
 <head>
   <title>PIE: Pruning Identified Exemplars</title>
@@ -170,7 +180,47 @@
       }
     }
     
-    d-byline {
+@supports not (display: grid) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    display: block;
+    padding: 8px;
+  }
+}
+
+.base-grid,
+distill-header,
+d-title,
+d-abstract,
+d-article,
+d-appendix,
+distill-appendix,
+d-byline,
+d-footnote-list,
+d-citation-list,
+distill-footer {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: [screen-start] 8px [page-start kicker-start text-start gutter-start middle-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [text-end page-end gutter-end kicker-end middle-end] 8px [screen-end];
+  grid-column-gap: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-column-gap: 8px;
+}
+    
+
+d-byline {
   contain: style;
   overflow: hidden;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -438,6 +488,33 @@ d-byline .affiliations {
       display: table-row !important;
     }
     
+<d-front-matter>
+  <script type="text/json">{
+  "title": "Feature Visualization",
+  "description": "How neural networks build up their understanding of images",
+  "authors": [
+    {
+      "author":"Chris Olah",
+      "authorURL":"https://colah.github.io/",
+      "affiliation":"Google Brain Team",
+      "affiliationURL":"https://g.co/brain"
+    },
+    {
+      "author":"Alexander Mordvintsev",
+      "authorURL":"https://znah.net/",
+      "affiliation":"Google Research",
+      "affiliationURL":"https://research.google.com/"
+    },
+    {
+      "author":"Ludwig Schubert",
+      "authorURL":"https://schubert.io/",
+      "affiliation":"Google Brain Team",
+      "affiliationURL":"https://g.co/brain"
+    }
+  ]
+  }</script>
+</d-front-matter>
+    
   </style>
 </head>
 <body>
@@ -461,7 +538,50 @@ d-byline .affiliations {
         <div class="authors">Sara Hooker, Yann Dauphine, Aaron Courville, Andrea Frome</div>
       <div class="institutions">Google Brain, MILA </div>
       </div>
-    
+<d-byline>
+  <div class="byline grid">
+    <div class="authors-affiliations grid">
+      <h3>Authors</h3>
+      <h3>Affiliations</h3>
+      
+        <p class="author">
+          
+            <a class="name" href="https://colah.github.io/">Chris Olah</a>
+        </p>
+        <p class="affiliation">
+        <a class="affiliation" href="https://g.co/brain">Google Brain Team</a>
+        </p>
+      
+        <p class="author">
+          
+            <a class="name" href="https://znah.net/">Alexander Mordvintsev</a>
+        </p>
+        <p class="affiliation">
+        <a class="affiliation" href="https://research.google.com/">Google Research</a>
+        </p>
+      
+        <p class="author">
+          
+            <a class="name" href="https://schubert.io/">Ludwig Schubert</a>
+        </p>
+        <p class="affiliation">
+        <a class="affiliation" href="https://g.co/brain">Google Brain Team</a>
+        </p>
+      
+    </div>
+    <div>
+      <h3>Published</h3>
+      
+        <p>Nov. 7, 2017</p> 
+    </div>
+    <div>
+      <h3>DOI</h3>
+      
+        <p><a href="https://doi.org/10.23915/distill.00007">10.23915/distill.00007</a></p>
+    </div>
+  </div>
+</d-byline><d-article>
+  </div>
     <div class="descriptions">
        <p> add note here saying this template was made available by James Wexler <p> 
       <h3>What is lost when we prune deep neural networks?</h3>
