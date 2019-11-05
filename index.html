@@ -735,9 +735,6 @@ figcaption,
       
     </div>
     <div>
-      <h3>Published</h3>
-      
-        <p>Nov. 7, 2019</p> 
   </div>
      </div>
 </d-byline>
@@ -754,18 +751,24 @@ figcaption,
             
             <p>In 1990, a popular paper was published titled Optimal Brain Damage. The paper was amongst the first [1,2,3] to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
               to our biological synaptic pruning. The pruning method identifies non-essential weights to remove from the network by setting to zero.
-              Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone.
-              At face value, pruning does appear to promise you can can (almost) have it all -- removing the majority of the weights results in a negligable loss in top-1 accuracy.
-            <p> 
-<!--                   while minimizing latency, energy and memory footprint.  However,  -->
-              What happens when we ask what is lost when we prune a deep 
+              Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone [1,2,3].
+              At face value, pruning does appear to promise you can can (almost) have it all. State of art pruning methods remove the majority of the weights with a negligable loss to top-1 accuracy. 
+              These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions.
+          
+            <p> However, it is equally unclear what exactly we give up when we prune a deep neural network. The cost to top-1 accuracy appears minimal if it is spread uniformally across all classes, but what if the cost is concentrated in a few classes? What makes performance on certain classes and images more or less ``forgettable'' as sparsity is introduced?
+<!--             
+   
+Where does the small degradation in accuracy come from? Are some classes and images impacted more than others? -->
+<!--               While the cost to aggregate metrics such as top-1 accuracy is minimal, is the impact across classes and images uniform? -->
+<!--             <p>       while minimizing latency, energy and memory footprint.  However,  -->
+<!--               What happens when we ask what is lost when we prune a deep 
         neural network? Pruning deep neural networks is a very popular technique for model compression. The ``excess capacity'' of a deep neural network is removed by identifying non-essential 
           weights to prune by setting the value of these weights to zero. Surprisingly, for many tasks, it is possible to remove 
           the majority of weights of a deep neural network 
           
-           <p> Today, pruned networks are being used in many sensitive real world algorithms like mobile phone health diagnostics. 
+           Today, pruned networks are being used in many sensitive real world algorithms like mobile phone health diagnostics. 
              What if we look beyond aggregate metrics like top-1 accuracy, and ask instead what classes and images are most impacted when we prune deep neural networks?
-          <p>
+          <p> -->
 <!--             Aggregate metrics 
             
           Pruned models are heavily used in resource constrained environments because reducing the number of weights 
