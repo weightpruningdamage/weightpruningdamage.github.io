@@ -747,17 +747,23 @@ figcaption,
       <div class="description">
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
             Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections 
-            that are most useful for the environment.
+            that are most useful for the environment.  
             Despite losing 50 % of all synapses between age two and ten, the brain continues to function.
-            The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
-            however there is little scientific consensus on what exactly is lost. <p> 
+            The phrase "use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
+            however there is little scientific consensus on <em>what</em> exactly is lost. <p> 
             
-            <p> What happens when we ask <em>what</em> is lost when we prune a deep neural network? <p> 
-        
-        <p> Pruning deep neural networks is a very popular technique for model compression. The ``excess capacity'' of a deep neural network is removed by identifying non-essential 
-          weights to prune by setting the value of these weights to zero. 
-          Pruned models are heavily used in resource constrained environments because reducing the number of weights lowers energy consumption, memory footprint and latency. 
-          These resource constrained environments often entail 
+            <p> What happens when we ask what is lost when we prune a deep neural network? Pruning deep neural networks is a very popular technique for model compression. The ``excess capacity'' of a deep neural network is removed by identifying non-essential 
+          weights to prune by setting the value of these weights to zero. Surprisingly, for many tasks, it is possible to remove 
+          the majority of weights of a deep neural network and see
+          minimal change to top-1 test set accuracy. 
+          
+           <p> What if we look beyond aggregate metrics like top-1 accuracy, and ask instead what classes and images are most impacted when we prune deep neural networks?
+          <p>
+<!--             Aggregate metrics 
+            
+          Pruned models are heavily used in resource constrained environments because reducing the number of weights 
+            lowers energy consumption, memory footprint and latency. 
+          These resource constrained environments often entail <p>
 
           The earliest deep neural network pruning methods, with names such as <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a>, were heavily
             motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. 
@@ -765,7 +771,7 @@ figcaption,
             to a fraction of the original weights while giving up minimal test-set accuracy. Relative
               comparisons of different pruning algorithm have largely centered on top-line metrics such as top-1 or top-5 test-set
               accuracy averaged across classes. However, such aggregate measures can hide details in model performance. Is relative performance unaltered 
-          by pruning or are some classes and images impacted more than others?<p>
+          by pruning or are some classes and images impacted more than others?<p> -->
       <div class="descriptions">
       <h3>What does a deep neural network "forget" as it is pruned?</h3>
       <div class="description">
