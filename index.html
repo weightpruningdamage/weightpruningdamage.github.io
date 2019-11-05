@@ -843,8 +843,7 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
           When the model makes a mistake, we show the row with a light
           red background and give the option to choose which mask to visualize -
           label or the prediction. Often times you can see why the model made a mistake!
-        </p>
-      </div>
+    </p>
     </div>
     <div class="attribution-container">
       <div id="headers">
@@ -887,5 +886,166 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
     ga('send', 'pageview');
 
   </script>
+</body>
+</html>
+  
+  <d-appendix>
+  
+   <h3 id="acknowledgements">Acknowledgments</h3>
+  <p>
+    We are extremely grateful to Shan Carter and Ian Goodfellow.
+    Shan gave thoughtful feedback, especially on the design of the article.
+    Ian generously stepped in to handle the review process of this article — we would not have been able to publish it without him.
+  </p>
+
+  <p>
+    We’re also grateful for the comments, thoughts and support of
+    Arvind Satyanarayan, Ian Johnson,
+    Greg Corrado, Blaise Aguera y Arcas,
+    Katherine Ye, Michael Nielsen, Emma Pierson, Dario Amodei,
+    Mike Tyka,
+    Andrea Vedaldi, Ruth Fong, Jason Freidenfelds,
+    Geoffrey Hinton,
+    Timon Ruban,
+    Been Kim, Martin Wattenberg, and Fernanda Viegas.
+  </p>
+
+  <p>
+    This work was made possible by many open source tools, for which we are grateful.
+    In particular, all of our experiments were based on Tensorflow<d-cite key="abadi2016tensorflow"></d-cite>.
+  </p>
+
+  <h3 id="author-contributions">Author Contributions</h3>
+  <p>
+    <strong>Writing, Exposition, and Diagram Contributions.</strong> Chris drafted most of the text of the article and made the original version of most interactive diagrams. Ludwig made the neuron addition, dataset examples, and interpolation diagrams, as well as refined the others. Ludwig also created the appendix that visualizes all of GoogLeNet.
+  </p>
+  <p>
+    <strong>Research Contributions.</strong> The biggest technical contribution of this work is likely the section on preconditioning. Alex discovered in prior work that normalizing gradient frequencies had a radical effect on visualizing neurons. Chris reframed this as adaptive gradient descent in a different basis. Together, they iterated on a number of ways of parameterizing images. Similarly, Alex originally introduced the use of diversity term, and Chris reﬁned using it. Chris did the exploration of interpolating between neurons.
+  </p>
+  <p>
+    <strong>Infrastructure Contributions.</strong> All experiments are based on code written by Alex, some of which was <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/deepdream/deepdream.ipynb">published previously</a>. Alex, Chris and Ludwig all contributed significantly to refining this into the present library, <a href="https://github.com/tensorflow/lucid">Lucid</a>. Alex and Chris introduced particularly important abstractions.
+  </p>
+
+  <h3 id="discussion-review">Discussion and Review</h3>
+  <p>
+    <a href="https://github.com/distillpub/post--feature-visualization/issues/1">Review 1 - Anonymous</a><br>
+    <a href="https://github.com/distillpub/post--feature-visualization/issues/4">Review 2 - Anonymous</a><br>
+    <a href="https://github.com/distillpub/post--feature-visualization/issues/6">Review 3 - Anonymous</a><br>
+  </p>
+
+  <d-footnote-list></d-footnote-list>
+  <d-citation-list distill-prerendered="true"><style>
+d-citation-list {
+  contain: style;
+}
+
+d-citation-list .references {
+  grid-column: text;
+}
+
+d-citation-list .references .title {
+  font-weight: 500;
+}
+</style><h3 id="references">References</h3><ol id="references-list" class="references"><li id="szegedy2015going"><span class="title">Going deeper with convolutions</span>   <a href="https://arxiv.org/pdf/1409.4842.pdf">[PDF]</a><br>Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S., Anguelov, D., Erhan, D., Vanhoucke, V. and Rabinovich, A., 2015. Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 1--9. </li><li id="deng2009imagenet"><span class="title">Imagenet: A large-scale hierarchical image database</span>   <a href="http://www.image-net.org/papers/imagenet_cvpr09.pdf">[PDF]</a><br>Deng, J., Dong, W., Socher, R., Li, L., Li, K. and Fei-Fei, L., 2009. Computer Vision and Pattern Recognition, 2009. CVPR 2009. IEEE Conference on, pp. 248--255.  <a href="https://doi.org/10.1109/cvprw.2009.5206848" style="text-decoration:inherit;">DOI: 10.1109/cvprw.2009.5206848</a></li><li id="erhan2009visualizing"><span class="title">Visualizing higher-layer features of a deep network</span>   <a href="https://www.researchgate.net/profile/Aaron_Courville/publication/265022827_Visualizing_Higher-Layer_Features_of_a_Deep_Network/links/53ff82b00cf24c81027da530.pdf">[PDF]</a><br>Erhan, D., Bengio, Y., Courville, A. and Vincent, P., 2009. University of Montreal, Vol 1341, pp. 3. </li><li id="mordvintsev2015inceptionism"><span class="title">Inceptionism: Going deeper into neural networks</span>   <a href="https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">[HTML]</a><br>Mordvintsev, A., Olah, C. and Tyka, M., 2015. Google Research Blog. </li><li id="simonyan2013deep"><span class="title">Deep inside convolutional networks: Visualising image classification models and saliency maps</span>   <a href="https://arxiv.org/pdf/1312.6034.pdf">[PDF]</a><br>Simonyan, K., Vedaldi, A. and Zisserman, A., 2013. arXiv preprint arXiv:1312.6034. </li><li id="gatys2015neural"><span class="title">A neural algorithm of artistic style</span>   <a href="https://arxiv.org/pdf/1508.06576.pdf">[PDF]</a><br>Gatys, L.A., Ecker, A.S. and Bethge, M., 2015. arXiv preprint arXiv:1508.06576. </li><li id="mahendran2015understanding"><span class="title">Understanding deep image representations by inverting them</span>   <a href="https://arxiv.org/pdf/1412.0035v1.pdf">[PDF]</a><br>Mahendran, A. and Vedaldi, A., 2015. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 5188--5196.  <a href="https://doi.org/10.1109/cvpr.2015.7299155" style="text-decoration:inherit;">DOI: 10.1109/cvpr.2015.7299155</a></li><li id="mneuron2015"><span class="title">Understanding Intra-Class Knowledge Inside {CNN}</span>   <a href="http://arxiv.org/pdf/1507.02379.pdf">[PDF]</a><br>Wei, D., Zhou, B., Torralba, A. and Freeman, W.T., 2015. CoRR, Vol abs/1507.02379. </li><li id="nguyen2016multifaceted"><span class="title">Multifaceted feature visualization: Uncovering the different types of features learned by each neuron in deep neural networks</span>   <a href="https://arxiv.org/pdf/1602.03616.pdf">[PDF]</a><br>Nguyen, A., Yosinski, J. and Clune, J., 2016. arXiv preprint arXiv:1602.03616. </li><li id="nguyen2016plug"><span class="title">Plug &amp; play generative networks: Conditional iterative generation of images in latent space</span>   <a href="https://arxiv.org/pdf/1612.00005.pdf">[PDF]</a><br>Nguyen, A., Yosinski, J., Bengio, Y., Dosovitskiy, A. and Clune, J., 2016. arXiv preprint arXiv:1612.00005. </li><li id="szegedy2013intriguing"><span class="title">Intriguing properties of neural networks</span>   <a href="https://arxiv.org/pdf/1312.6199.pdf">[PDF]</a><br>Szegedy, C., Zaremba, W., Sutskever, I., Bruna, J., Erhan, D., Goodfellow, I. and Fergus, R., 2013. arXiv preprint arXiv:1312.6199. </li><li id="netdissect2017"><span class="title">Network Dissection: Quantifying Interpretability of Deep Visual Representations</span>   <a href="https://arxiv.org/pdf/1704.05796.pdf">[PDF]</a><br>Bau, D., Zhou, B., Khosla, A., Oliva, A. and Torralba, A., 2017. Computer Vision and Pattern Recognition. </li><li id="odena2016deconvolution"><span class="title">Deconvolution and checkerboard artifacts</span>   <a href="http://distill.pub/2016/deconv-checkerboard/">[link]</a><br>Odena, A., Dumoulin, V. and Olah, C., 2016. Distill, Vol 1(10), pp. e3.  <a href="https://doi.org/distill.00003" style="text-decoration:inherit;">DOI: distill.00003</a></li><li id="nguyen2015deep"><span class="title">Deep neural networks are easily fooled: High confidence predictions for unrecognizable images</span>   <a href="https://arxiv.org/pdf/1412.1897.pdf">[PDF]</a><br>Nguyen, A., Yosinski, J. and Clune, J., 2015. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 427--436.  <a href="https://doi.org/10.1109/cvpr.2015.7298640" style="text-decoration:inherit;">DOI: 10.1109/cvpr.2015.7298640</a></li><li id="oygard2015vis"><span class="title">Visualizing GoogLeNet Classes</span>   <a href="https://www.auduno.com/2015/07/29/visualizing-googlenet-classes/">[link]</a><br>Øygard, A., 2015. </li><li id="tyka2016bilateral"><span class="title">Class visualization with bilateral filters</span>   <a href="https://mtyka.github.io/deepdream/2016/02/05/bilateral-class-vis.html">[HTML]</a><br>Tyka, M., 2016. </li><li id="mordvintsev2016deepdreaming"><span class="title">DeepDreaming with TensorFlow</span>   <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/deepdream/deepdream.ipynb">[link]</a><br>Mordvintsev, A., 2016. </li><li id="nguyen2016synthesizing"><span class="title">Synthesizing the preferred inputs for neurons in neural networks via deep generator networks</span>   <a href="https://arxiv.org/pdf/1605.09304.pdf">[PDF]</a><br>Nguyen, A., Dosovitskiy, A., Yosinski, J., Brox, T. and Clune, J., 2016. Advances in Neural Information Processing Systems, pp. 3387--3395. </li><li id="abadi2016tensorflow"><span class="title">Tensorflow: Large-scale machine learning on heterogeneous distributed systems</span>   <a href="https://arxiv.org/pdf/1603.04467.pdf">[PDF]</a><br>Abadi, M., Agarwal, A., Barham, P., Brevdo, E., Chen, Z., Citro, C., Corrado, G.S., Davis, A., Dean, J., Devin, M., Ghemawat, S., Goodfellow, I.J., Harp, A., Irving, G., Isard, M., Jia, Y., J{\'{o}}zefowicz, R., Kaiser, L., Kudlur, M., Levenberg, J., Man{\'{e}}, D., Monga, R., Moore, S., Murray, D.G., Olah, C., Schuster, M., Shlens, J., Steiner, B., Sutskever, I., Talwar, K., Tucker, P.A., Vanhoucke, V., Vasudevan, V., Vi{\'{e}}gas, F.B., Vinyals, O., Warden, P., Wattenberg, M., Wicke, M., Yu, Y. and Zheng, X., 2016. arXiv preprint arXiv:1603.04467. </li></ol></d-citation-list>
+<distill-appendix>
+<style>
+  distill-appendix {
+    contain: layout style;
+  }
+
+  distill-appendix .citation {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  distill-appendix > * {
+    grid-column: text;
+  }
+</style>
+
+    <h3 id="updates-and-corrections">Updates and Corrections</h3>
+    <p>
+    If you see mistakes or want to suggest changes, please <a href="https://github.com/distillpub/post--feature-visualization/issues/new">create an issue on GitHub</a>. </p>
+    
+    <h3 id="reuse">Reuse</h3>
+    <p>Diagrams and text are licensed under Creative Commons Attribution <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> with the <a class="github" href="https://github.com/distillpub/post--feature-visualization">source available on GitHub</a>, unless noted otherwise. The figures that have been reused from other sources don’t fall under this license and can be recognized by a note in their caption: “Figure from …”.</p>
+    
+    <h3 id="citation">Citation</h3>
+    <p>For attribution in academic contexts, please cite this work as</p>
+    <pre class="citation short">Olah, et al., "Feature Visualization", Distill, 2017.</pre>
+    <p>BibTeX citation</p>
+    <pre class="citation long">@article{olah2017feature,
+  author = {Olah, Chris and Mordvintsev, Alexander and Schubert, Ludwig},
+  title = {Feature Visualization},
+  journal = {Distill},
+  year = {2017},
+  note = {https://distill.pub/2017/feature-visualization},
+  doi = {10.23915/distill.00007}
+}</pre>
+    </distill-appendix></d-appendix>
+
+<d-bibliography><script type="text/json">[["erhan2009visualizing",{"title":"Visualizing higher-layer features of a deep network","author":"Erhan, Dumitru and Bengio, Yoshua and Courville, Aaron and Vincent, Pascal","journal":"University of Montreal","volume":"1341","pages":"3","year":"2009","url":"https://www.researchgate.net/profile/Aaron_Courville/publication/265022827_Visualizing_Higher-Layer_Features_of_a_Deep_Network/links/53ff82b00cf24c81027da530.pdf","type":"article"}],["mordvintsev2015inceptionism",{"title":"Inceptionism: Going deeper into neural networks","author":"Mordvintsev, Alexander and Olah, Christopher and Tyka, Mike","journal":"Google Research Blog","year":"2015","url":"https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html","type":"article"}],["simonyan2013deep",{"title":"Deep inside convolutional networks: Visualising image classification models and saliency maps","author":"Simonyan, Karen and Vedaldi, Andrea and Zisserman, Andrew","journal":"arXiv preprint arXiv:1312.6034","year":"2013","url":"https://arxiv.org/pdf/1312.6034.pdf","type":"article"}],["mahendran2015understanding",{"title":"Understanding deep image representations by inverting them","author":"Mahendran, Aravindh and Vedaldi, Andrea","booktitle":"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition","pages":"5188--5196","year":"2015","doi":"10.1109/cvpr.2015.7299155","url":"https://arxiv.org/pdf/1412.0035v1.pdf","type":"inproceedings"}],["dosovitskiy2016inverting",{"title":"Inverting visual representations with convolutional networks","author":"Dosovitskiy, Alexey and Brox, Thomas","booktitle":"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition","pages":"4829--4837","year":"2016","doi":"10.1109/cvpr.2016.522","url":"http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Dosovitskiy_Inverting_Visual_Representations_CVPR_2016_paper.pdf","type":"inproceedings"}],["dosovitskiy2016generating",{"title":"Generating images with perceptual similarity metrics based on deep networks","author":"Dosovitskiy, Alexey and Brox, Thomas","booktitle":"Advances in Neural Information Processing Systems","pages":"658--666","year":"2016","url":"https://arxiv.org/pdf/1602.02644.pdf","type":"inproceedings"}],["nguyen2015deep",{"title":"Deep neural networks are easily fooled: High confidence predictions for unrecognizable images","author":"Nguyen, Anh and Yosinski, Jason and Clune, Jeff","booktitle":"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition","pages":"427--436","year":"2015","doi":"10.1109/cvpr.2015.7298640","url":"https://arxiv.org/pdf/1412.1897.pdf","type":"inproceedings"}],["nguyen2016synthesizing",{"title":"Synthesizing the preferred inputs for neurons in neural networks via deep generator networks","author":"Nguyen, Anh and Dosovitskiy, Alexey and Yosinski, Jason and Brox, Thomas and Clune, Jeff","booktitle":"Advances in Neural Information Processing Systems","pages":"3387--3395","year":"2016","url":"https://arxiv.org/pdf/1605.09304.pdf","type":"inproceedings"}],["nguyen2016plug",{"title":"Plug & play generative networks: Conditional iterative generation of images in latent space","author":"Nguyen, Anh and Yosinski, Jason and Bengio, Yoshua and Dosovitskiy, Alexey and Clune, Jeff","journal":"arXiv preprint arXiv:1612.00005","year":"2016","url":"https://arxiv.org/pdf/1612.00005.pdf","type":"article"}],["tyka2016bilateral",{"title":"Class visualization with bilateral filters","author":"Tyka, Mike","year":"2016","url":"https://mtyka.github.io/deepdream/2016/02/05/bilateral-class-vis.html","type":"misc"}],["oygard2015vis",{"title":"Visualizing GoogLeNet Classes","author":"Øygard, Audun","year":"2015","url":"https://www.auduno.com/2015/07/29/visualizing-googlenet-classes/","type":"misc"}],["mordvintsev2016deepdreaming",{"title":"DeepDreaming with TensorFlow","author":"Mordvintsev, Alexander","year":"2016","url":"https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/deepdream/deepdream.ipynb","type":"misc"}],["szegedy2013intriguing",{"title":"Intriguing properties of neural networks","author":"Szegedy, Christian and Zaremba, Wojciech and Sutskever, Ilya and Bruna, Joan and Erhan, Dumitru and Goodfellow, Ian and Fergus, Rob","journal":"arXiv preprint arXiv:1312.6199","year":"2013","url":"https://arxiv.org/pdf/1312.6199.pdf","type":"article"}],["gatys2015neural",{"title":"A neural algorithm of artistic style","author":"Gatys, Leon A and Ecker, Alexander S and Bethge, Matthias","journal":"arXiv preprint arXiv:1508.06576","year":"2015","url":"https://arxiv.org/pdf/1508.06576.pdf","type":"article"}],["nguyen2016multifaceted",{"title":"Multifaceted feature visualization: Uncovering the different types of features learned by each neuron in deep neural networks","author":"Nguyen, Anh and Yosinski, Jason and Clune, Jeff","journal":"arXiv preprint arXiv:1602.03616","year":"2016","url":"https://arxiv.org/pdf/1602.03616.pdf","type":"article"}],["odena2016deconvolution",{"title":"Deconvolution and checkerboard artifacts","author":"Odena, Augustus and Dumoulin, Vincent and Olah, Chris","journal":"Distill","volume":"1","number":"10","pages":"e3","year":"2016","doi":"distill.00003","url":"http://distill.pub/2016/deconv-checkerboard/","type":"article"}],["joshi2017bringing",{"title":"Bringing impressionism to life with neural style transfer in come swim","author":"Joshi, Bhautik and Stewart, Kristen and Shapiro, David","journal":"arXiv preprint arXiv:1701.04928","year":"2017","url":"https://arxiv.org/pdf/1701.04928.pdf","type":"article"}],["netdissect2017",{"title":"Network Dissection: Quantifying Interpretability of Deep Visual Representations","author":"Bau, David and Zhou, Bolei and Khosla, Aditya and Oliva, Aude and Torralba, Antonio","booktitle":"Computer Vision and Pattern Recognition","year":"2017","url":"https://arxiv.org/pdf/1704.05796.pdf","type":"inproceedings"}],["mneuron2015",{"author":"Donglai Wei and Bolei Zhou and Antonio Torralba and William T. Freeman","title":"Understanding Intra-Class Knowledge Inside {CNN}","journal":"CoRR","volume":"abs/1507.02379","year":"2015","url":"http://arxiv.org/abs/1507.02379","archivePrefix":"arXiv","eprint":"1507.02379","archiveprefix":"arXiv","type":"article"}],["szegedy2015going",{"title":"Going deeper with convolutions","author":"Szegedy, Christian and Liu, Wei and Jia, Yangqing and Sermanet, Pierre and Reed, Scott and Anguelov, Dragomir and Erhan, Dumitru and Vanhoucke, Vincent and Rabinovich, Andrew","booktitle":"Proceedings of the IEEE conference on computer vision and pattern recognition","pages":"1--9","year":"2015","url":"https://arxiv.org/pdf/1409.4842.pdf","type":"inproceedings"}],["abadi2016tensorflow",{"title":"Tensorflow: Large-scale machine learning on heterogeneous distributed systems","author":"Mart{\\'i}n Abadi and Ashish Agarwal and Paul Barham and Eugene Brevdo and Zhifeng Chen and Craig Citro and Gregory S. Corrado and Andy Davis and Jeffrey Dean and Matthieu Devin and Sanjay Ghemawat and Ian J. Goodfellow and Andrew Harp and Geoffrey Irving and Michael Isard and Yangqing Jia and Rafal J{\\'{o}}zefowicz and Lukasz Kaiser and Manjunath Kudlur and Josh Levenberg and Dan Man{\\'{e}} and Rajat Monga and Sherry Moore and Derek Gordon Murray and Chris Olah and Mike Schuster and Jonathon Shlens and Benoit Steiner and Ilya Sutskever and Kunal Talwar and Paul A. Tucker and Vincent Vanhoucke and Vijay Vasudevan and Fernanda B. Vi{\\'{e}}gas and Oriol Vinyals and Pete Warden and Martin Wattenberg and Martin Wicke and Yuan Yu and Xiaoqiang Zheng","journal":"arXiv preprint arXiv:1603.04467","year":"2016","url":"https://arxiv.org/pdf/1603.04467.pdf","type":"article"}],["deng2009imagenet",{"title":"Imagenet: A large-scale hierarchical image database","author":"Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li","booktitle":"Computer Vision and Pattern Recognition, 2009. CVPR 2009. IEEE Conference on","pages":"248--255","year":"2009","organization":"IEEE","doi":"10.1109/cvprw.2009.5206848","url":"http://www.image-net.org/papers/imagenet_cvpr09.pdf","type":"inproceedings"}]]</script></d-bibliography>
+
+<script type="text/javascript" src="index.bundle.js"></script>
+<distill-footer>
+<style>
+
+:host {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: hsl(180, 5%, 15%); /*hsl(200, 60%, 15%);*/
+  text-align: left;
+  contain: content;
+}
+
+.footer-container .logo svg {
+  width: 24px;
+  position: relative;
+  top: 4px;
+  margin-right: 2px;
+}
+
+.footer-container .logo svg path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.8);
+  stroke-width: 3px;
+}
+
+.footer-container .logo {
+  font-size: 17px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-right: 6px;
+}
+
+.footer-container {
+  grid-column: text;
+}
+
+.footer-container .nav {
+  font-size: 0.9em;
+  margin-top: 1.5em;
+}
+
+.footer-container .nav a {
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 6px;
+  text-decoration: none;
+}
+    </script>
 </body>
 </html>
