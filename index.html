@@ -752,10 +752,16 @@ figcaption,
             The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
             however there is little scientific consensus on what exactly is lost. <p> 
             
-            <p> What happens when we ask what is lost when we prune a deep neural network? <p> 
+            <p> What happens when we ask <em>what</em> is lost when we prune a deep neural network? <p> 
         
-        <p> The earliest deep neural network pruning methods, with names such as <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a>, were heavily
-            motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. There are now many different pruning methods to choose from [1,2,3,4,5,6,7,8,9], and this research effort has demonstrated a remarkable ability to sparsify a model
+        <p> Pruning deep neural networks is a very popular technique for model compression. The ``excess capacity'' of a deep neural network is removed by identifying non-essential 
+          weights to prune by setting the value of these weights to zero. 
+          Pruned models are heavily used in resource constrained environments because reducing the number of weights lowers energy consumption, memory footprint and latency. 
+          These resource constrained environments often entail 
+
+          The earliest deep neural network pruning methods, with names such as <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a>, were heavily
+            motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. 
+          There are now many different pruning methods to choose from [1,2,3,4,5,6,7,8,9], and this research effort has demonstrated a remarkable ability to sparsify a model
             to a fraction of the original weights while giving up minimal test-set accuracy. Relative
               comparisons of different pruning algorithm have largely centered on top-line metrics such as top-1 or top-5 test-set
               accuracy averaged across classes. However, such aggregate measures can hide details in model performance. Is relative performance unaltered 
