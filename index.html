@@ -638,32 +638,38 @@ figcaption,
   }
 }
     
-<d-front-matter>
+/* <d-front-matter>
   <script type="text/json">{
-  "title": "Feature Visualization",
-  "description": "How neural networks build up their understanding of images",
+  "title": "Selective Brain Damage",
+  "description": "Measuring the Disparate Impact of Model Compression",
   "authors": [
     {
-      "author":"Chris Olah",
+      "author":"Sara Hooker",
       "authorURL":"https://colah.github.io/",
       "affiliation":"Google Brain Team",
       "affiliationURL":"https://g.co/brain"
     },
     {
-      "author":"Alexander Mordvintsev",
+      "author":"",
       "authorURL":"https://znah.net/",
       "affiliation":"Google Research",
       "affiliationURL":"https://research.google.com/"
     },
     {
-      "author":"Ludwig Schubert",
+      "author":"",
+      "authorURL":"https://schubert.io/",
+      "affiliation":"Google Brain Team",
+      "affiliationURL":"https://g.co/brain"
+    }
+     {
+      "author":"",
       "authorURL":"https://schubert.io/",
       "affiliation":"Google Brain Team",
       "affiliationURL":"https://g.co/brain"
     }
   ]
   }</script>
-</d-front-matter>
+</d-front-matter> */
     
   </style>
 </head>
@@ -705,18 +711,18 @@ figcaption,
       
         <p class="author">
           
-            <a class="name" href="http://www.dauphin.io/">Yann Dauphine</a>
-        </p>
-        <p class="affiliation">
-        <a class="affiliation" href="https://research.google.com/">Google Brain</a>
-        </p>
-      
-        <p class="author">
-          
             <a class="name" href="https://scholar.google.com/citations?user=km6CP8cAAAAJ&hl=en">Aaron Courville</a>
         </p>
         <p class="affiliation">
         <a class="affiliation" href="https://g.co/brain">MILA</a>
+        </p>
+      
+        <p class="author">
+          
+            <a class="name" href="http://www.dauphin.io/">Yann Dauphine</a>
+        </p>
+        <p class="affiliation">
+        <a class="affiliation" href="https://research.google.com/">Google Brain</a>
         </p>
       
       <p class="author">
@@ -746,7 +752,9 @@ figcaption,
             The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
             however there is little scientific consensus on what exactly is lost. <p> 
             
-            <p> What happens when we ask what is lost when we prune a deep neural network? The earliest deep neural network pruning methods, with names such as <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a>, were heavily
+            <p> What happens when we ask what is lost when we prune a deep neural network? <p> 
+        
+        <p> The earliest deep neural network pruning methods, with names such as <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a>, were heavily
             motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. There are now many different pruning methods to choose from [1,2,3,4,5,6,7,8,9], and this research effort has demonstrated a remarkable ability to sparsify a model
             to a fraction of the original weights while giving up minimal test-set accuracy. Relative
               comparisons of different pruning algorithm have largely centered on top-line metrics such as top-1 or top-5 test-set
@@ -786,11 +794,7 @@ figcaption,
 </figure>
         
         <h4>Impact on Individual Images</h4>
-       <p> At every level of sparsity, for both CIFAR-10 and ImageNet we identify
-        a subset of PIE images. At $10 \%$ and $90 \%$ sparsity, we classify
-        $3.34 \%$ and $10.27 \%$ of all ImageNet test-set images respectively as PIEs. 
-        For CIFAR-10, PIEs constitute 0.97% and $2.16 \%$ of the test set at $10 \%$
-        and $90 \%$ sparsity. <p>
+       <p>  <p>
         
       <strong>bold</strong>, <em>italics</em>,
 
@@ -852,22 +856,9 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
   <d-appendix>
   
    <h3 id="acknowledgements">Acknowledgments</h3>
-  <p>
-    We are extremely grateful to Shan Carter and Ian Goodfellow.
-    Shan gave thoughtful feedback, especially on the design of the article.
-    Ian generously stepped in to handle the review process of this article — we would not have been able to publish it without him.
-  </p>
+  <p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros, Prajit Ramachandran, Pieter Kindermans, Erich Elsen and Moustapha Cisse. We thank the institutional support and encouragement of Dan Nanas, Rita Ruiz, Sally Jesmonth and Alexander Popper.
 
-  <p>
-    We’re also grateful for the comments, thoughts and support of
-    Arvind Satyanarayan, Ian Johnson,
-    Greg Corrado, Blaise Aguera y Arcas,
-    Katherine Ye, Michael Nielsen, Emma Pierson, Dario Amodei,
-    Mike Tyka,
-    Andrea Vedaldi, Ruth Fong, Jason Freidenfelds,
-    Geoffrey Hinton,
-    Timon Ruban,
-    Been Kim, Martin Wattenberg, and Fernanda Viegas.
+  
   </p>
 
   <d-footnote-list></d-footnote-list>
@@ -911,16 +902,16 @@ d-citation-list .references .title {
   }
 </style>
     <h3 id="citation">Citation</h3>
-    <p>For attribution in academic contexts, please cite this work as</p>
-    <pre class="citation short">Hooker, et al., "Selective Brain Damage: ", .</pre>
+    <p>This work may be cited as:</p>
+    <pre class="citation short">Hooker, et al., "Selective Brain Damage: Measuring the Disparate Impact of Model Pruning", 2019.</pre>
     <p>BibTeX citation</p>
     <pre class="citation long">@article{olah2017feature,
-  author = {Olah, Chris and Mordvintsev, Alexander and Schubert, Ludwig},
-  title = {Feature Visualization},
-  journal = {Distill},
-  year = {2017},
-  note = {https://distill.pub/2017/feature-visualization},
-  doi = {10.23915/distill.00007}
+  author = {Hooker, Sara and Courville, Aaron and Dauphin, Yann and Frome, Andrea},
+  title = {},
+  journal = {},
+  year = {},
+  note = {},
+  doi = {}
 }</pre>
     </distill-appendix></d-appendix>
 <style>
