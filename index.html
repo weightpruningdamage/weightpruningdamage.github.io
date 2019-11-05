@@ -752,12 +752,17 @@ figcaption,
             The phrase "use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
             however there is little scientific consensus on <em>what</em> exactly is lost. <p> 
             
-            <p> What happens when we ask what is lost when we prune a deep neural network? Pruning deep neural networks is a very popular technique for model compression. The ``excess capacity'' of a deep neural network is removed by identifying non-essential 
+            <p>In 1990, a popular paper was published titled Optimal Brain Damage. The paper was amongst the first to propose that deep neural networks could be pruned of ``excess capacity'' in a similar  by removing
+              non-essential weights from the network after training. Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone.
+              At face value, pruning does appear to promise you can can (almost) have it all -- for many tasks it is possible to remove the majority of weights with a minimal drop to top-1 accuracy. The Prune models  while minimizing latency, energy and memory footprint.  However,  <p> 
+              
+              What happens when we ask what is lost when we prune a deep 
+        neural network? Pruning deep neural networks is a very popular technique for model compression. The ``excess capacity'' of a deep neural network is removed by identifying non-essential 
           weights to prune by setting the value of these weights to zero. Surprisingly, for many tasks, it is possible to remove 
-          the majority of weights of a deep neural network and see
-          minimal change to top-1 test set accuracy. 
+          the majority of weights of a deep neural network 
           
-           <p> What if we look beyond aggregate metrics like top-1 accuracy, and ask instead what classes and images are most impacted when we prune deep neural networks?
+           <p> Today, pruned networks are being used in many sensitive real world algorithms like mobile phone health diagnostics. 
+             What if we look beyond aggregate metrics like top-1 accuracy, and ask instead what classes and images are most impacted when we prune deep neural networks?
           <p>
 <!--             Aggregate metrics 
             
