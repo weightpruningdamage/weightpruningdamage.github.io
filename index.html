@@ -548,6 +548,11 @@ d-byline .affiliations {
   margin-top: 5px;
 }
 
+.katex, .katex-prerendered {
+  contain: style;
+  display: inline-block;
+}
+
 .draft {
   border-left: 2px solid orange;
   padding-left: 5px;
@@ -638,39 +643,6 @@ figcaption,
   }
 }
     
-/* <d-front-matter>
-  <script type="text/json">{
-  "title": "Selective Brain Damage",
-  "description": "Measuring the Disparate Impact of Model Compression",
-  "authors": [
-    {
-      "author":"Sara Hooker",
-      "authorURL":"https://colah.github.io/",
-      "affiliation":"Google Brain Team",
-      "affiliationURL":"https://g.co/brain"
-    },
-    {
-      "author":"",
-      "authorURL":"https://znah.net/",
-      "affiliation":"Google Research",
-      "affiliationURL":"https://research.google.com/"
-    },
-    {
-      "author":"",
-      "authorURL":"https://schubert.io/",
-      "affiliation":"Google Brain Team",
-      "affiliationURL":"https://g.co/brain"
-    }
-     {
-      "author":"",
-      "authorURL":"https://schubert.io/",
-      "affiliation":"Google Brain Team",
-      "affiliationURL":"https://g.co/brain"
-    }
-  ]
-  }</script>
-</d-front-matter> */
-    
   </style>
 </head>
 <body>
@@ -757,44 +729,38 @@ figcaption,
           
             <p> However, it is equally unclear what exactly we give up when we prune a deep neural network. The cost to top-1 accuracy appears minimal if it is spread uniformally across all classes, but what if the cost is concentrated in a few classes? What makes performance on certain classes and images more or less ``forgettable'' as sparsity is introduced?
 
-                      <figure id="fv-vs-attribution" class="grid" style="">
-  <div>
-    <div class="images">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F51_vase_vase_pot.png?v=1572924624884">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F365_castle_castle_monastery.png?v=1572924345160"/>
-    </div>
+        <p style="margin-top: 2em">
+          <div class="imgs-container">
+            <div class="img-container"></div>
+            <div class="img-container">Gradient</div>
+            <div class="img-container">SmoothGrad</div>
+          </div>
+          <div class="imgs-container">
+            <div class="img-container">
+              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F51_vase_vase_pot.png?v=1572924624884"/>
+              </div>
     <figcaption>
       <strong>Feature visualization</strong> answers questions about what a network — or parts of a network — are looking for by generating examples.
     </figcaption>
-    <figcaption>
-      <strong>Feature visualization</strong> answers questions about what a network — or parts of a network — are looking for by generating examples.
-    </figcaption>
-  </div>
-  <div>
-    <div class="images">
-      </div>
-    <figcaption>
-    <strong>Attribution</strong>   
-    <figcaption>
-  </div>
-  <div>
-    <div class="images">
-      <img src="images/attribution-2.jpg" style="">
-      /div>
-    <figcaption>
-    <strong>Attribution</strong>   
-        <figcaption>
-</div>
-    <figcaption>
-    <strong>Attribution</strong>   
-        <figcaption>
-       <img src="images/attribution-2.jpg" style="">
             </div>
+            <div class="img-container">
+              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F51_vase_vase_pot.png?v=1572924624884"/>
+             </div>
     <figcaption>
-    <strong>Attribution</strong>   
-        <figcaption>
-  </div>
-</figure>
+      <strong>Feature visualization</strong> answers questions about what a network — or parts of a network — are looking for by generating examples.
+    </figcaption>
+            </div>
+            <div class="img-container">
+              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F51_vase_vase_pot.png?v=1572924624884"/>
+           </div>
+    <figcaption>
+      <strong>Feature visualization</strong> answers questions about what a network — or parts of a network — are looking for by generating examples.
+    </figcaption>
+               </div>
+          </div>
+        </p>
+      </div>
+
               <!--             
    
 Where does the small degradation in accuracy come from? Are some classes and images impacted more than others? -->
