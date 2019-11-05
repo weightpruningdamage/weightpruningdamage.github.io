@@ -187,7 +187,15 @@
 
     .authors {
       margin-top: -40px;
-      font-size: 18px;
+      font-size: 20px;
+    }
+    .institutions {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+    .institutions a {
+      font-size: 15px;
+      color: #ccc;
     }
 
     .team-link {
@@ -374,9 +382,8 @@
         <div class="title"><h2>Selective Brain Damage: Measuring the Disparate Impact of Model Compression</h2></div>
         </div>
         <div class="authors">Sara Hooker, Yann Dauphine, Aaron Courville, Andrea Frome</div>
-        <div class="team-link"><a href="https://research.google.com/">Google Brain</a></div> 
+      <div class="institutions">Google Brain, MILA </div>
       </div>
-    </div>
     <div class="descriptions">
        <p> add note here saying this template was made available by James Wexler <p> 
       <h3>What is lost when we prune deep neural networks?</h3>
@@ -386,26 +393,16 @@
             that are most useful for the environment.
             Despite losing 50 % of all synapses between age two and ten, the brain continues to function.
             The phrase "Use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
-            however there is little scientific consensus on what exactly is lost [1]. <p> 
+            however there is little scientific consensus on what exactly is lost. <p> 
             
             <p> What happens when we ask what is lost when we prune a deep neural network? The earliest deep neural network pruning methods, with names such as <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a>, were heavily
             motivated by neuron pruning -- the premise that one could remove uneccessary weights while retaining overall accuracy. There are now many different pruning methods to choose from [1,2,3,4,5,6,7,8,9], and this research effort has demonstrated a remarkable ability to sparsify a model
             to a fraction of the original weights while giving up minimal test-set accuracy. Relative
-              comparisons of different pruning algorithm have largely centered on top-line metrics such as top-1 or top-5 test-set accuracy averaged across classes,
-              but reliance on these measures hides detail in the model's performance. 
-              Comparing only top-1 model accuracy between a baseline and a pruned model amounts to assuming that class accuracies are expected to maintain their relative relationships to the top-1 model accuracy before and after pruning. In this work, we consider 
-          whether this is a valid assumption. Is relative performance unaltered 
+              comparisons of different pruning algorithm have largely centered on top-line metrics such as top-1 or top-5 test-set
+              accuracy averaged across classes. However, such aggregate measures can hide details in model performance. Is relative performance unaltered 
           by pruning or are some classes and images impacted more than others?<p>
-         <h4>Measuring the disparate impact of model pruning has real world implications.</h4>     
-             <p> Many of the most promising use cases for compressed models occur in sensitive domains,such as improving access to 
-              health care by using machine learning driven diagnostics on mobile phones [1]. Pruned or compressed models are 
-              frequently favored for deploying deep neural networks onto devices because reducing the number of network weights
-               lowers energy consumption, memory footprint and latency. For tasks where incorrect predictions can harm human welfare,
-               it is critical that we understand when a machine learning model is qualified to make decisions on real world inputs. 
-              To our knowledge, this is the first work to shed light on the trade-offs pruning
-              incurs by considering new measures beyond test accuracy. <p>
       <div class="descriptions">
-      <h3>Are certain types of examples or classes disproportionately affected by pruning?</h3>
+      <h3>What does a deep neural network "forget" as it is pruned?</h3>
       <div class="description">
         <h4>Class Level Pruning Impact</h4>
         
