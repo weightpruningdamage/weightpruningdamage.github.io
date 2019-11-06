@@ -725,11 +725,12 @@ figcaption,
               to our biological synaptic pruning. The pruning method identifies non-essential weights to remove from the network by setting to zero.
               Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone [1,2,3].
               At face value, pruning does appear to promise you can can (almost) have it all. State of art pruning methods remove the majority of the weights with a negligable loss to top-1 accuracy. 
-              These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions.
+              These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions. All these attributes make pruned models ideal for deploying deep neural networks to mobile phones and other edge devices.
           
-            <p> However, it is equally unclear what exactly we give up when we prune a deep neural network. The cost to top-1 accuracy appears minimal if it is spread uniformally across all classes, but what if the cost is concentrated in a few classes? What makes performance on certain classes and images more or less ``forgettable'' as sparsity is introduced?
+            <p> However, it is equally unclear <em>what</em> exactly we give up when we prune a deep neural network. The cost to top-1 accuracy appears minimal if it is spread uniformally across all classes, but what if the cost is concentrated in a few classes? What makes performance on certain classes and images more or
+              less ``forgettable'' as sparsity is introduced?
         
-          <p>Our results are surprising and suggest caution is needed before deploying pruned models to sensitive domains. Pruning systematically impacts certain classes and images more than others. The images most impacted by pruning is a subset of images that are more challenging for both a dense and sparse model to classify. <p>
+          <p>Our results are surprising and suggest caution is needed before deploying pruned models to sensitive domains. Our central finding is that pruning systematically impacts certain classes and images more than others. The images most impacted by pruning is a subset of examples that are more challenging for both a dense and sparse model to classify. <p>
         <div class="imgs-container">
           </div>
           <div class="imgs-container">
@@ -750,6 +751,8 @@ figcaption,
       <h3>What does a deep neural network "forget" as it is pruned?</h3>
       <div class="description">
         <h4>Class Level Pruning Impact</h4>
+        
+        If the impact of pruning was uniform, we would expect each class accuracy to shift by the same number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model. 
         
         <figure id="fv-vs-attribution" class="grid" style="">
   <div>
