@@ -33,9 +33,14 @@ window.addEventListener('WebComponentsReady', function() {
   <meta property="article:author" content="Yann Dauphine">
   <meta property="article:author" content="Aaron Courville">
   <meta property="article:author" content="Andrea Frome">
+  
+   
+    <!-- import the webpage's javascript file -->
+    
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/script.js" defer></script>
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <style>
     body {
@@ -285,6 +290,8 @@ d-byline p.author {
 d-byline .affiliations {
 
 }
+    
+
 
     .cover h1 {
       font-family: "Roboto", "Gotham A", "Gotham B";
@@ -762,16 +769,18 @@ figcaption,
         <p> The directionality and magnitude of the impact is nuanced and surprising.
           Our results show that certain classes are relatively robust to the overall degradation 
           experienced by the model whereas others degrade in performance far more than the model itself. 
-          This amounts to \textit{selective ``brain damage"} with performance on certain classes evidencing
-          far more sensitivity to the removal of model capacity. Table~\ref{table:imagenet_class_recall_summary} 
-          shows that more classes show a significant \emph{relative} increase in accuracy than a decrease at every level, 
+          This amounts to selective <em>``brain damage"</em> with performance on certain classes evidencing
+          far more sensitivity to the removal of model capacity. <p> 
+          <p> More classes show a significant relative increase in accuracy than a decrease at every level, 
           though the overall model accuracy decreases at every pruning level, indicating that the magnitude
-          of class decreases must be larger in order to pull the model accuracy lower. The model appears 
-          to cannibalize performance on a small subset of classes in order to preserve performance 
-          (and even improve relative performance on a small number of classes). 
-          Figure~\ref{fig:imagenet_recall_70_90} visualizes the magnitude of the normalized recall
-        differences for $70\%$ and $90\%$ pruning and highlights the degree to which the classes
-          spread from model average.<p> 
+          of class decreases must be larger in order to pull the model accuracy lower.<p>
+        
+    <svg width="300" height="500"></svg>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
         
         <figure id="fv-vs-attribution" class="grid" style="">
   <div>
@@ -818,45 +827,7 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
           as a fraction of total PIEs and non-PIE codified):</p>
         <p> 
         </p>
-        <p style="margin-top: 2em">
-          <div class="imgs-container">
-            <div class="img-container">christmas_stocking</div>
-            <div class="img-container">castle</div>
-            <div class="img-container">SmoothGrad</div>
-            <div class="img-container">SmoothGrad</div>
-            <div class="img-container">SmoothGrad</div>
-          </div>
-          <div class="imgs-container">
-            <div class="img-container">
-              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F365_christmas_stocking_sock_christmas_stocking.png?v=1572924132688"/>
-            </div>
-            <div class="img-container">
-              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F365_castle_castle_monastery.png?v=1572924345160"/>
-            </div>
-            <div class="img-container">
-              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F250_convertible_convertible_sports_car.png?v=1572924365594">
-            </div>
-            <div class="img-container">
-              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F278_bathtub_tub_bathtub.png?v=1572924394404">
-            </div>
-            <div class="img-container">
-              <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F51_vase_vase_pot.png?v=1572924624884">
-            </div>
-          </div>
-        </p>
-      </div>
-      <div class="description" style="margin-top: 3em">
-        <h3>How does pruning impact robustness such as sensitivity to image corruptions
-          (blur, noise, contrast) and adversarial examples?</h3>
-        <p>
-        </p>
-        <p>
-          Below, we show vanilla gradients, <a href="">Integrated gradients</a>, and <a href="">Guided Backpropagation</a> as they apply to 200 randomly chosen images from the <a href="http://www.image-net.org/">ImageNet dataset</a> using the <a href="https://arxiv.org/abs/1512.00567">Inception V3 model</a>.
-        </p>
-        <p style="margin-bottom: 2em">
-          When the model makes a mistake, we show the row with a light
-          red background and give the option to choose which mask to visualize -
-          label or the prediction. Often times you can see why the model made a mistake!
+          
     </p>
         </div>
 </body>
