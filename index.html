@@ -735,13 +735,10 @@ figcaption,
           </div>
           <div class="imgs-container">
             <div class="img-container">
-              <img src="">
             </div>
             <div class="img-container">
-              <img src="">
             </div>
             <div class="img-container">
-              <img src="">
             </div>
           </div>
           <div class="img-container">1. Pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.</div>
@@ -752,7 +749,29 @@ figcaption,
       <div class="description">
         <h4>Class Level Pruning Impact</h4>
         
-        If the impact of pruning was uniform, we would expect each class accuracy to shift by the same number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model. 
+        <p> If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
+          number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model.<p> 
+        <p>   This forms our <strong>null hypothesis</strong> --  the shift in accuracy for each class 
+          before and after pruning is the same as the shift in top-1 accuracy. <p> 
+        <p> For each class we consider whether
+          to reject the null hypothesis and accept the <strong>alternate hypothesis</strong>
+          that pruning disparately affected the class's accuracy in either a positive or negative direction.  <p> 
+         <p>  We use a two-tailed independent Welch's t-test to determine whether there is a statistically significant deviation
+          from the expected shift for each class in the dataset. More details about our methodology can be found in <p> 
+        
+        <p> The directionality and magnitude of the impact is nuanced and surprising.
+          Our results show that certain classes are relatively robust to the overall degradation 
+          experienced by the model whereas others degrade in performance far more than the model itself. 
+          This amounts to \textit{selective ``brain damage"} with performance on certain classes evidencing
+          far more sensitivity to the removal of model capacity. Table~\ref{table:imagenet_class_recall_summary} 
+          shows that more classes show a significant \emph{relative} increase in accuracy than a decrease at every level, 
+          though the overall model accuracy decreases at every pruning level, indicating that the magnitude
+          of class decreases must be larger in order to pull the model accuracy lower. The model appears 
+          to cannibalize performance on a small subset of classes in order to preserve performance 
+          (and even improve relative performance on a small number of classes). 
+          Figure~\ref{fig:imagenet_recall_70_90} visualizes the magnitude of the normalized recall
+        differences for $70\%$ and $90\%$ pruning and highlights the degree to which the classes
+          spread from model average.<p> 
         
         <figure id="fv-vs-attribution" class="grid" style="">
   <div>
