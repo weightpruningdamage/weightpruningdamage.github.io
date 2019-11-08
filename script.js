@@ -26,10 +26,7 @@ d3.json("data.json", function(error, data) {
       return d.class_label;
     })
   );
-  x.domain([
-    -10,
-    10,
-  ]);
+  x.domain([-10, 10]);
 
   g.append("g")
     .attr("class", "axis axis--x")
@@ -38,17 +35,14 @@ d3.json("data.json", function(error, data) {
 
   g.append("g")
     .attr("class", "axis axis--y")
-    .call(
-      d3
-        .axisLeft(y)
-    )
+    .call(d3.axisLeft(y));
 
   g.selectAll(".bar")
     .data(data)
     .enter()
     .append("rect")
     .attr("y", function(d) {
-      return y(d.txt);
+      return y(d.class_label);
     })
     .attr("x2", function(d) {
       return x(d.diff_normed_class_mean);
@@ -58,15 +52,15 @@ d3.json("data.json", function(error, data) {
       return width - x(d.diff_normed_class_mean);
     })
     .attr("fill", function(d) {
-      return "lightblue"
+      return "lightblue";
     })
     .on("mouseenter", function(d) {
-      var str = "<img class=\"image\" src=\"" + d.img + "\"/>";
+      var str = '<img class="image" src="' + d.img + '"/>';
       tooltip
         .style("left", d3.event.pageX - 50 + "px")
         .style("top", d3.event.pageY - 370 + "px")
         .style("display", "inline-block")
-        .html(str)
+        .html(str);
     })
     .on("mouseleave", function(d) {
       tooltip.style("display", "none");
