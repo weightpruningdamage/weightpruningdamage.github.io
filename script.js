@@ -1,3 +1,9 @@
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 var svg = d3.select("svg"),
   margin = { top: 20, right: 20, bottom: 30, left: 50 },
   width = +svg.attr("width") - margin.left - margin.right,
@@ -23,46 +29,53 @@ d3.json("data.json", function(error, data) {
 
   y.domain(
     data.map(function(d) {
-      return d.class_label;
+      return d.txt;
     })
   );
-  x.domain([-10, 10]);
+  x.domain([
+    -10,
+    10,
+  ]);
 
   g.append("g")
     .attr("class", "axis axis--x")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x).ticks(1));
+    .call(d3.axisBottom(x).ticks(5));
 
   g.append("g")
     .attr("class", "axis axis--y")
-    .call(d3.axisLeft(y));
+    .call(
+      d3
+        .axisLeft(y)
+    )
 
   g.selectAll(".bar")
     .data(data)
     .enter()
     .append("rect")
     .attr("y", function(d) {
-      return y(d.class_label);
+      return y(d.txt);
     })
     .attr("x2", function(d) {
-      return x(d.diff_normed_class_mean);
+      return x(d.value);
     })
     .attr("height", y.bandwidth())
     .attr("width", function(d) {
-      return width - x(d.diff_normed_class_mean);
+      return width - x(d.value);
     })
     .attr("fill", function(d) {
-      return "lightblue";
+      return "lightblue"
     })
     .on("mouseenter", function(d) {
-      var str = '<img class="image" src="' + d.img + '"/>';
+      var str = "<img class=\"image\" src=\"" + d.img + "\"/>";
       tooltip
         .style("left", d3.event.pageX - 50 + "px")
         .style("top", d3.event.pageY - 370 + "px")
         .style("display", "inline-block")
-        .html(str);
+        .html(str)
     })
     .on("mouseleave", function(d) {
       tooltip.style("display", "none");
     });
 });
+
