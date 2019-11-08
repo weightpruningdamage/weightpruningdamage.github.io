@@ -1,19 +1,656 @@
-
-
 [
-    {"txt" : "dog", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
-    {"txt" : "cat", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-    {"txt" : "cat2", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-      {"txt" : "dog2", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
-    {"txt" : "cat1", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-    {"txt" : "cat12", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-      {"txt" : "dog3", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
-    {"txt" : "cat2", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-    {"txt" : "cat22", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-      {"txt" : "dog4", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
-    {"txt" : "cat3", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-    {"txt" : "cat32", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-      {"txt" : "dog5", "value": 0.65, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fdog.jpg?v=1570546072371"},
-    {"txt" : "cat4", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-    {"txt" : "cat42", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"},
-    {"txt" : "cat43", "value": 0.33, "img": "https://cdn.glitch.com/13fdeac1-5f27-48a1-b407-532b5e09e4ce%2Fcat.jpg?v=1570546066662"}]
+  {
+    "class_label": "safety_pin",
+    "label": "772",
+    "diff_normed_class_mean": -4.022824579492154,
+    "diff_class_mean": -4.829892361792809
+  },
+  {
+    "class_label": "oil_filter",
+    "label": "686",
+    "diff_normed_class_mean": -3.7434967995555777,
+    "diff_class_mean": -4.55056458185622
+  },
+  {
+    "class_label": "hand_blower",
+    "label": "589",
+    "diff_normed_class_mean": -3.680485434734346,
+    "diff_class_mean": -4.487553217034989
+  },
+  {
+    "class_label": "sax",
+    "label": "776",
+    "diff_normed_class_mean": -3.60670760858734,
+    "diff_class_mean": -4.413775390887986
+  },
+  {
+    "class_label": "beaker",
+    "label": "438",
+    "diff_normed_class_mean": -3.5359242906419492,
+    "diff_class_mean": -4.3429920729425975
+  },
+  {
+    "class_label": "swing",
+    "label": "843",
+    "diff_normed_class_mean": -3.37888094492446,
+    "diff_class_mean": -4.185948727225108
+  },
+  {
+    "class_label": "crutch",
+    "label": "523",
+    "diff_normed_class_mean": -3.377970355224691,
+    "diff_class_mean": -4.185038137525343
+  },
+  {
+    "class_label": "marimba",
+    "label": "642",
+    "diff_normed_class_mean": -3.195181231917145,
+    "diff_class_mean": -4.002249014217806
+  },
+  {
+    "class_label": "binoculars",
+    "label": "447",
+    "diff_normed_class_mean": -2.9972893409725065,
+    "diff_class_mean": -3.80435712327315
+  },
+  {
+    "class_label": "hair_slide",
+    "label": "584",
+    "diff_normed_class_mean": -2.985658363204122,
+    "diff_class_mean": -3.792726145504788
+  },
+  {
+    "class_label": "ice_lolly",
+    "label": "929",
+    "diff_normed_class_mean": -2.9590470067009087,
+    "diff_class_mean": -3.7661147890015845
+  },
+  {
+    "class_label": "lighter",
+    "label": "626",
+    "diff_normed_class_mean": -2.9232934827424546,
+    "diff_class_mean": -3.730361265043125
+  },
+  {
+    "class_label": "triumphal_arch",
+    "label": "873",
+    "diff_normed_class_mean": -2.7961384056748946,
+    "diff_class_mean": -3.6032061879755495
+  },
+  {
+    "class_label": "milk_can",
+    "label": "653",
+    "diff_normed_class_mean": -2.779585466920098,
+    "diff_class_mean": -3.5866532492207837
+  },
+  {
+    "class_label": "umbrella",
+    "label": "879",
+    "diff_normed_class_mean": -2.7653174605371698,
+    "diff_class_mean": -3.5723852428378278
+  },
+  {
+    "class_label": "vestment",
+    "label": "887",
+    "diff_normed_class_mean": -2.7067266759777304,
+    "diff_class_mean": -3.5137944582783853
+  },
+  {
+    "class_label": "bagel",
+    "label": "931",
+    "diff_normed_class_mean": -2.6289032342671153,
+    "diff_class_mean": -3.435971016567785
+  },
+  {
+    "class_label": "ant",
+    "label": "310",
+    "diff_normed_class_mean": -2.5635135983989685,
+    "diff_class_mean": -3.3705813806996
+  },
+  {
+    "class_label": "hair_spray",
+    "label": "585",
+    "diff_normed_class_mean": -2.5337619171975136,
+    "diff_class_mean": -3.340829699498149
+  },
+  {
+    "class_label": "gas_pump",
+    "label": "571",
+    "diff_normed_class_mean": -2.433286096674318,
+    "diff_class_mean": -3.2403538789749997
+  },
+  {
+    "class_label": "fire_screen",
+    "label": "556",
+    "diff_normed_class_mean": -2.349916641087687,
+    "diff_class_mean": -3.1569844233883315
+  },
+  {
+    "class_label": "minibus",
+    "label": "654",
+    "diff_normed_class_mean": -2.348605129455211,
+    "diff_class_mean": -3.1556729117558913
+  },
+  {
+    "class_label": "volcano",
+    "label": "980",
+    "diff_normed_class_mean": -2.2977335477046585,
+    "diff_class_mean": -3.1048013300053134
+  },
+  {
+    "class_label": "honeycomb",
+    "label": "599",
+    "diff_normed_class_mean": -2.295572427475627,
+    "diff_class_mean": -3.102640209776286
+  },
+  {
+    "class_label": "crash_helmet",
+    "label": "518",
+    "diff_normed_class_mean": -2.274556599590352,
+    "diff_class_mean": -3.0816243818909905
+  },
+  {
+    "class_label": "hotdog",
+    "label": "934",
+    "diff_normed_class_mean": -2.2465760305872307,
+    "diff_class_mean": -3.053643812887874
+  },
+  {
+    "class_label": "pembroke",
+    "label": "263",
+    "diff_normed_class_mean": -2.2166688169676547,
+    "diff_class_mean": -3.023736599268323
+  },
+  {
+    "class_label": "chain",
+    "label": "488",
+    "diff_normed_class_mean": -2.1773269756320826,
+    "diff_class_mean": -2.984394757932729
+  },
+  {
+    "class_label": "italian_greyhound",
+    "label": "171",
+    "diff_normed_class_mean": -2.1529082333430036,
+    "diff_class_mean": -2.9599760156436394
+  },
+  {
+    "class_label": "welsh_springer_spaniel",
+    "label": "218",
+    "diff_normed_class_mean": -2.1314889839947866,
+    "diff_class_mean": -2.9385567662954415
+  },
+  {
+    "class_label": "miniskirt",
+    "label": "655",
+    "diff_normed_class_mean": -2.126580141222936,
+    "diff_class_mean": -2.93364792352358
+  },
+  {
+    "class_label": "australian_terrier",
+    "label": "193",
+    "diff_normed_class_mean": -2.101153796779509,
+    "diff_class_mean": -2.9082215790801613
+  },
+  {
+    "class_label": "vizsla",
+    "label": "211",
+    "diff_normed_class_mean": -2.0871212592085358,
+    "diff_class_mean": -2.8941890415091875
+  },
+  {
+    "class_label": "american_staffordshire_terrier",
+    "label": "180",
+    "diff_normed_class_mean": -2.0600918739925147,
+    "diff_class_mean": -2.8671596562931723
+  },
+  {
+    "class_label": "cowboy_hat",
+    "label": "515",
+    "diff_normed_class_mean": -2.0588839033957695,
+    "diff_class_mean": -2.8659516856964107
+  },
+  {
+    "class_label": "hard_disc",
+    "label": "592",
+    "diff_normed_class_mean": -2.0563141982077195,
+    "diff_class_mean": -2.8633819805083727
+  },
+  {
+    "class_label": "medicine_chest",
+    "label": "648",
+    "diff_normed_class_mean": -1.965417719347076,
+    "diff_class_mean": -2.7724855016477368
+  },
+  {
+    "class_label": "shih_tzu",
+    "label": "155",
+    "diff_normed_class_mean": -1.9469088213654389,
+    "diff_class_mean": -2.753976603666075
+  },
+  {
+    "class_label": "american_alligato",
+    "label": "_50",
+    "diff_normed_class_mean": -1.8747391028478424,
+    "diff_class_mean": -2.6818068851484744
+  },
+  {
+    "class_label": "norfolk_terrier",
+    "label": "185",
+    "diff_normed_class_mean": -1.8736438774420772,
+    "diff_class_mean": -2.6807116597427294
+  },
+  {
+    "class_label": "lacewing",
+    "label": "318",
+    "diff_normed_class_mean": -1.8309642916731317,
+    "diff_class_mean": -2.638032073973784
+  },
+  {
+    "class_label": "police_van",
+    "label": "734",
+    "diff_normed_class_mean": -1.8190083053350237,
+    "diff_class_mean": -2.626076087635698
+  },
+  {
+    "class_label": "military_uniform",
+    "label": "652",
+    "diff_normed_class_mean": -1.7200381932897912,
+    "diff_class_mean": -2.527105975590449
+  },
+  {
+    "class_label": "cheetah",
+    "label": "293",
+    "diff_normed_class_mean": -1.2487967693955353,
+    "diff_class_mean": -2.055864551696196
+  },
+  {
+    "class_label": "red_breasted_merganse",
+    "label": "_98",
+    "diff_normed_class_mean": -1.0928908879426853,
+    "diff_class_mean": -1.8999586702433402
+  },
+  {
+    "class_label": "monarch",
+    "label": "323",
+    "diff_normed_class_mean": 0.6667616598516751,
+    "diff_class_mean": -0.14030612244899654
+  },
+  {
+    "class_label": "ostri",
+    "label": "h_9",
+    "diff_normed_class_mean": 0.8506488829664788,
+    "diff_class_mean": 0.043581100665812667
+  },
+  {
+    "class_label": "agaric",
+    "label": "992",
+    "diff_normed_class_mean": 0.865941556563618,
+    "diff_class_mean": 0.058873774262990786
+  },
+  {
+    "class_label": "ten",
+    "label": "h_0",
+    "diff_normed_class_mean": 0.870481130988876,
+    "diff_class_mean": 0.0634133486882349
+  },
+  {
+    "class_label": "japanese_spaniel",
+    "label": "152",
+    "diff_normed_class_mean": 0.9410635835077313,
+    "diff_class_mean": 0.13399580120708743
+  },
+  {
+    "class_label": "african_gre",
+    "label": "_87",
+    "diff_normed_class_mean": 1.0162323141027274,
+    "diff_class_mean": 0.20916453180208627
+  },
+  {
+    "class_label": "rock_beauty",
+    "label": "392",
+    "diff_normed_class_mean": 1.0352934588233027,
+    "diff_class_mean": 0.22822567652265313
+  },
+  {
+    "class_label": "great_grey_ow",
+    "label": "_24",
+    "diff_normed_class_mean": 1.1417616598516784,
+    "diff_class_mean": 0.33469387755102886
+  },
+  {
+    "class_label": "black_swan",
+    "label": "100",
+    "diff_normed_class_mean": 1.1900650837853437,
+    "diff_class_mean": 0.3829973014846999
+  },
+  {
+    "class_label": "african_hunting_dog",
+    "label": "275",
+    "diff_normed_class_mean": 1.2006701298722748,
+    "diff_class_mean": 0.39360234757163104
+  },
+  {
+    "class_label": "american_coot",
+    "label": "137",
+    "diff_normed_class_mean": 1.2376805373161353,
+    "diff_class_mean": 0.43061275501548035
+  },
+  {
+    "class_label": "sorrel",
+    "label": "339",
+    "diff_normed_class_mean": 1.2575613130462875,
+    "diff_class_mean": 0.4504935307456215
+  },
+  {
+    "class_label": "box_turtl",
+    "label": "_37",
+    "diff_normed_class_mean": 1.3050089173454948,
+    "diff_class_mean": 0.4979411350448437
+  },
+  {
+    "class_label": "ibex",
+    "label": "350",
+    "diff_normed_class_mean": 1.3385766776103591,
+    "diff_class_mean": 0.5315088953097069
+  },
+  {
+    "class_label": "magpi",
+    "label": "_18",
+    "diff_normed_class_mean": 1.390030793213748,
+    "diff_class_mean": 0.5829630109130957
+  },
+  {
+    "class_label": "trilobit",
+    "label": "_69",
+    "diff_normed_class_mean": 1.4316037066331,
+    "diff_class_mean": 0.6245359243324589
+  },
+  {
+    "class_label": "buckeye",
+    "label": "990",
+    "diff_normed_class_mean": 1.478615867064205,
+    "diff_class_mean": 0.6715480847635624
+  },
+  {
+    "class_label": "cabbage_butterfly",
+    "label": "324",
+    "diff_normed_class_mean": 1.517066062311903,
+    "diff_class_mean": 0.7099982800112592
+  },
+  {
+    "class_label": "ringlet",
+    "label": "322",
+    "diff_normed_class_mean": 1.5688765419757695,
+    "diff_class_mean": 0.7618087596750978
+  },
+  {
+    "class_label": "bullet_train",
+    "label": "466",
+    "diff_normed_class_mean": 1.5759209506173848,
+    "diff_class_mean": 0.7688531683167188
+  },
+  {
+    "class_label": "bulbu",
+    "label": "_16",
+    "diff_normed_class_mean": 1.5951865349454337,
+    "diff_class_mean": 0.7881187526447841
+  },
+  {
+    "class_label": "cucumber",
+    "label": "943",
+    "diff_normed_class_mean": 1.6223099893400927,
+    "diff_class_mean": 0.8152422070394572
+  },
+  {
+    "class_label": "american_lobster",
+    "label": "122",
+    "diff_normed_class_mean": 1.6405225328640207,
+    "diff_class_mean": 0.8334547505633783
+  },
+  {
+    "class_label": "bluetick",
+    "label": "164",
+    "diff_normed_class_mean": 1.7043320433811875,
+    "diff_class_mean": 0.8972642610805437
+  },
+  {
+    "class_label": "dung_beetle",
+    "label": "305",
+    "diff_normed_class_mean": 1.76147043921875,
+    "diff_class_mean": 0.9544026569180852
+  },
+  {
+    "class_label": "badger",
+    "label": "362",
+    "diff_normed_class_mean": 1.7643223744755216,
+    "diff_class_mean": 0.9572545921748832
+  },
+  {
+    "class_label": "schooner",
+    "label": "780",
+    "diff_normed_class_mean": 1.7723112036744013,
+    "diff_class_mean": 0.9652434213737737
+  },
+  {
+    "class_label": "harvester",
+    "label": "595",
+    "diff_normed_class_mean": 1.7841680220755052,
+    "diff_class_mean": 0.977100239774864
+  },
+  {
+    "class_label": "freight_car",
+    "label": "565",
+    "diff_normed_class_mean": 1.797904309272094,
+    "diff_class_mean": 0.9908365269714392
+  },
+  {
+    "class_label": "consomme",
+    "label": "925",
+    "diff_normed_class_mean": 1.8141454684680383,
+    "diff_class_mean": 1.0070776861673902
+  },
+  {
+    "class_label": "tape_player",
+    "label": "848",
+    "diff_normed_class_mean": 1.8626551143624992,
+    "diff_class_mean": 1.0555873320618525
+  },
+  {
+    "class_label": "manhole_cover",
+    "label": "640",
+    "diff_normed_class_mean": 1.8831445946088834,
+    "diff_class_mean": 1.0760768123082354
+  },
+  {
+    "class_label": "pop_bottle",
+    "label": "737",
+    "diff_normed_class_mean": 1.8994999558318348,
+    "diff_class_mean": 1.0924321735311882
+  },
+  {
+    "class_label": "green_mamb",
+    "label": "_64",
+    "diff_normed_class_mean": 1.9367778058136929,
+    "diff_class_mean": 1.1297100235130308
+  },
+  {
+    "class_label": "viaduct",
+    "label": "888",
+    "diff_normed_class_mean": 1.9411707541250156,
+    "diff_class_mean": 1.1341029718243245
+  },
+  {
+    "class_label": "cocker_spaniel",
+    "label": "219",
+    "diff_normed_class_mean": 2.028718079764771,
+    "diff_class_mean": 1.2216502974641497
+  },
+  {
+    "class_label": "shoji",
+    "label": "789",
+    "diff_normed_class_mean": 2.0370884259921826,
+    "diff_class_mean": 1.2300206436915428
+  },
+  {
+    "class_label": "german_short_haired_pointer",
+    "label": "210",
+    "diff_normed_class_mean": 2.0724104572667628,
+    "diff_class_mean": 1.2653426749661079
+  },
+  {
+    "class_label": "paddlewheel",
+    "label": "694",
+    "diff_normed_class_mean": 2.127757614305276,
+    "diff_class_mean": 1.32068983200464
+  },
+  {
+    "class_label": "zucchini",
+    "label": "939",
+    "diff_normed_class_mean": 2.1280655930779346,
+    "diff_class_mean": 1.3209978107772913
+  },
+  {
+    "class_label": "house_finc",
+    "label": "_12",
+    "diff_normed_class_mean": 2.144362491224763,
+    "diff_class_mean": 1.3372947089241194
+  },
+  {
+    "class_label": "granny_smith",
+    "label": "948",
+    "diff_normed_class_mean": 2.153105840007721,
+    "diff_class_mean": 1.3460380577070663
+  },
+  {
+    "class_label": "violin",
+    "label": "889",
+    "diff_normed_class_mean": 2.203746787153742,
+    "diff_class_mean": 1.3966790048530964
+  },
+  {
+    "class_label": "bearskin",
+    "label": "439",
+    "diff_normed_class_mean": 2.216063237681533,
+    "diff_class_mean": 1.4089954553808681
+  },
+  {
+    "class_label": "cougar",
+    "label": "286",
+    "diff_normed_class_mean": 2.2745520933860246,
+    "diff_class_mean": 1.4674843110853875
+  },
+  {
+    "class_label": "sea_urchin",
+    "label": "328",
+    "diff_normed_class_mean": 2.320024785073342,
+    "diff_class_mean": 1.512957002772708
+  },
+  {
+    "class_label": "typewriter_keyboard",
+    "label": "878",
+    "diff_normed_class_mean": 2.3574732718932365,
+    "diff_class_mean": 1.550405489592599
+  },
+  {
+    "class_label": "grocery_store",
+    "label": "582",
+    "diff_normed_class_mean": 2.392000858345886,
+    "diff_class_mean": 1.5849330760452363
+  },
+  {
+    "class_label": "h",
+    "label": "n_8",
+    "diff_normed_class_mean": 2.5061671681580004,
+    "diff_class_mean": 1.69909938585735
+  },
+  {
+    "class_label": "sewing_machine",
+    "label": "786",
+    "diff_normed_class_mean": 2.5118728784974955,
+    "diff_class_mean": 1.7048050961968375
+  },
+  {
+    "class_label": "cup",
+    "label": "968",
+    "diff_normed_class_mean": 2.52056565329708,
+    "diff_class_mean": 1.7134978709964277
+  },
+  {
+    "class_label": "water_jug",
+    "label": "899",
+    "diff_normed_class_mean": 2.5358293337335915,
+    "diff_class_mean": 1.7287615514329446
+  },
+  {
+    "class_label": "crate",
+    "label": "519",
+    "diff_normed_class_mean": 2.5583558735308944,
+    "diff_class_mean": 1.751288091230252
+  },
+  {
+    "class_label": "toaster",
+    "label": "859",
+    "diff_normed_class_mean": 2.576782914991599,
+    "diff_class_mean": 1.7697151326909522
+  },
+  {
+    "class_label": "ballpoint",
+    "label": "418",
+    "diff_normed_class_mean": 2.600657448626455,
+    "diff_class_mean": 1.7935896663258233
+  },
+  {
+    "class_label": "cauliflower",
+    "label": "938",
+    "diff_normed_class_mean": 2.6520157097951325,
+    "diff_class_mean": 1.8449479274945002
+  },
+  {
+    "class_label": "projectile",
+    "label": "744",
+    "diff_normed_class_mean": 2.6683744856702276,
+    "diff_class_mean": 1.8613067033695863
+  },
+  {
+    "class_label": "wooden_spoon",
+    "label": "910",
+    "diff_normed_class_mean": 2.933946478626037,
+    "diff_class_mean": 2.126878696325396
+  },
+  {
+    "class_label": "whiskey_jug",
+    "label": "901",
+    "diff_normed_class_mean": 3.208288525008407,
+    "diff_class_mean": 2.4012207427077548
+  },
+  {
+    "class_label": "toy_terrier",
+    "label": "158",
+    "diff_normed_class_mean": 3.5013574377820547,
+    "diff_class_mean": 2.6942896554813633
+  },
+  {
+    "class_label": "co",
+    "label": "k_7",
+    "diff_normed_class_mean": 3.513508417066273,
+    "diff_class_mean": 2.7064406347656056
+  },
+  {
+    "class_label": "barn_spide",
+    "label": "_73",
+    "diff_normed_class_mean": 4.2320014130510435,
+    "diff_class_mean": 3.424933630750404
+  },
+  {
+    "class_label": "cassette_player",
+    "label": "482",
+    "diff_normed_class_mean": 5.545417541678149,
+    "diff_class_mean": 4.738349759377503
+  },
+  {
+    "class_label": "overskirt",
+    "label": "689",
+    "diff_normed_class_mean": 6.921058794959796,
+    "diff_class_mean": 6.113991012659148
+  }
+]

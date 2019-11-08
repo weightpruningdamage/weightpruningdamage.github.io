@@ -23,18 +23,18 @@ d3.json("data.json", function(error, data) {
 
   y.domain(
     data.map(function(d) {
-      return d.txt;
+      return d.class_label;
     })
   );
   x.domain([
-    0,
-    1,
+    -10,
+    10,
   ]);
 
   g.append("g")
     .attr("class", "axis axis--x")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x).ticks(5));
+    .call(d3.axisBottom(x).ticks(1));
 
   g.append("g")
     .attr("class", "axis axis--y")
@@ -51,11 +51,11 @@ d3.json("data.json", function(error, data) {
       return y(d.txt);
     })
     .attr("x2", function(d) {
-      return x(d.value);
+      return x(d.diff_normed_class_mean);
     })
     .attr("height", y.bandwidth())
     .attr("width", function(d) {
-      return width - x(d.value);
+      return width - x(d.diff_normed_class_mean);
     })
     .attr("fill", function(d) {
       return "lightblue"
