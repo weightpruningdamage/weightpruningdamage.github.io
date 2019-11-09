@@ -650,7 +650,7 @@ figcaption,
   }
 }
     
-</style>
+  </style>
 </head>
 <body>
   <div id="scroll-container">
@@ -685,7 +685,7 @@ figcaption,
             <a class="name" href="https://www.sarahooker.me/">Sara Hooker</a>
         </p>
         <p class="affiliation">
-        <a class="affiliation" href="https://g.co/brain">Google Brain</a>
+        <a class="affiliation" href="https://g.co/brain">Google Brain, MILA</a>
         </p>
       
         <p class="author">
@@ -764,7 +764,7 @@ figcaption,
           to reject the null hypothesis and accept the <strong>alternate hypothesis</strong>
           that pruning disparately affected the class's accuracy in either a positive or negative direction.  <p> 
          <p>  We use a two-tailed independent Welch's t-test to determine whether there is a statistically significant deviation
-          from the expected shift for each class in the dataset. <p> 
+          from the expected shift for each class in the dataset. More details about our methodology can be found in <p> 
         
         <p> The directionality and magnitude of the impact is nuanced and surprising.
           Our results show that certain classes are relatively robust to the overall degradation 
@@ -774,41 +774,63 @@ figcaption,
           <p> More classes show a significant relative increase in accuracy than a decrease at every level, 
           though the overall model accuracy decreases at every pruning level, indicating that the magnitude
           of class decreases must be larger in order to pull the model accuracy lower.<p>
-  
-
-  <head>
-  
-  <!-- import the webpage's stylesheet -->
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <!-- import the webpage's javascript file -->
-  <script src="/script.js" defer></script>
-  </head>  
-  <body>
+        
     <svg width="300" height="500"></svg>
-  </body>
-        
 
+    <script src="https://button.glitch.me/button.js"></script>
         
-    <strong>bold</strong>, <em>italics</em>,
-     <style><div class="description">
-//         <p> Pruning has a non-uniform impact across classes; a fraction of classes are 
-//           disproportionately and systematically impacted by the introduction of sparsity.
-//           in a statistically significant way.
-// The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
-//               are more challenging for both sparse and non-sparse
-//          suggests that these hard-to-generalize-to images tend to be of lower image quality, mislabelled, entail abstract representations, require fine-grained classification or depict atypical class examples. We conducted a limited human study to inspect a random sample of $1200$ PIE and non-PIE ImageNet images.  We broadly group the properties we codify as indicative of 1) the exemplar being challenging or 2) the task being ill-specified. We introduce these groupings below (after each bucket we report the percentage of PIEs and non-PIEs in each category 
-//           as a fraction of total PIEs and non-PIE codified):</p>
-
-     <p> 
-      </p>
-          
- </p>
+        <figure id="fv-vs-attribution" class="grid" style="">
+  <div>
+    <div class="images">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F51_vase_vase_pot.png?v=1572924624884">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F365_christmas_stocking_sock_christmas_stocking.png?v=1572924132688">
+    </div>
+    <figcaption>
+      <strong>Feature visualization</strong> answers questions about what a network — or parts of a network — are looking for by generating examples.
+    </figcaption>
+  </div>
+  <div>
+    <div class="images">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F365_castle_castle_monastery.png?v=1572924345160"/>
+  </div>
+    <figcaption>
+    <strong>Attribution</strong>   
+        <figcaption>
+      <img src="images/attribution-2.jpg" style="">
 </div>
- </body>
- </html> -->
-<d-appendix> 
+    <figcaption>
+    <strong>Attribution</strong>   
+        <figcaption>
+       <img src="images/attribution-2.jpg" style="">
+            </div>
+    <figcaption>
+    <strong>Attribution</strong>   
+        <figcaption>
+  </div>
+</figure>
+        <h4>Impact on Individual Images</h4>
+       <p>  <p>
+        
+      <strong>bold</strong>, <em>italics</em>,
+
+        
+      <div class="description">
+        <p> Pruning has a non-uniform impact across classes; a fraction of classes are 
+          disproportionately and systematically impacted by the introduction of sparsity.
+          in a statistically significant way.
+The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
+              are more challenging for both sparse and non-sparse
+         suggests that these hard-to-generalize-to images tend to be of lower image quality, mislabelled, entail abstract representations, require fine-grained classification or depict atypical class examples. We conducted a limited human study to inspect a random sample of $1200$ PIE and non-PIE ImageNet images.  We broadly group the properties we codify as indicative of 1) the exemplar being challenging or 2) the task being ill-specified. We introduce these groupings below (after each bucket we report the percentage of PIEs and non-PIEs in each category 
+          as a fraction of total PIEs and non-PIE codified):</p>
+        <p> 
+        </p>
+          
+    </p>
+        </div>
+</body>
+</html>
   
-  
+  <d-appendix>
   
    <h3 id="acknowledgements">Acknowledgments</h3>
   <p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros, Prajit Ramachandran, Pieter Kindermans, Erich Elsen and Moustapha Cisse. We thank the institutional support and encouragement of Dan Nanas, Rita Ruiz, Sally Jesmonth and Alexander Popper.
