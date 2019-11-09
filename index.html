@@ -629,8 +629,10 @@ figcaption,
   }
 }
     
-  </style>
+</style>
 </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+
 <body>
   <div id="scroll-container">
     <div class="cover">
@@ -821,19 +823,13 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
               are more challenging for both sparse and non-sparse
          suggests that these hard-to-generalize-to images tend to be of lower image quality, mislabelled, entail abstract representations, require fine-grained classification or depict atypical class examples. We conducted a limited human study to inspect a random sample of $1200$ PIE and non-PIE ImageNet images.  We broadly group the properties we codify as indicative of 1) the exemplar being challenging or 2) the task being ill-specified. We introduce these groupings below (after each bucket we report the percentage of PIEs and non-PIEs in each category 
           as a fraction of total PIEs and non-PIE codified):</p>
-        <p> 
-        </p>
-          
-    </p>
         </div>
-</body>
-</html>
   
   <d-appendix>
   
    <h3 id="acknowledgements">Acknowledgments</h3>
   <p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros, Prajit Ramachandran, Pieter Kindermans, Erich Elsen and Moustapha Cisse. We thank the institutional support and encouragement of Dan Nanas, Rita Ruiz, Sally Jesmonth and Alexander Popper.
-
+This article was prepared with the Distill and SmoothGrad template.
   
   </p>
 
@@ -890,53 +886,5 @@ d-citation-list .references .title {
   doi = {}
 }</pre>
     </distill-appendix></d-appendix>
-<style>
-
-:host {
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 300;
-  padding: 2rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: hsl(180, 5%, 15%); /*hsl(200, 60%, 15%);*/
-  text-align: left;
-  contain: content;
-}
-
-.footer-container .logo svg {
-  width: 24px;
-  position: relative;
-  top: 4px;
-  margin-right: 2px;
-}
-
-.footer-container .logo svg path {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.8);
-  stroke-width: 3px;
-}
-
-.footer-container .logo {
-  font-size: 17px;
-  font-weight: 200;
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  margin-right: 6px;
-}
-
-.footer-container {
-  grid-column: text;
-}
-
-.footer-container .nav {
-  font-size: 0.9em;
-  margin-top: 1.5em;
-}
-
-.footer-container .nav a {
-  color: rgba(255, 255, 255, 0.8);
-  margin-right: 6px;
-  text-decoration: none;
-}
-    </script>
 </body>
 </html>
