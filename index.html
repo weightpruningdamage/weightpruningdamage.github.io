@@ -7,41 +7,7 @@ window.addEventListener('WebComponentsReady', function() {
 });
 </script><script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.17/webcomponents-loader.js"></script>  
 
-
-<html>
-<head>
-  <title>PIE: Pruning Identified Exemplars</title>
-  <meta property="og:type" content="article"/>
-  <meta property="og:title" content="PIE: Pruning Identified Exemplars"/>
-  <meta property="og:description" content="Measuring the Disparate Impact of Model Pruning">
-  <meta property="og:url" content="http://pair-code.github.io/saliency/"/>
-  <meta property="og:image" content="http://pair-code.github.io/saliency/images/preview.png"/>
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="Google Research">
-  <meta name="twitter:card" value="summary_large_image">
-  <meta name="twitter:title" content="PIE: Pruning Identified Exemplars">
-  <meta name="twitter:description" content="Measuring the disparate impact of model pruning on classes and individual images.">
-  <meta name="twitter:url" content="http://pair-code.github.io/saliency/">
-  <meta name="twitter:image" content="http://pair-code.github.io/saliency/images/preview.png">
-  <meta name="twitter:image:width" content="560">
-  <meta name="twitter:image:height" content="295">
-  
-  <!--  https://schema.org/Article -->
-  <meta property="description" itemprop="description" content="Measuring the disparate impact of model pruning on classes and individual images.">
-
-  <meta property="article:author" content="Sara Hooker">
-  <meta property="article:author" content="Yann Dauphine">
-  <meta property="article:author" content="Aaron Courville">
-  <meta property="article:author" content="Andrea Frome">
-  
-   
-    <!-- import the webpage's javascript file -->
-    
-
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="/script.js" defer></script>
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <!-- import the webpage's javascript file -->
   <style>
     body {
       font-family: "Roboto", "Helvetica", sans-serif;
@@ -56,16 +22,6 @@ window.addEventListener('WebComponentsReady', function() {
       margin: 0;
       padding: 0;
       height: 100%;
-    }
-
-    .grads-container {
-      width: 64%;
-    }
-
-    .grads-container img {
-      width: 100%;
-      background: url('assets/loader.gif') no-repeat;
-      background-position: center;
     }
 
     table td {
@@ -83,18 +39,7 @@ window.addEventListener('WebComponentsReady', function() {
       width: 25%;
     }
 
-    .footer-row {
-      height: 15px;
-    }
-
-    .incorrect-row {
-      background-color: #ffe8e8;
-    }
-
-    .incorrect-row td {
-      outline: 1px solid #ffe8e8;
-    }
-
+ 
     table.inner tr {
       border: 0;
     }
@@ -630,8 +575,39 @@ figcaption,
 }
     
 </style>
-</head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+
+<html>
+<head>
+  <title>PIE: Pruning Identified Exemplars</title>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="PIE: Pruning Identified Exemplars"/>
+  <meta property="og:description" content="Measuring the Disparate Impact of Model Pruning">
+  <meta property="og:url" content="http://pair-code.github.io/saliency/"/>
+  <meta property="og:image" content="http://pair-code.github.io/saliency/images/preview.png"/>
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Google Research">
+  <meta name="twitter:card" value="summary_large_image">
+  <meta name="twitter:title" content="PIE: Pruning Identified Exemplars">
+  <meta name="twitter:description" content="Measuring the disparate impact of model pruning on classes and individual images.">
+  <meta name="twitter:url" content="http://pair-code.github.io/saliency/">
+  <meta name="twitter:image" content="http://pair-code.github.io/saliency/images/preview.png">
+  <meta name="twitter:image:width" content="560">
+  <meta name="twitter:image:height" content="295">
+  
+  <!--  https://schema.org/Article -->
+  <meta property="description" itemprop="description" content="Measuring the disparate impact of model pruning on classes and individual images.">
+
+  <meta property="article:author" content="Sara Hooker">
+  <meta property="article:author" content="Yann Dauphine">
+  <meta property="article:author" content="Aaron Courville">
+  <meta property="article:author" content="Andrea Frome">
+  
+  </head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/script.js" defer></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
 
 <body>
   <div id="scroll-container">
@@ -655,49 +631,45 @@ figcaption,
       <div class="institutions"></div>
        </div>
     </div>
-<d-byline>
+  <div class="description">  
+  <d-byline>
   <div class="byline grid">
     <div class="authors-affiliations grid">
       <h3>Authors</h3>
-      <h3>Affiliations</h3>
-      
+      <h3>Affiliations</h3> 
         <p class="author">
-          
-            <a class="name" href="https://www.sarahooker.me/">Sara Hooker</a>
-        </p>
-        <p class="affiliation">
-        <a class="affiliation" href="https://g.co/brain">Google Brain, MILA</a>
-        </p>
-      
-        <p class="author">
-          
-            <a class="name" href="https://scholar.google.com/citations?user=km6CP8cAAAAJ&hl=en">Aaron Courville</a>
-        </p>
-        <p class="affiliation">
-        <a class="affiliation" href="https://g.co/brain">MILA</a>
-        </p>
-      
-        <p class="author">
-            <a class="name" href="http://www.dauphin.io/">Yann Dauphine</a>
-        </p>
-        <p class="affiliation">
-        <a class="affiliation" href="https://research.google.com/">Google Brain</a>
-        </p>
-      
-      <p class="author">
-          
-            <a class="name" href="https://scholar.google.com/citations?user=f9_wq_kAAAAJ&hl=en"> Andrea Frome</a>
+        <a class="name" href="https://www.sarahooker.me/">Sara Hooker</a>
         </p>
         <p class="affiliation">
         <a class="affiliation" href="https://g.co/brain">Google Brain</a>
         </p>
+        <p class="author">
+        <a class="name" href="https://scholar.google.com/citations?user=km6CP8cAAAAJ&hl=en">Aaron Courville</a>
+        </p>
+        <p class="affiliation">
+        <a class="affiliation" href="https://g.co/brain">MILA</a>
+        </p>
+        <p class="author">
+        <a class="name" href="http://www.dauphin.io/">Yann Dauphine</a>
+        </p>
+        <p class="affiliation">
+        <a class="affiliation" href="https://research.google.com/">Google Brain</a>
+        </p>
+        <p class="author">
+        <a class="name" href="https://scholar.google.com/citations?user=f9_wq_kAAAAJ&hl=en"> Andrea Frome</a>
+        </p>
+        <p class="affiliation">
+        <a class="affiliation" href="https://g.co/brain">Google Brain</a>
+        </p>
+      
+    
       
     </div>
     <div>
   </div>
      </div>
 </d-byline>
-    <div class="descriptions">
+  <div class="description">  
        <p> add note here saying this template was made available by James Wexler <p> 
       
          <h3>What is lost when we prune deep neural networks?</h3>
