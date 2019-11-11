@@ -423,24 +423,25 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
 <!-- perturbation charts -->
 <div>
 <div>
-<button onclick="toggle(['memory'], ['dynamics','joint'])" class="js-toggler active button-unstyled small-copy py-0.25 mr-0.5">Reset memory</button>
-<button onclick="toggle(['dynamics'], ['memory', 'joint'])" class="js-toggler button-unstyled small-copy py-0.25 mr-0.5">Reset dynamics</button>
-<button onclick="toggle(['joint'], ['memory', 'dynamics'])" class="js-toggler button-unstyled small-copy py-0.25">Broken joint</button>
+<button onclick="toggle(['pie'], ['a','c'])" class="js-toggler active button-unstyled small-copy py-0.25 mr-0.5">PIE Images</button>
+<button onclick="toggle(['a'], ['pie', 'c'])" class="js-toggler button-unstyled small-copy py-0.25 mr-0.5">ImageNet-A</button>
+<button onclick="toggle(['c'], ['pie', 'a'])" class="js-toggler button-unstyled small-copy py-0.25">ImageNet-C</button>
 <hr >
 </div>
 <div>
-<figure id="memory">
-  <h6>Time to success when the network’s memory is erased</h6>
+<figure id="pie">
+  <h6>PIE images are universally more challenging for sparse and dense models.</h6>
   <div id="chart-perturbation-memory"></div>
 </figure>
-<figure id="dynamics" class="position-absolute w-100" style="top:0;left:0;opacity:0">
+<figure id="a" class="position-absolute w-100" style="top:0;left:0;opacity:0">
   <h6>Time to success when friction, mass, or gravity change</h6>
   <div id="chart-perturbation-dynamics"></div>
 </figure>
-<figure id="joint" class="position-absolute w-100" style="top:0;left:0;opacity:0">
-  <h6>Time to success when the robot is impaired by breaking a random joint</h6>
-  <div id="chart-perturbation-joint"></div>
+<figure id="c" class="position-absolute w-100" style="top:0;left:0;opacity:0">
+  <h6></h6>
+  <div id="imagenet_c_a></div>
 </figure>
+  
 </div>
 </div>
 <dt-appendix>
