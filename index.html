@@ -303,21 +303,16 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial;
-}
-
 /* Center website */
 .main {
   max-width: 1000px;
   margin: auto;
 }
 
-h1 {
-  font-size: 50px;
+font_ {
+  font-size: 30px;
   word-break: break-all;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 .row {
@@ -327,13 +322,13 @@ h1 {
 /* Add padding BETWEEN each column (if you want) */
 .row,
 .row > .column {
-  padding: 6px;
+  padding: 0px;
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 33.33%;
+  width: 140.33%;
   display: none; /* Hide columns by default */
 }
 
@@ -478,26 +473,26 @@ h1 {
 <div class="row">
   <div class="column abstract">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_5.png?v=1573258926064" alt="Mountains" style="width:100%">
-      <h5>True Label: Cloak</h5>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_5.png?v=1573258926064" alt="Mountains" style="width:140%">
+      <p>True Label: Cloak</p>
       <p>Baseline Prediction: Gasmask</p>
        <p> Pruned Prediction: Breastplate</p>
     </div>
   </div>
   <div class="column abstract">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="Lights" style="width:100%">
-      <h5>True Label: Toilet Tissue</h5>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="Lights" style="width:140%">
+      <p>True Label: Toilet Tissue</p>
       <p>Baseline Prediction: Bath Towel</p>
        <p> Pruned Prediction: Great White Shark</p>
     </div>
   </div>
   <div class="column abstract">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F364_schooner_schooner_yawl.png?v=1573469387070" alt="Nature" style="width:100%">
-      <h5>True Label: Toilet Tissue</h5>
-      <p>Baseline Prediction: Bath Towel</p>
-       <p> Pruned Prediction: Great White Shark</p>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F364_schooner_schooner_yawl.png?v=1573469387070" alt="Nature" style="width:140%">
+      <p>True Label: Schooner</p>
+      <p>Baseline Prediction: Schooner</p>
+       <p> Pruned Prediction: Yawl</p>
     </div>
   </div>
 
