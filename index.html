@@ -27,6 +27,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script src="template.v1.js"></script>
 
   <style>
      body {
@@ -442,66 +443,24 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
           as a fraction of total PIEs and non-PIE codified):</p>
         </div>
   
-  <d-appendix>
-  
-   <h3 id="acknowledgements">Acknowledgments</h3>
-  <p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros, Prajit Ramachandran, Pieter Kindermans, Erich Elsen and Moustapha Cisse. We thank the institutional support and encouragement of Dan Nanas, Rita Ruiz, Sally Jesmonth and Alexander Popper.
-This article was prepared with the Distill and SmoothGrad template.
-  
-  </p>
-
-  <d-footnote-list></d-footnote-list>
-  <d-citation-list distill-prerendered="true"><style>
-d-citation-list {
-  contain: style;
-}
-
-d-citation-list .references {
-  grid-column: text;
-}
-
-d-citation-list .references .title {
-  font-weight: 500;
-}
-</style><h3 id="references">References</h3><ol id="references-list" class="references"><li id="szegedy2015going"><span class="title">Going deeper with convolutions</span>   <a href="https://arxiv.org/pdf/1409.4842.pdf">[PDF]</a><br>Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S., Anguelov, D., Erhan, D., Vanhoucke, V. and Rabinovich, A., 2015. Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 1--9. </li><li id="deng2009imagenet"><span class="title">Imagenet: A large-scale hierarchical image database</span>   <a href="http://www.image-net.org/papers/imagenet_cvpr09.pdf">[PDF]</a><br>Deng, J., Dong, W., Socher, R., Li, L., Li, K. and Fei-Fei, L., 2009. Computer Vision and Pattern Recognition, 2009. CVPR 2009. IEEE Conference on, pp. 248--255.  <a href="https://doi.org/10.1109/cvprw.2009.5206848" style="text-decoration:inherit;">DOI: 10.1109/cvprw.2009.5206848</a></li><li id="erhan2009visualizing"><span class="title">Visualizing higher-layer features of a deep network</span>   <a href="https://www.researchgate.net/profile/Aaron_Courville/publication/265022827_Visualizing_Higher-Layer_Features_of_a_Deep_Network/links/53ff82b00cf24c81027da530.pdf">[PDF]</a><br>Erhan, D., Bengio, Y., Courville, A. and Vincent, P., 2009. University of Montreal, Vol 1341, pp. 3. </li><li id="mordvintsev2015inceptionism"><span class="title">Inceptionism: Going deeper into neural networks</span>   <a href="https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">[HTML]</a><br>Mordvintsev, A., Olah, C. and Tyka, M., 2015. Google Research Blog. </li><li id="simonyan2013deep"><span class="title">Deep inside convolutional networks: Visualising image classification models and saliency maps</span>   <a href="https://arxiv.org/pdf/1312.6034.pdf">[PDF]</a><br>Simonyan, K., Vedaldi, A. and Zisserman, A., 2013. arXiv preprint arXiv:1312.6034. </li><li id="gatys2015neural"><span class="title">A neural algorithm of artistic style</span>   <a href="https://arxiv.org/pdf/1508.06576.pdf">[PDF]</a><br>Gatys, L.A., Ecker, A.S. and Bethge, M., 2015. arXiv preprint arXiv:1508.06576. </li><li id="mahendran2015understanding"><span class="title">Understanding deep image representations by inverting them</span>   <a href="https://arxiv.org/pdf/1412.0035v1.pdf">[PDF]</a><br>Mahendran, A. and Vedaldi, A., 2015. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 5188--5196.  <a href="https://doi.org/10.1109/cvpr.2015.7299155" style="text-decoration:inherit;">DOI: 10.1109/cvpr.2015.7299155</a></li><li id="mneuron2015"><span class="title">Understanding Intra-Class Knowledge Inside {CNN}</span>   <a href="http://arxiv.org/pdf/1507.02379.pdf">[PDF]</a><br>Wei, D., Zhou, B., Torralba, A. and Freeman, W.T., 2015. CoRR, Vol abs/1507.02379. </li><li id="nguyen2016multifaceted"><span class="title">Multifaceted feature visualization: Uncovering the different types of features learned by each neuron in deep neural networks</span>   <a href="https://arxiv.org/pdf/1602.03616.pdf">[PDF]</a><br>Nguyen, A., Yosinski, J. and Clune, J., 2016. arXiv preprint arXiv:1602.03616. </li><li id="nguyen2016plug"><span class="title">Plug &amp; play generative networks: Conditional iterative generation of images in latent space</span>   <a href="https://arxiv.org/pdf/1612.00005.pdf">[PDF]</a><br>Nguyen, A., Yosinski, J., Bengio, Y., Dosovitskiy, A. and Clune, J., 2016. arXiv preprint arXiv:1612.00005. </li><li id="szegedy2013intriguing"><span class="title">Intriguing properties of neural networks</span>   <a href="https://arxiv.org/pdf/1312.6199.pdf">[PDF]</a><br>Szegedy, C., Zaremba, W., Sutskever, I., Bruna, J., Erhan, D., Goodfellow, I. and Fergus, R., 2013. arXiv preprint arXiv:1312.6199. </li><li id="netdissect2017"><span class="title">Network Dissection: Quantifying Interpretability of Deep Visual Representations</span>   <a href="https://arxiv.org/pdf/1704.05796.pdf">[PDF]</a><br>Bau, D., Zhou, B., Khosla, A., Oliva, A. and Torralba, A., 2017. Computer Vision and Pattern Recognition. </li><li id="odena2016deconvolution"><span class="title">Deconvolution and checkerboard artifacts</span>   <a href="http://distill.pub/2016/deconv-checkerboard/">[link]</a><br>Odena, A., Dumoulin, V. and Olah, C., 2016. Distill, Vol 1(10), pp. e3.  <a href="https://doi.org/distill.00003" style="text-decoration:inherit;">DOI: distill.00003</a></li><li id="nguyen2015deep"><span class="title">Deep neural networks are easily fooled: High confidence predictions for unrecognizable images</span>   <a href="https://arxiv.org/pdf/1412.1897.pdf">[PDF]</a><br>Nguyen, A., Yosinski, J. and Clune, J., 2015. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 427--436.  <a href="https://doi.org/10.1109/cvpr.2015.7298640" style="text-decoration:inherit;">DOI: 10.1109/cvpr.2015.7298640</a></li><li id="oygard2015vis"><span class="title">Visualizing GoogLeNet Classes</span>   <a href="https://www.auduno.com/2015/07/29/visualizing-googlenet-classes/">[link]</a><br>Øygard, A., 2015. </li><li id="tyka2016bilateral"><span class="title">Class visualization with bilateral filters</span>   <a href="https://mtyka.github.io/deepdream/2016/02/05/bilateral-class-vis.html">[HTML]</a><br>Tyka, M., 2016. </li><li id="mordvintsev2016deepdreaming"><span class="title">DeepDreaming with TensorFlow</span>   <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/deepdream/deepdream.ipynb">[link]</a><br>Mordvintsev, A., 2016. </li><li id="nguyen2016synthesizing"><span class="title">Synthesizing the preferred inputs for neurons in neural networks via deep generator networks</span>   <a href="https://arxiv.org/pdf/1605.09304.pdf">[PDF]</a><br>Nguyen, A., Dosovitskiy, A., Yosinski, J., Brox, T. and Clune, J., 2016. Advances in Neural Information Processing Systems, pp. 3387--3395. </li><li id="abadi2016tensorflow"><span class="title">Tensorflow: Large-scale machine learning on heterogeneous distributed systems</span>   <a href="https://arxiv.org/pdf/1603.04467.pdf">[PDF]</a><br>Abadi, M., Agarwal, A., Barham, P., Brevdo, E., Chen, Z., Citro, C., Corrado, G.S., Davis, A., Dean, J., Devin, M., Ghemawat, S., Goodfellow, I.J., Harp, A., Irving, G., Isard, M., Jia, Y., J{\'{o}}zefowicz, R., Kaiser, L., Kudlur, M., Levenberg, J., Man{\'{e}}, D., Monga, R., Moore, S., Murray, D.G., Olah, C., Schuster, M., Shlens, J., Steiner, B., Sutskever, I., Talwar, K., Tucker, P.A., Vanhoucke, V., Vasudevan, V., Vi{\'{e}}gas, F.B., Vinyals, O., Warden, P., Wattenberg, M., Wicke, M., Yu, Y. and Zheng, X., 2016. arXiv preprint arXiv:1603.04467. </li></ol></d-citation-list>
-<distill-appendix>
-<style>
-  distill-appendix {
-    contain: layout style;
-  }
-
-  distill-appendix .citation {
-    font-size: 11px;
-    line-height: 15px;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    padding-left: 18px;
-    border: 1px solid rgba(0,0,0,0.1);
-    background: rgba(0, 0, 0, 0.02);
-    padding: 10px 18px;
-    border-radius: 3px;
-    color: rgba(150, 150, 150, 1);
-    overflow: hidden;
-    margin-top: -12px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  distill-appendix > * {
-    grid-column: text;
-  }
-</style>
-    <h3 id="citation">Citation</h3>
-    <p>This work may be cited as:</p>
-    <pre class="citation short">Hooker, et al., "Selective Brain Damage: Measuring the Disparate Impact of Model Pruning", 2019.</pre>
-    <p>BibTeX citation</p>
-    <pre class="citation long">@article{olah2017feature,
+      
+<dt-appendix>
+<h3 id="acknowledgements">Acknowledgments</h3>
+ <p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros, Prajit Ramachandran, Pieter Kindermans, Erich Elsen and Moustapha Cisse. We thank the institutional support and encouragement of Dan Nanas, Rita Ruiz, Sally Jesmonth and Alexander Popper.
+This article was prepared partly relying on the Distill template.</p>
+  <h3 id="citation">Citation</h3>
+<p>For attribution in academic contexts, please cite this work as</p>
+<pre class="citation short">Hooker et al., "Selective Brain Damage: Measuring the Disparate Impact of Model Pruning", 2019.</pre>
+<p>BibTeX citation</p>
+<pre class="citation long">@article{Ha2018designrl,
   author = {Hooker, Sara and Courville, Aaron and Dauphin, Yann and Frome, Andrea},
-  title = {},
-  journal = {},
-  year = {},
-  note = {},
-  doi = {}
+  title  = {Selective Brain Damage: Measuring the Disparate Impact of Model Pruning},
+  eprint = {arXiv:1810.03779},
+  url    = {https://designrl.github.io},
+  note   = "\url{https://designrl.github.io}",
+  year   = {2019}
 }</pre>
-    </distill-appendix></d-appendix>
+  
+
 </body>
 </html>
