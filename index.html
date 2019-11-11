@@ -327,7 +327,7 @@ h1 {
 /* Add padding BETWEEN each column (if you want) */
 .row,
 .row > .column {
-  padding: 8px;
+  padding: 6px;
 }
 
 /* Create three equal columns that floats next to each other */
@@ -347,7 +347,7 @@ h1 {
 /* Content */
 .content {
   background-color: white;
-  padding: 10px;
+  padding: 7px;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -464,37 +464,40 @@ h1 {
         
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('fine grained')"> fine grained</button>
-  <button class="btn" onclick="filterSelection('multiple images')"> multiple images</button>
-  <button class="btn" onclick="filterSelection('abstract classes')"> abstract classes</button>
-  <button class="btn" onclick="filterSelection('image corruptions')"> image corruptions</button>
-  <button class="btn" onclick="filterSelection('atypical examples')"> atypical examples</button>
-  <button class="btn" onclick="filterSelection('incorrect ground truth')"> incorrect ground truth</button>
+  <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
+  <button class="btn" onclick="filterSelection('multiple')"> multiple images</button>
+  <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
+  <button class="btn" onclick="filterSelection('corruptions')"> image corruptions</button>
+  <button class="btn" onclick="filterSelection('atypical')"> atypical examples</button>
+  <button class="btn" onclick="filterSelection('incorrect')"> incorrect ground truth</button>
 <hr >
 </div>
 <div>
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="column nature">
+  <div class="column abstract">
     <div class="content">
-      <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-      <h4>Mountains</h4>
-      <p>Lorem ipsum dolor..</p>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_5.png?v=1573258926064" alt="Mountains" style="width:100%">
+      <h5>True Label: Cloak</h5>
+      <p>Baseline Prediction: Gasmask</p>
+       <p> Pruned Prediction: Breastplate</p>
     </div>
   </div>
-  <div class="column nature">
+  <div class="column abstract">
     <div class="content">
-      <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
-      <h4>Lights</h4>
-      <p>Lorem ipsum dolor..</p>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="Lights" style="width:100%">
+      <h5>True Label: Toilet Tissue</h5>
+      <p>Baseline Prediction: Bath Towel</p>
+       <p> Pruned Prediction: Great White Shark</p>
     </div>
   </div>
-  <div class="column nature">
+  <div class="column abstract">
     <div class="content">
-      <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
-      <h4>Forest</h4>
-      <p>Lorem ipsum dolor..</p>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F364_schooner_schooner_yawl.png?v=1573469387070" alt="Nature" style="width:100%">
+      <h5>True Label: Toilet Tissue</h5>
+      <p>Baseline Prediction: Bath Towel</p>
+       <p> Pruned Prediction: Great White Shark</p>
     </div>
   </div>
 
