@@ -139,36 +139,35 @@
       padding-left: 15px;
       margin-right: auto;
       margin-left: auto;
+      
+      
     }
-
+    
+  
     @media (min-width: 415px) {
+      authors .authors-affiliations,
        .base-grid,
-        dt-title,
-        dt-abstract,
-        dt-article,
-        dt-appendix,
-        dt-byline,
-        dt-footnote-list,
-        dt-citation-list,
-        dt-footer,
       .cover-container, .descriptions {
         width: 500px;
       }
     }
 
     @media (min-width: 768px) {
+      authors .authors-affiliations,
       .cover-container, .descriptions {
         width: 650px;
       }
     }
 
     @media (min-width: 992px) {
+      authors .authors-affiliations,
       .cover-container, .descriptions {
         width: 770px;
       }
     }
 
     @media (min-width: 1200px) {
+      authors .authors-affiliations,
       .cover-container, .descriptions {
         width: 970px;
       }
@@ -198,18 +197,58 @@
       color: #ddd;
     }
 
-    .authors {
+
+    authors {
       margin-top: -40px;
       font-size: 15px;
+      overflow: hidden;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 0.8rem;
+      line-height: 1.8em;
+      padding: 1.5rem 0;
+      min-height: 1.8em;
     }
+    
+    authors .byline {
+    grid-template-columns: 1fr 1fr;
+    grid-column: text}
+    
+    authors .authors-affiliations {
+      grid-column-end: span 2;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 1em;
+    }
+    
+    authors h3 {
+      font-size: 0.6rem;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.5);
+      margin: 0;
+      text-transform: uppercase;
+    }
+    
+    authors p {
+  margin: 0;
+}
 
-    .team-link {
-      margin-top: 5px;
+authors a{
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+authors a:hover {
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+authors p.author {
+  font-weight: 500;
+}
+
+authors .affiliations {
     }
-    .team-link a {
-      font-size: 15px;
-      color: #ccc;
-    }
+    
 
     .subtitle {
       margin-top: -20px;
