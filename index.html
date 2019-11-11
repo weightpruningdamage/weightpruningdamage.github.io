@@ -352,7 +352,7 @@
           <div class="img-container">3. Pruning significantly reduces robustness to image corruptions and natural adversarial images.</div>
       <div class="descriptions">
       <h3>What does a deep neural network "forget" as it is pruned?</h3>
-      <div class="description">
+      <div class="descriptions">
         <h4>Class Level Pruning Impact</h4>
         
         <p> If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
@@ -373,6 +373,8 @@
           <p> More classes show a significant relative increase in accuracy than a decrease at every level, 
           though the overall model accuracy decreases at every pruning level, indicating that the magnitude
           of class decreases must be larger in order to pull the model accuracy lower.<p>
+        
+      <h4>Experiments</h4>
         
 <div class="gallery">
   <a target="_blank" href="">
@@ -401,39 +403,8 @@
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
-
         
-    <svg width="300" height="500"></svg>
-
-    <script src="https://button.glitch.me/button.js"></script>
-        
-        <figure id="fv-vs-attribution" class="grid" style="">
-  <div>
-    <div class="images">
-      <img src="">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_50.png?v=1573258995667">
-    </div>
-    <figcaption>
-      <strong>Feature visualization</strong> answers questions about what a network — or parts of a network — are looking for by generating examples.
-    </figcaption>
-  </div>
-  <div>
-    <div class="images">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_50.png?v=1573258995667"/>
-   <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_50.png?v=1573258995667"/>
-    </div>
-    <figcaption>
-    <strong>Attribution</strong>   
-        <figcaption>
-
-</figure>
-        <h4>Impact on Individual Images</h4>
-       <p>  <p>
-        
-      <strong>bold</strong>, <em>italics</em>,
-
-        
-      <div class="description">
+      <div class="descriptions">
         <p> Pruning has a non-uniform impact across classes; a fraction of classes are 
           disproportionately and systematically impacted by the introduction of sparsity.
           in a statistically significant way.
@@ -443,10 +414,10 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
           as a fraction of total PIEs and non-PIE codified):</p>
         </div>
 <dt-appendix>
-<h2>Acknowledgments</h2>
+<h3>Acknowledgments</h3>
 <p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros, Prajit Ramachandran, Pieter Kindermans, Erich Elsen and Moustapha Cisse. We thank the institutional support and encouragement of Dan Nanas, Rita Ruiz, Sally Jesmonth and Alexander Popper.
-This article was prepared partly relying on the <a href="https://distill.pub">Distill</a> <a href="https://github.com/distillpub/template">template</a>.</p>
-<h3 id="citation">Citation</h3>
+The appendix to this article was prepared by partly using <a href="https://distill.pub">Distill</a> <a href="https://github.com/distillpub/template">template</a>.</p>
+<h3>Citation</h3>
 <p>For attribution in academic contexts, please cite this work as</p>
 <pre class="citation short">David Ha, "Reinforcement Learning for Improving Agent Design", 2018.</pre>
 <p>BibTeX citation</p>
@@ -458,21 +429,6 @@ This article was prepared partly relying on the <a href="https://distill.pub">Di
   note   = "\url{https://designrl.github.io}",
   year   = {2018}
 }</pre>
-
- <p></p>
-  <h3 id="citation">Citation</h3>
-<p>For attribution in academic contexts, please cite this work as</p>
-<pre class="citation short">Hooker et al., "Selective Brain Damage: Measuring the Disparate Impact of Model Pruning", 2019.</pre>
-<p>BibTeX citation</p>
-<pre class="citation long">@article{Ha2018designrl,
-  author = {Hooker, Sara and Courville, Aaron and Dauphin, Yann and Frome, Andrea},
-  title  = {Selective Brain Damage: Measuring the Disparate Impact of Model Pruning},
-  eprint = {arXiv:1810.03779},
-  url    = {https://designrl.github.io},
-  note   = "\url{https://designrl.github.io}",
-  year   = {2019}
-}</pre>
-</dt-appendix>
 </dt-appendix>
 <script type="text/bibliography">
 @ARTICLE{openai_gym,
@@ -1063,4 +1019,3 @@ url="https://openreview.net/forum?id=SyfiiMZA-",
   year={2013},
   publisher={ACM}
 }
-</script>
