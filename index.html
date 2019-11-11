@@ -296,6 +296,82 @@
       margin-top: 4px;
       width: 100%;
     }
+    
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
   
 
     
@@ -341,7 +417,7 @@
               less ``forgettable'' as sparsity is introduced?
         
           <p>Our results are surprising and suggest caution is needed before deploying pruned models to sensitive domains. Our central finding is that pruning systematically impacts certain classes and images more than others. The images most impacted by pruning is a subset of examples that are more challenging for both a dense and sparse model to classify. <p>
-      <div class="descriptions">  
+    <div class="descriptions">  
       <div class="imgs-container">
           </div>
           <div class="imgs-container">
@@ -355,20 +431,21 @@
           <div class="img-container">1. Pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.</div>
           <div class="img-container">2. The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both sparse and non-sparse models to classify.</div>
           <div class="img-container">3. Pruning significantly reduces robustness to image corruptions and natural adversarial images.</div>
-      <div class="descriptions">
-      <h4>What does a deep neural network "forget" as it is pruned?</h4>
-      <div class="descriptions">
-        <h4>Our Approach</h4>
-        <p> If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
-          number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model.<p> 
-        <p>   This forms our <strong>null hypothesis</strong> --  the shift in accuracy for each class 
-          before and after pruning is the same as the shift in top-1 accuracy. <p> 
-        <p> For each class we consider whether
-          to reject the null hypothesis and accept the <strong>alternate hypothesis</strong>
-          that pruning disparately affected the class's accuracy in either a positive or negative direction.  <p> 
-         <p>  We use a two-tailed independent Welch's t-test to determine whether there is a statistically significant deviation
-          from the expected shift for each class in the dataset. More details about our methodology can be found in <p> 
-        <p> <p> 
+      </div>
+    
+    <h4>What does a deep neural network "forget" as it is pruned?</h4>
+    <div class="descriptions">
+    <h4>Our Approach</h4>
+    <p> If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
+      number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model.<p> 
+    <p>   This forms our <strong>null hypothesis</strong> --  the shift in accuracy for each class 
+      before and after pruning is the same as the shift in top-1 accuracy. <p> 
+    <p> For each class we consider whether
+      to reject the null hypothesis and accept the <strong>alternate hypothesis</strong>
+      that pruning disparately affected the class's accuracy in either a positive or negative direction.  <p> 
+     <p>  We use a two-tailed independent Welch's t-test to determine whether there is a statistically significant deviation
+      from the expected shift for each class in the dataset. More details about our methodology can be found in <p> 
+    <p> <p> 
         
         
         <p> The directionality and magnitude of the impact is nuanced and surprising.
@@ -382,32 +459,86 @@
         
       <h4>Experiments</h4>
         
-<div class="gallery">
-  <a target="_blank" href="">
-    <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_50.png?v=1573258995667" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('fine grained')"> fine grained</button>
+  <button class="btn" onclick="filterSelection('multiple images')"> multiple images</button>
+  <button class="btn" onclick="filterSelection('abstract classes')"> abstract classes</button>
+  <button class="btn" onclick="filterSelection('image corruptions')"> image corruptions</button>
+  <button class="btn" onclick="filterSelection('atypical examples')"> atypical examples</button>
+  <button class="btn" onclick="filterSelection('incorrect ground truth')"> incorrect ground truth</button>
+<hr >
 </div>
+<div>
 
-<div class="gallery">
-  <a target="_blank" href="img_forest.jpg">
-    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+      <h4>Mountains</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+      <h4>Lights</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+      <h4>Forest</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
 
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
+  <div class="column cars">
+    <div class="content">
+      <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
 
-<div class="gallery">
-  <a target="_blank" href="img_mountains.jpg">
-    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="People" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people2.jpg" alt="People" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people3.jpg" alt="People" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!-- END GRID -->
 </div>
         
       <div class="descriptions">
@@ -423,9 +554,9 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
 <!-- perturbation charts -->
 <div>
 <div>
-<button onclick="toggle(['pie'], ['a','c'])" class="js-toggler active button-unstyled small-copy py-0.25 mr-0.5">PIE Images</button>
-<button onclick="toggle(['a'], ['pie', 'c'])" class="js-toggler button-unstyled small-copy py-0.25 mr-0.5">ImageNet-A</button>
-<button onclick="toggle(['c'], ['pie', 'a'])" class="js-toggler button-unstyled small-copy py-0.25">ImageNet-C</button>
+<button onclick="filterSelection('fine grained')" class="btn active">PIE Images</button>
+<button onclick="filterSelection('fine grained')" class="btn">ImageNet-A</button>
+<button onclick="filterSelection('fine grained')" class="btn">ImageNet-C</button>
 <hr >
 </div>
 <div>
@@ -439,7 +570,7 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
 </figure>
 <figure id="c" class="position-absolute w-100" style="top:0;left:0;opacity:0">
   <h6></h6>
-  <div id="imagenet_c_a></div>
+  <div id="imagenet_c_a"></div>
 </figure>
   
 </div>
