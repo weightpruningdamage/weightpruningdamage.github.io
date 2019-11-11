@@ -328,7 +328,7 @@ font_ {
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 140.33%;
+  width: 33.33%;
   display: none; /* Hide columns by default */
 }
 
@@ -369,10 +369,71 @@ font_ {
   background-color: #666;
    color: white;
 }
+
+.hvrbox,
+.hvrbox * {
+	box-sizing: border-box;
+}
+.hvrbox {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+.hvrbox img {
+	max-width: 100%;
+}
+.hvrbox .hvrbox-layer_bottom {
+	display: block;
+}
+.hvrbox .hvrbox-layer_top {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 15px;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+	opacity: 1;
+}
+.hvrbox .hvrbox-text {
+	text-align: center;
+	font-size: 18px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.hvrbox .hvrbox-text_mobile {
+	font-size: 15px;
+	border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+	border-top: 1px solid rgba(179, 179, 179, 0.7);
+	margin-top: 5px;
+	padding-top: 2px;
+	display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+	display: block;
+}
   
 
-    
-  </style>
+</style>
 </head>
 <body>
   <div id="scroll-container">
@@ -473,26 +534,28 @@ font_ {
 <div class="row">
   <div class="column abstract">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_5.png?v=1573258926064" alt="Mountains" style="width:140%">
-      <p>True Label: Cloak</p>
-      <p>Baseline Prediction: Gasmask</p>
-       <p> Pruned Prediction: Breastplate</p>
+<div class="hvrbox">
+	<img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_5.png?v=1573258926064" style="width:100%"
+      alt="Mountains" class="hvrbox-layer_bottom">
+	<div class="hvrbox-layer_top">
+		<div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+	</div>
+</div>
+  <div class="hvrbox">
+	<img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" style="width:100%"
+      alt="Mountains" class="hvrbox-layer_bottom">
+	<div class="hvrbox-layer_top">
+		<div class="hvrbox-text">True Label: Toilet Tissue, Baseline Prediction: Bath Towel. Pruned Prediction: Great White Shark. </div>
+	</div>
     </div>
   </div>
   <div class="column abstract">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="Lights" style="width:140%">
-      <p>True Label: Toilet Tissue</p>
-      <p>Baseline Prediction: Bath Towel</p>
-       <p> Pruned Prediction: Great White Shark</p>
-    </div>
-  </div>
-  <div class="column abstract">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F364_schooner_schooner_yawl.png?v=1573469387070" alt="Nature" style="width:140%">
-      <p>True Label: Schooner</p>
-      <p>Baseline Prediction: Schooner</p>
-       <p> Pruned Prediction: Yawl</p>
+      <div class="hvrbox">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F364_schooner_schooner_yawl.png?v=1573469387070" alt="Nature" style="width:100%"  class="hvrbox-layer_bottom">
+        <div class="hvrbox-layer_top">
+		<div class="hvrbox-text">True Label: Schooner, Baseline Prediction: Schooner. Pruned Prediction: Yawl. </div>
+	</div>
     </div>
   </div>
 
