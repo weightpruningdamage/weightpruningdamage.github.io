@@ -27,10 +27,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-<!--<script src="lib/jquery-1.12.4.min.js"></script>
-<script src="lib/mobile-detect.min.js"></script>-->
-  <script src="lib/template.v1.js"></script>
 
   <style>
      body {
@@ -138,9 +134,7 @@
       padding-right: 15px;
       padding-left: 15px;
       margin-right: auto;
-      margin-left: auto;
-      
-      
+      margin-left: auto;   
     }
     
   
@@ -196,57 +190,15 @@
     .cover {
       color: #ddd;
     }
-
-
-    authors {
+    
+    .authors {
       margin-top: -40px;
-      font-size: 15px;
       overflow: hidden;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      font-size: 0.8rem;
-      line-height: 1.8em;
-      padding: 1.5rem 0;
-      min-height: 1.8em;
-    }
-    
-    authors .byline {
-    grid-template-columns: 1fr 1fr;
-    grid-column: text}
-    
-    authors .authors-affiliations {
-      grid-column-end: span 2;
-      grid-template-columns: 1fr 1fr;
-      margin-bottom: 1em;
-    }
-    
-    authors h3 {
-      font-size: 0.6rem;
-      font-weight: 400;
-      color: rgba(0, 0, 0, 0.5);
-      margin: 0;
-      text-transform: uppercase;
-    }
-    
-    authors p {
-  margin: 0;
-}
-
-authors a{
-  color: rgba(0, 0, 0, 0.8);
-  text-decoration: none;
-  border-bottom: none;
-}
-
-authors a:hover {
-  text-decoration: underline;
-  border-bottom: none;
-}
-
-authors p.author {
-  font-weight: 500;
-}
-
-authors .affiliations {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    line-height: 1.8em;
+    padding: 1.5rem 0;
+    min-height: 1.8em;
     }
     
 
@@ -362,42 +314,9 @@ authors .affiliations {
       <div class="institutions"></div>
        </div>
     </div>
- <d-byline>
-  <div class="byline grid">
-    <div class="authors-affiliations grid">
-      <h3>Authors</h3>
-      <h3>Affiliations</h3> 
-        <p class="author">
-        <a class="name" href="https://www.sarahooker.me/">Sara Hooker</a>
-        </p>
-        <p class="affiliation">
-        <a class="affiliation" href="https://g.co/brain">Google Brain</a>
-        </p>
-        <p class="author">
-        <a class="name" href="https://scholar.google.com/citations?user=km6CP8cAAAAJ&hl=en">Aaron Courville</a>
-        </p>
-        <p class="affiliation">
-        <a class="affiliation" href="https://g.co/brain">MILA</a>
-        </p>
-        <p class="author">
-        <a class="name" href="http://www.dauphin.io/">Yann Dauphine</a>
-        </p>
-        <p class="affiliation">
-        <a class="affiliation" href="https://research.google.com/">Google Brain</a>
-        </p>
-        <p class="author">
-        <a class="name" href="https://scholar.google.com/citations?user=f9_wq_kAAAAJ&hl=en"> Andrea Frome</a>
-        </p>
-        <p class="affiliation">
-        <a class="affiliation" href="https://g.co/brain">Google Brain</a>
-        </p> </div>
-    <div>
-  </div>
-     </div>
-</d-byline> 
-  <div class="description">  
+      <div class="descriptions">
        <p> add note here saying this template was made available by James Wexler <p> 
-      
+
          <h3>What is lost when we prune deep neural networks?</h3>
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
             Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections 
