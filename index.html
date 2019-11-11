@@ -317,7 +317,6 @@
     </div>
       <div class="descriptions">
        <p> add note here saying this template was made available by James Wexler <p> 
-
          <h3>What is lost when we prune deep neural networks?</h3>
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
             Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections 
@@ -327,16 +326,15 @@
             however there is little scientific consensus on <em>what</em> exactly is lost. <p> 
             
             <p>In 1990, a popular paper was published titled Optimal Brain Damage. The paper was amongst the first [1,2,3] to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
-              to our biological synaptic pruning. The pruning method identifies non-essential weights to remove from the network by setting to zero.
+              to our biological synaptic pruning. <dt-cite key="williams1992"></dt-cite> The pruning method identifies non-essential weights to remove from the network by setting to zero.
               Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone [1,2,3].
               At face value, pruning does appear to promise you can can (almost) have it all. State of art pruning methods remove the majority of the weights with a negligable loss to top-1 accuracy. 
               These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions. All these attributes make pruned models ideal for deploying deep neural networks to mobile phones and other edge devices.
-          
             <p> However, it is equally unclear <em>what</em> exactly we give up when we prune a deep neural network. The cost to top-1 accuracy appears minimal if it is spread uniformally across all classes, but what if the cost is concentrated in a few classes? What makes performance on certain classes and images more or
               less ``forgettable'' as sparsity is introduced?
         
           <p>Our results are surprising and suggest caution is needed before deploying pruned models to sensitive domains. Our central finding is that pruning systematically impacts certain classes and images more than others. The images most impacted by pruning is a subset of examples that are more challenging for both a dense and sparse model to classify. <p>
-      <div class="description">  
+      <div class="descriptions">  
       <div class="imgs-container">
           </div>
           <div class="imgs-container">
@@ -351,10 +349,9 @@
           <div class="img-container">2. The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both sparse and non-sparse models to classify.</div>
           <div class="img-container">3. Pruning significantly reduces robustness to image corruptions and natural adversarial images.</div>
       <div class="descriptions">
-      <h3>What does a deep neural network "forget" as it is pruned?</h3>
+      <h4>What does a deep neural network "forget" as it is pruned?</h4>
       <div class="descriptions">
         <h4>Class Level Pruning Impact</h4>
-        
         <p> If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
           number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model.<p> 
         <p>   This forms our <strong>null hypothesis</strong> --  the shift in accuracy for each class 
@@ -371,7 +368,7 @@
           This amounts to selective <em>``brain damage"</em> with performance on certain classes evidencing
           far more sensitivity to the removal of model capacity. <p> 
           <p> More classes show a significant relative increase in accuracy than a decrease at every level, 
-          though the overall model accuracy decreases at every pruning level, indicating that the magnitude
+          though the overall model accuracy <dt-cite key="jansen2008strandbeests"></dt-cite> and Passive Walkers<dt-cite key="mcgeer1990passive,collins2001three"></dt-cite> decreases at every pruning level, indicating that the magnitude
           of class decreases must be larger in order to pull the model accuracy lower.<p>
         
       <h4>Experiments</h4>
@@ -415,8 +412,14 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
         </div>
 <dt-appendix>
 <h3>Acknowledgments</h3>
-<p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros, Prajit Ramachandran, Pieter Kindermans, Erich Elsen and Moustapha Cisse. We thank the institutional support and encouragement of Dan Nanas, Rita Ruiz, Sally Jesmonth and Alexander Popper.
-The appendix to this article was prepared by partly using <a href="https://distill.pub">Distill</a> <a href="https://github.com/distillpub/template">template</a>.</p>
+<p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, 
+  Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, 
+  Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros,
+  Prajit Ramachandran, Pieter Kindermans, 
+  Erich Elsen and Moustapha Cisse. 
+  We thank the institutional support and encouragement of Dan Nanas,
+  Rita Ruiz, Sally Jesmonth and Alexander Popper.
+The appendix and citation management for this article was prepared by partly using <a href="https://distill.pub">Distill</a> <a href="https://github.com/distillpub/template">template</a>.</p>. The template itself is based in part on <a href="">SmoothGrad</a> <a href="">template</a>.</p>. We thanks James Wexler for many helpful suggestions about setting up a usable external website to host this project.
 <h3>Citation</h3>
 <p>For attribution in academic contexts, please cite this work as</p>
 <pre class="citation short">David Ha, "Reinforcement Learning for Improving Agent Design", 2018.</pre>
