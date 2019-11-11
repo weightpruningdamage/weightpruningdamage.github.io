@@ -13,8 +13,6 @@
   <meta name="twitter:description" content="Measuring the disparate impact of model pruning on classes and individual images.">
   <meta name="twitter:url" content="http://pair-code.github.io/">
   <meta name="twitter:image" content="http://pair-code.github.io/images/preview.png">
-  <meta name="twitter:image:width" content="560">
-  <meta name="twitter:image:height" content="295">
   <meta name="twitter:label1" content="Written by" />
   <meta name="twitter:data1" content="Sara Hooker" />
   <meta name="twitter:label2" content="Filed under" />
@@ -298,6 +296,8 @@
       margin-top: 4px;
       width: 100%;
     }
+  
+
     
   </style>
 </head>
@@ -358,7 +358,7 @@
       <div class="descriptions">
       <h4>What does a deep neural network "forget" as it is pruned?</h4>
       <div class="descriptions">
-        <h4>Class Level Pruning Impact</h4>
+        <h4>Our Approach</h4>
         <p> If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
           number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model.<p> 
         <p>   This forms our <strong>null hypothesis</strong> --  the shift in accuracy for each class 
@@ -368,6 +368,8 @@
           that pruning disparately affected the class's accuracy in either a positive or negative direction.  <p> 
          <p>  We use a two-tailed independent Welch's t-test to determine whether there is a statistically significant deviation
           from the expected shift for each class in the dataset. More details about our methodology can be found in <p> 
+        <p> <p> 
+        
         
         <p> The directionality and magnitude of the impact is nuanced and surprising.
           Our results show that certain classes are relatively robust to the overall degradation 

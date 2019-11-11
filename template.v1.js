@@ -5,6 +5,50 @@
 	(factory((global.dl = global.dl || {})));
 }(this, (function (exports) { 'use strict';
 
+                             
+                             
+// toggle function
+var toggle = function (whichIds, otherIds) {
+  for (var i = 0; i < whichIds.length; i++) {
+    var whichId = whichIds[i];
+    var whichEl = document.getElementById(whichId);
+    if (!whichEl) return;
+    whichEl.style.opacity = 1;
+  }
+  for (var i = 0; i < otherIds.length; i++) {
+    var otherId = otherIds[i];
+    var otherEl = document.getElementById(otherId);
+    if (!otherEl) return;
+    otherEl.style.opacity = 0;
+  }
+};
+
+// togglers
+var initToggler = function () {
+  var togglers = document.querySelectorAll('.js-toggler');
+  if (!togglers.length) return;
+  for (var i = 0; i < togglers.length; i++) {
+    var toggler = togglers[i];
+    toggler.addEventListener('click', function (e) {
+      removeActiveTogglers(this.parentElement.querySelectorAll('.js-toggler'));
+      addActiveToggler(this);
+    });
+  }
+};
+var addActiveToggler = function (el) {
+  el.classList.add('active');
+};
+var removeActiveTogglers = function (els) {
+  els.forEach(function (el) {
+    el.classList.remove('active');
+  });
+};
+
+// init
+document.addEventListener('DOMContentLoaded', function () {
+  initToggler();
+});                             
+                             
 var html = function(dom) {
   if (!dom.querySelector("html").getAttribute("lang")) {
     dom.querySelector("html").setAttribute("lang", "en");
