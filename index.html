@@ -299,7 +299,7 @@
       width: 100%;
     }
     
-    * {
+* {
   box-sizing: border-box;
 }
 
@@ -321,12 +321,12 @@ font_ {
 
 /* Add padding BETWEEN each column (if you want) */
 .row,
-.row > .column {
+.row > .column_portfolio {
   padding: 0px;
 }
 
 /* Create three equal columns that floats next to each other */
-.column {
+.column_portfolio {
   float: left;
   width: 33.33%;
   display: none; /* Hide columns by default */
@@ -342,7 +342,7 @@ font_ {
 /* Content */
 .content {
   background-color: white;
-  padding: 7px;
+  padding: 10px;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -368,68 +368,6 @@ font_ {
 .btn.active {
   background-color: #666;
    color: white;
-}
-
-.hvrbox,
-.hvrbox * {
-	box-sizing: border-box;
-}
-.hvrbox {
-	position: relative;
-	display: inline-block;
-	overflow: hidden;
-	max-width: 100%;
-	height: auto;
-}
-.hvrbox img {
-	max-width: 100%;
-}
-.hvrbox .hvrbox-layer_bottom {
-	display: block;
-}
-.hvrbox .hvrbox-layer_top {
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	color: #fff;
-	padding: 15px;
-	-moz-transition: all 0.4s ease-in-out 0s;
-	-webkit-transition: all 0.4s ease-in-out 0s;
-	-ms-transition: all 0.4s ease-in-out 0s;
-	transition: all 0.4s ease-in-out 0s;
-}
-.hvrbox:hover .hvrbox-layer_top,
-.hvrbox.active .hvrbox-layer_top {
-	opacity: 1;
-}
-.hvrbox .hvrbox-text {
-	text-align: center;
-	font-size: 18px;
-	display: inline-block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-.hvrbox .hvrbox-text_mobile {
-	font-size: 15px;
-	border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
-	border-top: 1px solid rgba(179, 179, 179, 0.7);
-	margin-top: 5px;
-	padding-top: 2px;
-	display: none;
-}
-.hvrbox.active .hvrbox-text_mobile {
-	display: block;
 }
   
 
@@ -523,9 +461,7 @@ font_ {
   <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
   <button class="btn" onclick="filterSelection('multiple')"> multiple images</button>
   <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
-  <button class="btn" onclick="filterSelection('corruptions')"> image corruptions</button>
   <button class="btn" onclick="filterSelection('atypical')"> atypical examples</button>
-  <button class="btn" onclick="filterSelection('incorrect')"> incorrect ground truth</button>
 <hr >
 </div>
 <div>
@@ -538,7 +474,8 @@ font_ {
   <div class="column abstract">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
-      <h4>Retro</h4>
+      <h5>Retro</h5>
+      <p>Lorem ipsum dolor..</p>
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
@@ -547,12 +484,14 @@ font_ {
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Fast</h4>
       <p>Lorem ipsum dolor..</p>
+      <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="column abstract">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
@@ -562,6 +501,7 @@ font_ {
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Retro</h4>
       <p>Lorem ipsum dolor..</p>
+      <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="column atypical">
@@ -569,12 +509,14 @@ font_ {
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Fast</h4>
       <p>Lorem ipsum dolor..</p>
+      <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="column atypical">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
@@ -584,6 +526,7 @@ font_ {
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Retro</h4>
       <p>Lorem ipsum dolor..</p>
+      <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="column fine">
@@ -591,12 +534,14 @@ font_ {
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Fast</h4>
       <p>Lorem ipsum dolor..</p>
+      <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="column fine">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
@@ -606,6 +551,7 @@ font_ {
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Girl</h4>
       <p>Lorem ipsum dolor..</p>
+      <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="column multiple">
@@ -613,12 +559,14 @@ font_ {
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Man</h4>
       <p>Lorem ipsum dolor..</p>
+      <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="column multiple">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
       <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
       <p>Lorem ipsum dolor..</p>
   </div>
   </div>
