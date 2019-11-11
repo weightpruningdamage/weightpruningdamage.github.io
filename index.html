@@ -419,6 +419,30 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
          suggests that these hard-to-generalize-to images tend to be of lower image quality, mislabelled, entail abstract representations, require fine-grained classification or depict atypical class examples. We conducted a limited human study to inspect a random sample of $1200$ PIE and non-PIE ImageNet images.  We broadly group the properties we codify as indicative of 1) the exemplar being challenging or 2) the task being ill-specified. We introduce these groupings below (after each bucket we report the percentage of PIEs and non-PIEs in each category 
           as a fraction of total PIEs and non-PIE codified):</p>
         </div>
+        
+<!-- perturbation charts -->
+<div>
+<div>
+<button onclick="toggle(['memory'], ['dynamics','joint'])" class="js-toggler active button-unstyled small-copy py-0.25 mr-0.5">Reset memory</button>
+<button onclick="toggle(['dynamics'], ['memory', 'joint'])" class="js-toggler button-unstyled small-copy py-0.25 mr-0.5">Reset dynamics</button>
+<button onclick="toggle(['joint'], ['memory', 'dynamics'])" class="js-toggler button-unstyled small-copy py-0.25">Broken joint</button>
+<hr >
+</div>
+<div>
+<figure id="memory">
+  <h6>Time to success when the network’s memory is erased</h6>
+  <div id="chart-perturbation-memory"></div>
+</figure>
+<figure id="dynamics" class="position-absolute w-100" style="top:0;left:0;opacity:0">
+  <h6>Time to success when friction, mass, or gravity change</h6>
+  <div id="chart-perturbation-dynamics"></div>
+</figure>
+<figure id="joint" class="position-absolute w-100" style="top:0;left:0;opacity:0">
+  <h6>Time to success when the robot is impaired by breaking a random joint</h6>
+  <div id="chart-perturbation-joint"></div>
+</figure>
+</div>
+</div>
 <dt-appendix>
 <h3>Acknowledgments</h3>
 <p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, 
@@ -427,8 +451,8 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
   Prajit Ramachandran, Pieter Kindermans, 
   Erich Elsen and Moustapha Cisse. 
   We thank the institutional support and encouragement of Dan Nanas,
-  Rita Ruiz, Sally Jesmonth and Alexander Popper.
-The appendix and citation management for this article was prepared by partly using <a href="https://distill.pub">Distill</a> <a href="https://github.com/distillpub/template">template</a>.</p>. The template itself is based in part on <a href="https://pair-code.github.io/saliency/">SmoothGrad</a></p>. We thanks James Wexler for many helpful suggestions about setting up a usable external website to host this project.
+  Rita Ruiz, Sally Jesmonth and Alexander Popper. The appendix and citation management for this article was prepared by partly using <a href="https://distill.pub">Distill</a> <a href="https://github.com/distillpub/template">template</a>.</p>. 
+  The template itself is based in part on <a href="https://pair-code.github.io/saliency/">SmoothGrad</a></p>. We thanks James Wexler for many helpful suggestions about setting up a usable external website to host this project.
 <h3>Citation</h3>
 <p>For attribution in academic contexts, please cite this work as</p>
 <pre class="citation short">David Ha, "Reinforcement Learning for Improving Agent Design", 2018.</pre>
