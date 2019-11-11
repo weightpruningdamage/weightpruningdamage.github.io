@@ -310,6 +310,10 @@
   width: 33.33%;
   display: none; /* Hide columns by default */
 }
+
+.caption {
+  visibility: hidden;
+    }
     
 .row h3 {
       font-size: 30px;
@@ -349,12 +353,24 @@
 .btn:hover {
   background-color: #ddd;
 }
+.btn:hover .caption {
+  visibility: visible;
+}
 
 /* Add a dark background color to the active button */
 .btn.active {
   background-color: #666;
    color: white;
 }
+
+@media (max-width: 768px) {
+  .caption {
+    visibility:visible;
+  }
+}
+
+
+
   
 
 </style>
