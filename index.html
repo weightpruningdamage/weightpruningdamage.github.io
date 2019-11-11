@@ -443,9 +443,20 @@
   <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
   <button class="btn active" onclick="filterSelection('atypical')"> atypical examples</button>
   <button class="btn" onclick="filterSelection('incorrect')"> incorrect or inadequate ground truth</button>
-<hr >
+<hr>
 </div>
 <div>
+<figure id="fine", class="position-absolute w-100" style="top:0;left:0;opacity:0">
+  <h6>Does label 1 accurately or adequately label an object in the image?</h6>
+</figure>
+<figure id="multiple" class="position-absolute w-100" style="top:0;left:0;opacity:0">
+  <h6>Time to success when friction, mass, or gravity change</h6>
+</figure>
+<figure id="c" class="position-absolute w-100" style="top:0;left:0;opacity:0">
+  <h6></h6>
+</figure>
+</div>
+</div>    
 
 <!-- Portfolio Gallery Grid -->
 
@@ -562,22 +573,25 @@
   </div>
   <div class="column_portfolio incorrect">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
-      <h4>Man</h4>
-      <p>Lorem ipsum dolor..</p>
-      <p>Lorem ipsum dolor..</p>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F265_sleeping_bag_apron_bib.png?v=1573493328529" alt="atypical" style="width:100%">
+      <h4>Sleeping Bag</h4>
+      <p>Apron</p>
+      <p>Bib</p>
     </div>
   </div>
   <div class="column_portfolio incorrect">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
-      <h4>Desktop Computer</h4>
-      <p>Screen</p>
-      <p>Monitor</p>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F227_strawberry_buckeye_strawberry.png?v=1573493474861" alt="atypical" style="width:100%">
+      <h4>Strawberry</h4>
+      <p>Buckeye</p>
+      <p>Strawberry</p>
   </div>
   </div>
+  
+
 <!-- END GRID -->
 </div>
+  
   
 <div class="row">
   
@@ -729,9 +743,9 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
 <hr>
 </div>
 <div>
-<figure id="pie">
+<figure id="pie",  class="position-absolute w-100" style="top:0;left:0;opacity:0">
   <h6>PIE images are universally more challenging for sparse and dense models.</h6>
-  <div id="chart-perturbation-memory"></div>
+  <div id="pie"></div>
 </figure>
 <figure id="a" class="position-absolute w-100" style="top:0;left:0;opacity:0">
   <h6>Time to success when friction, mass, or gravity change</h6>
