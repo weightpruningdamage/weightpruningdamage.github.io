@@ -401,7 +401,7 @@ h1 {
        </div>
     </div>
       <div class="descriptions_">
-       <p> add note here saying this template was made available by James Wexler <p> 
+       <p> add note here saying this template was made available by James Wexler </p>
          <h3>What is lost when we prune deep neural networks?</h3>
          <div class="description_">
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
@@ -409,7 +409,7 @@ h1 {
             that are most useful for the environment.  
             Despite losing 50 % of all synapses between age two and ten, the brain continues to function.
             The phrase "use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
-            however there is little scientific consensus on <em>what</em> exactly is lost. <p> 
+            however there is little scientific consensus on <em>what</em> exactly is lost. </p>
             
             <p>In 1990, a popular paper was published titled Optimal Brain Damage. The paper was amongst the first [1,2,3] to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
               to our biological synaptic pruning. <dt-cite key="williams1992"></dt-cite> The pruning method identifies non-essential weights to remove from the network by setting to zero.
@@ -419,7 +419,7 @@ h1 {
             <p> However, it is equally unclear <em>what</em> exactly we give up when we prune a deep neural network. The cost to top-1 accuracy appears minimal if it is spread uniformally across all classes, but what if the cost is concentrated in a few classes? What makes performance on certain classes and images more or
               less ``forgettable'' as sparsity is introduced?
         
-          <p>Our results are surprising and suggest caution is needed before deploying pruned models to sensitive domains. Our central finding is that pruning systematically impacts certain classes and images more than others. The images most impacted by pruning is a subset of examples that are more challenging for both a dense and sparse model to classify. <p>
+          <p>Our results are surprising and suggest caution is needed before deploying pruned models to sensitive domains. Our central finding is that pruning systematically impacts certain classes and images more than others. The images most impacted by pruning is a subset of examples that are more challenging for both a dense and sparse model to classify. </p>
     <div class="description_">  
       <div class="imgs-container">
           </div>
@@ -440,25 +440,25 @@ h1 {
     <div class="description_">
     <h4>Our Approach</h4>
     <p> If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
-      number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model.<p> 
+      number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model.</p>
     <p>   This forms our <strong>null hypothesis</strong> --  the shift in accuracy for each class 
-      before and after pruning is the same as the shift in top-1 accuracy. <p> 
+      before and after pruning is the same as the shift in top-1 accuracy. </p>
     <p> For each class we consider whether
       to reject the null hypothesis and accept the <strong>alternate hypothesis</strong>
-      that pruning disparately affected the class's accuracy in either a positive or negative direction.  <p> 
+      that pruning disparately affected the class's accuracy in either a positive or negative direction.  </p>
      <p>  We use a two-tailed independent Welch's t-test to determine whether there is a statistically significant deviation
-      from the expected shift for each class in the dataset. More details about our methodology can be found in <p> 
-    <p> <p> 
+      from the expected shift for each class in the dataset. More details about our methodology can be found in </p>
         
         
         <p> The directionality and magnitude of the impact is nuanced and surprising.
           Our results show that certain classes are relatively robust to the overall degradation 
           experienced by the model whereas others degrade in performance far more than the model itself. 
           This amounts to selective <em>``brain damage"</em> with performance on certain classes evidencing
-          far more sensitivity to the removal of model capacity. <p> 
+          far more sensitivity to the removal of model capacity. </p>
           <p> More classes show a significant relative increase in accuracy than a decrease at every level, 
-          though the overall model accuracy <dt-cite key="jansen2008strandbeests"></dt-cite> and Passive Walkers<dt-cite key="mcgeer1990passive,collins2001three"></dt-cite> decreases at every pruning level, indicating that the magnitude
-          of class decreases must be larger in order to pull the model accuracy lower.<p>
+          though the overall model accuracy <dt-cite key="jansen2008strandbeests"></dt-cite> and Passive Walkers<dt-cite key="mcgeer1990passive,collins2001three"></dt-cite> 
+            decreases at every pruning level, indicating that the magnitude
+          of class decreases must be larger in order to pull the model accuracy lower.</p>
         
       <h4>Experiments</h4>
         
@@ -543,24 +543,14 @@ h1 {
   </div>
 <!-- END GRID -->
 </div>
-        
-      <div class="description_">
-        <p> Pruning has a non-uniform impact across classes; a fraction of classes are 
-          disproportionately and systematically impacted by the introduction of sparsity.
-          in a statistically significant way.
-The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
-              are more challenging for both sparse and non-sparse
-         suggests that these hard-to-generalize-to images tend to be of lower image quality, mislabelled, entail abstract representations, require fine-grained classification or depict atypical class examples. We conducted a limited human study to inspect a random sample of $1200$ PIE and non-PIE ImageNet images.  We broadly group the properties we codify as indicative of 1) the exemplar being challenging or 2) the task being ill-specified. We introduce these groupings below (after each bucket we report the percentage of PIEs and non-PIEs in each category 
-          as a fraction of total PIEs and non-PIE codified):</p>
-        </div>
-        
+  
 <!-- perturbation charts -->
 <div>
 <div>
 <button onclick="filterSelection('fine grained')" class="btn active">PIE Images</button>
 <button onclick="filterSelection('fine grained')" class="btn">ImageNet-A</button>
 <button onclick="filterSelection('fine grained')" class="btn">ImageNet-C</button>
-<hr >
+<hr>
 </div>
 <div>
 <figure id="pie">
@@ -578,6 +568,20 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
 </div>
 </div>
 
+        
+      <div class="description_">
+        <p> Pruning has a non-uniform impact across classes; a fraction of classes are 
+          disproportionately and systematically impacted by the introduction of sparsity.
+          in a statistically significant way.
+The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
+              are more challenging for both sparse and non-sparse
+         suggests that these hard-to-generalize-to images tend to be of lower image quality, mislabelled,
+          entail abstract representations, require fine-grained classification or depict atypical class examples.
+          We conducted a limited human study to inspect a random sample of $1200$ PIE and non-PIE ImageNet images.  We broadly group the properties we codify as indicative of 1) the exemplar being challenging or 2) the task being ill-specified. We introduce these groupings below (after each bucket we report the percentage of PIEs and non-PIEs in each category 
+          as a fraction of total PIEs and non-PIE codified):</p>
+        </div>
+        
+</html>
 <dt-appendix>
 <h3>Acknowledgments</h3>
 <p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, 
@@ -603,10 +607,7 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
   note   = "\url{https://designrl.github.io}",
   year   = {2018}
 }</pre>
-</div>
 </dt-appendix>
-</dt-appendix>
-</body>
 <script type="text/bibliography">
 @ARTICLE{openai_gym,
   author = {Brockman, G. and Cheung, V. and Pettersson, L. and Schneider, J. and Schulman, J. and Tang, J. and Zaremba, W.},
@@ -1196,3 +1197,5 @@ url="https://openreview.net/forum?id=SyfiiMZA-",
   year={2013},
   publisher={ACM}
 }
+</script>
+        
