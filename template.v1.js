@@ -18194,7 +18194,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 // Tooltips Initialization
 
-filterSelection("fine") // Execute the function and show all columns
+filterSelection("") // Execute the function and show all columns
 function filterSelection(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfolio");
@@ -18242,22 +18242,8 @@ var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace("active", "");
-    current[0].className.style.backgroundColor = ".style.backgroundColor"
+    var current = document.getElementsByClassName("btn active");
+    current[0].className = current[0].className.replace("btn active", "btn");
     this.className += " active";
-    this.className.style.backgroundColor = "#666";
-    
-    current[0]. = "#FFFFFF"
-            count = 1;        
-        }
-        else {
-            property.style.backgroundColor = "#7FFF00"
-            count = 0;
-        }
   });
-}  
-
-
-  background-color: 
-   color: white;
+} 
