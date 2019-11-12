@@ -18196,14 +18196,19 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
-  var x, i;
+  var x, y, i;
   x = document.getElementsByClassName("column_portfolio");
+  y = document.getElementsByClassName("column_header");
   if (c == "all") c = "";
   // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+  for (i = 0; i < y.length; i++) {
+    RemoveClass(y[i], "show");
+    if (y[i].className.indexOf(c) > -1) AddClass(y[i], "show");
   }
 }
 
