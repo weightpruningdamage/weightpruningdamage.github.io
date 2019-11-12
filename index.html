@@ -310,10 +310,6 @@
   width: 33.33%;
   display: none; /* Hide columns by default */
 }
-
-.caption {
-  visibility: hidden;
-    }
     
 .row h3 {
       font-size: 30px;
@@ -353,7 +349,7 @@
 .btn:hover {
   background-color: #ddd;
 }
-.btn:hover .caption {
+.btn:hover {
   visibility: visible;
 }
 
@@ -363,14 +359,13 @@
    color: white;
 }
 
-@media (max-width: 768px) {
-  .caption {
-    visibility:visible;
-  }
+figure {
+  display: table;
 }
-
-
-
+figcaption {
+  display: table-caption;
+  caption-side: top;
+}
   
 
 </style>
@@ -478,11 +473,12 @@
 </figure>
 </div>
 </div>    
-
 <!-- Portfolio Gallery Grid -->
+           
 
-  
+
 <div class="row">
+
   <div class="column_portfolio abstract">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="atypical" style="width:100%">
@@ -611,6 +607,7 @@
 
 <!-- END GRID -->
 </div>
+
   
   
 <div class="row">
