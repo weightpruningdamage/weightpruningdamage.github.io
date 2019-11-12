@@ -327,7 +327,7 @@
 /* Content */
 .content {
   background-color: white;
-  padding: 10px;
+  padding: 5px;
 }
     
 
@@ -444,11 +444,11 @@
 <p>Click on the buttons to filter through a sample of PIE images.</p>
       
 <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('fine')"> fine grained</button>
+  <button class="btn active" onclick="filterSelection('abstract')"> abstract classes</button>
   <button class="btn" onclick="filterSelection('multiple')"> multiple possible labels</button>
-  <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
   <button class="btn" onclick="filterSelection('atypical')"> atypical examples</button>
   <button class="btn" onclick="filterSelection('incorrect')"> incorrect or inadequate ground truth</button>
+  <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
 <hr>
 </div>
   
@@ -456,12 +456,12 @@
       
 <div class="row">
   <div class="column_header abstract">
-    <h5>class object in an abstract form, such as a painting, drawing or rendering
+    <h5>class object is in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
   </div>
   <div class="column_header incorrect">
     <div class="content">
-    <h5>images where the ground truth label is incorrect or there is insufficient information for a human to arrive at the correct ground truth label.</h5>
+    <h5>the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
     </div>
   </div>
   
@@ -473,15 +473,16 @@
   </div>
   <div class="column_header fine">
     <div class="content">
-    <h5> involves classifying an object that is semantically close to 
+    <h5> image depicts an object that is semantically close to 
       various other classes present the data set (e.g.,
       rock crab and fiddler crab, cuirass and breastplate).</h5>
     </div>
   </div>
   <div class="column_header multiple">
     <div class="content">
-    <h5>images depicting multiple objects where a human may consider several labels to be appropriate (e.g.,
-      desktop computer consisting of a screen, mouse and monitor, a barber chair in a barber shop, a wine bottle which is full of red wine).</h5>
+    <h5>image depicts multiple objects, a human may consider several labels to be appropriate predictions (e.g.,
+      desktop computer consisting of a screen, mouse and monitor, a barber chair in a barber shop,
+      a wine bottle which is full of red wine).</h5>
     </div>
   </div>
     <!-- END GRID -->
@@ -751,7 +752,7 @@
 </div>
       
 <script>
-filterSelection("fine") // Execute the function and show all columns
+filterSelection("abstract") // Execute the function and show all columns
 function filterSelection(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfolio");
