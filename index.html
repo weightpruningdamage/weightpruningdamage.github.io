@@ -310,11 +310,18 @@
   width: 33.33%;
   display: none; /* Hide columns by default */
 }
+
+.column_header {
+  float: left;
+  width: 100.00%;
+  display: none; /* Hide columns by default */
+}
     
-.row h3 {
+.row h2 {
       font-size: 30px;
       letter-spacing: 0.05em;
       font-weight: 500;
+      column-span: all;
     }
 
 /* Clear floats after rows */
@@ -345,10 +352,6 @@
   cursor: pointer;
 }
     
-h2 {
-  column-span: all;
-}
-
 /* Add a grey background color on mouse-over */
 .btn:hover {
   background-color: #ddd;
@@ -464,46 +467,40 @@ h2 {
 <!-- Portfolio Gallery Grid -->
       
 <div class="row">
-  <div class="column_portfolio abstract">
+  
+  <div class="column_header abstract">
     <div class="content">
-      <h3>An abstract representation is an object in an abstract form, such as a painting, drawing or rendering
-        using a different material.</h3>
-    </div>
-  </div>
-  <div class="column_portfolio abstract">
-    <div class="content">
-    </div>
-  </div>
-  <div class="column_portfolio abstract">
-    <div class="content">
+    <h4>An abstract representation is an object in an abstract form, such as a painting, drawing or rendering
+        using a different material.</h4>
     </div>
   </div>
   
-  <div class="column_portfolio atypical">
+  <div class="column_header incorrect">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_100.png?v=1573258953383" alt="atypical" style="width:100%">
-      <h4>Petri Dish</h4>
-      <p>Espresso</p>
-      <p>Petri Dish</p>
+    <h4>An abstract representation is an object in an abstract form, such as a painting, drawing or rendering
+        using a different material.</h4>
     </div>
   </div>
-  <div class="column_portfolio fine">
+  
+  <div class="column_header atypical">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F94_coffeepot_espresso_maker_coffeepot.png?v=1573496269717" alt="atypical" style="width:100%">
-      <h4>coffeepot</h4>
-      <p>espresso maker</p>
-      <p>coffeepot</p>
+    <h4>An abstract representation is an object in an abstract form, such as a painting, drawing or rendering
+        using a different material.</h4>
     </div>
   </div>
-  <div class="column_portfolio multiple">
+  <div class="column_header fine">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F241_barber_chair_barber_chair_barbershop.png?v=1573496288027" alt="atypical" style="width:100%">
-      <h4>barber chair</h4>
-      <p>barber chair</p>
-      <p>barbershop</p>
+    <h4>An abstract representation is an object in an abstract form, such as a painting, drawing or rendering
+        using a different material.</h4>
     </div>
   </div>
-
+  <div class="column_header multiple">
+    <div class="content">
+    <h4>An abstract representation is an object in an abstract form, such as a painting, drawing or rendering
+        using a different material.</h4>
+    </div>
+  </div>
+  
 <div class="row">
   <div class="column_portfolio abstract">
     <div class="content">
@@ -527,14 +524,6 @@ h2 {
       <h4>Sombrero</h4>
       <p>Cowboy Hat</p>
       <p>Dough</p>
-    </div>
-  </div>
-  <div class="column_portfolio incorrect">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F201_tub_caldron_wok.png?v=1573489142261" alt="atypical" style="width:100%">
-      <h4>tub</h4>
-      <p>cauldron</p>
-      <p>wok</p>
     </div>
   </div>
   <!-- END GRID -->
