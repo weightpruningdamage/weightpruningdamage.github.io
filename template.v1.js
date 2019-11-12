@@ -18194,7 +18194,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 // Tooltips Initialization
 
-filterSelection("all") // Execute the function and show all columns
+filterSelection("fine") // Execute the function and show all columns
 function filterSelection(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfolio");
@@ -18244,7 +18244,20 @@ for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace("active", "");
-    this.className += "active";
+    current[0].className.style.backgroundColor = ".style.backgroundColor"
+    this.className += " active";
+    this.className.style.backgroundColor = "#666";
+    
+    current[0]. = "#FFFFFF"
+            count = 1;        
+        }
+        else {
+            property.style.backgroundColor = "#7FFF00"
+            count = 0;
+        }
   });
 }  
 
+
+  background-color: 
+   color: white;
