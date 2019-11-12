@@ -18192,6 +18192,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
 
+// Tooltips Initialization
 
 filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
@@ -18242,6 +18243,3 @@ for (var i = 0; i < btns.length; i++) {
   });
 }  
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})

@@ -372,6 +372,10 @@ figcaption {
   padding: 20px;
   margin-top: 20px;
 }
+
+h2 {
+  column-span: all;
+}
   
 
 </style>
@@ -462,17 +466,15 @@ figcaption {
 <p>Click on the buttons to filter through a sample of PIE images.</p>
       
 <div id="myBtnContainer">
-  <button class="btn  btn-primary active " data-placement="top" data-toggle="tooltip" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>" onclick="filterSelection('fine')"> fine grained </button>
-  <button class="btn  btn-primary" data-placement="top" data-toggle="tooltip" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>" data-html="true" onclick="filterSelection('multiple')"> multiple possible labels</button>
-  <button class="btn  btn-primary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>" onclick="filterSelection('abstract')"> abstract classes</button>
-  <button class="btn  btn-primary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>" onclick="filterSelection('atypical')"> atypical examples</button>
-  <button class="btn  btn-primary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>" onclick="filterSelection('incorrect')"> incorrect or inadequate ground truth</button>
+  <button class="btn active" onclick="filterSelection('fine')"> fine grained </button>
+  <button class="btn" onclick="filterSelection('multiple')"> multiple possible labels</button>
+  <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
+  <button class="btn" onclick="filterSelection('atypical')"> atypical examples</button>
+  <button class="btn" onclick="filterSelection('incorrect')"> incorrect or inadequate ground truth</button>
 <hr>
 </div>
   
 <!-- Portfolio Gallery Grid -->
-           
-
 
 <div class="row">
   <div class="column_portfolio abstract">
@@ -498,6 +500,7 @@ figcaption {
       <p>Cowboy Hat</p>
       <p>Dough</p>
     </div>
+     <h2>An abstract representation is an object in an abstract form, such as a painting, drawing or rendering using a different material.</h2>
   </div>
   
   <div class="column_portfolio atypical">
