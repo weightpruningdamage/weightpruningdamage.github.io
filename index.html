@@ -970,14 +970,60 @@
         Our results show that certain classes are relatively robust to the overall degradation experienced 
         by the model whereas others degrade in performance far more than the model itself. This amounts to 
         <em>selective brain damage</em> with performance on certain classes evidencing far more sensitivity 
-        to the removal of model capacity. Table~\ref{table:imagenet_class_recall_summary} shows that more classes
-        show a significant \emph{relative} increase in accuracy than a decrease at every level, though the overall
+        to the removal of model capacity. More classes
+        show a significant <em>relative</em> increase in accuracy than a decrease at every level, though the overall
         model accuracy decreases at every pruning level, indicating that the magnitude of class decreases must be larger 
         in order to pull the model accuracy lower. The model appears to cannibalize performance on a small subset of classes
-        in order to preserve performance (and even improve relative performance on a small number of classes). </p>
+        in order to preserve performance. </p>
       
-      
-      
+<div id="myBtnContainer_2">
+  <button class="btn active" onclick="filterSelection('abstract')"> abstract classes</button>
+  <button class="btn" onclick="filterSelection('atypical')"> atypical examples</button>
+  <button class="btn" onclick="filterSelection('incorrect')"> incorrect or inadequate ground truth</button>
+  <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
+<hr>
+        
+<div class="row">
+  <div class="column_header abstract">
+    <h5>class object is in an abstract form, such as a painting, drawing or rendering
+        using a different material.</h5>
+  </div>
+  <div class="column_header incorrect">
+    <div class="content">
+    <h5>the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
+    </div>
+  </div>
+  
+  <div class="column_header atypical">
+    <div class="content">
+    <h5>abstract representation is an object in an abstract form, such as a painting, drawing or rendering
+        using a different material.</h5>
+    </div>
+  </div>
+  <div class="column_header fine">
+    <div class="content">
+    <h5> image depicts an object that is semantically close to 
+      various other classes present the data set (e.g.,
+      rock crab and fiddler crab, cuirass and breastplate).</h5>
+    </div>
+  </div>
+  <div class="column_header multiple">
+    <div class="content">
+    <h5>image depicts multiple objects, a human may consider several labels to be appropriate predictions (e.g.,
+      desktop computer consisting of a screen, mouse and monitor, a barber chair in a barber shop,
+      a wine bottle which is full of red wine).</h5>
+    </div>
+  </div>
+ <div class="column_header freqently">
+    <div class="content">
+    <h5>image depicts object(s) with categories that frequently co-occur together.
+      Often, this may be because multiple labels describe the same object. For example, a missile is a type of projectile.</h5>
+    </div>
+  </div>
+    <!-- END GRID -->
+</div>
+</div>
+         <div class="description_">  
            <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
              critical details in the ways that pruning impacts model generalization. An understanding of these trade-offs is critical 
               for sensitive tasks such as hiring \citep{Dastin_2018, Harwell_2019}, health care diagnostics \citep{2019Hongtao, Gruetzemacher20183DDL}, 
@@ -1039,34 +1085,32 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-</script>
-      
-<div class="description_">
-        <p> Pruning has a non-uniform impact across classes; a fraction of classes are 
-          disproportionately and systematically impacted by the introduction of sparsity.
-          in a statistically significant way.
-The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs),
-              are more challenging for both sparse and non-sparse
-         suggests that these hard-to-generalize-to images tend to be of lower image quality, mislabelled,
-          entail abstract representations, require fine-grained classification or depict atypical class examples.
-          We conducted a limited human study to inspect a random sample of $1200$ PIE and non-PIE ImageNet images.  We broadly group the properties we codify as indicative of 1) the exemplar being challenging or 2) the task being ill-specified. We introduce these groupings below (after each bucket we report the percentage of PIEs and non-PIEs in each category 
-          as a fraction of total PIEs and non-PIE codified):</p>
-        </div>
   
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer_2");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
   
         
 </html>
 <dt-appendix>
 <h3>Acknowledgments</h3>
-<p>We thank the generosity of our peers for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, 
+<p>We thank the generosity of our peers and colleagues for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, 
   Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, 
-  Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros,
-  Prajit Ramachandran, Pieter Kindermans, 
-  Erich Elsen and Moustapha Cisse. </p>
+  Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros and
+  Prajit Ramachandran. </p>
   <p> We thank the institutional support and encouragement of Dan Nanas,
   Rita Ruiz, Sally Jesmonth and Alexander Popper. </p>
- <p> A special thank you is due to James Wexler for many helpful suggestions about how to visualize and communicate our results in an interactive manner. This article was in part prepared using <a href="https://github.com/distillpub/template">this</a><   template and style guide. The appendix and citation management for this article was prepared by partly using 
-  <a href="https://distill.pub">Distill</a> <a href="https://github.com/distillpub/template">template v1</a></p>
+ <p> A special thank you is due to James Wexler for many helpful suggestions about how to visualize and communicate our results in an interactive format. This article was in part prepared using the <a href="https://pair-code.github.io/saliency/">Google AI Pair</a> template and style guide.
+   The citation management for this article uses the <a href="https://github.com/distillpub/template">template v1</a> of the Distill style script. </p>
 <h3>Citation</h3>
 <p>For attribution in academic contexts, please cite this work as</p>
 <pre class="citation short">David Ha, "Reinforcement Learning for Improving Agent Design", 2018.</pre>
