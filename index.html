@@ -396,11 +396,18 @@
               to our biological synaptic pruning. <dt-cite key="williams1992"></dt-cite> The pruning method identifies non-essential weights to remove 
               from the network by setting to zero.
               Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone [1,2,3].</p>
-             <p>  At face value, pruning does appear to promise you can can (almost) have it all. State of art pruning methods remove the majority of the weights with a negligable loss to top-1 accuracy. 
-              These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions. All these attributes make pruned models ideal for deploying deep neural networks to mobile phones and other edge devices.</p>
-            <p> The ability to prune networks with seemingly so little degradation to generalization performance is puzzling. The cost to top-1 accuracy appears minimal 
+             <p>  At face value, pruning does appear to promise you can can (almost) have it all. State of art pruning methods remove the 
+               majority of the weights with a 
+               negligable loss to top-1 accuracy. 
+              These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions. 
+               All these attributes make pruned models ideal for deploying deep neural networks to mobile phones and other edge devices.</p>
+            <p> The ability to prune networks with seemingly so little degradation to generalization performance is puzzling. The cost
+              to top-1 accuracy appears minimal 
               if it is spread uniformally across all classes, but what if the cost is concentrated in only a few classes? 
               <i>Are certain types of examples or classes disproportionately impacted by pruning?</i></p>
+            <p> An understanding of these trade-offs is critical for sensitivetasks such as hiring [15,25], health care diagnostics [71,19], self-driving cars [56], where theintroduction of pruning may be at odds with fairness objectives to treat protected attributes uniformlyand/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonlyused in these domains, 
+           often driven by the resource constraints of deploying models to mobile phoneor embedded devices [17, 60] </p>
+       
            
            <div class="description_">  
       <div class="imgs-container">
@@ -420,9 +427,12 @@
              <div class="descriptions_"> 
 
             <p> In this work, we propose a framework to identify the classes and images where there is a high level of disagreement or difference in
-              generalization performance between prunedand non-pruned models. The images impacted by pruning, which we term pruning identified exemplars, are more challenging 
-              for both pruned and non-pruned models
-              to classify. PIE images are the most frequent prediction differs between a These hard-to-generalize-to images tend to be mislabelled, of lower image quality, depict multiple objects or require fine-grained classification.</p>
+              generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), and classes are systematically more impacted by the introduction of sparsity. </p>
+              
+                <p> The images impacted by pruning, which we term pruning identified exemplars, are images where the most frequent prediction differs between a population of 
+                  independently trained pruned and non-pruned models. Removing PIE images from the test-set greatly improves top-1 accuracy for both pruned and non-pruned models.
+                  These hard-to-generalize-to images tend to be mislabelled, of lower image quality, 
+                  depict multiple objects or require fine-grained classification.</p>
       <p>Click the buttons to see a sample of PIE identified ImageNet images:</p>
       
 <div id="myBtnContainer">
@@ -947,11 +957,14 @@
 <!-- END GRID -->
 </div>
     <div class="description_">  
-      <p>At a category level, our results are nuanced and surprising. If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
+      <p>At a class level, our results are nuanced and surprising. If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
       number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model. Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
-        “real” amounts to determining whether two data samples are drawn from the same underlying distribution. We train a population of pruned and non-pruned models use a two-sample, two-tailed,
+        “real” amounts to determining whether two data samples are drawn from the same underlying distribution. 
+        We train a population of pruned and non-pruned models and use a two-sample, two-tailed,
         independent Welch’s t-test to determine whether the means of the samples differ significantly.
         This allows us to identify a subset of classes that perform better or worse than expected.</p>
+      
+      <p>insert chart here</p>
       
            <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
              critical details in the ways that pruning impacts model generalization. An understanding of these trade-offs is critical 
@@ -983,14 +996,6 @@
           though the overall model accuracy <dt-cite key="jansen2008strandbeests"></dt-cite> and Passive Walkers<dt-cite key="mcgeer1990passive,collins2001three"></dt-cite> 
             decreases at every pruning level, indicating that the magnitude
           of class decreases must be larger in order to pull the model accuracy lower.</p>
-        
-<h4>Pruning Identified Exemplars</h4>
-
-
-     <div class="description_">  
-       
-          <p>Our results are surprising and suggest caution is needed before deploying pruned models to sensitive domains. Our central finding is that pruning systematically impacts certain classes and images more than others. The images most impacted by pruning is a subset of examples that are more challenging for both a dense and sparse model to classify. </p>
-    
       
 <script>
 filterSelection("abstract") // Execute the function and show all columns
