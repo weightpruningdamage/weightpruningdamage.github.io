@@ -973,14 +973,14 @@
         to the removal of model capacity. More classes
         show a significant <em>relative</em> increase in accuracy than a decrease at every level, though the overall
         model accuracy decreases at every pruning level, indicating that the magnitude of class decreases must be larger 
-        in order to pull the model accuracy lower. The model appears to cannibalize performance on a small subset of classes
-        in order to preserve performance. </p>
+        in order to pull the model accuracy lower. The model cannibalizes performance on a small subset of classes
+        in order to preserve overall performance. </p>
       
 <div id="myBtnContainer_2">
-  <button class="btn active" onclick="filterSelection('abstract')"> abstract classes</button>
-  <button class="btn" onclick="filterSelection('atypical')"> atypical examples</button>
-  <button class="btn" onclick="filterSelection('incorrect')"> incorrect or inadequate ground truth</button>
-  <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
+  <button class="btn active" onclick="filterSelection('pie')"> pie generalization</button>
+  <button class="btn" onclick="filterSelection('atypical')"> generalization without pie</button>
+  <button class="btn" onclick="filterSelection('incorrect')"> imagenet-c</button>
+  <button class="btn" onclick="filterSelection('incorrect')"> imagenet-a</button>
 <hr>
         
 <div class="row">
