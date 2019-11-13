@@ -391,14 +391,14 @@
             The phrase "use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
             however there is little scientific consensus on <em>what</em> exactly is lost. </p>
             
-            <p>In 1990, a popular paper was published titled Optimal Brain Damage. The paper was amongst the first [1,2,3] to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
+            <p>In 1990, a popular paper was published titled Optimal Brain Damage <dt-cite key="optimal-brain-damage"></dt-cite> . The paper was amongst the first [1,2,3] to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
               to our biological synaptic pruning. <dt-cite key="williams1992"></dt-cite> The pruning method identifies non-essential weights to remove from the network by setting to zero.
               Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone [1,2,3].
               At face value, pruning does appear to promise you can can (almost) have it all. State of art pruning methods remove the majority of the weights with a negligable loss to top-1 accuracy. 
               These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions. All these attributes make pruned models ideal for deploying deep neural networks to mobile phones and other edge devices.
             <p> However, it is equally unclear <em>what</em> exactly we give up when we prune a deep neural network. The cost to top-1 accuracy appears minimal if it is spread uniformally across all classes, but what if the cost is concentrated in a few classes? What makes performance on certain classes and images more or
               less ``forgettable'' as sparsity is introduced?
-        
+            <p> In this work, we consider the 
           <p>Our results are surprising and suggest caution is needed before deploying pruned models to sensitive domains. Our central finding is that pruning systematically impacts certain classes and images more than others. The images most impacted by pruning is a subset of examples that are more challenging for both a dense and sparse model to classify. </p>
     <div class="description_">  
       <div class="imgs-container">
@@ -955,10 +955,10 @@
   </div>
   <div class="column_portfolio incorrect">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F104_organ_carousel_recreational_vehicle.png?v=1573669430310" alt="incorrect_1" style="width:100%">
-      <h4>pipe organ</h4>
-      <p>carousel</p>
-      <p>recreational vehicle</p>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F290_polecat_black_footed_ferret_malamute.png?v=1573670791482" alt="incorrect_1" style="width:100%">
+      <h4>polecat</h4>
+      <p>black footed ferret</p>
+      <p>malamute</p>
   </div>
   </div>
   
@@ -1085,593 +1085,2933 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
 }</pre>
 </dt-appendix>
 <script type="text/bibliography">
-@ARTICLE{openai_gym,
-  author = {Brockman, G. and Cheung, V. and Pettersson, L. and Schneider, J. and Schulman, J. and Tang, J. and Zaremba, W.},
-  title={OpenAI Gym},
-  journal={Preprint arXiv:1606.01540},
-  year = 2016,
-  month = jun,
-  url = {https://arxiv.org/abs/1606.01540},
+@book{2002huber,
+  title={Goodness-of-Fit Tests and Model Validity},
+  author={Huber-Carol, C. and Balakrishnan, N. and Nikulin, M. and Mesbah, M.},
+  isbn={9780817642099},
+  lccn={2002022647},
+  series={Goodness-of-fit Tests and Model Validity},
+  url={https://books.google.com/books?id=gUMcv2\_NrhkC},
+  year={2002},
+  publisher={Birkh{\"a}user Boston}
 }
-@ARTICLE{roboschool,
-  author = {Oleg Klimov and John Schulman},
-  title={Roboschool},
-  journal={OpenAI Blog},
-  month=may,
-  year=2017,
-  url = {https://blog.openai.com/roboschool/},
+
+
+@misc{
+Carlini2018PrototypicalEI,
+title={Prototypical Examples in Deep Learning: Metrics, Characteristics, and Utility},
+author={Nicholas Carlini and Ulfar Erlingsson and Nicolas Papernot},
+year={2019},
+url={https://openreview.net/forum?id=r1xyx3R9tQ},
 }
-  @article{bipedalwalker,
-    author = {Oleg Klimov},
-    title = {BipedalWalker-v2},
-    year = 2016,
-    url = {https://gym.openai.com/envs/BipedalWalker-v2/},
-    journal = {OpenAI Gym},
-    urldate = {2017-11-01}
-  }
-  @article{bipedalwalkerhardcore,
-    author = {Oleg Klimov},
-    title = {BipedalWalkerHardcore-v2},
-    year = 2016,
-    url = {https://gym.openai.com/envs/BipedalWalkerHardcore-v2/},
-    journal = {OpenAI Gym},
-    urldate = {2017-11-01}
-  }
-@ARTICLE{pybullet,
-  author = {Erwin Coumans},
-  title={PyBullet Physics Environment},
-  journal={GitHub Repo},
-  year=2017,
-  url = {https://github.com/bulletphysics/bullet3},
+
+@ARTICLE{2018Masana,
+       author = {{Masana}, Marc and {Ruiz}, Idoia and {Serrat}, Joan and
+         {van de Weijer}, Joost and {Lopez}, Antonio M.},
+        title = "{Metric Learning for Novelty and Anomaly Detection}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition},
+         year = "2018",
+        month = "Aug",
+          eid = {arXiv:1808.05492},
+        pages = {arXiv:1808.05492},
+archivePrefix = {arXiv},
+       eprint = {1808.05492},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018arXiv180805492M},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@ARTICLE{griffis2018,
-  author = {David Griffis},
-  title={RL A3C Pytorch Continuous},
-  journal="GitHub Repo",
-  year=2018,
-  url = "https://github.com/dgriff777/a3c_continuous",
+
+@article{Leibig2017,
+author = {Leibig, Christian and Allken, Vaneeda and Ayhan, Murat Seckin and Berens, Philipp and Wahl, Siegfried},
+year = {2017},
+month = {12},
+pages = {},
+title = {Leveraging uncertainty information from deep neural networks for disease detection},
+volume = {7},
+journal = {Scientific Reports},
+doi = {10.1038/s41598-017-17876-z}
 }
-@inproceedings{mnih2016asynchronous,
-  title={Asynchronous methods for deep reinforcement learning},
-  author={Mnih, Volodymyr and Badia, Adria Puigdomenech and Mirza, Mehdi and Graves, Alex and Lillicrap, Timothy and Harley, Tim and Silver, David and Kavukcuoglu, Koray},
-  booktitle={International conference on machine learning},
-  pages={1928--1937},
-  year={2016}
+
+@incollection{Stevenson2018,
+ author = {{Megan}, Stevenson},
+ title = "{Assessing Risk Assessment in Action}",
+ journal = {Minnesota Law Review},
+  year = "2018",
+  	volume = {58},
+  	url = "https://scholarship.law.umn.edu/mlr/58"}
+
+@ARTICLE{2017Gurumoorthy,
+       author = {{Gurumoorthy}, Karthik S. and {Dhurandhar}, Amit and
+         {Cecchi}, Guillermo and {Aggarwal}, Charu},
+        title = "{Efficient Data Representation by Selecting Prototypes with Importance Weights}",
+      journal = {arXiv e-prints},
+     keywords = {Statistics - Machine Learning, Computer Science - Machine Learning, 65K05, 68W25},
+         year = "2017",
+        month = "Jul",
+          eid = {arXiv:1707.01212},
+        pages = {arXiv:1707.01212},
+archivePrefix = {arXiv},
+       eprint = {1707.01212},
+ primaryClass = {stat.ML},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv170701212G},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@article{lstm,
-  title={Long short-term memory},
-  author={Hochreiter, Sepp and Schmidhuber, J{\"u}rgen},
-  journal={Neural computation},
-  volume={9},
-  number={8},
-  pages={1735--1780},
-  year={1997},
-  publisher={MIT Press}
+
+@article{Sowell8223,
+	author = {Sowell, Elizabeth R. and Thompson, Paul M. and Leonard, Christiana M. and Welcome, Suzanne E. and Kan, Eric and Toga, Arthur W.},
+	title = {Longitudinal Mapping of Cortical Thickness and Brain Growth in Normal Children},
+	volume = {24},
+	number = {38},
+	pages = {8223--8231},
+	year = {2004},
+	doi = {10.1523/JNEUROSCI.1798-04.2004},
+	publisher = {Society for Neuroscience},
+	URL = {https://www.jneurosci.org/content/24/38/8223},
+	eprint = {https://www.jneurosci.org/content/24/38/8223.full.pdf},
+	journal = {Journal of Neuroscience}
 }
-@ARTICLE{box2d,
-  title={Box2d: A 2d physics engine for games},
-  author={Catto, Erin},
-  journal={GitHub Repo},
-  url={https://github.com/pybox2d/pybox2d},
-  year={2011},
+
+@incollection{RAKI1994,
+title = "Synaptic development of the cerebral cortex: implications for learning, memory, and mental illness",
+editor = "J. Van Pelt and M.A. Corner and H.B.M. Uylings and F.H. Lopes Da Silva",
+series = "Progress in Brain Research",
+publisher = "Elsevier",
+volume = "102",
+pages = "227 - 243",
+year = "1994",
+booktitle = "The Self-Organizing Brain: From Growth Cones to Functional Networks",
+issn = "0079-6123",
+doi = "https://doi.org/10.1016/S0079-6123(08)60543-9",
+url = "http://www.sciencedirect.com/science/article/pii/S0079612308605439",
+author = "Pasko Rakic and Jean-Pierre Bourgeois and Patricia S. Goldman-Rakic",
 }
-@article{ha2018computational,
-  title={Computational co-optimization of design parameters and motion trajectories for robotic systems},
-  author={Ha, Sehoon and Coros, Stelian and Alspach, Alexander and Kim, Joohyung and Yamane, Katsu},
-  journal={The International Journal of Robotics Research},
-  pages={0278364918771172},
-  year={2018},
-  publisher={SAGE Publications Sage UK: London, England}
+
+@article{Guo2016,
+  author    = {Yiwen Guo and
+               Anbang Yao and
+               Yurong Chen},
+  title     = {Dynamic Network Surgery for Efficient DNNs},
+  journal   = {CoRR},
+  volume    = {abs/1608.04493},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1608.04493},
+  archivePrefix = {arXiv},
+  eprint    = {1608.04493},
+  timestamp = {Mon, 13 Aug 2018 16:48:43 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/GuoYC16},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
-@article{corucci2018evolving,
-  title={Evolving soft locomotion in aquatic and terrestrial environments: effects of material properties and environmental transitions},
-  author={Corucci, Francesco and Cheney, Nick and Giorgio-Serchi, Francesco and Bongard, Josh and Laschi, Cecilia},
-  journal={Soft robotics},
-  volume={5},
-  number={4},
-  pages={475--495},
-  year={2018},
-  publisher={Mary Ann Liebert, Inc. 140 Huguenot Street, 3rd Floor New Rochelle, NY 10801 USA}
+
+@article{CollinsK14,
+  author    = {Maxwell D. Collins and
+               Pushmeet Kohli},
+  title     = {Memory Bounded Deep Convolutional Networks},
+  journal   = {CoRR},
+  volume    = {abs/1412.1442},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1412.1442},
+  archivePrefix = {arXiv},
+  eprint    = {1412.1442},
+  timestamp = {Mon, 13 Aug 2018 16:47:16 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/CollinsK14},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
-@article{hyperneat,
- author = {Gauci, Jason and Stanley, Kenneth O.},
- title = {Autonomous Evolution of Topographic Regularities in Artificial Neural Networks},
- journal = {Neural Computation},
- issue_date = {July 2010},
- volume = {22},
- number = {7},
- month = jul,
- year = {2010},
- issn = {0899-7667},
- pages = {1860--1898},
- numpages = {39},
- url = {http://eplex.cs.ucf.edu/papers/gauci_nc10.pdf},
- doi = {10.1162/neco.2010.06-09-1042},
- acmid = {1810223},
+
+@book{kolb2009fundamentals,
+  title={Fundamentals of Human Neuropsychology},
+  author={Kolb, B. and Whishaw, I.Q.},
+  isbn={9780716795865},
+  lccn={2007924870},
+  series={A series of books in psychology},
+  url={https://books.google.com/books?id=z0DThNQqdL4C},
+  year={2009},
+  publisher={Worth Publishers}
+}
+
+@ARTICLE{2019Hendrycks,
+       author = {{Hendrycks}, Dan and {Zhao}, Kevin and {Basart}, Steven and
+         {Steinhardt}, Jacob and {Song}, Dawn},
+        title = "{Natural Adversarial Examples}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning, Computer Science - Computer Vision and Pattern Recognition, Statistics - Machine Learning},
+         year = "2019",
+        month = "Jul",
+          eid = {arXiv:1907.07174},
+        pages = {arXiv:1907.07174},
+archivePrefix = {arXiv},
+       eprint = {1907.07174},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2019arXiv190707174H},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@ARTICLE{2017Huang,
+       author = {{Huang}, Gao and {Liu}, Shichen and {van der Maaten}, Laurens and
+         {Weinberger}, Kilian Q.},
+        title = "{CondenseNet: An Efficient DenseNet using Learned Group Convolutions}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition},
+         year = "2017",
+        month = "Nov",
+          eid = {arXiv:1711.09224},
+        pages = {arXiv:1711.09224},
+archivePrefix = {arXiv},
+       eprint = {1711.09224},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv171109224H},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@inproceedings{
+hendrycks2018benchmarking,
+title={Benchmarking Neural Network Robustness to Common Corruptions and Perturbations},
+author={Dan Hendrycks and Thomas Dietterich},
+booktitle={International Conference on Learning Representations},
+year={2019},
+url={https://openreview.net/forum?id=HJz6tiCqYm},
+}
+
+@inproceedings{Lakshminarayanan2017,
+ author = {Lakshminarayanan, Balaji and Pritzel, Alexander and Blundell, Charles},
+ title = {Simple and Scalable Predictive Uncertainty Estimation Using Deep Ensembles},
+ booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems},
+ series = {NIPS'17},
+ year = {2017},
+ isbn = {978-1-5108-6096-4},
+ location = {Long Beach, California, USA},
+ pages = {6405--6416},
+ numpages = {12},
+ url = {http://dl.acm.org/citation.cfm?id=3295222.3295387},
+ acmid = {3295387},
+ publisher = {Curran Associates Inc.},
+ address = {USA},
+} 
+
+@InProceedings{Caruana2000,
+author="Caruana, Rich",
+editor="Malmgren, Helge
+and Borga, Magnus
+and Niklasson, Lars",
+title="Case-Based Explanation for Artificial Neural Nets",
+booktitle="Artificial Neural Networks in Medicine and Biology",
+year="2000",
+publisher="Springer London",
+address="London",
+pages="303--308",
+abstract="Sometimes the most accurate models are the least intelligible. We show how to generate case-based explanations for non-case-based machine learning methods such as artificial neural nets. The method uses the neural net as a distance metric to determine which cases in the training set are most similar to a test case that needs to be explained.",
+isbn="978-1-4471-0513-8"
+}
+
+
+@inproceedings{Fumera2002,
+ author = {Fumera, Giorgio and Roli, Fabio},
+ title = {Support Vector Machines with Embedded Reject Option},
+ booktitle = {Proceedings of the First International Workshop on Pattern Recognition with Support Vector Machines},
+ series = {SVM '02},
+ year = {2002},
+ isbn = {3-540-44016-X},
+ pages = {68--82},
+ numpages = {15},
+ url = {http://dl.acm.org/citation.cfm?id=647230.719259},
+ acmid = {719259},
+ publisher = {Springer-Verlag},
+ address = {London, UK, UK},
+} 
+[download]
+
+@ARTICLE{2016alexey,
+       author = {{Kurakin}, Alexey and {Goodfellow}, Ian and {Bengio}, Samy},
+        title = "{Adversarial examples in the physical world}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Cryptography and Security, Computer Science - Machine Learning, Statistics - Machine Learning},
+         year = "2016",
+        month = "Jul",
+          eid = {arXiv:1607.02533},
+        pages = {arXiv:1607.02533},
+archivePrefix = {arXiv},
+       eprint = {1607.02533},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv160702533K},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2018Wang,
+       author = {{Wang}, Tianyang and {Huan}, Jun and {Li}, Bo},
+        title = "{Data Dropout: Optimizing Training Data for Convolutional Neural Networks}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition},
+         year = "2018",
+        month = "Sep",
+          eid = {arXiv:1809.00193},
+        pages = {arXiv:1809.00193},
+archivePrefix = {arXiv},
+       eprint = {1809.00193},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018arXiv180900193W},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@incollection{NIPS2016_6300,
+title = {Examples are not enough, learn to criticize! Criticism for Interpretability},
+author = {Kim, Been and Khanna, Rajiv and Koyejo, Oluwasanmi O},
+booktitle = {Advances in Neural Information Processing Systems 29},
+editor = {D. D. Lee and M. Sugiyama and U. V. Luxburg and I. Guyon and R. Garnett},
+pages = {2280--2288},
+year = {2016},
+publisher = {Curran Associates, Inc.},
+}
+
+
+@inproceedings{Bengio2009,
+ author = {Bengio, Yoshua and Louradour, J{\'e}r\^{o}me and Collobert, Ronan and Weston, Jason},
+ title = {Curriculum Learning},
+ booktitle = {Proceedings of the 26th Annual International Conference on Machine Learning},
+ series = {ICML '09},
+ year = {2009},
+ isbn = {978-1-60558-516-1},
+ location = {Montreal, Quebec, Canada},
+ pages = {41--48},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/1553374.1553380},
+ doi = {10.1145/1553374.1553380},
+ acmid = {1553380},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+[download]
+
+@inproceedings{
+lee2018training,
+title={Training Confidence-calibrated Classifiers for Detecting Out-of-Distribution Samples},
+author={Kimin Lee and Honglak Lee and Kibok Lee and Jinwoo Shin},
+booktitle={International Conference on Learning Representations},
+year={2018},
+url={https://openreview.net/forum?id=ryiAv2xAZ},
+}
+
+@inproceedings{
+liang2018enhancing,
+title={Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks},
+author={Shiyu Liang and Yixuan Li and R. Srikant},
+booktitle={International Conference on Learning Representations},
+year={2018},
+url={https://openreview.net/forum?id=H1VGkIxRZ},
+}
+
+@article{Ioffe2015,
+  author    = {Sergey Ioffe and
+               Christian Szegedy},
+  title     = {Batch Normalization: Accelerating Deep Network Training by Reducing
+               Internal Covariate Shift},
+  journal   = {CoRR},
+  volume    = {abs/1502.03167},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1502.03167},
+  archivePrefix = {arXiv},
+  eprint    = {1502.03167},
+  timestamp = {Mon, 13 Aug 2018 16:47:06 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/IoffeS15},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@ARTICLE{2017Lee,
+       author = {{Lee}, Kimin and {Lee}, Honglak and {Lee}, Kibok and {Shin}, Jinwoo},
+        title = "{Training Confidence-calibrated Classifiers for Detecting Out-of-Distribution Samples}",
+      journal = {arXiv e-prints},
+     keywords = {Statistics - Machine Learning, Computer Science - Machine Learning},
+         year = "2017",
+        month = "Nov",
+          eid = {arXiv:1711.09325},
+        pages = {arXiv:1711.09325},
+archivePrefix = {arXiv},
+       eprint = {1711.09325},
+ primaryClass = {stat.ML},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv171109325L},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@article{2017Hendrycks,
+  author    = {Dan Hendrycks and
+               Kevin Gimpel},
+  title     = {A Baseline for Detecting Misclassified and Out-of-Distribution Examples
+               in Neural Networks},
+  journal   = {CoRR},
+  volume    = {abs/1610.02136},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1610.02136},
+  archivePrefix = {arXiv},
+  eprint    = {1610.02136},
+  timestamp = {Mon, 13 Aug 2018 16:47:27 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/HendrycksG16c},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@ARTICLE{2016amodei,
+       author = {{Amodei}, Dario and {Olah}, Chris and {Steinhardt}, Jacob and
+         {Christiano}, Paul and {Schulman}, John and {Man{\'e}}, Dan},
+        title = "{Concrete Problems in AI Safety}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Artificial Intelligence, Computer Science - Machine Learning},
+         year = "2016",
+        month = "Jun",
+          eid = {arXiv:1606.06565},
+        pages = {arXiv:1606.06565},
+archivePrefix = {arXiv},
+       eprint = {1606.06565},
+ primaryClass = {cs.AI},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv160606565A},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2018Vodrahalli,
+       author = {{Vodrahalli}, Kailas and {Li}, Ke and {Malik}, Jitendra},
+        title = "{Are All Training Examples Created Equal? An Empirical Study}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning, Computer Science - Computer Vision and Pattern Recognition, Statistics - Machine Learning},
+         year = "2018",
+        month = "Nov",
+          eid = {arXiv:1811.12569},
+        pages = {arXiv:1811.12569},
+archivePrefix = {arXiv},
+       eprint = {1811.12569},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018arXiv181112569V},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2017Stock_Cisse,
+       author = {{Stock}, Pierre and {Cisse}, Moustapha},
+        title = "{ConvNets and ImageNet Beyond Accuracy: Understanding Mistakes and Uncovering Biases}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning, Computer Science - Artificial Intelligence, Computer Science - Computer Vision and Pattern Recognition, Computer Science - Computers and Society, Statistics - Machine Learning},
+         year = "2017",
+        month = "Nov",
+          eid = {arXiv:1711.11443},
+        pages = {arXiv:1711.11443},
+archivePrefix = {arXiv},
+       eprint = {1711.11443},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv171111443S},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@inproceedings{Han2015,
+ author = {Han, Song and Pool, Jeff and Tran, John and Dally, William J.},
+ title = {Learning Both Weights and Connections for Efficient Neural Networks},
+ booktitle = {Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1},
+ series = {NIPS'15},
+ year = {2015},
+ location = {Montreal, Canada},
+ pages = {1135--1143},
+ numpages = {9},
+ url = {http://dl.acm.org/citation.cfm?id=2969239.2969366},
+ acmid = {2969366},
  publisher = {MIT Press},
  address = {Cambridge, MA, USA},
+} 
+
+@ARTICLE{2017Narang,
+       author = {{Narang}, Sharan and {Elsen}, Erich and {Diamos}, Gregory and
+         {Sengupta}, Shubho},
+        title = "{Exploring Sparsity in Recurrent Neural Networks}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning, Computer Science - Computation and Language},
+         year = "2017",
+        month = "Apr",
+          eid = {arXiv:1704.05119},
+        pages = {arXiv:1704.05119},
+archivePrefix = {arXiv},
+       eprint = {1704.05119},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv170405119N},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@Article{neat,
-  title={Evolving neural networks through augmenting topologies},
-  author={Stanley, Kenneth O and Miikkulainen, Risto},
-  journal={Evolutionary computation},
-  volume={10},
-  number={2},
-  pages={99--127},
-  year={2002},
-  publisher={MIT Press}
+
+
+
+@ARTICLE{2016abigail,
+       author = {{See}, Abigail and {Luong}, Minh-Thang and {Manning}, Christopher D.},
+        title = "{Compression of Neural Machine Translation Models via Pruning}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Artificial Intelligence, Computer Science - Computation and Language, Computer Science - Neural and Evolutionary Computing},
+         year = "2016",
+        month = "Jun",
+          eid = {arXiv:1606.09274},
+        pages = {arXiv:1606.09274},
+archivePrefix = {arXiv},
+       eprint = {1606.09274},
+ primaryClass = {cs.AI},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv160609274S},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@article{jansen2008strandbeests,
-  title={Strandbeests},
-  author={Jansen, Theo},
-  journal={Architectural Design},
-  volume={78},
-  number={4},
-  pages={22--27},
-  year={2008},
-  publisher={Wiley Online Library}
+
+
+@ARTICLE{2013denil,
+       author = {{Denil}, Misha and {Shakibi}, Babak and {Dinh}, Laurent and
+         {Ranzato}, Marc'Aurelio and {de Freitas}, Nando},
+        title = "{Predicting Parameters in Deep Learning}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning, Computer Science - Neural and Evolutionary Computing, Statistics - Machine Learning},
+         year = "2013",
+        month = "Jun",
+          eid = {arXiv:1306.0543},
+        pages = {arXiv:1306.0543},
+archivePrefix = {arXiv},
+       eprint = {1306.0543},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2013arXiv1306.0543D},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@inproceedings{sims1994evolving,
-  title={Evolving virtual creatures},
-  author={Sims, Karl},
-  booktitle={Proceedings of the 21st annual conference on Computer graphics and interactive techniques},
-  pages={15--22},
-  year={1994},
-  organization={ACM}
+
+@ARTICLE{2014Nguyen,
+       author = {{Nguyen}, Anh and {Yosinski}, Jason and {Clune}, Jeff},
+        title = "{Deep Neural Networks are Easily Fooled: High Confidence Predictions for Unrecognizable Images}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Artificial Intelligence, Computer Science - Neural and Evolutionary Computing},
+         year = "2014",
+        month = "Dec",
+          eid = {arXiv:1412.1897},
+        pages = {arXiv:1412.1897},
+archivePrefix = {arXiv},
+       eprint = {1412.1897},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2014arXiv1412.1897N},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@article{sims1994evolving_MIT,
-  title={Evolving 3D morphology and behavior by competition},
-  author={Sims, Karl},
-  journal={Artificial life},
-  volume={1},
-  number={4},
-  pages={353--372},
-  year={1994},
-  publisher={MIT Press}
+
+@ARTICLE{2018Hendrycks,
+       author = {{Hendrycks}, Dan and {Dietterich}, Thomas G.},
+        title = "{Benchmarking Neural Network Robustness to Common Corruptions and Surface Variations}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning, Computer Science - Artificial Intelligence, Computer Science - Computer Vision and Pattern Recognition, Computer Science - Neural and Evolutionary Computing, Statistics - Machine Learning},
+         year = "2018",
+        month = "Jul",
+          eid = {arXiv:1807.01697},
+        pages = {arXiv:1807.01697},
+archivePrefix = {arXiv},
+       eprint = {1807.01697},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018arXiv180701697H},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@inproceedings{todorov2012mujoco,
-  title={Mujoco: A physics engine for model-based control},
-  author={Todorov, Emanuel and Erez, Tom and Tassa, Yuval},
-  booktitle={Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on},
-  pages={5026--5033},
-  year={2012},
-  organization={IEEE}
+
+@ARTICLE{2016Szegedy,
+       author = {{Szegedy}, Christian and {Ioffe}, Sergey and {Vanhoucke}, Vincent and
+         {Alemi}, Alex},
+        title = "{Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition},
+         year = "2016",
+        month = "Feb",
+          eid = {arXiv:1602.07261},
+        pages = {arXiv:1602.07261},
+archivePrefix = {arXiv},
+       eprint = {1602.07261},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv160207261S},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@inproceedings{mcgeer1990passive,
-  title={Passive walking with knees},
-  author={McGeer, Tad},
-  booktitle={Proceedings., IEEE International Conference on Robotics and Automation},
-  pages={1640--1645},
-  year={1990},
-  organization={IEEE}
+
+
+
+@ARTICLE{2015Szegedy,
+       author = {{Szegedy}, Christian and {Vanhoucke}, Vincent and {Ioffe}, Sergey and
+         {Shlens}, Jonathon and {Wojna}, Zbigniew},
+        title = "{Rethinking the Inception Architecture for Computer Vision}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition},
+         year = "2015",
+        month = "Dec",
+          eid = {arXiv:1512.00567},
+        pages = {arXiv:1512.00567},
+archivePrefix = {arXiv},
+       eprint = {1512.00567},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2015arXiv151200567S},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@article{williams1992,
-  title={Simple statistical gradient-following algorithms for connectionist reinforcement learning},
-  author={Williams, Ronald J},
-  journal={Machine learning},
-  volume={8},
-  number={3-4},
-  pages={229--256},
-  year={1992},
-  url={http://www-anw.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf},
-  publisher={Springer}
+
+
+@article{Kornblith2018DoBI,
+  title={Do Better ImageNet Models Transfer Better?},
+  author={Simon Kornblith and Jonathon Shlens and Quoc V. Le},
+  journal={ArXiv},
+  year={2018},
+  volume={abs/1805.08974}
 }
-@article{pepg,
-  title={Parameter-exploring policy gradients},
-  author={Sehnke, Frank and Osendorfer, Christian and R{\"u}ckstie{\ss}, Thomas and Graves, Alex and Peters, Jan and Schmidhuber, J{\"u}rgen},
-  journal={Neural Networks},
-  volume={23},
-  number={4},
-  pages={551--559},
-  year={2010},
-  publisher={Elsevier}
+
+@ARTICLE{2016Hendrycks,
+       author = {{Hendrycks}, Dan and {Gimpel}, Kevin},
+        title = "{A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Neural and Evolutionary Computing, Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning},
+         year = "2016",
+        month = "Oct",
+          eid = {arXiv:1610.02136},
+        pages = {arXiv:1610.02136},
+archivePrefix = {arXiv},
+       eprint = {1610.02136},
+ primaryClass = {cs.NE},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv161002136H},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@inproceedings{wierstra2008natural,
-  title={Natural evolution strategies},
-  author={Wierstra, Daan and Schaul, Tom and Peters, Jan and Schmidhuber, Juergen},
-  booktitle={Evolutionary Computation, 2008. CEC 2008.(IEEE World Congress on Computational Intelligence). IEEE Congress on},
-  pages={3381--3387},
-  year={2008},
-  organization={IEEE}
+
+
+@ARTICLE{2016Zhang,
+       author = {{Zhang}, Chiyuan and {Bengio}, Samy and {Hardt}, Moritz and
+         {Recht}, Benjamin and {Vinyals}, Oriol},
+        title = "{Understanding deep learning requires rethinking generalization}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning},
+         year = "2016",
+        month = "Nov",
+          eid = {arXiv:1611.03530},
+        pages = {arXiv:1611.03530},
+archivePrefix = {arXiv},
+       eprint = {1611.03530},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv161103530Z},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-  @article{openai_es,
-    title={Evolution Strategies as a Scalable Alternative to Reinforcement Learning},
-   author = {Salimans, T. and Ho, J. and Chen, X. and Sidor, S. and Sutskever, I.},
-  journal={Preprint arXiv:1703.03864},
-    year={2017},
-    url={https://arxiv.org/abs/1703.03864}
-  }
-  @article{visuales,
-    title={A Visual Guide to Evolution Strategies},
-    author = {Ha, D.},
-    journal={blog.otoro.net},
-    year={2017},
-    url="http://blog.otoro.net/2017/10/29/visual-evolution-strategies/"
-  }
-  @article{stablees,
-    title={Evolving Stable Strategies},
-    author = {Ha, D.},
-    journal={blog.otoro.net},
-    year={2017},
-    url="http://blog.otoro.net/2017/11/12/evolving-stable-strategies/"
-  }
-  @article{cmaes,
-   author = {Hansen, Nikolaus and Ostermeier, Andreas},
-   title = {Completely Derandomized Self-Adaptation in Evolution Strategies},
-   journal = {Evolutionary Computation},
-   issue_date = {June 2001},
-   volume = {9},
-   number = {2},
-   month = jun,
-   year = {2001},
-   issn = {1063-6560},
-   pages = {159--195},
-   numpages = {37},
-   url = {http://www.cmap.polytechnique.fr/~nikolaus.hansen/cmaartic.pdf},
-   doi = {10.1162/106365601750190398},
-   acmid = {1108843},
-   publisher = {MIT Press},
-   address = {Cambridge, MA, USA},
-  }
-@article{akimoto2012theoretical,
-  title={Theoretical foundation for CMA-ES from information geometry perspective},
-  author={Akimoto, Youhei and Nagata, Yuichi and Ono, Isao and Kobayashi, Shigenobu},
-  journal={Algorithmica},
-  volume={64},
-  number={4},
-  pages={698--716},
-  year={2012},
-  publisher={Springer}
+
+
+@Book{kipling1899,
+author = { Kipling, Rudyard},
+title = { American notes / by Rudyard Kipling },
+publisher = { Brown and Company Boston },
+pages = { 1 online resource (137 pages, 1 unnumbered leaf of plates) : },
+year = { 1899 },
+type = { Book, Online },
+language = { English },
+subjects = { United States -- Description and travel.; United States -- Social life and customs -- 1865-1918. },
+life-dates = { 1899 -  },
+catalogue-url = { https://nla.gov.au/nla.cat-vn6847688 },
 }
-@article{wilson2002six,
-  title={Six views of embodied cognition},
-  author={Wilson, Margaret},
-  journal={Psychonomic bulletin & review},
-  volume={9},
-  number={4},
-  pages={625--636},
-  year={2002},
-  publisher={Springer}
+
+@inproceedings{rn50,
+  author    = {Kaiming He and
+               Xiangyu Zhang and
+               Shaoqing Ren and
+               Jian Sun},
+  title     = {{D}eep {R}esidual {L}earning for {I}mage {R}ecognition},
+  booktitle = {2016 {IEEE} Conference on Computer Vision and Pattern Recognition,
+               {CVPR} 2016, Las Vegas, NV, USA, June 27-30, 2016},
+  pages     = {770--778},
+  year      = {2016},
 }
-@article{anderson2003embodied,
-  title={Embodied cognition: A field guide},
-  author={Anderson, Michael L},
-  journal={Artificial intelligence},
-  volume={149},
-  number={1},
-  pages={91--130},
-  year={2003}
+
+@inproceedings{transformer,
+  author    = {Ashish Vaswani and
+               Noam Shazeer and
+               Niki Parmar and
+               Jakob Uszkoreit and
+               Llion Jones and
+               Aidan N. Gomez and
+               Lukasz Kaiser and
+               Illia Polosukhin},
+  title     = {{A}ttention is {A}ll you {N}eed},
+  booktitle = {Advances in Neural Information Processing Systems 30: Annual Conference
+               on Neural Information Processing Systems 2017, 4-9 December 2017,
+               Long Beach, CA, {USA}},
+  pages     = {6000--6010},
+  year      = {2017},
 }
-@article{mahon2008critical,
-  title={A critical look at the embodied cognition hypothesis and a new proposal for grounding conceptual content},
-  author={Mahon, Bradford Z and Caramazza, Alfonso},
-  journal={Journal of physiology-Paris},
-  volume={102},
-  number={1-3},
-  pages={59--70},
-  year={2008},
-  publisher={Elsevier}
+
+@inproceedings{wavernn,
+  author    = {Nal Kalchbrenner and
+               Erich Elsen and
+               Karen Simonyan and
+               Seb Noury and
+               Norman Casagrande and
+               Edward Lockhart and
+               Florian Stimberg and
+               A{\"{a}}ron van den Oord and
+               Sander Dieleman and
+               Koray Kavukcuoglu},
+  title     = {Efficient {Neural} {Audio} {Synthesis}},
+  booktitle = {Proceedings of the 35th International Conference on Machine Learning,
+               {ICML} 2018, Stockholmsm{\"{a}}ssan, Stockholm, Sweden, July
+               10-15, 2018},
+  pages     = {2415--2424},
+  year      = {2018},
 }
-@book{shapiro2010embodied,
-  title={Embodied cognition},
-  author={Shapiro, Lawrence},
-  year={2010},
-  publisher={Routledge}
+
+@inproceedings{wavenet,
+  author    = {A{\"{a}}ron van den Oord and
+               Sander Dieleman and
+               Heiga Zen and
+               Karen Simonyan and
+               Oriol Vinyals and
+               Alex Graves and
+               Nal Kalchbrenner and
+               Andrew W. Senior and
+               Koray Kavukcuoglu},
+  title     = {WaveNet: {A} {Generative} {Model} for {Raw} {Audio}},
+  booktitle = {The 9th {ISCA} Speech Synthesis Workshop, Sunnyvale, CA, USA, 13-15
+               September 2016},
+  pages     = {125},
+  year      = {2016},
 }
-@article{gover1996embodied,
-  title={The Embodied Mind: Cognitive Science and Human Experience (Book)},
-  author={Gover, Mark R},
-  journal={Mind, Culture, and Activity},
-  volume={3},
-  number={4},
-  pages={295--299},
-  year={1996},
-  publisher={Taylor & Francis}
+
+@article{deep-learning-scaling,
+  author    = {Joel Hestness and
+               Sharan Narang and
+               Newsha Ardalani and
+               Gregory F. Diamos and
+               Heewoo Jun and
+               Hassan Kianinejad and
+               Md. Mostofa Ali Patwary and
+               Yang Yang and
+               Yanqi Zhou},
+  title     = {Deep Learning Scaling is Predictable, Empirically},
+  journal   = {CoRR},
+  volume    = {abs/1712.00409},
+  year      = {2017}
 }
-@book{pfeifer2006body,
-  title={How the body shapes the way we think: a new view of intelligence},
-  author={Pfeifer, Rolf and Bongard, Josh},
-  year={2006},
-  publisher={MIT press}
+
+@inproceedings{lwac,
+  author    = {Song Han and
+               Jeff Pool and
+               John Tran and
+               William J. Dally},
+  title     = {{L}earning both {W}eights and {C}onnections for {E}fficient {N}eural {N}etwork},
+  booktitle = {{NIPS}},
+  pages     = {1135--1143},
+  year      = {2015}
 }
-@article{bresadola1998medicine,
-  title={Medicine and science in the life of Luigi Galvani (1737--1798)},
-  author={Bresadola, Marco},
-  journal={Brain Research Bulletin},
-  volume={46},
-  number={5},
-  pages={367--380},
-  year={1998},
-  publisher={Elsevier}
+
+@article{exploring-sparsity-rnn,
+  author    = {Sharan Narang and
+               Gregory F. Diamos and
+               Shubho Sengupta and
+               Erich Elsen},
+  title     = {Exploring {S}parsity in {R}ecurrent {N}eural {N}etworks},
+  journal   = {CoRR},
+  volume    = {abs/1704.05119},
+  year      = {2017}
 }
-@article{beal2006passive,
-  title={Passive propulsion in vortex wakes},
-  author={Beal, DN and Hover, FS and Triantafyllou, MS and Liao, JC and Lauder, GV},
-  journal={Journal of Fluid Mechanics},
-  volume={549},
-  pages={385--402},
-  year={2006},
-  publisher={Cambridge University Press}
+
+@article{lasso,
+    author = {Robert Tibshirani},
+    title = {Regression {S}hrinkage and {S}election {V}ia the {L}asso},
+    journal = {JOURNAL OF THE ROYAL STATISTICAL SOCIETY, SERIES B},
+    year = {1994},
+    volume = {58},
+    pages = {267--288}
 }
-@article{tricoli2005short,
-  title={Short-term effects on lower-body functional power development: weightlifting vs. vertical jump training programs},
-  author={Tricoli, Valmor and Lamas, Leonardo and Carnevale, Roberto and Ugrinowitsch, Carlos},
-  journal={The Journal of Strength & Conditioning Research},
-  volume={19},
-  number={2},
-  pages={433--437},
-  year={2005},
-  publisher={LWW}
+
+@article{sws,
+  author    = {Karen Ullrich and
+               Edward Meeds and
+               Max Welling},
+  title     = {Soft {W}eight-{S}haring for {N}eural {N}etwork {C}ompression},
+  journal   = {CoRR},
+  volume    = {abs/1702.04008},
+  year      = {2017}
 }
-@article{raglin1990exercise,
-  title={Exercise and mental health},
-  author={Raglin, John S},
-  journal={Sports Medicine},
-  volume={9},
-  number={6},
-  pages={323--329},
-  year={1990},
-  publisher={Springer}
+
+@article{dropout-journal,
+  author    = {Nitish Srivastava and
+               Geoffrey E. Hinton and
+               Alex Krizhevsky and
+               Ilya Sutskever and
+               Ruslan Salakhutdinov},
+  title     = {Dropout: a simple way to prevent neural networks from overfitting},
+  journal   = {Journal of Machine Learning Research},
+  volume    = {15},
+  number    = {1},
+  pages     = {1929--1958},
+  year      = {2014},
 }
-@article{deslandes2009exercise,
-  title={Exercise and mental health: many reasons to move},
-  author={Deslandes, Andr{\'e}a and Moraes, Helena and Ferreira, Camila and Veiga, Heloisa and Silveira, Heitor and Mouta, Raphael and Pompeu, Fernando AMS and Coutinho, Evandro Silva Freire and Laks, Jerson},
-  journal={Neuropsychobiology},
-  volume={59},
-  number={4},
-  pages={191--198},
-  year={2009},
-  publisher={Karger Publishers}
+
+@article{l0-regularization,
+  author    = {Christos Louizos and
+               Max Welling and
+               Diederik P. Kingma},
+  title     = {Learning {S}parse {N}eural {N}etworks {t}hrough {L}\({}_{\mbox{0}}\) {R}egularization},
+  journal   = {CoRR},
+  volume    = {abs/1712.01312},
+  year      = {2017}
 }
-@article{bongard2011morphological,
-  title={Morphological change in machines accelerates the evolution of robust behavior},
-  author={Bongard, Josh},
-  journal={Proceedings of the National Academy of Sciences},
-  volume={108},
-  number={4},
-  pages={1234--1239},
-  year={2011},
-  publisher={National Acad Sciences}
+
+@ARTICLE{2016Lakshminarayanan,
+       author = {{Lakshminarayanan}, Balaji and {Pritzel}, Alexander and
+         {Blundell}, Charles},
+        title = "{Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles}",
+      journal = {arXiv e-prints},
+     keywords = {Statistics - Machine Learning, Computer Science - Machine Learning},
+         year = "2016",
+        month = "Dec",
+          eid = {arXiv:1612.01474},
+        pages = {arXiv:1612.01474},
+archivePrefix = {arXiv},
+       eprint = {1612.01474},
+ primaryClass = {stat.ML},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv161201474L},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@book{leger1999automated,
-  title={Automated synthesis and optimization of robot configurations: an evolutionary approach},
-  author={Leger, Chris},
-  year={1999},
-  publisher={Carnegie Mellon University USA}
+
+@ARTICLE{2019arXiv190802900M,
+       author = {{Mwebaze}, Ernest and {Gebru}, Timnit and {Frome}, Andrea and
+         {Nsumba}, Solomon and {Tusubira}, Jeremy},
+        title = "{iCassava 2019Fine-Grained Visual Categorization Challenge}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition},
+         year = "2019",
+        month = "Aug",
+          eid = {arXiv:1908.02900},
+        pages = {arXiv:1908.02900},
+archivePrefix = {arXiv},
+       eprint = {1908.02900},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2019arXiv190802900M},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-@inproceedings{cheney2013unshackling,
-  title={Unshackling evolution: evolving soft robots with multiple materials and a powerful generative encoding},
-  author={Cheney, Nick and MacCurdy, Robert and Clune, Jeff and Lipson, Hod},
-  booktitle={Proceedings of the 15th annual conference on Genetic and evolutionary computation},
-  pages={167--174},
-  year={2013},
-  organization={ACM}
+
+@article{Zagoruyko2016,
+  author    = {Sergey Zagoruyko and
+               Nikos Komodakis},
+  title     = {Wide Residual Networks},
+  journal   = {CoRR},
+  volume    = {abs/1605.07146},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1605.07146},
+  archivePrefix = {arXiv},
+  eprint    = {1605.07146},
+  timestamp = {Mon, 13 Aug 2018 16:46:42 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/ZagoruykoK16},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
-@inproceedings{prokopenko2006evolving,
-  title={Evolving spatiotemporal coordination in a modular robotic system},
-  author={Prokopenko, Mikhail and Gerasimov, Vadim and Tanev, Ivan},
-  booktitle={International Conference on Simulation of Adaptive Behavior},
-  pages={558--569},
-  year={2006},
-  organization={Springer}
+
+@incollection{NIPSKendall2017,
+title = {What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?},
+author = {Kendall, Alex and Gal, Yarin},
+booktitle = {Advances in Neural Information Processing Systems 30},
+editor = {I. Guyon and U. V. Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
+pages = {5574--5584},
+year = {2017},
+publisher = {Curran Associates, Inc.},
 }
-@article{zykov2007evolved,
-  title={Evolved and designed self-reproducing modular robotics},
-  author={Zykov, Victor and Mytilinaios, Efstathios and Desnoyer, Mark and Lipson, Hod},
-  journal={IEEE Transactions on robotics},
-  volume={23},
-  number={2},
-  pages={308--319},
-  year={2007},
-  publisher={IEEE}
+
+@article{Samala_2018,
+	doi = {10.1088/1361-6560/aabb5b},
+	year = 2018,
+	month = {may},
+	publisher = {{IOP} Publishing},
+	volume = {63},
+	number = {9},
+	pages = {095005},
+	author = {Ravi K Samala and Heang-Ping Chan and Lubomir M Hadjiiski and Mark A Helvie and Caleb Richter and Kenny Cha},
+	title = {Evolutionary pruning of transfer learned deep convolutional neural network for breast cancer diagnosis in digital breast tomosynthesis},
+	journal = {Physics in Medicine {\&} Biology},
 }
-@inproceedings{ostergaard2003evolving,
-  title={Evolving control for modular robotic units},
-  author={Ostergaard, Esben Hallundbok and Lund, Henrik Hautop},
-  booktitle={Computational Intelligence in Robotics and Automation, 2003. Proceedings. 2003 IEEE International Symposium on},
-  volume={2},
-  pages={886--892},
-  year={2003},
-  organization={IEEE}
+
+@article{Harwell_2019,
+ author = {Harwell, Drew},  
+ year = {2019},
+ title = {A face-scanning algorithm increasingly decides whether you deserve the job},
+ journal = {The Washington Post},
+ url = {https://wapo.st/2X3bupO},
+ urldate = {2019-03-12}
 }
-@article{collins2001three,
-  title={A three-dimensional passive-dynamic walking robot with two legs and knees},
-  author={Collins, Steven H and Wisse, Martijn and Ruina, Andy},
-  journal={The International Journal of Robotics Research},
-  volume={20},
-  number={7},
-  pages={607--615},
-  year={2001},
-  publisher={SAGE Publications}
+
+@ARTICLE{Dastin_2018,
+ author = {Dastin, Jeffrey},
+ year = {2018},
+ title = {Amazon scraps secret AI recruiting tool that showed bias against women},
+ journal = {Reuters},
+ url = {https://reut.rs/2p0ZWqe},
+ urldate = {2019-10-13}
 }
-@article{collins2005efficient,
-  title={Efficient bipedal robots based on passive-dynamic walkers},
-  author={Collins, Steve and Ruina, Andy and Tedrake, Russ and Wisse, Martijn},
-  journal={Science},
-  volume={307},
-  number={5712},
-  pages={1082--1085},
-  year={2005},
-  publisher={American Association for the Advancement of Science}
+
+@article{2017Andre,
+author = {Esteva, Andre and Kuprel, Brett and Novoa, Roberto and Ko, Justin and M Swetter, Susan and M Blau, Helen and Thrun, Sebastian},
+year = {2017},
+month = {01},
+pages = {},
+title = {Dermatologist-level classification of skin cancer with deep neural networks},
+volume = {542},
+journal = {Nature},
+doi = {10.1038/nature21056}
 }
-@inproceedings{paul2004morphology,
-  title={Morphology and computation},
-  author={Paul, Chandana},
-  booktitle={Proceedings of the International Conference on the Simulation of Adaptive Behaviour Los Angeles, CA, USA},
-  pages={33--38},
-  year={2004}
+
+
+@inproceedings{Zeiler2014,
+	Author = {Zeiler, Matthew D and Fergus, Rob},
+	Booktitle = {European Conference on Computer Vision},
+	Date-Added = {2016-10-12 11:14:28 +0000},
+	Date-Modified = {2016-10-12 11:16:57 +0000},
+	Organization = {Springer},
+	Pages = {818--833},
+	Title = {Visualizing and understanding convolutional networks},
+	Year = 2014,
+	}
+
+@article{Montavon2011,
+	Author = {Montavon, Gregoire and Braun, Mikio L and M{\"u}ller, Klaus-Robert},
+	Date-Added = {2016-10-12 11:13:21 +0000},
+	Date-Modified = {2016-10-19 16:36:27 +0000},
+	Journal = {Journal of Machine Learning Research},
+	Number = {Sep},
+	Pages = {2563--2581},
+	Title = {Kernel analysis of deep networks},
+	Volume = {12},
+	Year = 2011,
+	}
+
+@article{Bach2015,
+	Author = {Bach, Sebastian and Binder, Alexander and Montavon, Gr{\'e}goire and Klauschen, Frederick and M{\"u}ller, Klaus-Robert and Samek, Wojciech},
+	Date-Added = {2016-10-12 11:12:26 +0000},
+	Date-Modified = {2016-10-12 11:16:21 +0000},
+	Journal = {PloS one},
+	Number = {7},
+	Pages = {e0130140},
+	Publisher = {Public Library of Science},
+	Title = {On pixel-wise explanations for non-linear classifier decisions by layer-wise relevance propagation},
+	Volume = {10},
+	Year = 2015,
+	}
+
+@article{Montavon2017,
+	Author = {Montavon, Gr{\'e}goire and Lapuschkin, Sebastian and Binder, Alexander and Samek, Wojciech and M{\"u}ller, Klaus-Robert},
+	Date-Modified = {2017-02-10 22:17:33 +0000},
+	Journal = {Pattern Recognition},
+	Pages = {211--222},
+	Publisher = {Elsevier},
+	Title = {Explaining nonlinear classification decisions with deep taylor decomposition},
+	Volume = {65},
+	year = 2017,
+	}
+
+@article{RossFinale2017,
+  author    = {Andrew Slavin Ross and
+               Finale Doshi{-}Velez},
+  title     = {Improving the Adversarial Robustness and Interpretability of Deep
+               Neural Networks by Regularizing their Input Gradients},
+  journal   = {CoRR},
+  volume    = {abs/1711.09404},
+  year      = 2017,
 }
-@article{carter2016,
-  author = {Carter, Shan and Ha, David and Johnson, Ian and Olah, Chris},
-  title = {Experiments in Handwriting with a Neural Network},
-  journal = {Distill},
-  year = {2016},
-  url = {http://distill.pub/2016/handwriting},
-  doi = {10.23915/distill.00004}
+  
+@inproceedings{Fong2017,
+  author    = {Ruth C. Fong and
+               Andrea Vedaldi},
+  title     = {Interpretable Explanations of Black Boxes by Meaningful Perturbation},
+  booktitle = {{ICCV}},
+  pages     = {3449--3457},
+  publisher = {{IEEE} Computer Society},
+  year      = 2017,
 }
-@article{carter2017,
-  author = {Carter, Shan and Nielsen, Michael},
-  title = {Using Artificial Intelligence to Augment Human Intelligence},
-  journal = {Distill},
-  year = {2017},
-  note = {https://distill.pub/2017/aia},
-  doi = {10.23915/distill.00009}
+
+@InProceedings{gradcam2017,
+author = {Selvaraju, Ramprasaath R. and Cogswell, Michael and Das, Abhishek and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv},
+title = {Grad-CAM: Visual Explanations From Deep Networks via Gradient-Based Localization},
+booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+month = {Oct},
+year = 2017,
 }
-@inproceedings{schulman2015trust,
-  title={Trust region policy optimization},
-  author={Schulman, John and Levine, Sergey and Abbeel, Pieter and Jordan, Michael and Moritz, Philipp},
-  booktitle={International Conference on Machine Learning},
-  pages={1889--1897},
-  year={2015}
-}
-@article{schulman2017proximal,
-  title={Proximal policy optimization algorithms},
-  author={Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
-  journal={arXiv preprint arXiv:1707.06347},
-  url = {https://arxiv.org/abs/1707.06347},
-  year={2017}
-}
-@ARTICLE{DeepNeuroevolution2017,
-    title = {Deep Neuroevolution: Genetic Algorithms Are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning},
-  author={Such, Felipe Petroski and Madhavan, Vashisht and Conti, Edoardo and Lehman, Joel and Stanley, Kenneth O and Clune, Jeff},
-  journal={Preprint arXiv:1712.06567},
-  url = {https://arxiv.org/abs/1712.06567},
+
+
+@ARTICLE{He_2015,
+   author = {{He}, K. and {Zhang}, X. and {Ren}, S. and {Sun}, J.},
+    title = "{Deep Residual Learning for Image Recognition}",
+  journal = {ArXiv e-prints},
 archivePrefix = "arXiv",
-   eprint = {1712.06567},
- keywords = {Computer Science - Neural and Evolutionary Computing, Computer Science - Learning},
-     year = 2017,
+   eprint = {1512.03385},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2015,
     month = dec,
+   adsurl = {http://adsabs.harvard.edu/abs/2015arXiv151203385H},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
 }
-@article{lehman2018surprising,
-  title={The surprising creativity of digital evolution: A collection of anecdotes from the evolutionary computation and artificial life research communities},
-  author={Lehman, Joel and Clune, Jeff and Misevic, Dusan and Adami, Christoph and Beaulieu, Julie and Bentley, Peter J and Bernard, Samuel and Belson, Guillaume and Bryson, David M and Cheney, Nick and others},
-  journal={arXiv preprint arXiv:1803.03453},
-  url = {https://arxiv.org/abs/1803.03453},
-  year={2018}
+
+@ARTICLE{singledirection2018,
+   author = {{Morcos}, A.~S. and {Barrett}, D.~G.~T. and {Rabinowitz}, N.~C. and 
+	{Botvinick}, M.},
+    title = "{On the importance of single directions for generalization}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1803.06959},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Computer Science - Artificial Intelligence, Computer Science - Learning, Computer Science - Neural and Evolutionary Computing},
+     year = 2018,
+    month = mar,
+   adsurl = {http://adsabs.harvard.edu/abs/2018arXiv180306959M},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
 }
-@article{zoph2016neural,
-  title={Neural architecture search with reinforcement learning},
-  author={Zoph, Barret and Le, Quoc V},
-  journal={arXiv preprint arXiv:1611.01578},
-  url = {https://arxiv.org/abs/1611.01578},
+
+@ARTICLE{kitty_paper2017,
+   author = {{Kindermans}, P.-J. and {Hooker}, S. and {Adebayo}, J. and {Alber}, M. and 
+	{Sch{\"u}tt}, K.~T. and {D{\"a}hne}, S. and {Erhan}, D. and 
+	{Kim}, B.},
+    title = "{The (Un)reliability of saliency methods}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1711.00867},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Computer Science - Learning},
+     year = 2017,
+    month = nov,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv171100867K},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+}
+
+@ARTICLE{zhang2016,
+   author = {{Zhang}, J. and {Lin}, Z. and {Brandt}, J. and {Shen}, X. and 
+	{Sclaroff}, S.},
+    title = "{Top-down Neural Attention by Excitation Backprop}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1608.00507},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2016,
+    month = aug,
+   adsurl = {http://adsabs.harvard.edu/abs/2016arXiv160800507Z},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+}
+
+@inproceedings{Raghu2017,
+  author    = {Maithra Raghu and
+               Justin Gilmer and
+               Jason Yosinski and
+               Jascha Sohl{-}Dickstein},
+  title     = {{SVCCA:} Singular Vector Canonical Correlation Analysis for Deep Learning
+               Dynamics and Interpretability},
+  booktitle = {{NIPS}},
+  pages     = {6078--6087},
+  year      = 2017,
+}
+
+@ARTICLE{Hughes2017,
+   author = {{Wu}, M. and {Hughes}, M.~C. and {Parbhoo}, S. and {Zazzi}, M. and 
+	{Roth}, V. and {Doshi-Velez}, F.},
+    title = "{Beyond Sparsity: Tree Regularization of Deep Models for Interpretability}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1711.06178},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Computer Science - Learning},
+     year = 2017,
+    month = nov,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv171106178W},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+}
+
+
+@ARTICLE{papernot2015,
+   author = {{Papernot}, N. and {McDaniel}, P. and {Jha}, S. and {Fredrikson}, M. and 
+	{Berkay Celik}, Z. and {Swami}, A.},
+    title = "{The Limitations of Deep Learning in Adversarial Settings}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1511.07528},
+ primaryClass = "cs.CR",
+ keywords = {Computer Science - Cryptography and Security, Computer Science - Learning, Computer Science - Neural and Evolutionary Computing, Statistics - Machine Learning},
+     year = 2015,
+    month = nov,
+   adsurl = {http://adsabs.harvard.edu/abs/2015arXiv151107528P},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+}
+
+
+@article{olah2017feature,
+  author = {Olah, Chris and Mordvintsev, Alexander and Schubert, Ludwig},
+  title = {Feature Visualization},
+  journal = {Distill},
+  year = 2017,
+  note = {https://distill.pub/2017/feature-visualization},
+  doi = {10.23915/distill.00007},
+}
+
+@ARTICLE{samek2017, 
+author={W. Samek and A. Binder and G. Montavon and S. Lapuschkin and K. R. Müller},
+journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+title="{Evaluating the Visualization of What a Deep Neural Network Has Learned}", 
+year=2017, 
+month={Nov},
+volume={28}, 
+number={11}, 
+pages={2660-2673}, 
+keywords={data visualisation;image classification;learning (artificial intelligence);neural nets;DNN;ILSVRC2012;MIT Places data sets;SUN397;complex machine learning tasks;data visualization;deconvolution method;deep neural network;heatmap;multilayer nonlinear structure;relevance propagation algorithm;sensitivity-based approach;Algorithm design and analysis;Biological neural networks;Deconvolution;Heating;Learning systems;Neurons;Sensitivity;Convolutional neural networks;explaining classification;image classification;interpretable machine learning;relevance models}, 
+doi={10.1109/TNNLS.2016.2599820}, 
+ISSN={2162-237X},
+}
+
+
+@InProceedings{koh2017,
+  title = 	 {Understanding Black-box Predictions via Influence Functions},
+  author = 	 {Pang Wei Koh and Percy Liang},
+  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
+  pages = 	 {1885--1894},
+  year = 	 {2017},
+  editor = 	 {Doina Precup and Yee Whye Teh},
+  volume = 	 {70},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {International Convention Centre, Sydney, Australia},
+  month = 	 {06--11 Aug},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v70/koh17a/koh17a.pdf}
+}
+
+@ARTICLE{Goodman2016,
+   author = {{Goodman}, B. and {Flaxman}, S.},
+    title = "{European Union regulations on algorithmic decision-making and a ``right to explanation''}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1606.08813},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Computer Science - Computers and Society, Computer Science - Learning},
+     year = 2016,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2016arXiv160608813G},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}}
+
+
+@ARTICLE{kim2017,
+   author = {{Kim}, B. and {Wattenberg}, M. and {Gilmer}, J. and {Cai}, C. and 
+	{Wexler}, J. and {Viegas}, F. and {Sayres}, R.},
+    title = "{Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV)}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1711.11279},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning},
+     year = 2017,
+    month = nov,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv171111279K},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}}
+
+@article{LRP2016,
+  author    = {Avanti Shrikumar and
+               Peyton Greenside and
+               Anna Shcherbina and
+               Anshul Kundaje},
+  title     = {Not Just a Black Box: Learning Important Features Through Propagating
+               Activation Differences},
+  journal   = {CoRR},
+  volume    = {abs/1605.01713},
+  year      = 2016,
+  url       = {http://arxiv.org/abs/1605.01713},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/ShrikumarGSK16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}}
+
+
+@ARTICLE{2017Telsa,
+       author = {NHTSA},
+        title = "{Technical report, U.S. Department of Transportation, National Highway Traffic, Tesla Crash Preliminary Evaluation Report
+Safety Administration}",
+      journal = {PE 16-007},
+         year = "2017",
+        month = "Jan",
+}
+
+
+@inproceedings{Zeiler2014,
+	Author = {Zeiler, Matthew D and Fergus, Rob},
+	Booktitle = {European Conference on Computer Vision},
+	Date-Added = {2016-10-12 11:14:28 +0000},
+	Date-Modified = {2016-10-12 11:16:57 +0000},
+	Organization = {Springer},
+	Pages = {818--833},
+	Title = {Visualizing and understanding convolutional networks},
+	Year = 2014,
+	}
+
+@article{Montavon2011,
+	Author = {Montavon, Gregoire and Braun, Mikio L and M{\"u}ller, Klaus-Robert},
+	Date-Added = {2016-10-12 11:13:21 +0000},
+	Date-Modified = {2016-10-19 16:36:27 +0000},
+	Journal = {Journal of Machine Learning Research},
+	Number = {Sep},
+	Pages = {2563--2581},
+	Title = {Kernel analysis of deep networks},
+	Volume = {12},
+	Year = 2011,
+	}
+
+@article{Bach2015,
+	Author = {Bach, Sebastian and Binder, Alexander and Montavon, Gr{\'e}goire and Klauschen, Frederick and M{\"u}ller, Klaus-Robert and Samek, Wojciech},
+	Date-Added = {2016-10-12 11:12:26 +0000},
+	Date-Modified = {2016-10-12 11:16:21 +0000},
+	Journal = {PloS one},
+	Number = {7},
+	Pages = {e0130140},
+	Publisher = {Public Library of Science},
+	Title = {On pixel-wise explanations for non-linear classifier decisions by layer-wise relevance propagation},
+	Volume = {10},
+	Year = 2015,
+	}
+
+@article{Montavon2017,
+	Author = {Montavon, Gr{\'e}goire and Lapuschkin, Sebastian and Binder, Alexander and Samek, Wojciech and M{\"u}ller, Klaus-Robert},
+	Date-Modified = {2017-02-10 22:17:33 +0000},
+	Journal = {Pattern Recognition},
+	Pages = {211--222},
+	Publisher = {Elsevier},
+	Title = {Explaining nonlinear classification decisions with deep taylor decomposition},
+	Volume = {65},
+	year = 2017,
+	}
+
+@article{RossFinale2017,
+  author    = {Andrew Slavin Ross and
+               Finale Doshi{-}Velez},
+  title     = {Improving the Adversarial Robustness and Interpretability of Deep
+               Neural Networks by Regularizing their Input Gradients},
+  journal   = {CoRR},
+  volume    = {abs/1711.09404},
+  year      = 2017,
+}
+  
+@inproceedings{Fong2017,
+  author    = {Ruth C. Fong and
+               Andrea Vedaldi},
+  title     = {Interpretable Explanations of Black Boxes by Meaningful Perturbation},
+  booktitle = {{ICCV}},
+  pages     = {3449--3457},
+  publisher = {{IEEE} Computer Society},
+  year      = 2017,
+}
+
+@InProceedings{gradcam2017,
+author = {Selvaraju, Ramprasaath R. and Cogswell, Michael and Das, Abhishek and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv},
+title = {Grad-CAM: Visual Explanations From Deep Networks via Gradient-Based Localization},
+booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+month = {Oct},
+year = 2017,
+}
+
+
+
+@ARTICLE{kitty_paper2017,
+   author = {{Kindermans}, P.-J. and {Hooker}, S. and {Adebayo}, J. and {Alber}, M. and 
+	{Sch{\"u}tt}, K.~T. and {D{\"a}hne}, S. and {Erhan}, D. and 
+	{Kim}, B.},
+    title = "{The (Un)reliability of saliency methods}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1711.00867},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Computer Science - Learning},
+     year = 2017,
+    month = nov,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv171100867K},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+}
+
+@ARTICLE{zhang2016,
+   author = {{Zhang}, J. and {Lin}, Z. and {Brandt}, J. and {Shen}, X. and 
+	{Sclaroff}, S.},
+    title = "{Top-down Neural Attention by Excitation Backprop}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1608.00507},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2016,
+    month = aug,
+   adsurl = {http://adsabs.harvard.edu/abs/2016arXiv160800507Z},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+}
+
+
+@ARTICLE{papernot2015,
+   author = {{Papernot}, N. and {McDaniel}, P. and {Jha}, S. and {Fredrikson}, M. and 
+	{Berkay Celik}, Z. and {Swami}, A.},
+    title = "{The Limitations of Deep Learning in Adversarial Settings}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1511.07528},
+ primaryClass = "cs.CR",
+ keywords = {Computer Science - Cryptography and Security, Computer Science - Learning, Computer Science - Neural and Evolutionary Computing, Statistics - Machine Learning},
+     year = 2015,
+    month = nov,
+   adsurl = {http://adsabs.harvard.edu/abs/2015arXiv151107528P},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+}
+
+
+@ARTICLE{samek2017, 
+author={W. Samek and A. Binder and G. Montavon and S. Lapuschkin and K. R. Müller},
+journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+title="{Evaluating the Visualization of What a Deep Neural Network Has Learned}", 
+year=2017, 
+month={Nov},
+volume={28}, 
+number={11}, 
+pages={2660-2673}, 
+keywords={data visualisation;image classification;learning (artificial intelligence);neural nets;DNN;ILSVRC2012;MIT Places data sets;SUN397;complex machine learning tasks;data visualization;deconvolution method;deep neural network;heatmap;multilayer nonlinear structure;relevance propagation algorithm;sensitivity-based approach;Algorithm design and analysis;Biological neural networks;Deconvolution;Heating;Learning systems;Neurons;Sensitivity;Convolutional neural networks;explaining classification;image classification;interpretable machine learning;relevance models}, 
+doi={10.1109/TNNLS.2016.2599820}, 
+ISSN={2162-237X},
+}
+
+
+@ARTICLE{Goodman2016,
+   author = {{Goodman}, B. and {Flaxman}, S.},
+    title = "{European Union regulations on algorithmic decision-making and a ``right to explanation''}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1606.08813},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Computer Science - Computers and Society, Computer Science - Learning},
+     year = 2016,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2016arXiv160608813G},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}}
+
+@article{LRP2016,
+  author    = {Avanti Shrikumar and
+               Peyton Greenside and
+               Anna Shcherbina and
+               Anshul Kundaje},
+  title     = {Not Just a Black Box: Learning Important Features Through Propagating
+               Activation Differences},
+  journal   = {CoRR},
+  volume    = {abs/1605.01713},
+  year      = 2016,
+  url       = {http://arxiv.org/abs/1605.01713},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/ShrikumarGSK16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}}
+
+@ARTICLE{1971Naturdistance_sets,
+   author = {{Levandowsky}, M.},
+    title = "{Distance between Sets}",
+  journal = {\nat},
+     year = 1971,
+    month = nov,
+   volume = 234,
+    pages = {34-35},
+      doi = {10.1038/234034a0},
+   adsurl = {https://ui.adsabs.harvard.edu/abs/1971Natur.234...34L},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{Gruetzemacher20183DDL,
+  title={3D deep learning for detecting pulmonary nodules in CT scans},
+  author={Ross Gruetzemacher and Ashish Gupta and David B. Paradice},
+  journal={Journal of the American Medical Informatics Association : JAMIA},
+  year={2018},
+  volume={25 10},
+  pages={
+          1301-1310
+        }
+}
+
+@article{2019Hongtao,
+title = "Automated pulmonary nodule detection in CT images using deep convolutional neural networks",
+journal = "Pattern Recognition",
+volume = "85",
+pages = "109 - 119",
+year = "2019",
+issn = "0031-3203",
+doi = "https://doi.org/10.1016/j.patcog.2018.07.031",
+url = "http://www.sciencedirect.com/science/article/pii/S0031320318302711",
+author = "Hongtao Xie and Dongbao Yang and Nannan Sun and Zhineng Chen and Yongdong Zhang",}
+
+
+@INPROCEEDINGS{Kubat97addressingthe,
+    author = {Miroslav Kubat and Stan Matwin},
+    title = {Addressing the Curse of Imbalanced Training Sets: One-Sided Selection},
+    booktitle = {In Proceedings of the Fourteenth International Conference on Machine Learning},
+    year = {1997},
+    pages = {179--186},
+    publisher = {Morgan Kaufmann}
+}
+
+@inproceedings{CameronJones1995InstanceSB,
+  title={Instance Selection by Encoding Length Heuristic with Random Mutation Hill Climbing},
+  author={R. Mike Cameron-Jones},
+  year={1995}
+}
+
+@Article{Aha1991,
+author="Aha, David W.
+and Kibler, Dennis
+and Albert, Marc K.",
+title="Instance-based learning algorithms",
+journal="Machine Learning",
+year="1991",
+month="Jan",
+day="01",
+volume="6",
+number="1",
+pages="37--66",
+url="https://doi.org/10.1007/BF00153759"
+}
+
+@misc{karpathy2014,
+author="Karpathy, Andrej",
+year="2014",
+  title = {What I learned from competing against a ConvNet on ImageNet},
+  howpublished = {\url{http://karpathy.github.io/2014/09/02/what-i-learned-from-competing-against-a-convnet-on-imagenet/}},
+  note = {Accessed: 2019-07-07}
+}
+
+@ARTICLE{2016Zhang,
+       author = {{Zhang}, Chiyuan and {Bengio}, Samy and {Hardt}, Moritz and
+         {Recht}, Benjamin and {Vinyals}, Oriol},
+        title = "{Understanding deep learning requires rethinking generalization}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning},
+         year = "2016",
+        month = "Nov",
+          eid = {arXiv:1611.03530},
+        pages = {arXiv:1611.03530},
+archivePrefix = {arXiv},
+       eprint = {1611.03530},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv161103530Z},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2018Nalisnick,
+       author = {{Nalisnick}, Eric and {Matsukawa}, Akihiro and {Whye Teh}, Yee and
+         {Gorur}, Dilan and {Lakshminarayanan}, Balaji},
+        title = "{Do Deep Generative Models Know What They Don't Know?}",
+      journal = {arXiv e-prints},
+     keywords = {Statistics - Machine Learning, Computer Science - Machine Learning},
+         year = "2018",
+        month = "Oct",
+          eid = {arXiv:1810.09136},
+        pages = {arXiv:1810.09136},
+archivePrefix = {arXiv},
+       eprint = {1810.09136},
+ primaryClass = {stat.ML},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018arXiv181009136N},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2017Guo,
+       author = {{Guo}, Chuan and {Pleiss}, Geoff and {Sun}, Yu and
+         {Weinberger}, Kilian Q.},
+        title = "{On Calibration of Modern Neural Networks}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning},
+         year = "2017",
+        month = "Jun",
+          eid = {arXiv:1706.04599},
+        pages = {arXiv:1706.04599},
+archivePrefix = {arXiv},
+       eprint = {1706.04599},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv170604599G},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2017jo,
+       author = {{Jo}, Jason and {Bengio}, Yoshua},
+        title = "{Measuring the tendency of CNNs to Learn Surface Statistical Regularities}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
+         year = "2017",
+        month = "Nov",
+          eid = {arXiv:1711.11561},
+        pages = {arXiv:1711.11561},
+archivePrefix = {arXiv},
+       eprint = {1711.11561},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv171111561J},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2017hosseini,
+       author = {{Hosseini}, Hossein and {Xiao}, Baicen and {Jaiswal}, Mayoore and
+         {Poovendran}, Radha},
+        title = "{On the Limitation of Convolutional Neural Networks in Recognizing Negative Images}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning, Statistics - Machine Learning},
+         year = "2017",
+        month = "Mar",
+          eid = {arXiv:1703.06857},
+        pages = {arXiv:1703.06857},
+archivePrefix = {arXiv},
+       eprint = {1703.06857},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv170306857H},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@Article{Russakovsky2015,
+author="Russakovsky, Olga
+and Deng, Jia
+and Su, Hao
+and Krause, Jonathan
+and Satheesh, Sanjeev
+and Ma, Sean
+and Huang, Zhiheng
+and Karpathy, Andrej
+and Khosla, Aditya
+and Bernstein, Michael
+and Berg, Alexander C.
+and Fei-Fei, Li",
+title="ImageNet Large Scale Visual Recognition Challenge",
+journal="International Journal of Computer Vision",
+year="2015",
+month="Dec",
+day="01",
+volume="115",
+number="3",
+pages="211--252",
+abstract="The ImageNet Large Scale Visual Recognition Challenge is a benchmark in object category classification and detection on hundreds of object categories and millions of images. The challenge has been run annually from 2010 to present, attracting participation from more than fifty institutions. This paper describes the creation of this benchmark dataset and the advances in object recognition that have been possible as a result. We discuss the challenges of collecting large-scale ground truth annotation, highlight key breakthroughs in categorical object recognition, provide a detailed analysis of the current state of the field of large-scale image classification and object detection, and compare the state-of-the-art computer vision accuracy with human accuracy. We conclude with lessons learned in the 5 years of the challenge, and propose future directions and improvements.",
+issn="1573-1405",
+doi="10.1007/s11263-015-0816-y",
+url="https://doi.org/10.1007/s11263-015-0816-y"
+}
+
+
+@misc{keras_pruning,
+  author = {{Keras TensorFlow}},
+  title = {Keras Tensorflow Magnitude Pruning Open Source Code},
+  howpublished = {\url{https://www.tensorflow.org/model_optimization/guide/pruning/pruning_with_keras}},
+  note = {Accessed: 2019-07-10}
+}
+
+@article{Aha1992ToleratingNI,
+  title={Tolerating Noisy, Irrelevant and Novel Attributes in Instance-Based Learning Algorithms},
+  author={David W. Aha},
+  journal={International Journal of Man-Machine Studies},
+  year={1992},
+  volume={36},
+  pages={267-287}
+}
+
+@article{Krizhevsky09learningmultiple,
+author = {Krizhevsky, Alex},
+year = {2012},
+month = {05},
+pages = {},
+title = {Learning Multiple Layers of Features from Tiny Images},
+journal = {University of Toronto}
+}
+
+@article{domingo_1995,
+author = {Domingos, Pedro},
+year = {1995},
+month = {05},
+pages = {},
+title = {Rule Induction and Instance-Based Learning: A Unified Approach}
+}
+
+@InProceedings{papadimitriou1980,
+author="Papadimitriou, Christos H.
+and Bentley, Jon Louis",
+editor="de Bakker, Jaco
+and van Leeuwen, Jan",
+title="A worst-case analysis of nearest neighbor searching by projection",
+booktitle="Automata, Languages and Programming",
+year="1980",
+}
+
+
+
+@inproceedings{Aha_1989,
+ author = {Aha, David W. and Kibler, Dennis},
+ title = {Noise-tolerant Instance-based Learning Algorithms},
+ booktitle = {Proceedings of the 11th International Joint Conference on Artificial Intelligence - Volume 1},
+ series = {IJCAI'89},
+ year = {1989},
+ location = {Detroit, Michigan},
+ pages = {794--799},
+ numpages = {6},
+ url = {http://dl.acm.org/citation.cfm?id=1623755.1623881},
+ acmid = {1623881},
+ publisher = {Morgan Kaufmann Publishers Inc.},
+ address = {San Francisco, CA, USA},
+} 
+
+@misc{blocksparse-gpu-kernels,
+  title = {Block-Sparse GPU Kernels},
+  author = {Scott Gray and Alec Radford and Diedrik P. Kingma},
+  howpublished = {\url{https://blog.openai.com/block-sparse-gpu-kernels/}},
+  year = {2017}
+}
+
+@inproceedings{dynamic-network-surgery,
+  title={Dynamic {N}etwork {S}urgery for {E}fficient {DNN}s},
+  author={Yiwen Guo and Anbang Yao and Yurong Chen},
+  booktitle={NIPS},
   year={2016}
 }
-@inproceedings{togelius2008experiment,
-  title={An experiment in automatic game design},
-  author={Togelius, Julian and Schmidhuber, Jurgen},
-  booktitle={Computational Intelligence and Games, 2008. CIG'08. IEEE Symposium On},
-  pages={111--118},
-  year={2008},
-  organization={IEEE}
+
+@incollection{NIPS2016Cortes,
+title = {Boosting with Abstention},
+author = {Cortes, Corinna and DeSalvo, Giulia and Mohri, Mehryar},
+booktitle = {Advances in Neural Information Processing Systems 29},
+editor = {D. D. Lee and M. Sugiyama and U. V. Luxburg and I. Guyon and R. Garnett},
+pages = {1660--1668},
+year = {2016},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/6336-boosting-with-abstention.pdf}
 }
-@book{millington2009artificial,
-  title={Artificial intelligence for games},
-  author={Millington, Ian and Funge, John},
-  year={2009},
-  publisher={CRC Press}
+
+@inproceedings{Corinna2016,
+  title={Learning with Rejection},
+  author={Corinna Cortes and Giulia DeSalvo and Mehryar Mohri},
+  booktitle={ALT},
+  year={2016}
 }
-@article{summerville2018procedural,
-  title={Procedural content generation via machine learning (PCGML)},
-  author={Summerville, Adam and Snodgrass, Sam and Guzdial, Matthew and Holmgard, Christoffer and Hoover, Amy K and Isaksen, Aaron and Nealen, Andy and Togelius, Julian},
-  journal={IEEE Transactions on Games},
-  year={2018},
-  publisher={IEEE}
+
+@article{Bartlett2008,
+ author = {Bartlett, Peter L. and Wegkamp, Marten H.},
+ title = {Classification with a Reject Option Using a Hinge Loss},
+ journal = {J. Mach. Learn. Res.},
+ issue_date = {6/1/2008},
+ volume = {9},
+ month = jun,
+ year = {2008},
+ issn = {1532-4435},
+ pages = {1823--1840},
+ numpages = {18},
+ url = {http://dl.acm.org/citation.cfm?id=1390681.1442792},
+ acmid = {1442792},
+ publisher = {JMLR.org},
+} 
+
+@inproceedings{Hooker2019ABF,
+  title={A Benchmark for Interpretability Methods in Deep Neural Networks},
+  author={Sara Hooker and Dumitru Erhan and Pieter-Jan Kindermans and Been Kim},
+  booktitle={NeurIPS 2019},
+  year={2019}
 }
-@article{volz2018evolving,
-  title={Evolving Mario Levels in the Latent Space of a Deep Convolutional Generative Adversarial Network},
-  author={Volz, Vanessa and Schrum, Jacob and Liu, Jialin and Lucas, Simon M and Smith, Adam and Risi, Sebastian},
-  journal={arXiv preprint arXiv:1805.00728},
-  url = {https://arxiv.org/abs/1805.00728},
-  year={2018}
+
+@INPROCEEDINGS{7551407Chen, 
+author={Y. {Chen} and J. {Emer} and V. {Sze}}, 
+booktitle={2016 ACM/IEEE 43rd Annual International Symposium on Computer Architecture (ISCA)}, 
+title={Eyeriss: A Spatial Architecture for Energy-Efficient Dataflow for Convolutional Neural Networks}, 
+year={2016}, 
+volume={}, 
+number={}, 
+pages={367-379}, 
+keywords={computer architecture;convolution;data flow computing;neural nets;power aware computing;Eyeriss;spatial architecture;energy-efficient dataflow;deep convolutional neural networks;deep CNNs;computational complexity;high-dimensional convolutions;parallel processing;energy-efficient CNN processing;row-stationary dataflow;RS dataflow;data movement energy consumption minimization;local data reuse;feature map pixels;partial sum accumulations;processing engine local storage;PE local storage;direct interPE communication;spatial parallelism;AlexNet CNN configurations;Throughput;Random access memory;Radio frequency;Parallel processing;Shape;Arrays;Spatial Architecture;Convolutional Neural Networks;Dataflow;Energy Efficiency}, 
+doi={10.1109/ISCA.2016.40}, 
+ISSN={1063-6897}, 
+month={June},}
+
+@INPROCEEDINGS{Reagen_7551399, 
+author={B. {Reagen} and P. {Whatmough} and R. {Adolf} and S. {Rama} and H. {Lee} and S. K. {Lee} and J. M. {Hernández-Lobato} and G. {Wei} and D. {Brooks}}, 
+booktitle={2016 ACM/IEEE 43rd Annual International Symposium on Computer Architecture (ISCA)}, 
+title={Minerva: Enabling Low-Power, Highly-Accurate Deep Neural Network Accelerators}, 
+year={2016}, 
+volume={}, 
+number={}, 
+pages={267-278}, 
+keywords={neural nets;Minerva;deep neural network accelerators;deep neural networks;classification tasks;specialized hardware;magnitude improvement;general-purpose hardware;automated codesign;DNN hardware accelerators;fixed-point accelerator baseline;heterogeneous datatype optimization;inline predication;small activity values;active hardware fault detection;domain-aware error mitigation;SRAM voltages;DNN model accuracy;ultra-low power DNN accelerators;power-constrained IoT;mobile devices;Optimization;Random access memory;Hardware;Integrated circuit modeling;Circuit faults;Space exploration;Libraries}, 
+doi={10.1109/ISCA.2016.32}, 
+ISSN={1063-6897}, 
+month={June},}
+
+
+@article{2018_sparse_evolutionary_training,
+    author = {Mocanu, Decebal Constantin and Mocanu, Elena and Stone, Peter and Nguyen, Phuong H. and Gibescu, Madeleine and Liotta, Antonio}, 
+    journal = {Nature Communications}, 
+    title = {Scalable {T}raining of {A}rtificial {N}eural {N}etworks with {A}daptive {S}parse {C}onnectivity {I}nspired by {N}etwork {S}cience}, 
+    year = {2018}, 
 }
-@article{guzdial2018co,
-  title={Co-Creative Level Design via Machine Learning},
-  author={Guzdial, Matthew and Liao, Nicholas and Riedl, Mark},
-  journal={arXiv preprint arXiv:1809.09420},
-  url = {https://arxiv.org/abs/1809.09420},
-  year={2018}
+
+@article{deep-rewiring,
+  author    = {Guillaume Bellec and
+               David Kappel and
+               Wolfgang Maass and
+               Robert A. Legenstein},
+  title     = {Deep {R}ewiring: {T}raining {V}ery {S}parse {D}eep {N}etworks},
+  journal   = {CoRR},
+  volume    = {abs/1711.05136},
+  year      = {2017},
 }
-@inproceedings{ha2017joint,
-  title={Joint optimization of robot design and motion parameters using the implicit function theorem},
-  author={Ha, Sehoon and Coros, Stelian and Alspach, Alexander and Kim, Joohyung and Yamane, Katsu},
-  booktitle={Robotics: Science and Systems},
-  year={2017}
+
+@article{lottery-ticket-hypothesis,
+  author    = {Jonathan Frankle and
+               Michael Carbin},
+  title     = {The {L}ottery {T}icket {H}ypothesis: {T}raining {P}runed {N}eural {N}etworks},
+  journal   = {CoRR},
+  volume    = {abs/1803.03635},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1803.03635},
 }
-@article{schaff2018jointly,
-  title={Jointly Learning to Construct and Control Agents using Deep Reinforcement Learning},
-  author={Schaff, Charles and Yunis, David and Chakrabarti, Ayan and Walter, Matthew R},
-  journal={arXiv preprint arXiv:1801.01432},
-  url = {https://arxiv.org/abs/1801.01432},
-  year={2018}
+
+@article{rethinking-pruning,
+  author    = {Zhuang Liu and
+               Mingjie Sun and
+               Tinghui Zhou and
+               Gao Huang and
+               Trevor Darrell},
+  title     = {Rethinking the {V}alue of {N}etwork {P}runing},
+  journal   = {CoRR},
+  volume    = {abs/1810.05270},
+  year      = {2018}
 }
-@article{
-schaff2018jointly_iclr_workshop,
-title={Jointly Learning to Construct and Control Agents using Deep Reinforcement Learning},
-author={Charles Schaff and David Yunis and Ayan Chakrabarti and Matthew R. Walter},
-journal={ICLR 2018 Workshop},
-year={2018},
-url="https://openreview.net/forum?id=SyfiiMZA-",
+
+@article{memory-bounded-convnet,
+  author    = {Maxwell D. Collins and
+               Pushmeet Kohli},
+  title     = {Memory {B}ounded {D}eep {C}onvolutional {N}etworks},
+  journal   = {CoRR},
+  volume    = {abs/1412.1442},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1412.1442},
 }
-@article{lipson2000automatic,
-  title={Automatic design and manufacture of robotic lifeforms},
-  author={Lipson, Hod and Pollack, Jordan B},
-  journal={Nature},
-  volume={406},
-  number={6799},
-  pages={974},
-  year={2000},
-  publisher={Nature Publishing Group}
+
+@article{Gupta2017,
+  author    = {Michael Zhu and
+               Suyog Gupta},
+  title     = {To prune, or not to prune: exploring the efficacy of pruning for model
+               compression},
+  journal   = {CoRR},
+  volume    = {abs/1710.01878},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1710.01878},
 }
-@inproceedings{szerlip2013indirectly,
-  title={Indirectly Encoded Sodarace for Artificial Life.},
-  author={Szerlip, Paul A and Stanley, Kenneth O},
-  booktitle={ECAL},
-  pages={218--225},
-  year={2013},
-  organization={MIT Press},
-  url="http://eplex.cs.ucf.edu/ecal13/demo/PCA.html",
+
+@inproceedings{variational-dropout,
+  author    = {Dmitry Molchanov and
+               Arsenii Ashukha and
+               Dmitry P. Vetrov},
+  title     = {Variational {D}ropout {S}parsifies {D}eep {N}eural {N}etworks},
+  booktitle = {Proceedings of the 34th International Conference on Machine Learning,
+               {ICML} 2017, Sydney, NSW, Australia, 6-11 August 2017},
+  pages     = {2498--2507},
+  year      = {2017},
 }
-@inproceedings{szerlip2014steps,
-  title={Steps toward a modular library for turning any evolutionary domain into an online interactive platform},
-  author={Szerlip, Paul A and Stanley, Kenneth O},
-  booktitle={H. Sayama and J. Rieffel and S. Risi and R. Doursat and H. Lipson, Artificial life 14: Proceedings of the Fourteenth International Conference on the Synthesis and Simulation of Living Systems},
-  pages={900--907},
-  year={2014},
-  organization={Citeseer}
+
+@article{variational-information-bottleneck,
+  author    = {Bin Dai and
+               Chen Zhu and
+               David P. Wipf},
+  title     = {Compressing {N}eural {N}etworks using the {V}ariational {I}nformation {B}ottleneck},
+  journal   = {CoRR},
+  volume    = {abs/1802.10399},
+  year      = {2018}
 }
-@article{moore2014evolutionary,
-  title={Evolutionary robotics on the Web with WebGL and Javascript},
-  author={Moore, Jared and Clark, Anthony and McKinley, Philip},
-  journal={arXiv preprint arXiv:1406.3337},
-  url="http://jaredmmoore.com/WebGL_Visualizer/visualizer.html",
-  year={2014}
+
+@ARTICLE{2017Cortes,
+       author = {{Cortes}, Corinna and {DeSalvo}, Giulia and {Gentile}, Claudio and
+         {Mohri}, Mehryar and {Yang}, Scott},
+        title = "{Online Learning with Abstention}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning},
+         year = "2017",
+        month = "Mar",
+          eid = {arXiv:1703.03478},
+        pages = {arXiv:1703.03478},
+archivePrefix = {arXiv},
+       eprint = {1703.03478},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv170303478C},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-  @misc{boxcar2d,
-    author = {Ryan Weber },
-    title = {BoxCar2D},
-    year = 2010,
-    url = {http://boxcar2d.com/about.html},
-    urldate = {2018-11-01}
-  }
-@article{agrawal2014diverse,
-  title={Diverse Motions and Character Shapes for Simulated Skills},
-  author={Agrawal, Shailen and Shen, Shuo and van de Panne, Michiel},
-  journal={IEEE transactions on visualization and computer graphics},
-  volume={20},
-  number={10},
-  pages={1345--1355},
-  year={2014},
-  publisher={IEEE}
+
+
+
+@inproceedings{bayesian-compression,
+  author    = {Christos Louizos and
+               Karen Ullrich and
+               Max Welling},
+  title     = {Bayesian {C}ompression for {D}eep {L}earning},
+  booktitle = {Advances in Neural Information Processing Systems 30: Annual Conference
+               on Neural Information Processing Systems 2017, 4-9 December 2017,
+               Long Beach, CA, {USA}},
+  pages     = {3290--3300},
+  year      = {2017},
 }
-@article{geijtenbeek2013flexible,
-  title={Flexible muscle-based locomotion for bipedal creatures},
-  author={Geijtenbeek, Thomas and Van De Panne, Michiel and Van Der Stappen, A Frank},
-  journal={ACM Transactions on Graphics (TOG)},
-  volume={32},
-  number={6},
-  pages={206},
-  year={2013},
-  publisher={ACM}
+
+@inproceedings{optimal-brain-damage,
+  author    = {Yann LeCun and
+               John S. Denker and
+               Sara A. Solla},
+  title     = {Optimal {B}rain {D}amage},
+  booktitle = {{NIPS}},
+  pages     = {598--605},
+  publisher = {Morgan Kaufmann},
+  year      = {1989}
 }
+
+@inproceedings{optimal-brain-surgeon,
+  author    = {Babak Hassibi and
+               David G. Stork},
+  title     = {Second Order Derivatives for Network Pruning: Optimal Brain Surgeon},
+  booktitle = {{NIPS}},
+  pages     = {164--171},
+  publisher = {Morgan Kaufmann},
+  year      = {1992}
+}
+
+@article{pruning-convnet-nvidia,
+  author    = {Pavlo Molchanov and
+               Stephen Tyree and
+               Tero Karras and
+               Timo Aila and
+               Jan Kautz},
+  title     = {Pruning {C}onvolutional {N}eural {N}etworks for {R}esource {E}fficient {T}ransfer {L}earning},
+  journal   = {CoRR},
+  volume    = {abs/1611.06440},
+  year      = {2016}
+}
+
+@article{fisher-pruning,
+  author    = {Lucas Theis and
+               Iryna Korshunova and
+               Alykhan Tejani and
+               Ferenc Husz{\'{a}}r},
+  title     = {Faster gaze prediction with dense networks and {F}isher pruning},
+  journal   = {CoRR},
+  volume    = {abs/1801.05787},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1801.05787},
+}
+
+@inproceedings{automatic-model-compression,
+  author    = {Yihui He and
+               Ji Lin and
+               Zhijian Liu and
+               Hanrui Wang and
+               Li{-}Jia Li and
+               Song Han},
+  title     = {{AMC:} AutoML for Model Compression and Acceleration on Mobile Devices},
+  booktitle = {Computer Vision - {ECCV} 2018 - 15th European Conference, Munich,
+               Germany, September 8-14, 2018, Proceedings, Part {VII}},
+  pages     = {815--832},
+  year      = {2018},
+}
+
+@ARTICLE{2016Canziani,
+       author = {{Canziani}, Alfredo and {Paszke}, Adam and {Culurciello}, Eugenio},
+        title = "{An Analysis of Deep Neural Network Models for Practical Applications}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition},
+         year = "2016",
+        month = "May",
+          eid = {arXiv:1605.07678},
+        pages = {arXiv:1605.07678},
+archivePrefix = {arXiv},
+       eprint = {1605.07678},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv160507678C},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@inproceedings{imagenet_cvpr09,
+        AUTHOR = {Deng, J. and Dong, W. and Socher, R. and Li, L.-J. and Li, K. and Fei-Fei, L.},
+        TITLE = {{ImageNet: A Large-Scale Hierarchical Image Database}},
+        BOOKTITLE = {CVPR09},
+        YEAR = 2009,
+        BIBSOURCE = "http://www.image-net.org/papers/imagenet_cvpr09.bib"}
+
+
+
+@article{1954anderson_darling,
+  added-at = {2009-05-09T19:00:52.000+0200},
+  author = {Anderson, T. W. and Darling, D. A.},
+  biburl = {https://www.bibsonomy.org/bibtex/23d61214a70e110f205f8cb26b11f5381/maverick},
+  copyright = {Copyright � 1954 American Statistical Association},
+  description = {two papers about anderson-darling test},
+  interhash = {45de0970eda98983a1a9a7f0b6f2b471},
+  intrahash = {3d61214a70e110f205f8cb26b11f5381},
+  issn = {01621459},
+  journal = {Journal of the American Statistical Association},
+  jstor_articletype = {primary_article},
+  jstor_formatteddate = {Dec., 1954},
+  keywords = {gof},
+  number = 268,
+  pages = {765--769},
+  publisher = {American Statistical Association},
+  timestamp = {2009-05-09T19:00:53.000+0200},
+  title = {A Test of Goodness of Fit},
+  url = {http://www.jstor.org/stable/2281537},
+  volume = 49,
+  year = 1954
+}
+
+
+@book{1986agostino,
+ editor = {D'Agostino, Ralph B and Stephens, Michael A},
+ title = {Goodness-of-fit Techniques},
+ year = {1986},
+ isbn = {0-824-77487-6},
+ publisher = {Marcel Dekker, Inc.},
+ address = {New York, NY, USA},
+} 
+
+
+@article{2018Mittal,
+  author    = {Deepak Mittal and
+               Shweta Bhardwaj and
+               Mitesh M. Khapra and
+               Balaraman Ravindran},
+  title     = {Recovering from Random Pruning: On the Plasticity of Deep Convolutional
+               Neural Networks},
+  journal   = {CoRR},
+  volume    = {abs/1801.10447},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1801.10447},
+  archivePrefix = {arXiv},
+  eprint    = {1801.10447},
+  timestamp = {Mon, 13 Aug 2018 16:46:51 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1801-10447},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Ciresan2011,
+  author    = {Dan C. Ciresan and
+               Ueli Meier and
+               Jonathan Masci and
+               Luca Maria Gambardella and
+               J{\"{u}}rgen Schmidhuber},
+  title     = {High-Performance Neural Networks for Visual Object Classification},
+  journal   = {CoRR},
+  volume    = {abs/1102.0183},
+  year      = {2011},
+  url       = {http://arxiv.org/abs/1102.0183},
+  archivePrefix = {arXiv},
+  eprint    = {1102.0183},
+  timestamp = {Mon, 13 Aug 2018 16:47:27 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1102-0183},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{stock2018,
+  author    = {Pierre Stock and
+               Moustapha Ciss{\'{e}}},
+  title     = {ConvNets and ImageNet Beyond Accuracy: Understanding Mistakes and
+               Uncovering Biases},
+  booktitle = {Computer Vision - {ECCV} 2018 - 15th European Conference, Munich,
+               Germany, September 8-14, 2018, Proceedings, Part {VI}},
+  pages     = {504--519},
+  year      = {2018},
+  crossref  = {DBLP:conf/eccv/2018-6},
+  url       = {https://doi.org/10.1007/978-3-030-01231-1\_31},
+  doi       = {10.1007/978-3-030-01231-1\_31},
+  timestamp = {Tue, 14 May 2019 10:00:45 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/eccv/StockC18},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@ARTICLE{2015hinton,
+       author = {{Hinton}, Geoffrey and {Vinyals}, Oriol and {Dean}, Jeff},
+        title = "{Distilling the Knowledge in a Neural Network}",
+      journal = {arXiv e-prints},
+     keywords = {Statistics - Machine Learning, Computer Science - Machine Learning, Computer Science - Neural and Evolutionary Computing},
+         year = "2015",
+        month = "Mar",
+          eid = {arXiv:1503.02531},
+        pages = {arXiv:1503.02531},
+archivePrefix = {arXiv},
+       eprint = {1503.02531},
+ primaryClass = {stat.ML},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2015arXiv150302531H},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2019Hendrycks_Dietterich,
+       author = {{Hendrycks}, Dan and {Dietterich}, Thomas},
+        title = "{Benchmarking Neural Network Robustness to Common Corruptions and Perturbations}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning, Computer Science - Computer Vision and Pattern Recognition, Statistics - Machine Learning},
+         year = "2019",
+        month = "Mar",
+          eid = {arXiv:1903.12261},
+        pages = {arXiv:1903.12261},
+archivePrefix = {arXiv},
+       eprint = {1903.12261},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2019arXiv190312261H},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+
+@article{namhoon2018,
+  author    = {Namhoon Lee and
+               Thalaiyasingam Ajanthan and
+               Philip H. S. Torr},
+  title     = {{SNIP:} Single-shot Network Pruning based on Connection Sensitivity},
+  journal   = {CoRR},
+  volume    = {abs/1810.02340},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1810.02340},
+  archivePrefix = {arXiv},
+  eprint    = {1810.02340},
+  timestamp = {Tue, 30 Oct 2018 10:49:09 +0100},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1810-02340},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@INPROCEEDINGS{Cun90optimalbrain,
+    author = {Yann Le Cun and John S. Denker and Sara A. Solla},
+    title = {Optimal Brain Damage},
+    booktitle = {Advances in Neural Information Processing Systems},
+    year = {1990},
+    pages = {598--605},
+    publisher = {Morgan Kaufmann}
+}
+
+@INPROCEEDINGS{Hassibi93secondorder,
+    author = {Babak Hassibi and David G. Stork and Stork Crc. Ricoh. Com},
+    title = {Second Order Derivatives for Network Pruning: Optimal Brain Surgeon},
+    booktitle = {Advances in Neural Information Processing Systems 5},
+    year = {1993},
+    pages = {164--171},
+    publisher = {Morgan Kaufmann}
+}
+
+@article{CASEY2000241,
+title = "Structural and functional brain development and its relation to cognitive development",
+journal = "Biological Psychology",
+volume = "54",
+number = "1",
+pages = "241 - 257",
+year = "2000",
+issn = "0301-0511",
+doi = "https://doi.org/10.1016/S0301-0511(00)00058-2",
+url = "http://www.sciencedirect.com/science/article/pii/S0301051100000582",
+author = "B.J. Casey and Jay N. Giedd and Kathleen M. Thomas",
+}
+
+@incollection{RAKIC1994227,
+title = "Synaptic development of the cerebral cortex: implications for learning, memory, and mental illness",
+editor = "J. Van Pelt and M.A. Corner and H.B.M. Uylings and F.H. Lopes Da Silva",
+series = "Progress in Brain Research",
+publisher = "Elsevier",
+volume = "102",
+pages = "227 - 243",
+year = "1994",
+booktitle = "The Self-Organizing Brain: From Growth Cones to Functional Networks",
+issn = "0079-6123",
+doi = "https://doi.org/10.1016/S0079-6123(08)60543-9",
+url = "http://www.sciencedirect.com/science/article/pii/S0079612308605439",
+author = "Pasko Rakic and Jean-Pierre Bourgeois and Patricia S. Goldman-Rakic",
+abstract = "Publisher Summary
+This chapter explores various questions: Are synapses added as we learn? Are there more synapses in some cortical areas than in others? Are there gender differences in synaptic density and do we lose synapses as we age? If we lose synapses with age, what is the timing and rate of this dissolution? To address these issue this chapter present the finding reported in the rhesus monkey. The study of major structural and functional subdivisions of the cortex over the primate lifespan offers a particularly comprehensive view of synapse formation. From study, it is eminently clear that knowledge of the normal course and mechanisms of synapse formation, the influence of various exogenous and endogenous events upon synapse stability and turnover, are essential prerequisites to determining the locus and timing of etiological factors in diseases that affect the cortex and alter cognitive function."
+}
+
+@article{2015_gupta,
+  author    = {Suyog Gupta and
+               Ankur Agrawal and
+               Kailash Gopalakrishnan and
+               Pritish Narayanan},
+  title     = {Deep Learning with Limited Numerical Precision},
+  journal   = {CoRR},
+  volume    = {abs/1502.02551},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1502.02551},
+  archivePrefix = {arXiv},
+  eprint    = {1502.02551},
+  timestamp = {Mon, 13 Aug 2018 16:46:31 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/GuptaAGN15},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+@article{1992_nowlan_hinton,
+author = {Nowlan, Steven J. and Hinton, Geoffrey E.},
+title = {Simplifying Neural Networks by Soft Weight-Sharing},
+journal = {Neural Computation},
+volume = {4},
+number = {4},
+pages = {473-493},
+year = {1992},
+doi = {10.1162/neco.1992.4.4.473},
+
+URL = { 
+        https://doi.org/10.1162/neco.1992.4.4.473
+    
+},
+eprint = { 
+        https://doi.org/10.1162/neco.1992.4.4.473
+    
+}
+,
+    abstract = { One way of simplifying neural networks so they generalize better is to add an extra term to the error function that will penalize complexity. Simple versions of this approach include penalizing the sum of the squares of the weights or penalizing the number of nonzero weights. We propose a more complicated penalty term in which the distribution of weight values is modeled as a mixture of multiple gaussians. A set of weights is simple if the weights have high probability density under the mixture model. This can be achieved by clustering the weights into subsets with the weights in each cluster having very similar values. Since we do not know the appropriate means or variances of the clusters in advance, we allow the parameters of the mixture model to adapt at the same time as the network learns. Simulations on two different problems demonstrate that this complexity term is more effective than previous complexity terms. }
+}
+
+@incollection{NIPS1990_Andreas_weight_elimination,
+title = {Generalization by Weight-Elimination with Application to Forecasting},
+author = {Andreas S. Weigend and David E. Rumelhart and Bernardo A. Huberman},
+booktitle = {Advances in Neural Information Processing Systems 3},
+editor = {R. P. Lippmann and J. E. Moody and D. S. Touretzky},
+pages = {875--882},
+year = {1991},
+publisher = {Morgan-Kaufmann},
+}
+
+
+@ARTICLE{reed_1993_pruning_algorithms_survey, 
+author={R. {Reed}}, 
+journal={IEEE Transactions on Neural Networks}, 
+title={Pruning algorithms-a survey}, 
+year={1993}, 
+volume={4}, 
+number={5}, 
+pages={740-747}, 
+keywords={learning (artificial intelligence);neural nets;neural network pruning algorithms;neural net training;Testing;Training data;Thumb;Neural networks;Multilayer perceptrons;Tree data structures;Sampling methods}, 
+doi={10.1109/72.248452}, 
+ISSN={1045-9227}, 
+month={Sep.},}
+
+@article{Hubara2016_training_neural_networks_low_precision,
+  author    = {Itay Hubara and
+               Matthieu Courbariaux and
+               Daniel Soudry and
+               Ran El{-}Yaniv and
+               Yoshua Bengio},
+  title     = {Quantized Neural Networks: Training Neural Networks with Low Precision
+               Weights and Activations},
+  journal   = {CoRR},
+  volume    = {abs/1609.07061},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1609.07061},
+  archivePrefix = {arXiv},
+  eprint    = {1609.07061},
+  timestamp = {Mon, 13 Aug 2018 16:49:12 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/HubaraCSEB16},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@ARTICLE{2014Courbariaux_low_precision_multiplications,
+       author = {{Courbariaux}, Matthieu and {Bengio}, Yoshua and {David}, Jean-Pierre},
+        title = "{Training deep neural networks with low precision multiplications}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Machine Learning, Computer Science - Computer Vision and Pattern Recognition, Computer Science - Neural and Evolutionary Computing},
+         year = "2014",
+        month = "Dec",
+          eid = {arXiv:1412.7024},
+        pages = {arXiv:1412.7024},
+archivePrefix = {arXiv},
+       eprint = {1412.7024},
+ primaryClass = {cs.LG},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2014arXiv1412.7024C},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@InProceedings{kumar17,
+  title = 	 {Resource-efficient Machine Learning in 2 {KB} {RAM} for the Internet of Things},
+  author = 	 {Ashish Kumar and Saurabh Goyal and Manik Varma},
+  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
+  pages = 	 {1935--1944},
+  year = 	 {2017},
+  editor = 	 {Doina Precup and Yee Whye Teh},
+  volume = 	 {70},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {International Convention Centre, Sydney, Australia},
+  month = 	 {06--11 Aug},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v70/kumar17a/kumar17a.pdf},
+  url = 	 {http://proceedings.mlr.press/v70/kumar17a.html},
+  abstract = 	 {This paper develops a novel tree-based algorithm, called Bonsai, for efficient prediction on IoT devices – such as those based on the Arduino Uno board having an 8 bit ATmega328P microcontroller operating at 16 MHz with no native floating point support, 2 KB RAM and 32 KB read-only flash. Bonsai maintains prediction accuracy while minimizing model size and prediction costs by: (a) developing a tree model which learns a single, shallow, sparse tree with powerful nodes; (b) sparsely projecting all data into a low-dimensional space in which the tree is learnt; and (c) jointly learning all tree and projection parameters. Experimental results on multiple benchmark datasets demonstrate that Bonsai can make predictions in milliseconds even on slow microcontrollers, can fit in KB of memory, has lower battery consumption than all other algorithms while achieving prediction accuracies that can be as much as 30\% higher than state-of-the-art methods for resource-efficient machine learning. Bonsai is also shown to generalize to other resource constrained settings beyond IoT by generating significantly better search results as compared to Bing’s L3 ranker when the model size is restricted to 300 bytes. Bonsai’s code can be downloaded from (http://www.manikvarma.org/code/Bonsai/download.html).}
+}
+
+@article{squeezenet2018,
+  author    = {Forrest N. Iandola and
+               Matthew W. Moskewicz and
+               Khalid Ashraf and
+               Song Han and
+               William J. Dally and
+               Kurt Keutzer},
+  title     = {SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and {\textless}1MB
+               model size},
+  journal   = {CoRR},
+  volume    = {abs/1602.07360},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1602.07360},
+  archivePrefix = {arXiv},
+  eprint    = {1602.07360},
+  timestamp = {Mon, 13 Aug 2018 16:46:12 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/IandolaMAHDK16},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{shooker2019,
+  author    = {Sara Hooker and
+               Dumitru Erhan and
+               Pieter{-}Jan Kindermans and
+               Been Kim},
+  title     = {Evaluating Feature Importance Estimates},
+  journal   = {CoRR},
+  volume    = {abs/1806.10758},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1806.10758},
+  archivePrefix = {arXiv},
+  eprint    = {1806.10758},
+}
+
+@article{tgale_shooker_2019,
+  author    = {Trevor Gale and
+               Erich Elsen and
+               Sara Hooker},
+  title     = {The State of Sparsity in Deep Neural Networks},
+  journal   = {CoRR},
+  volume    = {abs/1902.09574},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1902.09574},
+  archivePrefix = {arXiv},
+  eprint    = {1902.09574},
+  timestamp = {Tue, 21 May 2019 18:03:40 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1902-09574},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{runtime-neural-pruning,
+  author    = {Ji Lin and
+               Yongming Rao and
+               Jiwen Lu and
+               Jie Zhou},
+  title     = {Runtime Neural Pruning},
+  booktitle = {{NIPS}},
+  pages     = {2178--2188},
+  year      = {2017}
+}
+
+@article{variational-dropout-local-reparameterization,
+  author    = {Diederik P. Kingma and
+               Tim Salimans and
+               Max Welling},
+  title     = {Variational Dropout and the Local Reparameterization Trick},
+  journal   = {CoRR},
+  volume    = {abs/1506.02557},
+  year      = {2015}
+}
+
+@article{autoencoding-variational-bayes,
+  author    = {Diederik P. Kingma and
+               Max Welling},
+  title     = {Auto-Encoding Variational Bayes},
+  journal   = {CoRR},
+  volume    = {abs/1312.6114},
+  year      = {2013}
+}
+
+@inproceedings{stochastic-backpropagation,
+  author    = {Danilo Jimenez Rezende and
+               Shakir Mohamed and
+               Daan Wierstra},
+  title     = {Stochastic {B}ackpropagation and {A}pproximate {I}nference in {D}eep {G}enerative
+               Models},
+  booktitle = {{ICML}},
+  series    = {{JMLR} Workshop and Conference Proceedings},
+  volume    = {32},
+  pages     = {1278--1286},
+  publisher = {JMLR.org},
+  year      = {2014}
+}
+
+@article{spike-and-slab,
+author = { T. J.   Mitchell  and  J. J.   Beauchamp },
+title = {Bayesian {V}ariable {S}election in {L}inear {R}egression},
+journal = {Journal of the American Statistical Association},
+volume = {83},
+number = {404},
+pages = {1023-1032},
+year  = {1988},
+publisher = {Taylor & Francis},
+}
+
+@article{tensor2tensor,
+  author    = {Ashish Vaswani and Samy Bengio and Eugene Brevdo and
+    Francois Chollet and Aidan N. Gomez and Stephan Gouws and Llion Jones and
+    \L{}ukasz Kaiser and Nal Kalchbrenner and Niki Parmar and Ryan Sepassi and
+    Noam Shazeer and Jakob Uszkoreit},
+  title     = {Tensor2Tensor for {N}eural {M}achine {T}ranslation},
+  journal   = {CoRR},
+  volume    = {abs/1803.07416},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1803.07416},
+}
+
+@inproceedings{scaling-nmt,
+  author    = {Myle Ott and
+               Sergey Edunov and
+               David Grangier and
+               Michael Auli},
+  title     = {Scaling {N}eural {M}achine {T}ranslation},
+  booktitle = {Proceedings of the Third Conference on Machine Translation: Research
+               Papers, {WMT} 2018, Belgium, Brussels, October 31 - November 1, 2018},
+  pages     = {1--9},
+  year      = {2018},
+}
+
+@article{adam-optimizer,
+  author    = {Diederik P. Kingma and
+               Jimmy Ba},
+  title     = {Adam: {A} {M}ethod for {S}tochastic {O}ptimization},
+  journal   = {CoRR},
+  volume    = {abs/1412.6980},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1412.6980},
+}
+
+@inproceedings{network-slimming,
+  author    = {Zhuang Liu and
+               Jianguo Li and
+               Zhiqiang Shen and
+               Gao Huang and
+               Shoumeng Yan and
+               Changshui Zhang},
+  title     = {Learning {E}fficient {C}onvolutional {N}etworks through {N}etwork {S}limming},
+  booktitle = {{IEEE} International Conference on Computer Vision, {ICCV} 2017, Venice,
+               Italy, October 22-29, 2017},
+  pages     = {2755--2763},
+  year      = {2017},
+}
+
+@inproceedings{thinet,
+  author    = {Jian{-}Hao Luo and
+               Jianxin Wu and
+               Weiyao Lin},
+  title     = {ThiNet: {A} {F}ilter {L}evel {P}runing {M}ethod for {D}eep {N}eural {N}etwork {C}ompression},
+  booktitle = {{IEEE} International Conference on Computer Vision, {ICCV} 2017, Venice,
+               Italy, October 22-29, 2017},
+  pages     = {5068--5076},
+  year      = {2017},
+}
+
+@inproceedings{wide-resnet,
+  author    = {Sergey Zagoruyko and
+               Nikos Komodakis},
+  title     = {Wide {R}esidual {N}etworks},
+  booktitle = {Proceedings of the British Machine Vision Conference 2016, {BMVC}
+               2016, York, UK, September 19-22, 2016},
+  year      = {2016},
+}
+
+@article{lpcnet,
+  author    = {Jean{-}Marc Valin and
+               Jan Skoglund},
+  title     = {LPCNet: {I}mproving {N}eural {S}peech {S}ynthesis {T}hrough {L}inear {P}rediction},
+  journal   = {CoRR},
+  volume    = {abs/1810.11846},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1810.11846},
+}
+
+@inproceedings{sparse-connection-1997,
+  author    = {Nikko Str\"om},
+  title     = {Sparse {C}onnection and {P}runing in {L}arge {D}ynamic {A}rtificial {N}eural {N}etworks},
+  booktitle = {EUROSPEECH},
+  year      = {1997},
+}
+
+@article{fbnet,
+  author    = {Bichen Wu and
+               Xiaoliang Dai and
+               Peizhao Zhang and
+               Yanghan Wang and
+               Fei Sun and
+               Yiming Wu and
+               Yuandong Tian and
+               Peter Vajda and
+               Yangqing Jia and
+               Kurt Keutzer},
+  title     = {FBNet: {H}ardware-{A}ware {E}fficient {C}onv{N}et {D}esign via {D}ifferentiable
+               Neural Architecture Search},
+  journal   = {CoRR},
+  volume    = {abs/1812.03443},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1812.03443},
+}
+
+@article{mobilenetv2,
+  author    = {Mark Sandler and
+               Andrew G. Howard and
+               Menglong Zhu and
+               Andrey Zhmoginov and
+               Liang{-}Chieh Chen},
+  title     = {{I}nverted {R}esiduals and {L}inear {B}ottlenecks: {M}obile {N}etworks for {C}lassification,
+               Detection and Segmentation},
+  journal   = {CoRR},
+  volume    = {abs/1801.04381},
+  year      = {2018}
+}
+
+
+
+@inproceedings{langley00,
+ author    = {P. Langley},
+ title     = {Crafting Papers on Machine Learning},
+ year      = {2000},
+ pages     = {1207--1216},
+ editor    = {Pat Langley},
+ booktitle     = {Proceedings of the 17th International Conference
+              on Machine Learning (ICML 2000)},
+ address   = {Stanford, CA},
+ publisher = {Morgan Kaufmann}
+}
+
+@TechReport{mitchell80,
+  author = 	 "T. M. Mitchell",
+  title = 	 "The Need for Biases in Learning Generalizations",
+  institution =  "Computer Science Department, Rutgers University",
+  year = 	 "1980",
+  address =	 "New Brunswick, MA",
+}
+
+@phdthesis{kearns89,
+  author = {M. J. Kearns},
+  title =  {Computational Complexity of Machine Learning},
+  school = {Department of Computer Science, Harvard University},
+  year =   {1989}
+}
+
+@ARTICLE{2018random_pruning,
+   author = {{Mittal}, D. and {Bhardwaj}, S. and {Khapra}, M.~M. and {Ravindran}, B.
+	},
+    title = "{Recovering from Random Pruning: On the Plasticity of Deep Convolutional Neural Networks}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1801.10447},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2018,
+    month = jan,
+   adsurl = {http://adsabs.harvard.edu/abs/2018arXiv180110447M},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@Book{MachineLearningI,
+  editor = 	 "R. S. Michalski and J. G. Carbonell and T.
+		  M. Mitchell",
+  title = 	 "Machine Learning: An Artificial Intelligence
+		  Approach, Vol. I",
+  publisher = 	 "Tioga",
+  year = 	 "1983",
+  address =	 "Palo Alto, CA"
+}
+
+@Book{DudaHart2nd,
+  author =       "R. O. Duda and P. E. Hart and D. G. Stork",
+  title =        "Pattern Classification",
+  publisher =    "John Wiley and Sons",
+  edition =      "2nd",
+  year =         "2000"
+}
+
+@misc{anonymous,
+  title= {Suppressed for Anonymity},
+  author= {Author, N. N.},
+  year= {2018}
+}
+
+@InCollection{Newell81,
+  author =       "A. Newell and P. S. Rosenbloom",
+  title =        "Mechanisms of Skill Acquisition and the Law of
+                  Practice", 
+  booktitle =    "Cognitive Skills and Their Acquisition",
+  pages =        "1--51",
+  publisher =    "Lawrence Erlbaum Associates, Inc.",
+  year =         "1981",
+  editor =       "J. R. Anderson",
+  chapter =      "1",
+  address =      "Hillsdale, NJ"
+}
+
+
+@Article{Samuel59,
+  author = 	 "A. L. Samuel",
+  title = 	 "Some Studies in Machine Learning Using the Game of
+		  Checkers",
+  journal =	 "IBM Journal of Research and Development",
+  year =	 "1959",
+  volume =	 "3",
+  number =	 "3",
+  pages =	 "211--229"
+}
+
+
+@ARTICLE{2017arXiv170604599G,
+   author = {{Guo}, C. and {Pleiss}, G. and {Sun}, Y. and {Weinberger}, K.~Q.
+	},
+    title = "{On Calibration of Modern Neural Networks}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1706.04599},
+ keywords = {Computer Science - Machine Learning},
+     year = 2017,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv170604599G},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2017arXiv170603762V,
+   author = {{Vaswani}, A. and {Shazeer}, N. and {Parmar}, N. and {Uszkoreit}, J. and 
+	{Jones}, L. and {Gomez}, A.~N. and {Kaiser}, L. and {Polosukhin}, I.
+	},
+    title = "{Attention Is All You Need}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1706.03762},
+ primaryClass = "cs.CL",
+ keywords = {Computer Science - Computation and Language, Computer Science - Machine Learning},
+     year = 2017,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv170603762V},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{lenet, 
+author={Y. Lecun and L. Bottou and Y. Bengio and P. Haffner}, 
+journal={Proceedings of the IEEE}, 
+title={Gradient-based learning applied to document recognition}, 
+year={1998}, 
+volume={86}, 
+number={11}, 
+pages={2278-2324}, 
+keywords={optical character recognition;multilayer perceptrons;backpropagation;convolution;gradient-based learning;document recognition;multilayer neural networks;back-propagation;gradient based learning technique;complex decision surface synthesis;high-dimensional patterns;handwritten character recognition;handwritten digit recognition task;2D shape variability;document recognition systems;field extraction;segmentation recognition;language modeling;graph transformer networks;GTN;multimodule systems;performance measure minimization;cheque reading;convolutional neural network character recognizers;Neural networks;Pattern recognition;Machine learning;Optical character recognition software;Character recognition;Feature extraction;Multi-layer neural network;Optical computing;Hidden Markov models;Principal component analysis}, 
+doi={10.1109/5.726791}, 
+ISSN={0018-9219}, 
+month={Nov},}
+
+@ARTICLE{2014Simonyan,
+   author = {{Simonyan}, K. and {Zisserman}, A.},
+    title = "{Very Deep Convolutional Networks for Large-Scale Image Recognition}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1409.1556},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2014,
+    month = sep,
+   adsurl = {http://adsabs.harvard.edu/abs/2014arXiv1409.1556S},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@incollection{NIPSKingma,
+title = {Variational Dropout and the Local Reparameterization Trick},
+author = {Kingma, Diederik P and Salimans, Tim and Welling, Max},
+booktitle = {Advances in Neural Information Processing Systems 28},
+editor = {C. Cortes and N. D. Lawrence and D. D. Lee and M. Sugiyama and R. Garnett},
+pages = {2575--2583},
+year = {2015},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/5666-variational-dropout-and-the-local-reparameterization-trick.pdf}
+}
+
+@incollection{LeCun1990,
+title = {Optimal Brain Damage},
+author = {{LeCun}, Yann and John S. Denker and Sara A. Solla},
+booktitle = {Advances in Neural Information Processing Systems 2},
+editor = {D. S. Touretzky},
+pages = {598--605},
+year = {1990},
+publisher = {Morgan-Kaufmann},
+url = {http://papers.nips.cc/paper/250-optimal-brain-damage.pdf}
+}
+
+
+@ARTICLE{2017Molchanov,
+   author = {{Molchanov}, D. and {Ashukha}, A. and {Vetrov}, D.},
+    title = "{Variational Dropout Sparsifies Deep Neural Networks}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1701.05369},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Computer Science - Machine Learning},
+     year = 2017,
+    month = jan,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv170105369M},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2016DropNeuron,
+   author = {{Pan}, W. and {Dong}, H. and {Guo}, Y.},
+    title = "{DropNeuron: Simplifying the Structure of Deep Neural Networks}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1606.07326},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning, Statistics - Machine Learning},
+     year = 2016,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2016arXiv160607326P},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@MISC{Strom97sparseconnection,
+    author = {Nikko Ström},
+    title = {Sparse Connection And Pruning In Large Dynamic Artificial Neural Networks},
+    year = {1997}
+}
+
+@ARTICLE{2016Molchanov,
+   author = {{Molchanov}, P. and {Tyree}, S. and {Karras}, T. and {Aila}, T. and 
+	{Kautz}, J.},
+    title = "{Pruning Convolutional Neural Networks for Resource Efficient Inference}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1611.06440},
+ keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
+     year = 2016,
+    month = nov,
+   adsurl = {http://adsabs.harvard.edu/abs/2016arXiv161106440M},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@INPROCEEDINGS{1993optimalbrain, 
+author={B. Hassibi and D. G. Stork and G. J. Wolff}, 
+booktitle={IEEE International Conference on Neural Networks}, 
+title={Optimal Brain Surgeon and general network pruning}, 
+year={1993}, 
+volume={}, 
+number={}, 
+pages={293-299 vol.1}, 
+keywords={generalisation (artificial intelligence);learning (artificial intelligence);neural nets;Optimal Brain Surgeon;general network pruning;second-order derivatives;error function;generalization;storage requirements;rule extraction;recursion relation;inverse Hessian matrix;structural information;trained XOR network;Surges;Training data;Hardware;Data mining;Backpropagation;Benchmark testing;Machine learning;Pattern recognition;Biological neural networks;Statistics}, 
+doi={10.1109/ICNN.1993.298572}, 
+ISSN={}, 
+month={March},}
+
+@ARTICLE{2016learnedSparsity,
+   author = {{Wen}, W. and {Wu}, C. and {Wang}, Y. and {Chen}, Y. and {Li}, H.
+	},
+    title = "{Learning Structured Sparsity in Deep Neural Networks}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1608.03665},
+ keywords = {Computer Science - Neural and Evolutionary Computing, Computer Science - Machine Learning, Statistics - Machine Learning, I.2.6, I.5.1},
+     year = 2016,
+    month = aug,
+   adsurl = {http://adsabs.harvard.edu/abs/2016arXiv160803665W},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2017l0_reg,
+   author = {{Louizos}, C. and {Welling}, M. and {Kingma}, D.~P.},
+    title = "{Learning Sparse Neural Networks through $L\_0$ Regularization}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1712.01312},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Computer Science - Machine Learning},
+     year = 2017,
+    month = dec,
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{DBLPKornblith,
+  author    = {Simon Kornblith and
+               Jonathon Shlens and
+               Quoc V. Le},
+  title     = {Do Better ImageNet Models Transfer Better?},
+  journal   = {CoRR},
+  volume    = {abs/1805.08974},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1805.08974},
+  archivePrefix = {arXiv},
+  eprint    = {1805.08974},
+  timestamp = {Mon, 13 Aug 2018 16:48:13 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1805-08974},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Wilson2000,
+ author = {Wilson, D. Randall and Martinez, Tony R.},
+ title = {Reduction Techniques for Instance-BasedLearning Algorithms},
+ journal = {Mach. Learn.},
+ issue_date = {March 2000},
+ volume = {38},
+ number = {3},
+ month = mar,
+ year = {2000},
+ issn = {0885-6125},
+ pages = {257--286},
+ numpages = {30},
+ url = {https://doi.org/10.1023/A:1007626913721},
+ doi = {10.1023/A:1007626913721},
+ acmid = {343200},
+ publisher = {Kluwer Academic Publishers},
+ address = {Hingham, MA, USA},
+ keywords = {classification, instance reduction, instance-based learning, nearest neighbor, pruning},
+} 
+
+@ARTICLE{1993pruningsurvey, 
+author={R. Reed}, 
+journal={IEEE Transactions on Neural Networks}, 
+title={Pruning algorithms-a survey}, 
+year={1993}, 
+volume={4}, 
+number={5}, 
+pages={740-747}, 
+keywords={learning (artificial intelligence);neural nets;neural network pruning algorithms;neural net training;Testing;Training data;Thumb;Neural networks;Multilayer perceptrons;Tree data structures;Sampling methods}, 
+doi={10.1109/72.248452}, 
+ISSN={1045-9227}, 
+month={Sept},}
+
+@article {1947welch,
+    AUTHOR = {Welch, B. L.},
+     TITLE = {The generalization of `{S}tudent's' problem when several
+              different population variances are involved},
+   JOURNAL = {Biometrika},
+  FJOURNAL = {Biometrika},
+    VOLUME = {34},
+      YEAR = {1947},
+     PAGES = {28--35},
+      ISSN = {0006-3444},
+   MRCLASS = {62.0X},
+  MRNUMBER = {0019277},
+MRREVIEWER = {A. A. Bennett},
+       DOI = {10.2307/2332510},
+       URL = {https://doi.org/10.2307/2332510},
+}
+
+@ARTICLE{2014memorybounded,
+   author = {{Collins}, M.~D. and {Kohli}, P.},
+    title = "{Memory Bounded Deep Convolutional Networks}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1412.1442},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2014,
+    month = dec,
+   adsurl = {http://adsabs.harvard.edu/abs/2014arXiv1412.1442C},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{Novel2009, 
+author={H. A. Fayed and A. F. Atiya}, 
+journal={IEEE Transactions on Neural Networks}, 
+title={A Novel Template Reduction Approach for the$K$-Nearest Neighbor Method}, 
+year={2009}, 
+volume={20}, 
+number={5}, 
+pages={890-896}, 
+keywords={data reduction;pattern classification;template reduction approach;K-nearest neighbor method;pattern classification;large data set;condensing approach;pattern removal;computational burden;data reduction;Nearest neighbor searches;Prototypes;Pattern classification;Cellular neural networks;Classification algorithms;Satellites;Layout;Medical diagnosis;Design engineering;Mathematics;Condensing;cross validation;editing;$K$-nearest neighbor (KNN);template reduction}, 
+doi={10.1109/TNN.2009.2018547}, 
+ISSN={1045-9227}, 
+month={May},}
+
+@ARTICLE{2012Prototype,
+   author = {{Bien}, J. and {Tibshirani}, R.},
+    title = "{Prototype selection for interpretable classification}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1202.5933},
+ primaryClass = "stat.AP",
+ keywords = {Statistics - Applications},
+     year = 2012,
+    month = feb,
+   adsurl = {http://adsabs.harvard.edu/abs/2012arXiv1202.5933B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2018Liu,
+   author = {{Liu}, Y. and {Chen}, J. and {Chen}, H.},
+    title = "{Less is More: Culling the Training Set to Improve Robustness of Deep Neural Networks}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1801.02850},
+ primaryClass = "cs.CR",
+ keywords = {Computer Science - Cryptography and Security, Computer Science - Machine Learning, Statistics - Machine Learning},
+     year = 2018,
+    month = jan,
+   adsurl = {http://adsabs.harvard.edu/abs/2018arXiv180102850L},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@ARTICLE{2018Theis,
+   author = {{Theis}, L. and {Korshunova}, I. and {Tejani}, A. and {Husz{\'a}r}, F.
+	},
+    title = "{Faster gaze prediction with dense networks and Fisher pruning}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1801.05787},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition, Statistics - Machine Learning},
+     year = 2018,
+    month = jan,
+   adsurl = {http://adsabs.harvard.edu/abs/2018arXiv180105787T},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2017Liu,
+   author = {{Liu}, Z. and {Li}, J. and {Shen}, Z. and {Huang}, G. and {Yan}, S. and 
+	{Zhang}, C.},
+    title = "{Learning Efficient Convolutional Networks through Network Slimming}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1708.06519},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Artificial Intelligence, Computer Science - Machine Learning},
+     year = 2017,
+    month = aug,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv170806519L},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2015Han,
+   author = {{Han}, S. and {Mao}, H. and {Dally}, W.~J.},
+    title = "{Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1510.00149},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Neural and Evolutionary Computing},
+     year = 2015,
+    month = oct,
+   adsurl = {http://adsabs.harvard.edu/abs/2015arXiv151000149H},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2016Squeezenet,
+   author = {{Iandola}, F.~N. and {Han}, S. and {Moskewicz}, M.~W. and {Ashraf}, K. and 
+	{Dally}, W.~J. and {Keutzer}, K.},
+    title = "{SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and $\lt$0.5MB model size}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1602.07360},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Artificial Intelligence},
+     year = 2016,
+    month = feb,
+   adsurl = {http://adsabs.harvard.edu/abs/2016arXiv160207360I},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@ARTICLE{2017Howard,
+   author = {{Howard}, A.~G. and {Zhu}, M. and {Chen}, B. and {Kalenichenko}, D. and 
+	{Wang}, W. and {Weyand}, T. and {Andreetto}, M. and {Adam}, H.
+	},
+    title = "{MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1704.04861},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2017,
+    month = apr,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv170404861H},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2014Collins,
+   author = {{Collins}, M.~D. and {Kohli}, P.},
+    title = "{Memory Bounded Deep Convolutional Networks}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1412.1442},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2014,
+    month = dec,
+   adsurl = {http://adsabs.harvard.edu/abs/2014arXiv1412.1442C},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2018Frankle,
+   author = {{Frankle}, J. and {Carbin}, M.},
+    title = "{The Lottery Ticket Hypothesis: Finding Small, Trainable Neural Networks}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1803.03635},
+ keywords = {Computer Science - Machine Learning, Computer Science - Artificial Intelligence, Computer Science - Neural and Evolutionary Computing},
+     year = 2018,
+    month = mar,
+   adsurl = {http://adsabs.harvard.edu/abs/2018arXiv180303635F},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@misc{tensorflow2015,
+title={ {TensorFlow}: Large-Scale Machine Learning on Heterogeneous Systems},
+url={https://www.tensorflow.org/},
+note={Software available from tensorflow.org},
+author={
+    Mart\'{\i}n~Abadi and
+    Ashish~Agarwal and
+    Paul~Barham and
+    Eugene~Brevdo and
+    Zhifeng~Chen and
+    Craig~Citro and
+    Greg~S.~Corrado and
+    Andy~Davis and
+    Jeffrey~Dean and
+    Matthieu~Devin and
+    Sanjay~Ghemawat and
+    Ian~Goodfellow and
+    Andrew~Harp and
+    Geoffrey~Irving and
+    Michael~Isard and
+    Yangqing Jia and
+    Rafal~Jozefowicz and
+    Lukasz~Kaiser and
+    Manjunath~Kudlur and
+    Josh~Levenberg and
+    Dandelion~Man\'{e} and
+    Rajat~Monga and
+    Sherry~Moore and
+    Derek~Murray and
+    Chris~Olah and
+    Mike~Schuster and
+    Jonathon~Shlens and
+    Benoit~Steiner and
+    Ilya~Sutskever and
+    Kunal~Talwar and
+    Paul~Tucker and
+    Vincent~Vanhoucke and
+    Vijay~Vasudevan and
+    Fernanda~Vi\'{e}gas and
+    Oriol~Vinyals and
+    Pete~Warden and
+    Martin~Wattenberg and
+    Martin~Wicke and
+    Yuan~Yu and
+    Xiaoqiang~Zheng},
+  year = {2015},
+  month = jan,
+}
+ 
+@article{Goyal2017,
+   author = {{Goyal}, P. and {Doll{\'a}r}, P. and {Girshick}, R. and {Noordhuis}, P. and 
+	{Wesolowski}, L. and {Kyrola}, A. and {Tulloch}, A. and {Jia}, Y. and 
+	{He}, K.},
+    title = "{Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1706.02677},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Distributed, Parallel, and Cluster Computing, Computer Science - Learning},
+     year = 2017,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv170602677G},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}}
+  
+@ARTICLE{2017Zhu,
+   author = {{Zhu}, M. and {Gupta}, S.},
+    title = "{To prune, or not to prune: exploring the efficacy of pruning for model compression}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1710.01878},
+ primaryClass = "stat.ML",
+ keywords = {Statistics - Machine Learning, Computer Science - Machine Learning},
+     year = 2017,
+    month = oct,
+   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv171001878Z},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
 </script>
         
