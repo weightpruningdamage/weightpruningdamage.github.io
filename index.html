@@ -400,17 +400,9 @@
               These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions. All these attributes make pruned models ideal for deploying deep neural networks to mobile phones and other edge devices.</p>
             <p> The ability to prune networks with seemingly so little degradation to generalization performance is puzzling. The cost to top-1 accuracy appears minimal 
               if it is spread uniformally across all classes, but what if the cost is concentrated in only a few classes? 
-              \textit{Are certain types of examples or classes disproportionately impacted by pruning?} An understanding of these trade-offs is critical 
-              for sensitive tasks such as hiring \citep{Dastin_2018, Harwell_2019}, health care diagnostics \citep{2019Hongtao, Gruetzemacher20183DDL}, 
-              self-driving cars \citep{2017Telsa}, where the introduction of pruning may be at odds with fairness objectives to treat protected attributes 
-              uniformly and/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonly used in these domains,
-              often driven by the resource constraints of deploying models to mobile phone or embedded devices \citep{2017Andre, 
-              Samala_2018}.</p>
-            <p> In this work, we propose a framework to identify the classes and images where there is a high level of disagreement or difference in
-              generalization performance between prunedand non-pruned models. The images impacted by pruning, which we term pruning identified exemplars,  </p>
-              
-              
-<div class="description_">  
+              <i>Are certain types of examples or classes disproportionately impacted by pruning?</i></p>
+           
+           <div class="description_">  
       <div class="imgs-container">
           </div>
           <div class="imgs-container">
@@ -422,36 +414,16 @@
             </div>
           </div>
           <div class="img-container">1. Pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.</div>
-          <div class="img-container">2. The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both sparse and non-sparse models to classify.</div>
+          <div class="img-container">2. The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both pruned and non-pruned models to classify.</div>
           <div class="img-container">3. Pruning significantly reduces robustness to image corruptions and natural adversarial images.</div>
       </div>
-    
-    <h4>What does a deep neural network "forget" as it is pruned?</h4>
-    <div class="description_">
-    
-    <p> If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
-      number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model.</p>
-    <p>   This forms our <strong>null hypothesis</strong> --  the shift in accuracy for each class 
-      before and after pruning is the same as the shift in top-1 accuracy. </p>
-    <p> For each class we consider whether
-      to reject the null hypothesis and accept the <strong>alternate hypothesis</strong>
-      that pruning disparately affected the class's accuracy in either a positive or negative direction.  </p>
-     <p>  We use a More details about our methodology can be found in </p>
-        
-        
-        <p> The directionality and magnitude of the impact is nuanced and surprising.
-          Our results show that certain classes are relatively robust to the overall degradation 
-          experienced by the model whereas others degrade in performance far more than the model itself. 
-          This amounts to selective <em>``brain damage"</em> with performance on certain classes evidencing
-          far more sensitivity to the removal of model capacity. </p>
-          <p> More classes show a significant relative increase in accuracy than a decrease at every level, 
-          though the overall model accuracy <dt-cite key="jansen2008strandbeests"></dt-cite> and Passive Walkers<dt-cite key="mcgeer1990passive,collins2001three"></dt-cite> 
-            decreases at every pruning level, indicating that the magnitude
-          of class decreases must be larger in order to pull the model accuracy lower.</p>
-        
-<h4>Pruning Identified Exemplars</h4>
+             <div class="descriptions_"> 
 
-<p>Click on the buttons to filter through a sample of PIE images.</p>
+            <p> In this work, we propose a framework to identify the classes and images where there is a high level of disagreement or difference in
+              generalization performance between prunedand non-pruned models. The images impacted by pruning, which we term pruning identified exemplars, are more challenging 
+              for both pruned and non-pruned models
+              to classify. These hard-to-generalize-to images tend to be mislabelled, of lower image quality, depict multiple objects or require fine-grained classification.</p>
+      <h3>What is lost when we prune deep neural networks?</h3>
       
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('abstract')"> abstract classes</button>
@@ -974,6 +946,43 @@
 
 <!-- END GRID -->
 </div>
+    <div class="description_">  
+      <p> </p>
+           <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
+             critical details in the ways that pruning impacts model generalization. An understanding of these trade-offs is critical 
+              for sensitive tasks such as hiring \citep{Dastin_2018, Harwell_2019}, health care diagnostics \citep{2019Hongtao, Gruetzemacher20183DDL}, 
+              self-driving cars \citep{2017Telsa}, where the introduction of pruning may be at odds with fairness objectives to treat protected attributes 
+              uniformly and/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonly used in these domains,
+              often driven by the resource constraints of deploying models to mobile phone or embedded devices \citep{2017Andre, 
+              Samala_2018}.</p>
+
+    
+    <h4>What does a deep neural network "forget" as it is pruned?</h4>
+    <div class="description_">
+    
+    <p> If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
+      number of percentage points as the difference in top-1 accuracy between the sparse and non-sparse model.</p>
+    <p>   This forms our <strong>null hypothesis</strong> --  the shift in accuracy for each class 
+      before and after pruning is the same as the shift in top-1 accuracy. </p>
+    <p> For each class we consider whether
+      to reject the null hypothesis and accept the <strong>alternate hypothesis</strong>
+      that pruning disparately affected the class's accuracy in either a positive or negative direction.  </p>
+     <p>  We use a More details about our methodology can be found in </p>
+        
+        
+        <p> The directionality and magnitude of the impact is nuanced and surprising.
+          Our results show that certain classes are relatively robust to the overall degradation 
+          experienced by the model whereas others degrade in performance far more than the model itself. 
+          This amounts to selective <em>``brain damage"</em> with performance on certain classes evidencing
+          far more sensitivity to the removal of model capacity. </p>
+          <p> More classes show a significant relative increase in accuracy than a decrease at every level, 
+          though the overall model accuracy <dt-cite key="jansen2008strandbeests"></dt-cite> and Passive Walkers<dt-cite key="mcgeer1990passive,collins2001three"></dt-cite> 
+            decreases at every pruning level, indicating that the magnitude
+          of class decreases must be larger in order to pull the model accuracy lower.</p>
+        
+<h4>Pruning Identified Exemplars</h4>
+
+
      <div class="description_">  
        
           <p>Our results are surprising and suggest caution is needed before deploying pruned models to sensitive domains. Our central finding is that pruning systematically impacts certain classes and images more than others. The images most impacted by pruning is a subset of examples that are more challenging for both a dense and sparse model to classify. </p>
