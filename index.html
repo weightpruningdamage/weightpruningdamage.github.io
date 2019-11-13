@@ -959,12 +959,24 @@
     <div class="description_">  
       <p>At a class level, our results are nuanced and surprising. If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
       number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model. Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
-        “real” amounts to determining whether two data samples are drawn from the same underlying distribution. 
+        “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature \citep{1986agostino, 1954anderson_darling, 2002huber}. 
         We train a population of pruned and non-pruned models and use a two-sample, two-tailed,
-        independent Welch’s t-test to determine whether the means of the samples differ significantly.
-        This allows us to identify a subset of classes that perform better or worse than expected.</p>
+        independent Welch’s t-test  \citep{1947welch}  to determine whether the means of the samples differ significantly.
+        This methodology allows us to identify a subset of classes that perform better or worse than expected.</p>
       
       <p>insert chart here</p>
+      
+      <p>The directionality and magnitude of the impact is nuanced and surprising. 
+        Our results show that certain classes are relatively robust to the overall degradation experienced 
+        by the model whereas others degrade in performance far more than the model itself. This amounts to 
+        <em>selective brain damage</em> with performance on certain classes evidencing far more sensitivity 
+        to the removal of model capacity. Table~\ref{table:imagenet_class_recall_summary} shows that more classes
+        show a significant \emph{relative} increase in accuracy than a decrease at every level, though the overall
+        model accuracy decreases at every pruning level, indicating that the magnitude of class decreases must be larger 
+        in order to pull the model accuracy lower. The model appears to cannibalize performance on a small subset of classes
+        in order to preserve performance (and even improve relative performance on a small number of classes). </p>
+      
+      
       
            <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
              critical details in the ways that pruning impacts model generalization. An understanding of these trade-offs is critical 
@@ -973,29 +985,6 @@
               uniformly and/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonly used in these domains,
               often driven by the resource constraints of deploying models to mobile phone or embedded devices \citep{2017Andre, 
               Samala_2018}.</p>
-
-    
-    <h4>What does a deep neural network "forget" as it is pruned?</h4>
-    <div class="description_">
-    
-    <p> /p>
-    <p>   This forms our <strong>null hypothesis</strong> --  the shift in accuracy for each class 
-      before and after pruning is the same as the shift in top-1 accuracy. </p>
-    <p> For each class we consider whether
-      to reject the null hypothesis and accept the <strong>alternate hypothesis</strong>
-      that pruning disparately affected the class's accuracy in either a positive or negative direction.  </p>
-     <p>  We use a More details about our methodology can be found in </p>
-        
-        
-        <p> The directionality and magnitude of the impact is nuanced and surprising.
-          Our results show that certain classes are relatively robust to the overall degradation 
-          experienced by the model whereas others degrade in performance far more than the model itself. 
-          This amounts to selective <em>``brain damage"</em> with performance on certain classes evidencing
-          far more sensitivity to the removal of model capacity. </p>
-          <p> More classes show a significant relative increase in accuracy than a decrease at every level, 
-          though the overall model accuracy <dt-cite key="jansen2008strandbeests"></dt-cite> and Passive Walkers<dt-cite key="mcgeer1990passive,collins2001three"></dt-cite> 
-            decreases at every pruning level, indicating that the magnitude
-          of class decreases must be larger in order to pull the model accuracy lower.</p>
       
 <script>
 filterSelection("abstract") // Execute the function and show all columns
@@ -1064,29 +1053,7 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
           as a fraction of total PIEs and non-PIE codified):</p>
         </div>
   
- <!-- perturbation charts -->
-<div>
-<div>
-<button onclick="filterSelection('fine grained')" class="btn active">PIE Images</button>
-<button onclick="filterSelection('fine grained')" class="btn">ImageNet-A</button>
-<button onclick="filterSelection('fine grained')" class="btn">ImageNet-C</button>
-<hr>
-</div>
-<div>
-<figure id="pie",  class="position-absolute w-100" style="top:0;left:0;opacity:0">
-  <h6>PIE images are universally more challenging for sparse and dense models.</h6>
-  <div id="pie"></div>
-</figure>
-<figure id="a" class="position-absolute w-100" style="top:0;left:0;opacity:0">
-  <h6>Time to success when friction, mass, or gravity change</h6>
-  <div id="chart-perturbation-dynamics"></div>
-</figure>
-<figure id="c" class="position-absolute w-100" style="top:0;left:0;opacity:0">
-  <h6></h6>
-  <div id="imagenet_c_a"></div>
-</figure>
-</div>
-</div>    
+  
         
 </html>
 <dt-appendix>
@@ -1095,12 +1062,11 @@ The examples most impacted by pruning, which we term Pruning Identified Exemplar
   Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, 
   Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros,
   Prajit Ramachandran, Pieter Kindermans, 
-  Erich Elsen and Moustapha Cisse. 
-  We thank the institutional support and encouragement of Dan Nanas,
-  Rita Ruiz, Sally Jesmonth and Alexander Popper. 
-  The appendix and citation management for this article was prepared by partly using 
-  <a href="https://distill.pub">Distill</a> <a href="https://github.com/distillpub/template">template</a> 
-  We thanks James Wexler for many helpful suggestions about setting up a usable external website to host this project.</p>
+  Erich Elsen and Moustapha Cisse. </p>
+  <p> We thank the institutional support and encouragement of Dan Nanas,
+  Rita Ruiz, Sally Jesmonth and Alexander Popper. </p>
+ <p> A special thank you is due to James Wexler for many helpful suggestions about how to visualize and communicate our results in an interactive manner. This article was in part prepared using <a href="https://github.com/distillpub/template">this</a><   template and style guide. The appendix and citation management for this article was prepared by partly using 
+  <a href="https://distill.pub">Distill</a> <a href="https://github.com/distillpub/template">template v1</a></p>
 <h3>Citation</h3>
 <p>For attribution in academic contexts, please cite this work as</p>
 <pre class="citation short">David Ha, "Reinforcement Learning for Improving Agent Design", 2018.</pre>
