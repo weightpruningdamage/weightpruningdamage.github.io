@@ -129,8 +129,8 @@
       padding-top: 20px;
     }
     .cover-container, .descriptions_ {
-      padding-right: 15px;
-      padding-left: 15px;
+      padding-right: 10px;
+      padding-left: 10px;
       margin-right: auto;
       margin-left: auto;   
     }
@@ -139,20 +139,20 @@
     @media (min-width: 415px) {
       authors .authors-affiliations,
        .base-grid,
-      .cover-container, .descriptions_, .column_portfolio .row .btn  {
+      .cover-container, .btn, .descriptions_, .description_, .column_portfolio .row .btn  {
         width: 500px;
       }
     }
 
     @media (min-width: 768px) {
-      authors .authors-affiliations,
+      authors .authors-affiliations, .btn,
       .cover-container, .descriptions_, .description_, .column_portfolio .row .btn  {
         width: 650px;
       }
     }
 
     @media (min-width: 992px) {
-      authors .authors-affiliations,
+      authors .authors-affiliations, .btn,
       .cover-container, .descriptions_, .description_, .column_portfolio .row .btn  {
         width: 770px;
       }
@@ -389,7 +389,7 @@
       <div class="descriptions_">
          <h3>What is lost when we prune deep neural networks?</h3>
         </div>
-         <div class="descriptions_">
+         <div class="description_">
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
             Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections 
             that are most useful for the environment.  
@@ -428,7 +428,7 @@
           <div class="img-container">2. The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both pruned and non-pruned models to classify.</div>
           <div class="img-container">3. Pruning significantly reduces robustness to image corruptions and natural adversarial images.</div>
       </div>
-             <div class="descriptions_"> 
+             <div class="description_"> 
 
             <p> In this work, we propose a framework to identify the classes and images where there is a high level of disagreement or difference in
               generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), and classes are systematically more impacted by the introduction of sparsity. </p>
@@ -438,7 +438,8 @@
                   These hard-to-generalize-to images tend to be mislabelled, of lower image quality, 
                   depict multiple objects or require fine-grained classification.</p>
       <p>Click the buttons to see a sample of PIE identified ImageNet images:</p>
-     </div> 
+
+  
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('abstract')"> abstract classes</button>
   <button class="btn" onclick="filterSelection('atypical')"> atypical examples</button>
