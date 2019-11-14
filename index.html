@@ -381,7 +381,6 @@
        </div>
     </div>
       <div class="descriptions_">
-       <p> add note here saying this template was made available by James Wexler </p>
          <h3>What is lost when we prune deep neural networks?</h3>
          <div class="description_">
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
@@ -393,7 +392,7 @@
             
             <p>In 1990, a popular paper was published titled Optimal Brain Damage <dt-cite key="optimal-brain-damage"></dt-cite> . 
               The paper was amongst the first [1,2,3] to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
-              to our biological synaptic pruning. <dt-cite key="williams1992"></dt-cite> The pruning method identifies non-essential weights to remove 
+              to our biological synaptic pruning. The pruning method identifies non-essential weights to remove 
               from the network by setting to zero.
               Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone [1,2,3].</p>
              <p>  At face value, pruning does appear to promise you can can (almost) have it all. State of art pruning methods remove the 
@@ -976,6 +975,18 @@
         in order to pull the model accuracy lower. The model cannibalizes performance on a small subset of classes
         in order to preserve overall performance. </p>
       
+ <!-- import the webpage's stylesheet -->
+ <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  <body>
+    <svg width="300" height="500"></svg>
+   </body>
+
+<div class="description_"> 
+      
 <div id="myBtnContainer_2">
   <button class="btn active" onclick="filterSelection('pie')"> pie generalization</button>
   <button class="btn" onclick="filterSelection('no_pie')"> generalization without pie</button>
@@ -1096,15 +1107,7 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-</script>
-
- <!-- import the webpage's stylesheet -->
-  <link rel="stylesheet" href="/style.css">
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <!-- import the webpage's javascript file -->
-  <script src="/script.js" defer></script>
-  <svg width="300" height="500"></svg>
-<div class="description_">  
+</script> 
   
 </html>
 <dt-appendix>
@@ -1119,7 +1122,7 @@ for (var i = 0; i < btns.length; i++) {
    The citation management for this article uses the <a href="https://github.com/distillpub/template">template v1</a> of the Distill style script. </p>
 <h3>Citation</h3>
 <p>For attribution in academic contexts, please cite this work as</p>
-<pre class="citation short">David Ha, "Reinforcement Learning for Improving Agent Design", 2018.</pre>
+<pre class="citation short">David Ha, "Selective Brain Damage: Measuring the Disparate Impact of Model Pruning", 2019.</pre>
 
 <p>BibTeX citation</p>
 <pre class="citation long">@article{hooker2019selective,
@@ -1130,7 +1133,9 @@ for (var i = 0; i < btns.length; i++) {
   note   = "\url{https://designrl.github.io}",
   year   = {2019}
 }</pre>
+</div></dt-appendix>
 </dt-appendix>
+</body>
 <script type="text/bibliography">
 @book{2002huber,
   title={Goodness-of-Fit Tests and Model Validity},
