@@ -20,12 +20,33 @@
   <meta name="twitter:site" content="@googleai" />
   <meta property="og:image:width" content="1920" />
   <meta property="og:image:height" content="1080" />
+  
+  <meta name="citation_title" content="Selective Brain Damage: Measuring the Disparate Impact of Model Pruning">
+  <meta name="citation_doi" content="10.5281/zenodo.1207631">
+  <meta name="citation_volume" content="1">
+  <meta name="citation_issue" content="1">
+  <meta name="citation_firstpage" content="e10">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="citation_fulltext_html_url" content="https://worldmodels.github.io/">
+  <meta name="citation_online_date" content="2019/09/27">
+  <meta name="citation_publication_date" content="2019/09/27">
+  <meta name="citation_author" content="Hooker, Sara">
+  <meta name="citation_author_institution" content="Google Brain">
+  <meta name="citation_author" content="Courville, Aaron">
+  <meta name="citation_author_institution" content="MILA">
+   <meta name="citation_author" content="Dauphin, Yann">
+  <meta name="citation_author_institution" content="Google Brain">
+   <meta name="citation_author" content="Frome, Andrea">
+  <meta name="citation_author_institution" content="Google Brain">
+  <meta name="citation_journal_title" content="Selective Brain Damage: Measuring the Disparate Impact of Model Compression">
+  <meta name="citation_journal_abbrev" content="PIE: Pruning Identified Exemplars">
+  <meta name="citation_pdf_url" content="https://arxiv.org/abs/1911.05248">
 
   <!--  https://schema.org/Article -->
   <meta property="description" itemprop="description" content="Measuring the disparate impact of model pruning on classes and individual images.">
 
   <meta property="article:author" content="Sara Hooker">
-  <meta property="article:author" content="Yann Dauphine">
+  <meta property="article:author" content="Yann Dauphin">
   <meta property="article:author" content="Aaron Courville">
   <meta property="article:author" content="Andrea Frome">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
@@ -355,6 +376,40 @@
 .btn.active {
   background-color: #666;
    color: white;
+}
+    
+.transparent {
+  opacity: 0;
+}
+
+.figload {
+  font-family: Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  color: rgba(0, 174, 239, .8);
+  font-size: 24px;
+  line-height: 1.5em;
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: calc(50% - 80px + 190px);
+}
+
+dt-article figcaption {
+  padding: 0.5em;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+dt-article figcaption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+dt-article figcaption b {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
 }
 
 </style>
@@ -1108,8 +1163,7 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script> 
-  
-</html>
+
 <dt-appendix>
 <h3>Acknowledgments</h3>
 <p>We thank the generosity of our peers and colleagues for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, 
@@ -1122,7 +1176,7 @@ for (var i = 0; i < btns.length; i++) {
    The citation management for this article uses the <a href="https://github.com/distillpub/template">template v1</a> of the Distill style script. </p>
 <h3>Citation</h3>
 <p>For attribution in academic contexts, please cite this work as</p>
-<pre class="citation short">David Ha, "Selective Brain Damage: Measuring the Disparate Impact of Model Pruning", 2019.</pre>
+<pre class="citation short"> Hooker et al., "Selective Brain Damage: Measuring the Disparate Impact of Model Pruning", 2019.</pre>
 
 <p>BibTeX citation</p>
 <pre class="citation long">@article{hooker2019selective,
@@ -1133,7 +1187,6 @@ for (var i = 0; i < btns.length; i++) {
   note   = "\url{https://designrl.github.io}",
   year   = {2019}
 }</pre>
-</div></dt-appendix>
 </dt-appendix>
 </body>
 <script type="text/bibliography">
