@@ -146,21 +146,21 @@
 
     @media (min-width: 768px) {
       authors .authors-affiliations,
-      .cover-container, .descriptions_, .column_portfolio .row .btn  {
+      .cover-container, .descriptions_, .description_, .column_portfolio .row .btn  {
         width: 650px;
       }
     }
 
     @media (min-width: 992px) {
       authors .authors-affiliations,
-      .cover-container, .descriptions_, .column_portfolio .row .btn  {
+      .cover-container, .descriptions_, .description_, .column_portfolio .row .btn  {
         width: 770px;
       }
     }
 
     @media (min-width: 1200px) {
       authors .authors-affiliations,
-      .cover-container, .descriptions_, .column_portfolio .row .btn  {
+      .cover-container, .descriptions_, .description_, .column_portfolio .row .btn  {
         width: 970px;
       }
     }
@@ -183,6 +183,12 @@
     .descriptions_ h3 {
       color: #313b4e;
       opacity: .8;
+    }
+    
+    .descriptions_ p {
+      color: #313b4e;
+      opacity: .8;
+      font-size: 16px;
     }
 
     .cover {
@@ -356,40 +362,6 @@
   background-color: #666;
    color: white;
 }
-    
-.transparent {
-  opacity: 0;
-}
-
-.figload {
-  font-family: Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  color: rgba(0, 174, 239, .8);
-  font-size: 24px;
-  line-height: 1.5em;
-  display: block;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  top: calc(50% - 80px + 190px);
-}
-
-dt-article figcaption {
-  padding: 0.5em;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 12px;
-  line-height: 1.5em;
-  text-align: left;
-}
-
-dt-article figcaption a {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-dt-article figcaption b {
-  font-weight: 600;
-  color: rgba(0, 0, 0, 1.0);
-}
 
 </style>
 </head>
@@ -416,7 +388,8 @@ dt-article figcaption b {
     </div>
       <div class="descriptions_">
          <h3>What is lost when we prune deep neural networks?</h3>
-         <div class="description_">
+        </div>
+         <div class="descriptions_">
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
             Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections 
             that are most useful for the environment.  
@@ -440,9 +413,7 @@ dt-article figcaption b {
               <i>Are certain types of examples or classes disproportionately impacted by pruning?</i></p>
             <p> An understanding of these trade-offs is critical for sensitivetasks such as hiring [15,25], health care diagnostics [71,19], self-driving cars [56], where theintroduction of pruning may be at odds with fairness objectives to treat protected attributes uniformlyand/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonlyused in these domains, 
            often driven by the resource constraints of deploying models to mobile phoneor embedded devices [17, 60] </p>
-       
-           
-           <div class="description_">  
+       </div>
       <div class="imgs-container">
           </div>
           <div class="imgs-container">
@@ -467,7 +438,7 @@ dt-article figcaption b {
                   These hard-to-generalize-to images tend to be mislabelled, of lower image quality, 
                   depict multiple objects or require fine-grained classification.</p>
       <p>Click the buttons to see a sample of PIE identified ImageNet images:</p>
-      
+     </div> 
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('abstract')"> abstract classes</button>
   <button class="btn" onclick="filterSelection('atypical')"> atypical examples</button>
@@ -989,16 +960,23 @@ dt-article figcaption b {
 
 <!-- END GRID -->
 </div>
-    <div class="description_">  
+    <div class="descriptions_">  
       <p>At a class level, our results are nuanced and surprising. If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
       number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model. Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature \citep{1986agostino, 1954anderson_darling, 2002huber}. 
         We train a population of pruned and non-pruned models and use a two-sample, two-tailed,
         independent Welch’s t-test  \citep{1947welch}  to determine whether the means of the samples differ significantly.
         This methodology allows us to identify a subset of classes that perform better or worse than expected.</p>
-      
-      <p>insert chart here</p>
-      
+        </div>
+      <!-- import the webpage's stylesheet -->
+ <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <svg width="500" height="800"></svg>
+  
+  <div class="descriptions_">   
       <p>The directionality and magnitude of the impact is nuanced and surprising. 
         Our results show that certain classes are relatively robust to the overall degradation experienced 
         by the model whereas others degrade in performance far more than the model itself. This amounts to 
@@ -1008,18 +986,8 @@ dt-article figcaption b {
         model accuracy decreases at every pruning level, indicating that the magnitude of class decreases must be larger 
         in order to pull the model accuracy lower. The model cannibalizes performance on a small subset of classes
         in order to preserve overall performance. </p>
-      
- <!-- import the webpage's stylesheet -->
- <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  <body>
-    <svg width="300" height="500"></svg>
-   </body>
+      </div>
 
-<div class="description_"> 
       
 <div id="myBtnContainer_2">
   <button class="btn active" onclick="filterSelection('pie')"> pie generalization</button>
@@ -1068,15 +1036,7 @@ dt-article figcaption b {
     <!-- END GRID -->
 </div>
 </div>
-         <div class="description_">  
-           <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
-             critical details in the ways that pruning impacts model generalization. An understanding of these trade-offs is critical 
-              for sensitive tasks such as hiring \citep{Dastin_2018, Harwell_2019}, health care diagnostics \citep{2019Hongtao, Gruetzemacher20183DDL}, 
-              self-driving cars \citep{2017Telsa}, where the introduction of pruning may be at odds with fairness objectives to treat protected attributes 
-              uniformly and/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonly used in these domains,
-              often driven by the resource constraints of deploying models to mobile phone or embedded devices \citep{2017Andre, 
-              Samala_2018}.</p>
-      
+  
 <script>
 filterSelection("abstract") // Execute the function and show all columns
 function filterSelection(c) {
@@ -1142,6 +1102,16 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script> 
+  
+         <div class="descriptions_">  
+           <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
+             critical details in the ways that pruning impacts model generalization. An understanding of these trade-offs is critical 
+              for sensitive tasks such as hiring \citep{Dastin_2018, Harwell_2019}, health care diagnostics \citep{2019Hongtao, Gruetzemacher20183DDL}, 
+              self-driving cars \citep{2017Telsa}, where the introduction of pruning may be at odds with fairness objectives to treat protected attributes 
+              uniformly and/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonly used in these domains,
+              often driven by the resource constraints of deploying models to mobile phone or embedded devices \citep{2017Andre, 
+              Samala_2018}.</p>
+      </div>
 <dt-appendix>
 <h3>Acknowledgments</h3>
 <p>We thank the generosity of our peers and colleagues for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, 
