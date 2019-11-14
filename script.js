@@ -64,13 +64,17 @@ d3.json("data.json", function(error, data) {
       return "lightblue"
     })
     .on("mouseenter", function(d) {
+      
       var str = d.txt ;
       tooltip
+        .attr("opacity", 1)
         .style("left", d3.event.pageX - 50 + "px")
         .style("top", d3.event.pageY - 370 + "px")
         .style("display", "inline-block")
-        .html(str)
+    d3.select(tooltip, .)
     })
+    
+    
     .on("mouseleave", function(d) {
       tooltip.style("display", "none");
     });
