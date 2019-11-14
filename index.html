@@ -32,7 +32,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-  <script src="template.v1.js"></script>
 
   <style>
      body {
@@ -129,8 +128,8 @@
       padding-top: 20px;
     }
     .cover-container, .descriptions_, .description_ {
-      padding-right: 10px;
-      padding-left: 10px;
+      padding-right: 20px;
+      padding-left: 20px;
       margin-right: auto;
       margin-left: auto;   
     }
@@ -160,7 +159,7 @@
 
     @media (min-width: 1200px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio .row {
+      .cover-container, .descriptions_, .description_, .column_portfolio .row  {
         width: 970px;
       }
     }
@@ -413,7 +412,7 @@
               <i>Are certain types of examples or classes disproportionately impacted by pruning?</i></p>
             <p> An understanding of these trade-offs is critical for sensitivetasks such as hiring [15,25], health care diagnostics [71,19], self-driving cars [56], where theintroduction of pruning may be at odds with fairness objectives to treat protected attributes uniformlyand/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonlyused in these domains, 
            often driven by the resource constraints of deploying models to mobile phoneor embedded devices [17, 60] </p>
-       </div>
+
       <div class="imgs-container">
           </div>
           <div class="imgs-container">
@@ -428,7 +427,8 @@
           <div class="img-container">2. The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both pruned and non-pruned models to classify.</div>
           <div class="img-container">3. Pruning significantly reduces robustness to image corruptions and natural adversarial images.</div>
       </div>
-             <div class="description_"> 
+     </div>
+    <div class="description_">
 
             <p> In this work, we propose a framework to identify the classes and images where there is a high level of disagreement or difference in
               generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), and classes are systematically more impacted by the introduction of sparsity. </p>
@@ -449,7 +449,7 @@
   <button class="btn" onclick="filterSelection('multiple')"> multiple-object image</button>
 <hr>
 </div>
-  
+
 <!-- Portfolio Gallery Grid -->
       
 <div class="row">
@@ -483,10 +483,10 @@
       a wine bottle which is full of red wine).</h5>
     </div>
   </div>
- <div class="column_header freqently">
+ <div class="column_header frequently">
     <div class="content">
-    <h5>image depicts object(s) with categories that frequently co-occur together.
-      Often, this may be because multiple labels describe the same object. For example, a missile is a type of projectile.</h5>
+<h5>image depicts object(s) from categories that frequently co-occur together. 
+  In some cases, this is because both labels are acceptable to describe the same object. </h5>
     </div>
   </div>
     <!-- END GRID -->
@@ -957,18 +957,18 @@
       <p>malamute</p>
   </div>
   </div>
-  
+  </div>  
 
 <!-- END GRID -->
 </div>
-    <div class="descriptions_">  
+    <div class="description_">  
       <p>At a class level, our results are nuanced and surprising. If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
       number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model. Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature \citep{1986agostino, 1954anderson_darling, 2002huber}. 
         We train a population of pruned and non-pruned models and use a two-sample, two-tailed,
         independent Welch’s t-test  \citep{1947welch}  to determine whether the means of the samples differ significantly.
         This methodology allows us to identify a subset of classes that perform better or worse than expected.</p>
-        </div>
+      
       <!-- import the webpage's stylesheet -->
  <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
@@ -976,8 +976,8 @@
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
     <svg width="500" height="800"></svg>
-  
-  <div class="descriptions_">   
+    </div>
+  <div class="description_">   
       <p>The directionality and magnitude of the impact is nuanced and surprising. 
         Our results show that certain classes are relatively robust to the overall degradation experienced 
         by the model whereas others degrade in performance far more than the model itself. This amounts to 
@@ -987,7 +987,7 @@
         model accuracy decreases at every pruning level, indicating that the magnitude of class decreases must be larger 
         in order to pull the model accuracy lower. The model cannibalizes performance on a small subset of classes
         in order to preserve overall performance. </p>
-      </div>
+
 
       
 <div id="myBtnContainer_2">
@@ -1037,7 +1037,7 @@
     <!-- END GRID -->
 </div>
 </div>
-  
+</div>
 <script>
 filterSelection("abstract") // Execute the function and show all columns
 function filterSelection(c) {
@@ -1104,7 +1104,7 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script> 
   
-         <div class="descriptions_">  
+         <div class="description_">  
            <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
              critical details in the ways that pruning impacts model generalization. An understanding of these trade-offs is critical 
               for sensitive tasks such as hiring \citep{Dastin_2018, Harwell_2019}, health care diagnostics \citep{2019Hongtao, Gruetzemacher20183DDL}, 
@@ -1113,7 +1113,10 @@ for (var i = 0; i < btns.length; i++) {
               often driven by the resource constraints of deploying models to mobile phone or embedded devices \citep{2017Andre, 
               Samala_2018}.</p>
       </div>
+<dt-article id="dtbody">
+</dt-article>
 <dt-appendix>
+<div class="description_">  
 <h3>Acknowledgments</h3>
 <p>We thank the generosity of our peers and colleagues for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, 
   Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, 
@@ -1136,8 +1139,7 @@ for (var i = 0; i < btns.length; i++) {
   note   = "\url{https://designrl.github.io}",
   year   = {2019}
 }</pre>
-</dt-appendix>
-</body>
+<script src="template.v1.js"></script>
 <script type="text/bibliography">
 @book{2002huber,
   title={Goodness-of-Fit Tests and Model Validity},
