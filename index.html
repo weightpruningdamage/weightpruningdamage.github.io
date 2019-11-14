@@ -31,6 +31,16 @@
   <meta property="article:author" content="Andrea Frome">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
   <style>
      body {
       font-family: "Roboto", "Helvetica", sans-serif;
@@ -390,16 +400,21 @@
           <p>Between infancy and adulthood, the number of synapses in our brain first multiply and then fall. 
             Synaptic pruning improves efficiency by removing redundant neurons and strengthening synaptic connections 
             that are most useful for the environment.  
-            Despite losing 50 % of all synapses between age two and ten, the brain continues to function.
-            The phrase "use it or lose it" is frequently used to describe the environmental influence of the learning process on synaptic  pruning,
-            however there is little scientific consensus on <em>what</em> exactly is lost. </p>
+            Despite losing 50 % of all synapses between age two and ten, the brain continues to function <dt-cite key="RAKI1994"></dt-cite>.
+            The phrase "use it or lose it" is frequently used to describe the environmental influence of the learning process
+            on synaptic  pruning,
+            however there is little scientific 
+            consensus on <em>what</em> exactly is lost. </p> <dt-cite key="RAKI1994"></dt-cite>
             
-            <p>In 1990, a popular paper was published titled Optimal Brain Damage <dt-cite key="Cun90optimalbrain"></dt-cite> . 
-              The paper was amongst the first  <dt-cite key="Hassibi93secondorder,1992_nowlan_hinton, NIPS1990_Andreas_weight_elimination"></dt-cite> to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
-              to our biological synaptic pruning. The pruning method identifies non-essential weights to remove 
+            <p>In 1990, a popular paper was published titled Optimal Brain Damage 
+              <dt-cite key="Cun90optimalbrain"></dt-cite> . 
+              The paper was amongst the first  <dt-cite key="Hassibi93secondorder,1992_nowlan_hinton,NIPS1990_Andreas_weight_elimination"></dt-cite> to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
+              to our biological synaptic pruning. 
+              The pruning method identifies non-essential weights to remove 
               from the network by setting to zero.
-              Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone [1,2,3].</p>
-             <p>  At face value, pruning does appear to promise you can can (almost) have it all. State of art pruning methods remove the 
+              Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone.</p>
+             <p>  At face value, pruning does appear to promise you can can (almost) have it all. 
+               State of art pruning methods remove the 
                majority of the weights with a 
                negligable loss to top-1 accuracy. 
               These newly slimmed down networks require less memory, energy consumption and are faster at producing predictions. 
@@ -1130,6 +1145,15 @@ for (var i = 0; i < btns.length; i++) {
     publisher = {Morgan Kaufmann}
 }
 
+@INPROCEEDINGS{Hassibi93secondorder,
+    author = {Babak Hassibi and David G. Stork and Stork Crc. Ricoh. Com},
+    title = {Second Order Derivatives for Network Pruning: Optimal Brain Surgeon},
+    booktitle = {Advances in Neural Information Processing Systems 5},
+    year = {1993},
+    pages = {164--171},
+    publisher = {Morgan Kaufmann}
+}
+
 @incollection{NIPS1990_Andreas_weight_elimination,
 title = {Generalization by Weight-Elimination with Application to Forecasting},
 author = {Andreas S. Weigend and David E. Rumelhart and Bernardo A. Huberman},
@@ -1140,36 +1164,33 @@ year = {1991},
 publisher = {Morgan-Kaufmann},
 }
 
+@article{1992_nowlan_hinton,
+author = {Nowlan, Steven J. and Hinton, Geoffrey E.},
+title = {Simplifying Neural Networks by Soft Weight-Sharing},
+journal = {Neural Computation},
+volume = {4},
+number = {4},
+pages = {473-493},
+year = {1992},
+doi = {10.1162/neco.1992.4.4.473},
+}
 
-@article{Ioffe2015,
-  author    = {Sergey Ioffe and
-               Christian Szegedy},
-  title     = {Batch Normalization: Accelerating Deep Network Training by Reducing
-               Internal Covariate Shift},
-  journal   = {CoRR},
-  volume    = {abs/1502.03167},
-  year      = {2015},
-  archivePrefix = {arXiv},
-  eprint    = {1502.03167},
-  timestamp = {Mon, 13 Aug 2018 16:47:06 +0200},
-  biburl    = {https://dblp.org/rec/bib/journals/corr/IoffeS15},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@incollection{RAKI1994,
+title = "Synaptic development of the cerebral cortex: implications for learning, memory, and mental illness",
+editor = "J. Van Pelt and M.A. Corner and H.B.M. Uylings and F.H. Lopes Da Silva",
+series = "Progress in Brain Research",
+publisher = "Elsevier",
+volume = "102",
+pages = "227 - 243",
+year = "1994",
+booktitle = "The Self-Organizing Brain: From Growth Cones to Functional Networks",
+issn = "0079-6123",
+doi = "https://doi.org/10.1016/S0079-6123(08)60543-9",
+url = "http://www.sciencedirect.com/science/article/pii/S0079612308605439",
+author = "Pasko Rakic and Jean-Pierre Bourgeois and Patricia S. Goldman-Rakic",
 }
 
 
-@ARTICLE{samek2017, 
-author={W. Samek and A. Binder and G. Montavon and S. Lapuschkin and K. R. Müller},
-journal={IEEE Transactions on Neural Networks and Learning Systems}, 
-title="{Evaluating the Visualization of What a Deep Neural Network Has Learned}", 
-year=2017, 
-month={Nov},
-volume={28}, 
-number={11}, 
-pages={2660-2673}, 
-keywords={data visualisation;image classification;learning (artificial intelligence);neural nets;DNN;ILSVRC2012;MIT Places data sets;SUN397;complex machine learning tasks;data visualization;deconvolution method;deep neural network;heatmap;multilayer nonlinear structure;relevance propagation algorithm;sensitivity-based approach;Algorithm design and analysis;Biological neural networks;Deconvolution;Heating;Learning systems;Neurons;Sensitivity;Convolutional neural networks;explaining classification;image classification;interpretable machine learning;relevance models}, 
-doi={10.1109/TNNLS.2016.2599820}, 
-ISSN={2162-237X},
-}
 </script> 
 
 <script language="javascript" type="text/javascript" src="lib/jquery-1.12.4.min.js"></script>
