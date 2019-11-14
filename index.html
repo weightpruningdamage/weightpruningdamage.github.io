@@ -987,8 +987,6 @@
         model accuracy decreases at every pruning level, indicating that the magnitude of class decreases must be larger 
         in order to pull the model accuracy lower. The model cannibalizes performance on a small subset of classes
         in order to preserve overall performance. </p>
-
-
       
 <div id="myBtnContainer_2">
   <button class="btn active" onclick="filterSelection('pie')"> pie generalization</button>
@@ -1113,7 +1111,10 @@ for (var i = 0; i < btns.length; i++) {
               often driven by the resource constraints of deploying models to mobile phone or embedded devices \citep{2017Andre, 
               Samala_2018}.</p>
       </div>
-<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+<script>
+$.noConflict();
+// Code that uses other library's $ can follow here.
+</script>
 <dt-appendix>
 <div class="description_">  
 <h3>Acknowledgments</h3>
