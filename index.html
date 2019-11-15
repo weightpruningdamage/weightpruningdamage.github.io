@@ -1143,8 +1143,19 @@ for (var i = 0; i < btns.length; i++) {
   
 <div class="descriptions_">  
 <h3>What does this mean for the use of pruned models?</h3>
- <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
-   critical details in the ways that pruning impacts model generalization. We hope this work prompts additional attention on the impact of pruning and other model compression methods such as quantization on  </p>
+ <p> Pruned models are widely used by many real world applications.
+   Our results are surprising and suggest that 
+   a reliance on top-line metrics such as top-1 or 
+   top-5 test-set accuracy hides
+   critical details in the ways that pruning 
+   impacts model generalization. 
+   However, our methodology also offers a way for domain experts to better understand the trade-offs incurred by pruning.
+   Inspecting PIEs provide valuable insights into where models fail to generalize.
+   This can be extremely valuable for creating human-in-the-loop decisions, where certain examples are re-routed for human inspection and judgement. 
+   In this work, we focus on real-world datasets and find 
+   We hope this work prompts additional attention on
+   the impact of pruning and other model compression 
+   methods such as quantization on  </p>
   </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
