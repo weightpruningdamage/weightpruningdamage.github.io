@@ -519,25 +519,16 @@
   <div class="column_portfolio abstract">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="abstract_1" style="width:100%">
-      <h4>Toilet Tissue</h4>
-      <p>Bath Towel</p>
-      <p>Great White Shark</p>
     </div>
   </div>
   <div class="column_portfolio abstract">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F29_cauliflower_cauliflower_artichoke.png?v=1573469365213" alt="abstract_1" style="width:100%">
-      <h4>Cauliflower</h4>
-      <p>Cauliflower</p>
-      <p>Artichoke</p>
     </div>
   </div>
   <div class="column_portfolio abstract">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F172_sombrero_cowboy_hat_dough.png?v=1573469378538" alt="abstract_1" style="width:100%">
-      <h4>Sombrero</h4>
-      <p>Cowboy Hat</p>
-      <p>Dough</p>
     </div>
   </div>
 
@@ -989,7 +980,7 @@
       number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model. Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature. 
         We train a population of pruned and non-pruned models and use a two-sample, two-tailed,
-        independent Welch’s t-test  \citep{1947welch}  to determine whether the means of the samples differ significantly.
+        independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>, to determine whether the means of the samples differ significantly.
         This methodology allows us to identify a subset of classes that perform better or worse than expected.</p>
       
       <!-- import the webpage's stylesheet -->
@@ -1050,7 +1041,7 @@
 <div class="row">
   <div class="column_header pie">
   <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_5.png?v=1573779667166">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fpies_alone.png?v=1573780368491">
       <h4>Toilet Tissue</h4>
       <p>Bath Towel</p>
       <p>Great White Shark</p>
@@ -1154,12 +1145,7 @@ for (var i = 0; i < btns.length; i++) {
   
 <div class="description_">  
  <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
-   critical details in the ways that pruning impacts model generalization. An understanding of these trade-offs is critical 
-    for sensitive tasks such as hiring \citep{Dastin_2018, Harwell_2019}, health care diagnostics \citep{2019Hongtao, Gruetzemacher20183DDL}, 
-    self-driving cars \citep{2017Telsa}, where the introduction of pruning may be at odds with fairness objectives to treat protected attributes 
-    uniformly and/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonly used in these domains,
-    often driven by the resource constraints of deploying models to mobile phone or embedded devices \citep{2017Andre, 
-    Samala_2018}.</p>
+   critical details in the ways that pruning impacts model generalization. We hope this work prompts additional attention on the impact of pruning and other model compression methods such as quantization on  </p>
   </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
@@ -1216,6 +1202,23 @@ editor = {R. P. Lippmann and J. E. Moody and D. S. Touretzky},
 pages = {875--882},
 year = {1991},
 publisher = {Morgan-Kaufmann},
+}
+
+@article {1947welch,
+    AUTHOR = {Welch, B. L.},
+     TITLE = {The generalization of `{S}tudent's' problem when several
+              different population variances are involved},
+   JOURNAL = {Biometrika},
+  FJOURNAL = {Biometrika},
+    VOLUME = {34},
+      YEAR = {1947},
+     PAGES = {28--35},
+      ISSN = {0006-3444},
+   MRCLASS = {62.0X},
+  MRNUMBER = {0019277},
+MRREVIEWER = {A. A. Bennett},
+       DOI = {10.2307/2332510},
+       URL = {https://doi.org/10.2307/2332510},
 }
 
 @article{Sowell8223,
