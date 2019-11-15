@@ -1005,14 +1005,43 @@
         in order to preserve overall performance. </p>
       
 <div id="myBtnContainer_2">
-  <button class="btn active" onclick="filterSelection('pie')"> pie generalization</button>
-  <button class="btn" onclick="filterSelection('no_pie')"> generalization without pie</button>
-  <button class="btn" onclick="filterSelection('imagenet_c')"> imagenet-c</button>
-  <button class="btn" onclick="filterSelection('imagenet_a')"> imagenet-a</button>
+  <button class="btn active_" onclick="filterSelection('pie')"> pie generalization</button>
+  <button class="btn" onclick="filterSelection('without')"> generalization without pie</button>
+  <button class="btn" onclick="filterSelection('corruption')"> imagenet-c</button>
+  <button class="btn" onclick="filterSelection('adversarial')"> imagenet-a</button>
 <hr>
+  
+<div class="row">
+  <div class="column_header pie">
+    <div class="content">
+    <h5>image depicts object(s) from categories that frequently co-occur together. 
+      In some cases, this is because both labels are acceptable to describe the same object. </h5>
+        </div>
+      </div>
+  <div class="column_header without">
+       <div class="content">
+<h5>image depicts object(s) from categories that frequently co-occur together. 
+  In some cases, this is because both labels are acceptable to describe the same object. </h5>
+    </div>
+  </div>
+  <div class="column_header corruption">
+      <div class="content">
+<h5>image depicts object(s) from categories that frequently co-occur together. 
+  In some cases, this is because both labels are acceptable to describe the same object. </h5>
+    </div>
+  </div>
+   <div class="column_header adversarial">
+      <div class="content">
+<h5>image depicts object(s) from categories that frequently co-occur together. 
+  In some cases, this is because both labels are acceptable to describe the same object. </h5>
+    </div>
+  </div>
+    <!-- END GRID -->
+</div>
+</div>
         
 <div class="row">
-  <div class="column_portfolio pie">
+  <div class="column_header pie">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="abstract_1" style="width:100%">
       <h4>Toilet Tissue</h4>
@@ -1020,7 +1049,7 @@
       <p>Great White Shark</p>
     </div>
   </div>
-  <div class="column_portfolio no_pie">
+  <div class="column_header without">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F29_cauliflower_cauliflower_artichoke.png?v=1573469365213" alt="abstract_1" style="width:100%">
       <h4>Cauliflower</h4>
@@ -1028,17 +1057,17 @@
       <p>Artichoke</p>
     </div>
   </div>
-  <div class="column_portfolio imagenet_c">
+  <div class="column_header corruption">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F172_sombrero_cowboy_hat_dough.png?v=1573469378538" alt="abstract_1" style="width:100%">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fimagenet_c.png?v=1573776423368" alt="abstract_1" style="width:100%">
       <h4>Sombrero</h4>
       <p>Cowboy Hat</p>
       <p>Dough</p>
     </div>
   </div>
-   <div class="column_portfolio imagenet_c">
+   <div class="column_header adversarial">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F172_sombrero_cowboy_hat_dough.png?v=1573469378538" alt="abstract_1" style="width:100%">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fimagenet_a_image.png?v=1573757726025" alt="abstract_1" style="width:100%">
       <h4>Sombrero</h4>
       <p>Cowboy Hat</p>
       <p>Dough</p>
@@ -1107,9 +1136,9 @@ var btnContainer = document.getElementById("myBtnContainer_2");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    var current = document.getElementsByClassName("active_");
+    current[0].className = current[0].className.replace(" active_", "");
+    this.className += " active_";
   });
 }
 </script> 
