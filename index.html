@@ -1012,25 +1012,27 @@
 <div class="row">
   <div class="column_header pie">
     <div class="content">
-    <h5>We compare the test-set performance of a fully parameterized non-pruned model on a fixed number of randomly selected PIE images and a random sample of the test set. When inference restricted to only PIE images (green bar) significantly degrades top-1 accuracy relative to performance on a random sample (.</h5>
+    <p>A non-pruned model performs significantly worse
+      on a sample of only PIE images (green bar) relative to performance on
+      a random sample of images from the test set (pink bar).</p>
         </div>
       </div>
   <div class="column_header without">
        <div class="content">
-<h5>image depicts object(s) from categories that frequently co-occur together. 
-  In some cases, this is because both labels are acceptable to describe the same object. </h5>
+
+<p>In contrast, top-1 accuracy improves when the non-pruned model is restricted
+  to only non-pie images (teal). PIE images are far more challenging for both pruned 
+  and non-pruned models to generalize to.</p>
     </div>
   </div>
   <div class="column_header corruption">
       <div class="content">
-<h5>image depicts object(s) from categories that frequently co-occur together. 
-  In some cases, this is because both labels are acceptable to describe the same object. </h5>
+<h5> </h5>
     </div>
   </div>
    <div class="column_header adversarial">
       <div class="content">
-<h5>image depicts object(s) from categories that frequently co-occur together. 
-  In some cases, this is because both labels are acceptable to describe the same object. </h5>
+<h5></h5>
     </div>
   </div>
     <!-- END GRID -->
@@ -1041,9 +1043,6 @@
   <div class="column_header pie">
   <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fpies_alone.png?v=1573780368491">
-      <h4>Toilet Tissue</h4>
-      <p>Bath Towel</p>
-      <p>Great White Shark</p>
     </div>
   </div>
   
@@ -1142,7 +1141,8 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script> 
   
-<div class="description_">  
+<div class="descriptions_">  
+<h3>What does this mean for the use of pruned models?</h3>
  <p> Our results are surprising and suggest that a reliance on top-line metrics such as top-1 or top-5 test-set accuracy hides
    critical details in the ways that pruning impacts model generalization. We hope this work prompts additional attention on the impact of pruning and other model compression methods such as quantization on  </p>
   </div>
