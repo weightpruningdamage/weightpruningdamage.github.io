@@ -136,8 +136,8 @@
       padding-top: 20px;
     }
     .cover-container, .descriptions_, .description_ {
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: 15px;
+      padding-left: 15px;
       margin-right: auto;
       margin-left: auto;   
     }
@@ -146,28 +146,28 @@
     @media (min-width: 415px) {
       authors .authors-affiliations,
        .base-grid, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio, .row {
+      .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 500px;
       }
     }
 
     @media (min-width: 768px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio .row {
+      .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 650px;
       }
     }
 
     @media (min-width: 992px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio .row   {
+      .cover-container, .descriptions_, .description_, .column_portfolio  {
         width: 770px;
       }
     }
 
     @media (min-width: 1200px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio .row  {
+      .cover-container, .descriptions_, .description_, .column_portfolio=  {
         width: 970px;
       }
     }
@@ -1003,8 +1003,8 @@
         in order to preserve overall performance. </p>
       <p>Click on the buttons to see generalization and robustness performance:</p>
 <div id="myBtnContainer_2">
-  <button class="btn active_" onclick="filterSelection('pie')"> pie generalization top-1</button>
-  <button class="btn" onclick="filterSelection('without')"> top-1 excluding pie</button>
+  <button class="btn active_" onclick="filterSelection('pie')"> pie more challenging</button>
+  <button class="btn" onclick="filterSelection('without')"> excluding pie</button>
   <button class="btn" onclick="filterSelection('corruption')"> imagenet-c</button>
   <button class="btn" onclick="filterSelection('adversarial')"> imagenet-a</button>
 <hr>
@@ -1012,8 +1012,7 @@
 <div class="row">
   <div class="column_header pie">
     <div class="content">
-    <h5>image depicts object(s) from categories that frequently co-occur together. 
-      In some cases, this is because both labels are acceptable to describe the same object. </h5>
+    <h5>We compare the test-set performance of a fully parameterized non-pruned model on a fixed number of randomly selected PIE images and a random sample of the test set. When inference restricted to only PIE images (green bar) significantly degrades top-1 accuracy relative to performance on a random sample (.</h5>
         </div>
       </div>
   <div class="column_header without">
