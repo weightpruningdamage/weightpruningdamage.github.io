@@ -1149,7 +1149,7 @@ for (var i = 0; i < btns.length; i++) {
    top-5 test-set accuracy hides
    critical details in the ways that pruning 
    impacts model generalization.  
-   However, our methodology also offers a way for domain experts to better understand the trade-offs incurred by pruning. </p>
+   However, our methodology also offers a way for human domain experts to better understand the trade-offs incurred by pruning. </p>
   <p>  Inspecting PIEs provide valuable insights into where models fail to generalize.
    This can be extremely valuable for creating human-in-the-loop decisions, where certain examples are re-routed for human inspection and judgement.  </p>  
  <p>  In this work, we focus on open source research datasets and find that for datasets like ImageNet PIE images tend to over-index on poorly structured data. 
@@ -1159,7 +1159,7 @@ that the explosion of growth in number of parameters in deep neural networks may
 problem that is better addressed in the data cleaning pipeline. PIE provides one tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert.
    We hope this work prompts additional attention on
    the impact of pruning and other popular and widely used model compression 
-   methods such as quantization.  </p>
+   methods such as quantization. For sensitive tasks where human welfare can be impacted adversely, we suggest caution be used before deploying pruned models.  </p>
   </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
