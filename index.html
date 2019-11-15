@@ -329,6 +329,13 @@
   width: 100.00%;
   display: none; /* Hide columns by default */
 }
+    
+.column_two_fig {
+  float: left;
+  width: 50.00%;
+  display: none; /* Hide columns by default */
+}
+
 
 /* Clear floats after rows */
 .row:after {
@@ -1005,8 +1012,8 @@
         in order to preserve overall performance. </p>
       <p>Click on the buttons to see generalization and robustness performance:</p>
 <div id="myBtnContainer_2">
-  <button class="btn active_" onclick="filterSelection('pie')"> pie generalization</button>
-  <button class="btn" onclick="filterSelection('without')"> generalization without pie</button>
+  <button class="btn active_" onclick="filterSelection('pie')"> pie generalization top-1</button>
+  <button class="btn" onclick="filterSelection('without')"> top-1 excluding pie</button>
   <button class="btn" onclick="filterSelection('corruption')"> imagenet-c</button>
   <button class="btn" onclick="filterSelection('adversarial')"> imagenet-a</button>
 <hr>
@@ -1042,21 +1049,23 @@
         
 <div class="row">
   <div class="column_header pie">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="abstract_1" style="width:100%">
+  <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_5.png?v=1573779667166">
       <h4>Toilet Tissue</h4>
       <p>Bath Towel</p>
       <p>Great White Shark</p>
     </div>
   </div>
+  
   <div class="column_header without">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F29_cauliflower_cauliflower_artichoke.png?v=1573469365213" alt="abstract_1" style="width:100%">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
       <h4>Cauliflower</h4>
       <p>Cauliflower</p>
       <p>Artichoke</p>
     </div>
   </div>
+
   <div class="column_header corruption">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fimagenet_c.png?v=1573776423368" alt="abstract_1" style="width:100%">
