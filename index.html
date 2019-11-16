@@ -993,36 +993,23 @@
         in order to preserve overall performance. </p>
       <p>Click on the buttons to see generalization and robustness performance:</p>
 <div id="myBtnContainer_2">
-  <button class="btn active_" onclick="filterSelection('pie')"> pie more challenging</button>
-  <button class="btn" onclick="filterSelection('without')"> excluding pie</button>
-  <button class="btn" onclick="filterSelection('corruption')"> imagenet-c</button>
-  <button class="btn" onclick="filterSelection('adversarial')"> imagenet-a</button>
+  <button class="btn active_" onclick="filterSelection_('pie')"> pie more challenging</button>
+  <button class="btn" onclick="filterSelection_('without')"> excluding pie</button>
 <hr>
   
 <div class="row">
   <div class="column_header pie">
     <div class="content">
-    <p>A non-pruned model performs significantly worse
+    <h5>A non-pruned model performs significantly worse
       on a sample of only PIE images (green bar) relative to performance on
-      a random sample of images from the test set (pink bar).</p>
+      a random sample of images from the test set (pink bar).</h5>
         </div>
       </div>
   <div class="column_header without">
        <div class="content">
-
-<p>In contrast, top-1 accuracy improves when the non-pruned model is restricted
+<h5>In contrast, top-1 accuracy improves when the non-pruned model is restricted
   to only non-pie images (teal). PIE images are far more challenging for both pruned 
-  and non-pruned models to generalize to.</p>
-    </div>
-  </div>
-  <div class="column_header corruption">
-      <div class="content">
-<h5> </h5>
-    </div>
-  </div>
-   <div class="column_header adversarial">
-      <div class="content">
-<h5></h5>
+  and non-pruned models to generalize to.</h5>
     </div>
   </div>
     <!-- END GRID -->
@@ -1039,21 +1026,6 @@
   <div class="column_header without">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
-      <h4>Cauliflower</h4>
-      <p>Cauliflower</p>
-      <p>Artichoke</p>
-    </div>
-  </div>
-
-  <div class="column_header corruption">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fimagenet_c.png?v=1573776423368" alt="abstract_1" style="width:100%">
-
-    </div>
-  </div>
-   <div class="column_header adversarial">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fimagenet_a_image.png?v=1573757726025" alt="abstract_1" style="width:100%">
     </div>
   </div>
     <!-- END GRID -->
@@ -1063,6 +1035,23 @@
 <script>
 filterSelection("abstract") // Execute the function and show all columns
 function filterSelection(c) {
+  var x, y, i;
+  x = document.getElementsByClassName("column_portfolio");
+  y = document.getElementsByClassName("column_header");
+  // Add the "show" class (display:block) to the filtered elements,
+  // and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+  for (i = 0; i < y.length; i++) {
+    RemoveClass(y[i], "show");
+    if (y[i].className.indexOf(c) > -1) AddClass(y[i], "show");
+  }
+}
+  
+filterSelection_("pie") // Execute the function and show all columns
+function filterSelection_(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfolio");
   y = document.getElementsByClassName("column_header");
@@ -1135,16 +1124,16 @@ for (var i = 0; i < btns.length; i++) {
    critical details in the ways that pruning 
    impacts model generalization.  
    However, our methodology also offers a way for human domain experts to better understand the trade-offs incurred by pruning. </p>
-  <p>  Inspecting PIEs provide valuable insights into where models fail to generalize.
-   This can be extremely valuable for creating human-in-the-loop decisions, where certain examples are re-routed for human inspection and judgement.  </p>  
+  <p>  PIE provides one tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert.
+    This can be extremely valuable for creating human-in-the-loop decisions, where certain examples are re-routed for human inspection and judgement.  </p>  
  <p>  In this work, we focus on open source research datasets and find that for datasets like ImageNet PIE images tend to over-index on poorly structured data. 
  ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. </p>
   <p>  The over-indexing of poorly structured data hints
 that the explosion of growth in number of parameters in deep neural networks may be solving a
-problem that is better addressed in the data cleaning pipeline. PIE provides one tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert.
+problem that is better addressed in the data cleaning pipeline.
    We hope this work prompts additional attention on
    the impact of pruning and other popular and widely used model compression 
-   methods such as quantization. For sensitive tasks where human welfare can be impacted adversely, we suggest caution be used before deploying pruned models.  </p>
+   methods such as quantization.  </p>
   </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
