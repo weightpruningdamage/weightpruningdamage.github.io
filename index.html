@@ -1073,18 +1073,18 @@ function filterSelection(c) {
   
 filterSelection_("pie") // Execute the function and show all columns
 function filterSelection_(c) {
-  var s, t, z;
+  var s, t, i;
   s = document.getElementsByClassName("column_portfolio");
   t = document.getElementsByClassName("column_header");
   // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
-  for (z = 0; z < s.length; z++) {
+  for (i = 0; i < s.length; i++) {
     RemoveClass(s[i], "show");
-    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+    if (s[i].className.indexOf(c) > -1) AddClass(s[i], "show");
   }
-  for (z = 0; z < y.length; z++) {
-    RemoveClass(y[z], "show");
-    if (y[z].className.indexOf(c) > -1) AddClass(y[z], "show");
+  for (i = 0; z < t.length; i++) {
+    RemoveClass(t[i], "show");
+    if (t[i].className.indexOf(c) > -1) AddClass(t[i], "show");
   }
 }
 
@@ -1123,15 +1123,25 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-  
+for (var i = 0; i < btns.length; i++) {
+  btns[i].removeEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer_2");
+function active_button(){
+  var current = document.getElementsByClassName("active_");
+  current[0].className = current[0].className.replace(" active_", "");
+  this.className += " active_";
+}
+   
 var btns = btnContainer.getElementsByClassName("btn_");
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active_");
-    current[0].className = current[0].className.replace(" active_", "");
-    this.className += " active_";
+  
+  btns[i].addEventListener("click", active_button)
   });
 }
 </script> 
