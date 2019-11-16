@@ -327,6 +327,12 @@
   display: none; /* Hide columns by default */
 }
     
+.column_header_ {
+  float: left;
+  width: 100.00%;
+  display: none; /* Hide columns by default */
+}
+    
 .column_two_fig {
   float: left;
   width: 50.00%;
@@ -374,27 +380,6 @@
    color: white;
 }
     
-/* Style the buttons */
-.btn_ {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-/* Add a grey background color on mouse-over */
-.btn_:hover {
-  background-color: #ddd;
-}
-
-/* Add a dark background color to the active button */
-.btn.active_ {
-  background-color: #666;
-   color: white;
-}
-
 </style>
 </head>
 <body>
@@ -494,37 +479,37 @@
 <!-- Portfolio Gallery Grid -->
       
 <div class="row">
-  <div class="column_header abstract">
+  <div class="column_header_ abstract">
     <h5>class object is in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
   </div>
-  <div class="column_header incorrect">
+  <div class="column_header_ incorrect">
     <div class="content">
     <h5>the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
     </div>
   </div>
   
-  <div class="column_header atypical">
+  <div class="column_header_ atypical">
     <div class="content">
     <h5>abstract representation is an object in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
     </div>
   </div>
-  <div class="column_header fine">
+  <div class="column_header_ fine">
     <div class="content">
     <h5> image depicts an object that is semantically close to 
       various other classes present the data set (e.g.,
       rock crab and fiddler crab, cuirass and breastplate).</h5>
     </div>
   </div>
-  <div class="column_header multiple">
+  <div class="column_header_ multiple">
     <div class="content">
     <h5>image depicts multiple objects, a human may consider several labels to be appropriate predictions (e.g.,
       desktop computer consisting of a screen, mouse and monitor, a barber chair in a barber shop,
       a wine bottle which is full of red wine).</h5>
     </div>
   </div>
- <div class="column_header frequently">
+ <div class="column_header_ frequently">
     <div class="content">
 <h5>image depicts object(s) from categories that frequently co-occur together. 
   In some cases, this is because both labels are acceptable to describe the same object. </h5>
@@ -1065,7 +1050,7 @@ filterSelection("abstract") // Execute the function and show all columns
 function filterSelection(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfolio_");
-  y = document.getElementsByClassName("column_header");
+  y = document.getElementsByClassName("column_header_");
   // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
