@@ -1019,20 +1019,28 @@
         in order to preserve overall performance. </p>
       <p>Click on the buttons to see generalization and robustness performance:</p>
 <div id="myBtnContainer_2">
-  <button class="btn active_" onclick="filterSelection_('pie')"> pie more challenging</button>
+  <button class="btn active_" onclick="filterSelection_('pie')"> pie </button>
   <button class="btn" onclick="filterSelection_('without')"> excluding pie</button>
+  <button class="btn" onclick="filterSelection_('all')"> different levels of sparsity </button>
 <hr>
   
 <div class="row">
   <div class="column_header pie">
     <div class="content">
     <h5>A non-pruned model performs significantly worse
-      on a sample of only PIE images (green bar) relative to performance on
+      on a random sample of PIE images (green bar) relative to performance on
       a random sample of images from the test set (pink bar).</h5>
-        </div>
-      </div>
+    </div>
+    </div>
   <div class="column_header without">
-       <div class="content">
+  <div class="content">
+<h5>In contrast, top-1 accuracy improves when the non-pruned model is restricted
+  to only non-pie images (teal). PIE images are far more challenging for both pruned 
+  and non-pruned models to generalize to.</h5>
+  </div>
+    </div>
+<div class="column_header all">
+<div class="content">
 <h5>In contrast, top-1 accuracy improves when the non-pruned model is restricted
   to only non-pie images (teal). PIE images are far more challenging for both pruned 
   and non-pruned models to generalize to.</h5>
@@ -1050,6 +1058,13 @@
   </div>
   
   <div class="column_header without">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+  
+   
+  <div class="column_header all">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
     </div>
