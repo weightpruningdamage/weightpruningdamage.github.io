@@ -1029,16 +1029,15 @@
 <div class="row">
   <div class="column_header pie">
     <div class="content">
-    <h5>A non-pruned model performs significantly worse
+    <h5>PIE images are more challenging to classify. A ResNet-50 deep neural network performs significantly worse
       on a random sample of PIE images (green bar) relative to performance on
-      a random sample of images from the test set (pink bar).</h5>
+      a random sample of images from the ImageNet test set (pink bar).</h5>
     </div>
     </div>
   <div class="column_header without">
   <div class="content">
-<h5>In contrast, top-1 accuracy improves when the non-pruned model is restricted
-  to only non-pie images (teal). PIE images are far more challenging for both pruned 
-  and non-pruned models to generalize to.</h5>
+<h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
+  to a random sample of non-pie ImageNet images (teal). </h5>
   </div>
     </div>
 <div class="column_header levels">
