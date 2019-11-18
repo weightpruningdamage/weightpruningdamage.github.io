@@ -989,25 +989,41 @@
 <!-- END GRID -->
 </div>
       
+  <div class="content">
+        <h5>At all levels of pruning, some classes are impacted far more than others.
+      Plum colored bars indicate that the change to class recall was significant relative to the drop in overall accuracy caused by pruning. At higher levels of pruning, more classes are impacted and the absolute difference between class impact widens. </h5>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Flimitless_loop_gif.gif?v=1574046728293"  style="width:100%">
+           <h5> The directionality and magnitude of the impact of pruning is nuanced and surprising.
+      The model cannibalizes performance on some classes while retaining a  robust performance (relative to overall ) on others. We call this "selective brain damage." </h5>
+    </div>
+      
 <div id="myBtnContainer_3">
-  <button class="btn active_" onclick="filterSelection_('sparsity_all')"> pruning class impact </button>
-  <button class="btn" onclick="filterSelection_('sparsity_5')"> 10% Pruning </button>
-  <button class="btn" onclick="filterSelection_('sparsity_5')"> 30% Pruning </button>
+  <button class="btn" onclick="filterSelection_('sparsity_3')"> 30% pruning </button>
   <button class="btn" onclick="filterSelection_('sparsity_5')"> 50% Pruning </button>
-  <button class="btn" onclick="filterSelection_('sparsity_5')"> 70% Pruning </button>
-  <button class="btn" onclick="filterSelection_('sparsity_5')"> 90% Pruning </button>
-<hr>
-  
+  <button class="btn" onclick="filterSelection_('sparsity_7')"> 70% Pruning </button>
+  <button class="btn" onclick="filterSelection_('sparsity_9')"> 90% Pruning </button>
 <hr>
   
 <div class="row">
-  <div class="column_header sparsity_all">
-    <div class="content">
-    <h5>In this chart, we compare the performance of a set of models with 50% of weights removed vs. a set of non-pruned models.
-      Plum colored bars indicate that the change to class recall was significant relative to the drop in overall accuracy caused by pruning. </h5>
+    <div class="column_header sparsity_3">
+  <div class="content">
+      <h5> The directionality and magnitude of the impact of pruning is nuanced and surprising.
+      The model appears to cannibalize performance on some classes while retaining a relatively robust performance on others. We call this "selective brain damage." More research is needed to understand these classes are impacted in different ways. </h5>
+  </div>
     </div>
+    <div class="column_header sparsity_5">
+  <div class="content">
+      <h5> The directionality and magnitude of the impact of pruning is nuanced and surprising.
+      The model appears to cannibalize performance on some classes while retaining a relatively robust performance on others. We call this "selective brain damage." More research is needed to understand these classes are impacted in different ways. </h5>
+  </div>
     </div>
-  <div class="column_header sparsity_5">
+  <div class="column_header sparsity_7">
+  <div class="content">
+      <h5> The directionality and magnitude of the impact of pruning is nuanced and surprising.
+      The model appears to cannibalize performance on some classes while retaining a relatively robust performance on others. We call this "selective brain damage." More research is needed to understand these classes are impacted in different ways. </h5>
+  </div>
+    </div>
+   <div class="column_header sparsity_9">
   <div class="content">
       <h5> The directionality and magnitude of the impact of pruning is nuanced and surprising.
       The model appears to cannibalize performance on some classes while retaining a relatively robust performance on others. We call this "selective brain damage." More research is needed to understand these classes are impacted in different ways. </h5>
@@ -1020,7 +1036,9 @@
 <div class="row">
   <div class="column_header sparsity_all">
   <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fall_sparsity_levels.gif?v=1574046033880"  style="width:120%">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ffinal_gif_all.gif?v=1574046271220"  style="width:120%">
+           <h5> The directionality and magnitude of the impact of pruning is nuanced and surprising.
+      The model appears to cannibalize performance on some classes while retaining a relatively robust performance on others. We call this "selective brain damage." </h5>
     </div>
   </div>
   
