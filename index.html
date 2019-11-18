@@ -428,19 +428,18 @@
               Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone.</p>
              <p>  At face value, pruning does appear to promise you can can (almost) have it all. 
                State of art pruning methods remove the 
-               majority of the weights with a 
-               negligable loss to top-1 accuracy. 
+               majority of the weights with minimal degradation to top-1 accuracy <dt-cite key="tgale_shooker_2019"></dt-cite>. 
               These newly slimmed down networks require less memory, energy consumption 
                and are faster at producing predictions. 
-               All these attributes make pruned models ideal for deploying deep neural networks to mobile phones and other edge devices.</p>
+               All these attributes make pruned models ideal for deploying deep neural networks to resource constrained environments.</p>
             <p> The ability to prune networks with seemingly so little degradation to generalization performance is puzzling. The cost
               to top-1 accuracy appears minimal 
               if it is spread uniformally across all classes, but what if the cost is 
               concentrated in only a few classes? 
               <i>Are certain types of examples or classes disproportionately impacted by 
                 pruning?</i></p>
-            <p> An understanding of these trade-offs is critical for sensitive tasks such 
-              as hiring <dt-cite key="Dastin_2018,Harwell_2019"></dt-cite>, health care diagnostics <dt-cite key="2019Hongtao,Gruetzemacher20183DDL"></dt-cite>, self-driving cars <dt-cite key="2017Telsa,2019Uber"></dt-cite>, where theintroduction of pruning may be at odds with fairness objectives 
+            <p> An understanding of these trade-offs is critical when deep neural networks are used for sensitive tasks such 
+              as hiring <dt-cite key="Dastin_2018,Harwell_2019"></dt-cite>, health care diagnostics <dt-cite key="2019Hongtao,Gruetzemacher20183DDL"></dt-cite> or self-driving cars <dt-cite key="2017Telsa,2019Uber"></dt-cite>. For these tasks, the introduction of pruning may be at odds with fairness objectives 
               to treat protected attributes uniformly and/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonly used in these domains, 
            often driven by the resource constraints of deploying models to mobile phone or embedded devices <dt-cite key="2017Andre"></dt-cite>. </p>
       <div class="imgs-container">
@@ -1018,7 +1017,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         <p>  This forms our null hypothesis, and we must decide for each class whether
         to reject the null hypothesis and accept the alternative -- the 
         change to class level recall differs from the change to overall accuracy
-        in a statistically significant way. This amounts to asking -- "did the class perform better or worse than expected given the overall change in top-1 accuracy after pruning?"</p>
+        in a statistically significant way. This amounts to asking -- <i>did the class perform better or worse than expected given the overall change in top-1 accuracy after pruning?</i></p>
        <p> Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key="1954anderson_darling,2002huber"></dt-cite>. </p>      
       <p>In this work, we use a two-sample, two-tailed,
@@ -1108,9 +1107,12 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 </div>
 </div>
 <div class="description_">   
-<p> We would welcome additional discussion and code contributions. A comprehensive introduction of the methodology, experiment framework and results can be found in our <a href="https://arxiv.org/abs/1911.05248">paper</a> and <a href="https://github.com/google-research/google-research/tree/master/pruning_identified_exemplars">open source code</a>.
-  There is substantial ground we were not able to address within the scope of this work, and underserved areas worthy of future consideration include evaluating the impact of pruning for additional domains such as language and audio, different architectures and compare the relative trade-offs incurred by pruning with other popular compression techniques such as quantization.</p>
-          
+<p> We would welcome additional discussion and code contributions. A comprehensive introduction of the methodology,
+  experiment framework and results can be found in our <a href="https://arxiv.org/abs/1911.05248">paper</a> and <a href="https://github.com/google-research/google-research/tree/master/pruning_identified_exemplars">open source code</a>.
+  There is substantial ground we were not able to address within the scope of this work, and underserved areas worthy of
+  future consideration include evaluating the impact of pruning for additional domains such as language and audio,
+  different architectures and compare the relative trade-offs incurred by pruning with other popular compression techniques such as quantization.</p>
+
 <script>
 filterSelection("abstract") // Execute the function and show all columns
 function filterSelection(c) {
@@ -1199,8 +1201,7 @@ for (var i = 0; i < btns2.length; i++) {
   });
 }
 </script> 
-
-  </div><
+  </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
 <script src="template.v1.js"></script>
@@ -1213,7 +1214,8 @@ for (var i = 0; i < btns2.length; i++) {
   Prajit Ramachandran, Pieter Kindermans, Moustapha Cisse, Erich Elsen. </p>
   <p> We thank the institutional support and encouragement of Dan Nanas,
   Rita Ruiz, Sally Jesmonth and Alexander Popper. </p>
- <p> A special thank you is due to James Wexler for some helpful suggestions about how to visualize and communicate our results in an interactive format. This article was in part prepared using the <a href="https://pair-code.github.io/saliency/">Google AI Pair</a> template and style guide.
+ <p> A special thank you is due to James Wexler for some helpful suggestions about how to visualize and communicate our results in an interactive format.
+   This article was in part prepared using the <a href="https://pair-code.github.io/saliency/">Google AI Pair</a> template and style guide.
    The citation management for this article uses the <a href="https://github.com/distillpub/template">template v1</a> of the Distill style script. </p>
   
 <h3>Citation</h3>
@@ -1420,6 +1422,22 @@ author = "Hongtao Xie and Dongbao Yang and Nannan Sun and Zhineng Chen and Yongd
  journal = {The Washington Post},
  url = {https://wapo.st/2X3bupO},
  urldate = {2019-03-12}
+}
+
+@article{tgale_shooker_2019,
+  author    = {Trevor Gale and
+               Erich Elsen and
+               Sara Hooker},
+  title     = {The State of Sparsity in Deep Neural Networks},
+  journal   = {CoRR},
+  volume    = {abs/1902.09574},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1902.09574},
+  archivePrefix = {arXiv},
+  eprint    = {1902.09574},
+  timestamp = {Tue, 21 May 2019 18:03:40 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1902-09574},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
 @ARTICLE{2017Telsa,
