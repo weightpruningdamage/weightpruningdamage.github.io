@@ -1001,6 +1001,54 @@
 problem that is better addressed in the data cleaning pipeline.  </p>
   <p>  On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For sensitive tasks such as patient risk stratification or medical diagnoses <dt-cite key="NIPS2012_4525"></dt-cite>, our results suggest caution should be excercised before deploying pruned models. </p>
     
+  <div id="myBtnContainer_2">
+  <button class="btn active_" onclick="filterSelection_('pie')"> pie </button>
+  <button class="btn" onclick="filterSelection_('without')"> excluding pie</button>
+<hr>
+  
+<div class="row">
+  <div class="column_header pie">
+    <div class="content">
+    <h5>Inspecting PIE images can help us anticipate where models will fail to generalize in the real world.
+      PIE images are far more challenging for a model to classify. A ResNet-50 deep neural network performs significantly worse
+      on a random sample of PIE ImageNet images (green bar) relative to performance on
+      a random sample of images from the ImageNet test set (pink bar).</h5>
+    </div>
+    </div>
+  <div class="column_header without">
+  <div class="content">
+<h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
+  to a random sample of non-pie ImageNet images (teal). </h5>
+  </div>
+    </div>
+    <!-- END GRID -->
+</div>
+</div>
+  
+  <div class="row">
+  <div class="column_header pie">
+  <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fpies_alone.png?v=1573780368491">
+    </div>
+  </div>
+  
+  <div class="column_header without">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+  
+   
+  <div class="column_header levels">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload.png?v=1573894529483" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+  
+    <!-- END GRID -->
+</div>
+</div>
+  
     <p> PIE provides one tool to become more familiar with the underlying data by surfacing
       a far smaller subset of examples the model finds challenging to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
     where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
@@ -1058,54 +1106,8 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   <p> However, our methodology offers one way for humans to better understand 
    the trade-offs incurred by pruning and gain intuition about what classes 
    benefit the most from additional capacity. We believe this type of tooling is a valuable first step to help human experts understand the trade-offs incurred by pruning.</p>
-    
-<div id="myBtnContainer_2">
-  <button class="btn active_" onclick="filterSelection_('pie')"> pie </button>
-  <button class="btn" onclick="filterSelection_('without')"> excluding pie</button>
-<hr>
-  
-<div class="row">
-  <div class="column_header pie">
-    <div class="content">
-    <h5>Inspecting PIE images can help us anticipate where models will fail to generalize in the real world.
-      PIE images are far more challenging for a model to classify. A ResNet-50 deep neural network performs significantly worse
-      on a random sample of PIE ImageNet images (green bar) relative to performance on
-      a random sample of images from the ImageNet test set (pink bar).</h5>
-    </div>
-    </div>
-  <div class="column_header without">
-  <div class="content">
-<h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
-  to a random sample of non-pie ImageNet images (teal). </h5>
-  </div>
-    </div>
-    <!-- END GRID -->
-</div>
-</div>
         
-<div class="row">
-  <div class="column_header pie">
-  <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fpies_alone.png?v=1573780368491">
-    </div>
-  </div>
-  
-  <div class="column_header without">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
-    </div>
-  </div>
-  
-   
-  <div class="column_header levels">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload.png?v=1573894529483" alt="abstract_1" style="width:100%">
-    </div>
-  </div>
-  
-    <!-- END GRID -->
-</div>
-</div>
+
 <div class="description_">   
 <p> We would welcome additional discussion and code contributions. A comprehensive introduction of the methodology,
   experiment framework and results can be found in our <a href="https://arxiv.org/abs/1911.05248">paper</a> and <a href="https://github.com/google-research/google-research/tree/master/pruning_identified_exemplars">open source code</a>.
