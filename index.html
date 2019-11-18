@@ -1020,7 +1020,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         change to class level recall differs from the change to overall accuracy
         in a statistically significant way. This amounts to asking -- "did the class perform better or worse than expected given the overall change in top-1 accuracy after pruning?"</p>
        <p> Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
-        “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key="1986agostino,1954anderson_darling,2002huber"></dt-cite>. </p>      
+        “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key="1954anderson_darling,2002huber"></dt-cite>. </p>      
       <p>In this work, we use a two-sample, two-tailed,
         independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and use apply the t-test
  to determine whether the means of the samples differ significantly.
@@ -1108,7 +1108,8 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 </div>
 </div>
 <div class="description_">   
-<p>Additional technical details can be found in our paper and open source code. We would welcome any feedback and code contributions. Some possible directions of future work include a consideration of additional domains such as language and audio, different architectures and additional compression techniques such as quantization.</p>
+<p>Additional technical details can be found in our paper and open source code. We would welcome additional discussion and code contributions.
+  There is substantial ground we were not able to address within the scope of this work, and underserved areas worthy of future consideration include evaluating the impact of pruning for additional domains such as language and audio, different architectures and additional compression techniques such as quantization.  A key goal of our analysis was to produce findings that are not anecdotal as would be the case when analyzing one trained model of each type. To achieve this we trained a large population of deep neural networks at each level of pruning that we considered. However, for man</p>
           
 <script>
 filterSelection("abstract") // Execute the function and show all columns
@@ -1467,11 +1468,8 @@ year="2000",
 publisher="Springer London",
 address="London",
 pages="303--308",
-abstract="Sometimes the most accurate models are the least intelligible. We show how to generate case-based explanations for non-case-based machine learning methods such as artificial neural nets. The method uses the neural net as a distance metric to determine which cases in the training set are most similar to a test case that needs to be explained.",
 isbn="978-1-4471-0513-8"
 }
-
-
 
 
 @inproceedings{Hooker2019ABF,
@@ -1492,13 +1490,6 @@ journal = {Nature},
 doi = {10.1038/nature21056}
 }
 
-@book{1986agostino,
- editor = {D Agostino and Ralph, B and Stephens, Michael},
- title = {Goodness of fit Techniques},
- year = {1986},
- publisher = {Marcel Dekker, Inc.},
- address = {New York, NY, USA},
-} 
 
 @article{1954anderson_darling,
   author = {Anderson, T and Darling, D},
@@ -1510,8 +1501,6 @@ doi = {10.1038/nature21056}
   url = {http://www.jstor.org/stable/2236446},
   volume = {23},
 }
-
-
 
 
 </script> 
