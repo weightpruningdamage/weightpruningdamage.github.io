@@ -431,14 +431,8 @@ figcaption,
 .figcaption {
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
+   font-weight: bold;
   line-height: 1.5em;
-}
-
-@media(min-width: 1024px) {
-figcaption,
-.figcaption {
-    font-size: 14px;
-  }
 }
     
 figcaption a {
@@ -546,8 +540,8 @@ figcaption .strong_, {
   </div>
   
 <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('abstract')"> abstract classes</button>
-  <button class="btn" onclick="filterSelection('atypical')"> atypical examples</button>
+  <button class="btn active" onclick="filterSelection('atypical')"> atypical examples</button>
+  <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
   <button class="btn" onclick="filterSelection('incorrect')"> incorrect or inadequate ground truth</button>
   <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
   <button class="btn" onclick="filterSelection('frequently')"> frequently co-occuring classes</button>
@@ -613,120 +607,181 @@ figcaption .strong_, {
     <div class="content">
     <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F29_cauliflower_cauliflower_artichoke.png?v=1573469365213" alt="abstract_1" style="width:100%">
        <div class="figcaption">
-         <code>True Label:</code><br>
-         <strong_>cauliflower</strong_><br><code>Non-Pruned:</code>
-         <br><strong_>cauliflower</strong_><br><code>Pruned:</code><br>
-         <strong_>artichoke</strong_><br>
+         <code>True Label:</code>
+         <strong_>cauliflower</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>cauliflower</strong_><br>
+         <code>Pruned:</code><strong_>artichoke</strong_><br>
        </div>
     </div>
   </div>
   <div class="column_portfolio_ abstract">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F172_sombrero_cowboy_hat_dough.png?v=1573469378538" alt="abstract_1" style="width:100%">
-   <h4>sombrero</h4>
-      <p>cowboy hat</p>
-      <p>dough</p>
+  <div class="figcaption">
+         <code>True Label:</code>
+         <strong_>sombrero</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>cowboy hat</strong_><br>
+         <code>Pruned:</code><strong_>dough</strong_><br>
+       </div>
     </div>
   </div>
 
-
-  
   <div class="column_portfolio_ atypical">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_100.png?v=1573258953383" alt="atypical_" style="width:100%">
-      <h4>Petri Dish</h4>
-      <p>Espresso</p>
-      <p>Petri Dish</p>
+       <div class="figcaption">
+         <code>True Label:</code>
+         <strong_>petri dish</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>espresso</strong_><br>
+         <code>Pruned:</code><strong_>petri dish</strong_><br>
+       </div>
     </div>
   </div>
+      
+
   <div class="column_portfolio_ atypical">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fupright_piano.png?v=1573508296506" alt="atypical_" style="width:100%">
-      <h4>upright piano</h4>
-      <p>upright piano</p>
-      <p>apiary</p>
+       <div class="figcaption">
+         <code>True Label:</code>
+         <strong_>upright piano</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>upright piano</strong_><br>
+         <code>Pruned:</code><strong_>apiary</strong_><br>
+       </div>
     </div>
   </div>
+      
     <div class="column_portfolio_ atypical">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_36.png?v=1573258948893" alt="atypical_" style="width:100%">
-      <h4>espresso</h4>
-      <p>espresso</p>
-      <p>red wine</p>
+    <div class="figcaption">
+      <code>True Label:</code>
+         <strong_>espresso</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>espresso</strong_><br>
+         <code>Pruned:</code><strong_>red wine</strong_><br>
+       </div>
     </div>
   </div>
-  
  <div class="column_portfolio_ fine">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F94_coffeepot_espresso_maker_coffeepot.png?v=1573496269717" alt="fine_1" style="width:100%">
-      <h4>coffeepot</h4>
-      <p>espresso maker</p>
-      <p>coffeepot</p>
+      <div class="figcaption">
+      <code>True Label:</code>
+         <strong_>coffeepot</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>espresso maker</strong_><br>
+         <code>Pruned:</code><strong_>coffeepot</strong_><br>
+       </div>
     </div>
   </div>
+      
   <div class="column_portfolio_ fine">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fcrib.png?v=1573508689310" alt="fine_1" style="width:100%">
-      <h4>cradle</h4>
-      <p>bassinet</p>
-      <p>cradle</p>
-    </div>
-  </div>
-  <div class="column_portfolio_ fine">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F224_valley_valley_alp.png?v=1573506053550" alt="fine_1" style="width:100%">
-      <h4>valley</h4>
-      <p>valley</p>
-      <p>alp</p>
+      <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>cradle</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>bassinet</strong_><br>
+         <code>Pruned:</code><strong_>cradle</strong_><br>
+       </div>
     </div>
   </div>
 
+  <div class="column_portfolio_ fine">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F224_valley_valley_alp.png?v=1573506053550" alt="fine_1" style="width:100%">
+     <div class="figcaption">
+      <code>True Label:</code>
+         <strong_>valley</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>valley</strong_><br>
+         <code>Pruned:</code><strong_>alp</strong_><br>
+       </div>
+    </div>
+  </div>
   <div class="column_portfolio_ multiple">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F223_guacamole_burrito_plate.png?v=1573659747235" alt="multiple_1" style="width:100%">
-      <h4>guacamole</h4>
-      <p>burrito</p>
-      <p>plate</p>
+        <div class="figcaption">
+      <code>True Label:</code>
+         <strong_>guacamole</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>burrito</strong_><br>
+         <code>Pruned:</code><strong_>plate</strong_><br>
+       </div>
     </div>
   </div>
   <div class="column_portfolio_ multiple">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F127_parallel_bars_parallel_bars_horizontal_bar.png?v=1573495571682" alt="multiple_1" style="width:100%">
-      <h4>parallel bars</h4>
-      <p>parallel bars</p>
-      <p>horizontal bars</p>
+      <div class="figcaption">
+      <code>True Label:</code>
+         <strong_>parallel bars</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>parallel bars</strong_><br>
+         <code>Pruned:</code><strong_>horizontal bars</strong_><br>
+       </div>
     </div>
   </div>
   <div class="column_portfolio_ multiple">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_9.png?v=1573481511702" alt="multiple_1" style="width:100%">
-      <h4>Desktop Computer</h4>
-      <p>Screen</p>
-      <p>Monitor</p>
-  </div>
+        <div class="figcaption">
+      <code>True Label:</code>
+         <strong_>desktop computer</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>screen</strong_><br>
+         <code>Pruned:</code><strong_>monitor</strong_><br>
+       </div>
+    </div>
   </div>
   
  <div class="column_portfolio_ frequently">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F241_barber_chair_barber_chair_barbershop.png?v=1573496288027" alt="multiple_1" style="width:100%">
-      <h4>barber chair</h4>
-      <p>barber chair</p>
-      <p>barbershop</p>
+        <div class="figcaption">
+      <code>True Label:</code>
+         <strong_>barber chair</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>barber chair</strong_><br>
+         <code>Pruned:</code><strong_>barbershop</strong_><br>
+       </div>
     </div>
   </div>
+      
   <div class="column_portfolio_ frequently">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F83_breastplate_breastplate_cuirass.png?v=1573659152839" alt="multiple_1" style="width:100%">
-      <h4>breastplate</h4>
-      <p>breastplate</p>
-      <p>cuirass</p>
-  </div>
-  </div>
+           <div class="figcaption">
+      <code>True Label:</code>
+         <strong_>breastplate</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>breastplate</strong_><br>
+         <code>Pruned:</code><strong_>cuirass</strong_><br>
+       </div>
+    </div>
+      
   <div class="column_portfolio_ frequently">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F355_mortarboard_academic_gown_mortarboard.png?v=1573658986843" alt="multiple_1" style="width:100%">
-      <h4>mortarboard</h4>
-      <p>academic gown</p>
+        <div class="figcaption">
+      <code>True Label:</code>
+         <strong_>mortarboard</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>breastplate</strong_><br>
+         <code>Pruned:</code><strong_>cuirass</strong_><br>
+       </div>
+    </div>
+      
+      
+      <h4></h4>
+      <p>a</p>
       <p>mortarboard</p>
   </div>
   </div>
@@ -1184,7 +1239,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
    </p>
 
 <script>
-filterSelection("abstract") // Execute the function and show all columns
+filterSelection("atypical") // Execute the function and show all columns
 function filterSelection(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfolio_");
