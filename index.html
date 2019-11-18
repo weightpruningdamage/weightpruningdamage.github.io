@@ -159,6 +159,12 @@
       .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 500px;
       }
+      .column_portfolio_  .column_portfolio figcaption {
+        padding: 0;
+        padding-top: 4px;
+        word-wrap: break-word;
+        word-break: break-word;
+      }
     }
 
     @media (min-width: 768px) {
@@ -334,11 +340,13 @@
   display: none; /* Hide columns by default */
 }
     
-.column_portfolio figcaption {
+.column_portfolio_  .column_portfolio figcaption {
       padding: 4px 8px;
       word-wrap: break-word;
       word-break: break-word;
-}
+  }
+    
+
     
 /* Create three equal columns that floats next to each other */
 .column_portfolio_ {
