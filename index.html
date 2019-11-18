@@ -126,8 +126,8 @@
       padding-top: 20px;
     }
     .cover-container, .descriptions_, .description_ {
-      padding-right: 15px;
-      padding-left: 15px;
+      padding-right: 10px;
+      padding-left: 10px;
       margin-right: auto;
       margin-left: auto;   
     }
@@ -484,38 +484,38 @@
       
 <div class="row">
   <div class="column_header_ abstract">
-    <h5>class object is in an abstract form, such as a painting, drawing or rendering
+    <h5>Sample of PIEs where theclass object is in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
   </div>
   <div class="column_header_ incorrect">
     <div class="content">
-    <h5>the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
+    <h5>Sample of PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
     </div>
   </div>
   
   <div class="column_header_ atypical">
     <div class="content">
-    <h5>abstract representation is an object in an abstract form, such as a painting, drawing or rendering
-        using a different material.</h5>
+    <h5>Sample of PIEs where the image would be considered by a human to be an atypical examplar of the category of images.
+       </h5>
     </div>
   </div>
   <div class="column_header_ fine">
     <div class="content">
-    <h5> image depicts an object that is semantically close to 
+    <h5> Sample of PIEs where the image depicts an object that is semantically close to 
       various other classes present the data set (e.g.,
       rock crab and fiddler crab, cuirass and breastplate).</h5>
     </div>
   </div>
   <div class="column_header_ multiple">
     <div class="content">
-    <h5>image depicts multiple objects, a human may consider several labels to be appropriate predictions (e.g.,
+    <h5>Sample of PIEs where the image depicts multiple objects, a human may consider several labels to be appropriate predictions (e.g.,
       desktop computer consisting of a screen, mouse and monitor, a barber chair in a barber shop,
       a wine bottle which is full of red wine).</h5>
     </div>
   </div>
  <div class="column_header_ frequently">
     <div class="content">
-<h5>image depicts object(s) from categories that frequently co-occur together. 
+<h5>Sample of PIEs where the image depicts object(s) from categories that frequently co-occur together. 
   In some cases, this is because both labels are acceptable to describe the same object. </h5>
     </div>
   </div>
@@ -1161,14 +1161,15 @@ for (var i = 0; i < btns2.length; i++) {
   });
 }
 </script> 
- <p>   In this work, we propose a formal methodology to compare the geIn this work, we focus on open source research datasets and find that for datasets like ImageNet PIE images tend to over-index on poorly structured data. 
+ <p>   
+   In this work, we focus on open source research datasets and find that for datasets like ImageNet PIE images tend to over-index on poorly structured data. 
  ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. </p>
   <p>  The over-indexing of poorly structured data hints
 that the explosion of growth in number of parameters in deep neural networks may be solving a
-problem that is better addressed in the data cleaning pipeline.
-   We hope this work prompts additional attention on
-   the impact of pruning and other popular and widely used model compression 
-   methods such as quantization.  </p>
+problem that is better addressed in the data cleaning pipeline.  </p>
+<p>  On real world datasets, the stakes are often much higher than correctly classifying a paddle or guacamole. For sensitive tasks such as a medical diagnosis, our findings suggest that pruned models
+ can be tension with other objectives such as fairness guarantees or AI safety. PIE is one possible tool to understand the risk and trade-offs entailed by pruning. </p>
+          
   </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
