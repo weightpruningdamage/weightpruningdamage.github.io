@@ -1005,12 +1005,18 @@
   </div>
       
     <div class="description_">  
-      <p>Now, we turn to looking at the impact of pruning on class categories. ImageNet has 1000 different class categories, which include both every day objects such as <i>cassette player</i> and more nuanced categories that refer to the texture of object such as <i>velvet</i> or a person type such as <i>groom</i>. 
-        If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
-      number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model. Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
-        “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature. </p>
-        <p> We train a population of pruned and non-pruned models and use a two-sample, two-tailed,
-        independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>, to determine whether the means of the samples differ significantly.
+      <p> ImageNet has 1000 different class categories, which include both every day objects such as <i>cassette player</i> and more nuanced categories that refer to the texture of an object such as <i>velvet</i> or even person types such as <i>groom</i>. 
+        If the impact of pruning was uniform across all classes, we would expect the model accuracy on each class to shift by the same 
+      number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model.</p>
+        <p>  This forms our null hypothesis, and we must decide for each class whether
+        to reject the null hypothesis and accept the alternative -- the 
+        change to class level recall differs from the change to overall accuracy
+        in a statistically significant way. We are basically asking -- "did the class perform better or worse than expected given the overall change in top-1 accuracy after pruning?"</p>
+       <p> Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
+        “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key=",,"></dt-cite>. </p>
+        <p> In this work, we use a two-sample, two-tailed,
+        independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and use apply the t-test
+ to determine whether the means of the samples differ significantly.
         This methodology allows us to identify a subset of classes that perform better or worse than expected.</p>
        </div>
         <div class="content">
