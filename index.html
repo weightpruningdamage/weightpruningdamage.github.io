@@ -1000,8 +1000,20 @@
  The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
 problem that is better addressed in the data cleaning pipeline.  </p>
   <p>  On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For these sensitive tasks, PIE provides a possible tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
-    where certain atypical examples are re-routed for human inspection <dt-cite key=",,"></dt-cite> and judgement or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key=",,"></dt-cite>.</p>
+    where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> and judgement or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
  </div>
+
+@article{Leibig2017,
+author = {Leibig, Christian and Allken, Vaneeda and Ayhan, Murat Seckin and Berens, Philipp and Wahl, Siegfried},
+year = {2017},
+month = {12},
+pages = {},
+title = {Leveraging uncertainty information from deep neural networks for disease detection},
+volume = {7},
+journal = {Scientific Reports},
+doi = {10.1038/s41598-017-17876-z}
+}
+
        <div class="descriptions_">  
 <h3>What class categories are impacted by pruning?</h3>
   </div>
@@ -1220,6 +1232,17 @@ for (var i = 0; i < btns2.length; i++) {
 </dt-appendix>
 </body>
 <script type="text/bibliography">
+
+@incollection{NIPS2016_6300,
+title = {Examples are not enough, learn to criticize! Criticism for Interpretability},
+author = {Kim, Been and Khanna, Rajiv and Koyejo, Oluwasanmi O},
+booktitle = {Advances in Neural Information Processing Systems 29},
+editor = {D. D. Lee and M. Sugiyama and U. V. Luxburg and I. Guyon and R. Garnett},
+pages = {2280--2288},
+year = {2016},
+publisher = {Curran Associates, Inc.},
+}
+
 @INPROCEEDINGS{Cun90optimalbrain,
     author = {Yann Le Cun and John S. Denker and Sara A. Solla},
     title = {Optimal Brain Damage},
@@ -1343,9 +1366,7 @@ doi = {10.1038/nature21056}
   journal={Journal of the American Medical Informatics Association : JAMIA},
   year={2018},
   volume={25 10},
-  pages={
-          1301-1310
-        }
+  pages={1301-1310}
 }
 
 @article{2019Hongtao,
@@ -1383,6 +1404,46 @@ Safety Administration",
       journal = "HWY18MH010",
          year = "2019",
         month = "Nov",
+}
+
+    @ARTICLE{2017Gurumoorthy,
+       author = {{Gurumoorthy}, Karthik S. and {Dhurandhar}, Amit and
+         {Cecchi}, Guillermo and {Aggarwal}, Charu},
+        title = "{Efficient Data Representation by Selecting Prototypes with Importance Weights}",
+      journal = {arXiv e-prints},
+     keywords = {Statistics - Machine Learning, Computer Science - Machine Learning, 65K05, 68W25},
+         year = "2017",
+        month = "Jul",
+          eid = {arXiv:1707.01212},
+        pages = {arXiv:1707.01212},
+archivePrefix = {arXiv},
+       eprint = {1707.01212},
+ primaryClass = {stat.ML},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017arXiv170701212G},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+    
+@InProceedings{Caruana2000,
+author="Caruana, Rich",
+editor="Malmgren, Helge
+and Borga, Magnus
+and Niklasson, Lars",
+title="Case-Based Explanation for Artificial Neural Nets",
+booktitle="Artificial Neural Networks in Medicine and Biology",
+year="2000",
+publisher="Springer London",
+address="London",
+pages="303--308",
+abstract="Sometimes the most accurate models are the least intelligible. We show how to generate case-based explanations for non-case-based machine learning methods such as artificial neural nets. The method uses the neural net as a distance metric to determine which cases in the training set are most similar to a test case that needs to be explained.",
+isbn="978-1-4471-0513-8"
+}
+    
+
+@inproceedings{Hooker2019ABF,
+  title={A Benchmark for Interpretability Methods in Deep Neural Networks},
+  author={Sara Hooker and Dumitru Erhan and Pieter-Jan Kindermans and Been Kim},
+  booktitle={NeurIPS 2019},
+  year={2019}
 }
 
 </script> 
