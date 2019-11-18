@@ -316,17 +316,7 @@
 }
     
     
-div_box {
-    display: none;
-    float: left;
-    width: 100.00%;
-    border:1px solid #000;
-    height:120px;
-}
 
-l:hover + div_box {
-    display: block;
-}
 /* Create three equal columns that floats next to each other */
 .column_portfolio_ {
   float: left;
@@ -368,7 +358,6 @@ l:hover + div_box {
   margin-left: auto;
   margin-right: auto;
 }
-    
 
 /* The "show" class is added to the filtered elements */
 .show {
@@ -543,15 +532,15 @@ l:hover + div_box {
   <div class="column_portfolio_ abstract">
     <div class="content">
      <l><img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="abstract_1" style="width:100%"></l>
-      <div_box><h4>true label: toilet tissue</h4></div_box>
-      <h4>toilet tissue</h4>
-      <p>bath towel</p>
-      <p>great white shark</p>
+      <div_box><p>True label: toilet tissue</p><p>Non-pruned prediction: bath towel</p>
+      <p>Pruned prediction: great white shark</p></div_box>
     </div>
   </div>
   <div class="column_portfolio_ abstract">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F29_cauliflower_cauliflower_artichoke.png?v=1573469365213" alt="abstract_1" style="width:100%">
+    <l><img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F29_cauliflower_cauliflower_artichoke.png?v=1573469365213" alt="abstract_1" style="width:100%"></l>
+      <div_box><p>True label: toilet tissue</p><p>Non-pruned prediction: bath towel</p>
+      <p>Pruned prediction: great white shark</p></div_box>
     <h4>cauliflower</h4>
       <p>cauliflower</p>
       <p>artichoke</p>
