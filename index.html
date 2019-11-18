@@ -1014,7 +1014,9 @@
   
 <div class="descriptions_">  
 <h3>What does this mean for the use of pruned models?</h3>
- <p> Pruned models are widely used by many real world machine learning applications.
+  </div>
+  <div class="description_">          
+ <p> Pruned models are widely used by many real world machine learning applications. Many of the algorithms on your phone are likely pruned or compressed in some way. 
    Our results are surprising and suggest that 
    a reliance on top-line metrics such as top-1 or 
    top-5 test-set accuracy hides
@@ -1022,19 +1024,18 @@
    impacts model generalization.  
    However, our methodology also offers a way for humans to better understand the trade-offs incurred by pruning and gain intuition about what classes benefit the most from additional capacity. </p>
   <p>  PIE provides one tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert.
-    This can be extremely valuable for creating human-in-the-loop decisions, where certain examples are re-routed for human inspection and judgement.  </p> 
-  <p>Click on the buttons to see generalization and robustness performance:</p>
+    This can be extremely valuable for creating human-in-the-loop decisions, where certain atypical examples are re-routed for human inspection and judgement. </p> 
+    
 <div id="myBtnContainer_2">
   <button class="btn active_" onclick="filterSelection_('pie')"> pie </button>
   <button class="btn" onclick="filterSelection_('without')"> excluding pie</button>
-  <button class="btn" onclick="filterSelection_('levels')"> different levels of sparsity </button>
 <hr>
   
 <div class="row">
   <div class="column_header pie">
     <div class="content">
     <h5>Inspecting PIE images can help us anticipate where models will fail to generalize in the real world. PIE images are far more challenging for a model to classify. A ResNet-50 deep neural network performs significantly worse
-      on a random sample of PIE images (green bar) relative to performance on
+      on a random sample of PIE ImageNet images (green bar) relative to performance on
       a random sample of images from the ImageNet test set (pink bar).</h5>
     </div>
     </div>
@@ -1043,13 +1044,6 @@
 <h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
   to a random sample of non-pie ImageNet images (teal). </h5>
   </div>
-    </div>
-<div class="column_header levels">
-<div class="content">
-<h5>In contrast, top-1 accuracy improves when the non-pruned model is restricted
-  to only non-pie images (teal). PIE images are far more challenging for both pruned 
-  and non-pruned models to generalize to.</h5>
- </div>
     </div>
     <!-- END GRID -->
 </div>
@@ -1167,7 +1161,7 @@ for (var i = 0; i < btns2.length; i++) {
   });
 }
 </script> 
- <p>  In this work, we focus on open source research datasets and find that for datasets like ImageNet PIE images tend to over-index on poorly structured data. 
+ <p>   In this work, we propose a formal methodology to compare the geIn this work, we focus on open source research datasets and find that for datasets like ImageNet PIE images tend to over-index on poorly structured data. 
  ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. </p>
   <p>  The over-indexing of poorly structured data hints
 that the explosion of growth in number of parameters in deep neural networks may be solving a
