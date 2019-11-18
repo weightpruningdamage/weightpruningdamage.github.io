@@ -1058,7 +1058,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
    impacts model generalization.   </p>
   <p> However, our methodology offers one way for humans to better understand 
    the trade-offs incurred by pruning and gain intuition about what classes 
-   benefit the most from additional capacity. We believe this type of tooling is a valuable first step to help equip domain experts with the insights to choose when and how to apply pruning.  </p>
+   benefit the most from additional capacity. We believe this type of tooling is a valuable first step to help human experts understand the trade-offs incurred by pruning.</p>
     
 <div id="myBtnContainer_2">
   <button class="btn active_" onclick="filterSelection_('pie')"> pie </button>
@@ -1107,10 +1107,8 @@ problem that is better addressed in the data cleaning pipeline.  </p>
     <!-- END GRID -->
 </div>
 </div>
-<p> One of the key challenges of pro-actively identifying possible failure points in model generalization before deployment is adequate tooling.
-  For computer vision problems, it is hard for a human to inspect model behavior on thousands (or even millions of images) in order to verify that it aligns with human judgement. 
-  Moreover, often it is more useful to understand what a model finds challenging in order to anticipate problems with generalization.</p>
-
+<div class="description_">   
+<p>Additional technical details can be found in our paper and open source code. We would welcome any feedback and code contributions. Some possible directions of future work include a consideration of additional domains such as language and audio, different architectures and additional compression techniques such as quantization.</p>
           
 <script>
 filterSelection("abstract") // Execute the function and show all columns
@@ -1201,7 +1199,7 @@ for (var i = 0; i < btns2.length; i++) {
 }
 </script> 
 
-  </div>
+  </div><
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
 <script src="template.v1.js"></script>
@@ -1259,14 +1257,8 @@ publisher = {Curran Associates, Inc.},
   publisher={Birkh{\"a}user Boston}
 } 
 @article{1954anderson_darling,
-  added-at = {2009-05-09T19:00:52.000+0200},
   author = {Anderson, T. W. and Darling, D. A.},
-  biburl = {https://www.bibsonomy.org/bibtex/23d61214a70e110f205f8cb26b11f5381/maverick},
-  copyright = {Copyright � 1954 American Statistical Association},
   description = {two papers about anderson-darling test},
-  interhash = {45de0970eda98983a1a9a7f0b6f2b471},
-  intrahash = {3d61214a70e110f205f8cb26b11f5381},
-  issn = {01621459},
   journal = {Journal of the American Statistical Association},
   jstor_articletype = {primary_article},
   jstor_formatteddate = {Dec., 1954},
@@ -1274,12 +1266,12 @@ publisher = {Curran Associates, Inc.},
   number = 268,
   pages = {765--769},
   publisher = {American Statistical Association},
-  timestamp = {2009-05-09T19:00:53.000+0200},
   title = {A Test of Goodness of Fit},
   url = {http://www.jstor.org/stable/2281537},
   volume = 49,
   year = 1954
 }
+
 @incollection{NIPS2012_4525,
 title = {Patient Risk Stratification for Hospital-Associated C. diff as a Time-Series Classification Task},
 author = {Jenna Wiens and Eric Horvitz and John V. Guttag},
