@@ -995,7 +995,11 @@
 
 <!-- END GRID -->
 </div>
-<div class="description_">      
+<div class="description_">   
+   <p> ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. </p>
+The over-indexing of poorly structured data may offer some hints about what 
+that the explosion of growth in number of parameters in deep neural networks may be solving a
+problem that is better addressed in the data cleaning pipeline.  </p>
   <p>  PIEs are a subset of images that are most sensitive to varying the number of weights in a deep neural network.
     On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For these sensitive tasks, PIE provides a possible tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
     where certain atypical examples are re-routed for human inspection <dt-cite key=",,"></dt-cite> and judgement or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key=",,"></dt-cite>.</p>
@@ -1020,11 +1024,12 @@
         This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is overly sensitive to the reduction in capacity.</p>
        </div>
         <div class="content">
-        <h5>At all levels of pruning, some classes are impacted far more than others (the green  indicates that the change to recall was statistically significant).
-      Plum colored bars indicate that the change to class recall was significant relative to the drop in overall accuracy caused by pruning. At higher levels of pruning, more classes are impacted and the absolute % difference between the classes most and least impacted widens. </h5>
+        <h5>At all levels of pruning, some classes are impacted far more than others (classes that are statistically significant indicated by pink and green). We plot both the absolute % change in class recall (pink) and
+          the normalized accuracy relative to change in overall top-1 accuracy caused by pruning (green).</h5>
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Flimitless_loop_gif.gif?v=1574046728293"  style="width:100%">
            <h5> 
-    Both  </h5>
+    
+          At higher levels of pruning, more classes are impacted and the absolute % difference widens between the classes most and least impacted.   </h5>
     </div>
         <div class="description_">  
       <p>The directionality and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are relatively robust to the overall degradation experienced 
@@ -1034,9 +1039,9 @@
         
        <p>The classes that experience a significant <em>relative</em> decrease in accuracy are fewer at every level than those that recieve a relative boost, however the magnitude of class decreases is larger 
         than the gains (which pulls overall accuracy downwards). 
-        This tells us that the losses of pruning are far more concentrated 
-        than the relative gains, with a few classes bearing
-        the brunt of the degradation in generalization caused by weight removal.</p>
+        This tells us that the loss in generalization caused by pruning is far more concentrated 
+        than the relative gains, with fewer classes bearing
+        the brunt of the degradation caused by weight removal.</p>
   
 <div class="descriptions_">  
 <h3>What does this mean for the use of pruned models?</h3>
@@ -1188,11 +1193,7 @@ for (var i = 0; i < btns2.length; i++) {
 }
 </script> 
  <p>   
-   In this work, we focus on open source research datasets and find that for datasets like ImageNet PIE images tend to over-index on poorly structured data. 
- ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. </p>
-  <p>  The over-indexing of poorly structured data hints
-that the explosion of growth in number of parameters in deep neural networks may be solving a
-problem that is better addressed in the data cleaning pipeline.  </p>
+ 
 <p>  On real world datasets, the stakes are often much higher than correctly classifying a paddle or guacamole. For sensitive tasks such as a medical diagnosis, our findings suggest that pruned models
  can be tension with other objectives such as fairness guarantees or AI safety. PIE is one possible tool to understand the risk and trade-offs entailed by pruning. </p>
           
