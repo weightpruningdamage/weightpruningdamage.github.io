@@ -462,13 +462,19 @@
 
             <p> In this work, we propose a framework to identify the classes and images where there is a high level of disagreement or difference in
               generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), and classes are systematically more impacted by the introduction of sparsity. </p>
-              
-                <p> The images impacted by pruning, which we term pruning identified exemplars, are images where the most frequent prediction differs between a population of 
-                  independently trained pruned and non-pruned models. Removing PIE images from the test-set greatly improves top-1 accuracy for both pruned and non-pruned models.
+             
+                <p> PIEs are images where the most frequent prediction differs between a population of 
+                  independently trained pruned and non-pruned models. Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.
                   These hard-to-generalize-to images tend to be mislabelled, of lower image quality, 
                   depict multiple objects or require fine-grained classification.</p>
-      <p>Click the buttons to see a sample of PIE identified ImageNet images:</p>
+    
 
+  
+  <div>
+      <div class="content">
+    <h5>PIE images overindex on exemplars that a human finds challenging to classify. We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likeley to be mislabelled,
+                  depict multiple objects or require fine-grained classification.</h5>
+  </div>
   
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('abstract')"> abstract classes</button>
@@ -484,38 +490,38 @@
       
 <div class="row">
   <div class="column_header_ abstract">
-    <h5>Sample of PIEs where theclass object is in an abstract form, such as a painting, drawing or rendering
+    <h5>PIEs where the class object is in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
   </div>
   <div class="column_header_ incorrect">
     <div class="content">
-    <h5>Sample of PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
+    <h5>PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
     </div>
   </div>
   
   <div class="column_header_ atypical">
     <div class="content">
-    <h5>Sample of PIEs where the image would be considered by a human to be an atypical examplar of the category of images.
+    <h5>PIEs where the image would be considered by a human to be an atypical examplar of the category of images.
        </h5>
     </div>
   </div>
   <div class="column_header_ fine">
     <div class="content">
-    <h5> Sample of PIEs where the image depicts an object that is semantically close to 
+    <h5>PIEs where the image depicts an object that is semantically close to 
       various other classes present the data set (e.g.,
       rock crab and fiddler crab, cuirass and breastplate).</h5>
     </div>
   </div>
   <div class="column_header_ multiple">
     <div class="content">
-    <h5>Sample of PIEs where the image depicts multiple objects, a human may consider several labels to be appropriate predictions (e.g.,
+    <h5>PIEs where the image depicts multiple objects, a human may consider several labels to be appropriate predictions (e.g.,
       desktop computer consisting of a screen, mouse and monitor, a barber chair in a barber shop,
       a wine bottle which is full of red wine).</h5>
     </div>
   </div>
  <div class="column_header_ frequently">
     <div class="content">
-<h5>Sample of PIEs where the image depicts object(s) from categories that frequently co-occur together. 
+<h5>PIEs where the image depicts object(s) from categories that frequently co-occur together. 
   In some cases, this is because both labels are acceptable to describe the same object. </h5>
     </div>
   </div>
@@ -988,10 +994,13 @@
 
 <!-- END GRID -->
 </div>
-      
+       <div class="descriptions_">  
+<h3>What class categories are impacted by pruning?</h3>
+  </div>
       
     <div class="description_">  
-      <p>At a class level, our results are nuanced and surprising. If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
+      <p>Now, we turn to looking at the impact on class categories. ImageNet has 1000 different categories, which range from 
+        If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
       number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model. Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature. </p>
         <p> We train a population of pruned and non-pruned models and use a two-sample, two-tailed,
