@@ -678,8 +678,6 @@
 
 <!-- END GRID -->
 </div>
-
-  
   
 <div class="row">
   
@@ -990,6 +988,93 @@
 
 <!-- END GRID -->
 </div>
+      
+<div id="myBtnContainer_3">
+  <button class="btn active_" onclick="filterSelection_('sparsity_3')"> class_0.3 </button>
+  <button class="btn" onclick="filterSelection_('without')"> excluding pie</button>
+  <button class="btn" onclick="filterSelection_('levels')"> different levels of sparsity </button>
+  <button class="btn" onclick="filterSelection_('adversarial')"> imagenet-a </button>
+  <button class="btn" onclick="filterSelection_('corruption')"> imagenet-c </button>
+<hr>
+  
+<hr>
+  
+<div class="row">
+  <div class="column_header sparsity_3">
+    <div class="content">
+    <h5>PIE images are more challenging to classify. A ResNet-50 deep neural network performs significantly worse
+      on a random sample of PIE images (green bar) relative to performance on
+      a random sample of images from the ImageNet test set (pink bar).</h5>
+    </div>
+    </div>
+  <div class="column_header without">
+  <div class="content">
+<h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
+  to a random sample of non-pie ImageNet images (teal). </h5>
+  </div>
+    </div>
+<div class="column_header levels">
+<div class="content">
+<h5>In contrast, top-1 accuracy improves when the non-pruned model is restricted
+  to only non-pie images (teal). PIE images are far more challenging for both pruned 
+  and non-pruned models to generalize to.</h5>
+ </div>
+    </div>
+<div class="column_header adversarial">
+<div class="content">
+<h5>In contrast, top-1 accuracy improves when the non-pruned model is restricted
+  to only non-pie images (teal). PIE images are far more challenging for both pruned 
+  and non-pruned models to generalize to.</h5>
+</div>
+</div>
+<div class="column_header corruption">
+<div class="content">
+<h5>In contrast, top-1 accuracy improves when the non-pruned model is restricted
+  to only non-pie images (teal). PIE images are far more challenging for both pruned 
+  and non-pruned models to generalize to.</h5>
+</div>
+</div>
+    <!-- END GRID -->
+</div>
+</div>
+        
+<div class="row">
+  <div class="column_header sparsity_3">
+  <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F30_percent.svg?v=1574038887255"  style="width:100%">
+    </div>
+  </div>
+  
+  <div class="column_header without">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+  
+   
+  <div class="column_header levels">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload.png?v=1573894529483" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+  
+    <div class="column_header adversarial">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fimagenet_a.png?v=1573757557103" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+  
+    <div class="column_header corruption">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fimagenet_c.png?v=1573776423368" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+    <!-- END GRID -->
+</div>
+</div>
+
+      
+      
     <div class="description_">  
       <p>At a class level, our results are nuanced and surprising. If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
       number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model. Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
