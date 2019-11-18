@@ -442,7 +442,7 @@
             <p> An understanding of these trade-offs is critical for sensitivetasks such 
               as hiring <dt-cite key="Dastin_2018,Harwell_2019"></dt-cite>, health care diagnostics <dt-cite key="2019Hongtao,Gruetzemacher20183DDL"></dt-cite>, self-driving cars <dt-cite key="2017Telsa,2019Uber"></dt-cite>, where theintroduction of pruning may be at odds with fairness objectives 
               to treat protected attributes uniformlyand/or the need to guarantee a certain level of recall for certain classes. Pruning is already commonly used in these domains, 
-           often driven by the resource constraints of deploying models to mobile phone or embedded devices <dt-cite key="2019Hongtao,Gruetzemacher20183DDL"></dt-cite>. </p>
+           often driven by the resource constraints of deploying models to mobile phone or embedded devices <dt-cite key="2017Andre"></dt-cite>. </p>
       <div class="imgs-container">
           </div>
           <div class="imgs-container">
@@ -461,7 +461,8 @@
     <div class="description_">
 
             <p> In this work, we propose a framework to identify the classes and images where there is a high level of disagreement or difference in
-              generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), and classes are systematically more impacted by the introduction of sparsity. </p>
+              generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), 
+              and classes are systematically more impacted by the introduction of sparsity. </p>
              
                 <p> PIEs are images where the most frequent prediction differs between a population of 
                   independently trained pruned and non-pruned models. 
@@ -999,20 +1000,12 @@
    <p> PIEs are a subset of images that are most sensitive to varying the number of weights in a deep neural network. ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. 
  The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
 problem that is better addressed in the data cleaning pipeline.  </p>
-  <p>  On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For these sensitive tasks, PIE provides a possible tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
-    where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> and judgement or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
+  <p>  On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For sensitive tasks such as patient risk stratification or medical diagnoses <dt-cite key="NIPS2012_4525"></dt-cite>, our results suggest caution should be excercised before deploying pruned models. </p>
+    
+    <p> PIE provides one tool to become more familiar with the underlying data by surfacing
+      a far smaller subset of examples the model finds challenging to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
+    where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
  </div>
-
-@article{Leibig2017,
-author = {Leibig, Christian and Allken, Vaneeda and Ayhan, Murat Seckin and Berens, Philipp and Wahl, Siegfried},
-year = {2017},
-month = {12},
-pages = {},
-title = {Leveraging uncertainty information from deep neural networks for disease detection},
-volume = {7},
-journal = {Scientific Reports},
-doi = {10.1038/s41598-017-17876-z}
-}
 
        <div class="descriptions_">  
 <h3>What class categories are impacted by pruning?</h3>
@@ -1027,8 +1020,8 @@ doi = {10.1038/s41598-017-17876-z}
         change to class level recall differs from the change to overall accuracy
         in a statistically significant way. This amounts to asking -- "did the class perform better or worse than expected given the overall change in top-1 accuracy after pruning?"</p>
        <p> Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
-        “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key=",,"></dt-cite>. </p>
-        <p>In this work, we use a two-sample, two-tailed,
+        “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key="1986agostino,1954anderson_darling,2002huber"></dt-cite>. </p>      
+      <p>In this work, we use a two-sample, two-tailed,
         independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and use apply the t-test
  to determine whether the means of the samples differ significantly.
         This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is overly sensitive to the reduction in capacity.</p>
@@ -1063,7 +1056,9 @@ doi = {10.1038/s41598-017-17876-z}
    top-5 test-set accuracy hides
    critical details in the ways that pruning 
    impacts model generalization.  
-   However, our methodology also offers a way for humans to better understand the trade-offs incurred by pruning and gain intuition about what classes benefit the most from additional capacity. </p>
+   However, our methodology also offers a way for humans to better understand 
+   the trade-offs incurred by pruning and gain intuition about what classes 
+   benefit the most from additional capacity. </p>
     
 <div id="myBtnContainer_2">
   <button class="btn active_" onclick="filterSelection_('pie')"> pie </button>
@@ -1243,6 +1238,18 @@ year = {2016},
 publisher = {Curran Associates, Inc.},
 }
 
+@incollection{NIPS2012_4525,
+title = {Patient Risk Stratification for Hospital-Associated C. diff as a Time-Series Classification Task},
+author = {Jenna Wiens and Eric Horvitz and John V. Guttag},
+booktitle = {Advances in Neural Information Processing Systems 25},
+editor = {F. Pereira and C. J. C. Burges and L. Bottou and K. Q. Weinberger},
+pages = {467--475},
+year = {2012},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/4525-patient-risk-stratification-for-hospital-associated-c-diff-as-a-time-series-classification-task.pdf}
+}
+
+
 @INPROCEEDINGS{Cun90optimalbrain,
     author = {Yann Le Cun and John S. Denker and Sara A. Solla},
     title = {Optimal Brain Damage},
@@ -1369,6 +1376,17 @@ doi = {10.1038/nature21056}
   pages={1301-1310}
 }
 
+@article{Leibig2017,
+author = {Leibig, Christian and Allken, Vaneeda and Ayhan, Murat Seckin and Berens, Philipp and Wahl, Siegfried},
+year = {2017},
+month = {12},
+pages = {},
+title = {Leveraging uncertainty information from deep neural networks for disease detection},
+volume = {7},
+journal = {Scientific Reports},
+doi = {10.1038/s41598-017-17876-z}
+}
+
 @article{2019Hongtao,
 title = "Automated pulmonary nodule detection in CT images using deep convolutional neural networks",
 journal = "Pattern Recognition",
@@ -1445,6 +1463,18 @@ isbn="978-1-4471-0513-8"
   booktitle={NeurIPS 2019},
   year={2019}
 }
+
+@article{2017Andre,
+author = {Esteva, Andre and Kuprel, Brett and Novoa, Roberto and Ko, Justin and M Swetter, Susan and M Blau, Helen and Thrun, Sebastian},
+year = {2017},
+month = {01},
+pages = {},
+title = {Dermatologist-level classification of skin cancer with deep neural networks},
+volume = {542},
+journal = {Nature},
+doi = {10.1038/nature21056}
+}
+
 
 </script> 
 
