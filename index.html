@@ -996,12 +996,10 @@
 <!-- END GRID -->
 </div>
 <div class="description_">   
-   <p> ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. </p>
-The over-indexing of poorly structured data may offer some hints about what 
-that the explosion of growth in number of parameters in deep neural networks may be solving a
+   <p> PIEs are a subset of images that are most sensitive to varying the number of weights in a deep neural network. ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. 
+ The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
 problem that is better addressed in the data cleaning pipeline.  </p>
-  <p>  PIEs are a subset of images that are most sensitive to varying the number of weights in a deep neural network.
-    On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For these sensitive tasks, PIE provides a possible tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
+  <p>  On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For these sensitive tasks, PIE provides a possible tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
     where certain atypical examples are re-routed for human inspection <dt-cite key=",,"></dt-cite> and judgement or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key=",,"></dt-cite>.</p>
  </div>
        <div class="descriptions_">  
@@ -1054,8 +1052,6 @@ problem that is better addressed in the data cleaning pipeline.  </p>
    critical details in the ways that pruning 
    impacts model generalization.  
    However, our methodology also offers a way for humans to better understand the trade-offs incurred by pruning and gain intuition about what classes benefit the most from additional capacity. </p>
-  <p>  PIE provides one tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert.
-    This can be extremely valuable for creating human-in-the-loop decisions, where certain atypical examples are re-routed for human inspection and judgement. </p> 
     
 <div id="myBtnContainer_2">
   <button class="btn active_" onclick="filterSelection_('pie')"> pie </button>
@@ -1103,6 +1099,8 @@ problem that is better addressed in the data cleaning pipeline.  </p>
     <!-- END GRID -->
 </div>
 </div>
+<p> One of the key challenges of pro-actively identifying possible failure points in model generalization before deployment is adequate tooling. For computer vision problems, it is hard for a human to inspect model behavior on millions of images in order to verify that it aligns with human judgement. </p>
+
           
 <script>
 filterSelection("abstract") // Execute the function and show all columns
@@ -1192,11 +1190,7 @@ for (var i = 0; i < btns2.length; i++) {
   });
 }
 </script> 
- <p>   
- 
-<p>  On real world datasets, the stakes are often much higher than correctly classifying a paddle or guacamole. For sensitive tasks such as a medical diagnosis, our findings suggest that pruned models
- can be tension with other objectives such as fairness guarantees or AI safety. PIE is one possible tool to understand the risk and trade-offs entailed by pruning. </p>
-          
+
   </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
