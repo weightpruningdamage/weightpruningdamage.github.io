@@ -990,8 +990,8 @@
 </div>
       
 <div id="myBtnContainer_3">
-  <button class="btn active_" onclick="filterSelection_('sparsity_3')"> class_0.3 </button>
-  <button class="btn" onclick="filterSelection_('without')"> excluding pie</button>
+  <button class="btn active_" onclick="filterSelection_('sparsity_all')"> all classes </button>
+  <button class="btn" onclick="filterSelection_('sparsity_5')"> impacted classes </button>
   <button class="btn" onclick="filterSelection_('levels')"> different levels of sparsity </button>
   <button class="btn" onclick="filterSelection_('adversarial')"> imagenet-a </button>
   <button class="btn" onclick="filterSelection_('corruption')"> imagenet-c </button>
@@ -1000,14 +1000,13 @@
 <hr>
   
 <div class="row">
-  <div class="column_header sparsity_3">
+  <div class="column_header sparsity_all">
     <div class="content">
-    <h5>PIE images are more challenging to classify. A ResNet-50 deep neural network performs significantly worse
-      on a random sample of PIE images (green bar) relative to performance on
-      a random sample of images from the ImageNet test set (pink bar).</h5>
+    <h5>A subset of classes bear the brunt of pruning. In this chart, we compare the performance of a set of models with 50% of weights removed vs. a set of non-pruned models.
+      The classes (plum)  </h5>
     </div>
     </div>
-  <div class="column_header without">
+  <div class="column_header sparsity_5">
   <div class="content">
 <h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
   to a random sample of non-pie ImageNet images (teal). </h5>
@@ -1039,16 +1038,15 @@
 </div>
         
 <div class="row">
-  <div class="column_header sparsity_3">
+  <div class="column_header sparsity_all">
   <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ffigure.png?v=1574040631974"  style="width:120%">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ffigure_copy_50.png?v=1574041293486"  style="width:100%">
     </div>
   </div>
-
   
-  <div class="column_header without">
+  <div class="column_header sparsity_5">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:80%">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ffigure.png?v=1574040631974" alt="abstract_1" style="width:150%">
     </div>
   </div>
   
