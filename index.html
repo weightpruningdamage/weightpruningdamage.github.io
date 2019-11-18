@@ -465,11 +465,10 @@
              
                 <p> PIEs are images where the most frequent prediction differs between a population of 
                   independently trained pruned and non-pruned models. 
- In this work, we focus on open source research datasets and find that for datasets like ImageNet PIE images tend to over-index on poorly structured data. </p>
+ In this work, we focus on open source research datasets and find that for PIEs in the ImageNet test-set tend to over-index on poorly structured data. </p>
  <p> Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.
                   These hard-to-generalize-to images tend to be mislabelled, of lower image quality, 
-                  depict multiple objects or require fine-grained classification. ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few  different labels may align with human judgement. </p>
-    
+                  depict multiple objects or require fine-grained classification. </p>
 
   
   <div>
@@ -997,11 +996,9 @@
 <!-- END GRID -->
 </div>
 <div class="description_">      
-  <p>  The over-indexing of poorly structured data hints
-that the explosion of growth in number of parameters in deep neural networks may be solving a
-problem that is better addressed in the data cleaning pipeline.  </p>
-<p>  On real world datasets, the stakes are often much higher than correctly classifying a paddle or guacamole. For sensitive tasks such as a medical diagnosis, our findings suggest that pruned models
- can be tension with other objectives such as fairness guarantees or AI safety. PIE is one possible tool to understand the risk and trade-offs entailed by pruning. </p>
+  <p>  PIEs are a subset of images that are most sensitive to varying the number of weights in a deep neural network.
+    On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For these sensitive tasks, PIE provides a possible tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
+    where certain atypical examples are re-routed for human inspection and judgement or to aid interpretability as a case based reasoning tool to explain model behavior.</p>
  </div>
        <div class="descriptions_">  
 <h3>What class categories are impacted by pruning?</h3>
