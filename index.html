@@ -464,16 +464,18 @@
               generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), and classes are systematically more impacted by the introduction of sparsity. </p>
              
                 <p> PIEs are images where the most frequent prediction differs between a population of 
-                  independently trained pruned and non-pruned models. Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.
+                  independently trained pruned and non-pruned models. 
+ In this work, we focus on open source research datasets and find that for datasets like ImageNet PIE images tend to over-index on poorly structured data. </p>
+ <p> Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.
                   These hard-to-generalize-to images tend to be mislabelled, of lower image quality, 
-                  depict multiple objects or require fine-grained classification.</p>
+                  depict multiple objects or require fine-grained classification. ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few  different labels may align with human judgement. </p>
     
 
   
   <div>
       <div class="content">
-    <h5>PIE images overindex on exemplars that a human finds challenging to classify. We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likeley to be mislabelled,
-                  depict multiple objects or require fine-grained classification.</h5>
+    <h5>We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
+                  depict multiple objects or require fine-grained classification.</h5> <h5>Click on the buttons below to view a sample of PIEs in each category.</h5>
   </div>
   
 <div id="myBtnContainer">
@@ -994,12 +996,19 @@
 
 <!-- END GRID -->
 </div>
+<div class="description_">      
+  <p>  The over-indexing of poorly structured data hints
+that the explosion of growth in number of parameters in deep neural networks may be solving a
+problem that is better addressed in the data cleaning pipeline.  </p>
+<p>  On real world datasets, the stakes are often much higher than correctly classifying a paddle or guacamole. For sensitive tasks such as a medical diagnosis, our findings suggest that pruned models
+ can be tension with other objectives such as fairness guarantees or AI safety. PIE is one possible tool to understand the risk and trade-offs entailed by pruning. </p>
+ </div>
        <div class="descriptions_">  
 <h3>What class categories are impacted by pruning?</h3>
   </div>
       
     <div class="description_">  
-      <p>Now, we turn to looking at the impact on class categories. ImageNet has 1000 different categories, which range from 
+      <p>Now, we turn to looking at the impact of pruning on class categories. ImageNet has 1000 different class categories, which include both every day objects such as <i>cassette player</i> and more nuanced categories that refer to the texture of object such as <i>velvet</i> or a person type such as <i>groom</i>. 
         If the impact of pruning was uniform, we would expect each class accuracy to shift by the same 
       number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model. Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature. </p>
