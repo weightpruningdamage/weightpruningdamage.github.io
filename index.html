@@ -1003,15 +1003,13 @@
   <div class="column_header sparsity_all">
     <div class="content">
     <h5>In this chart, we compare the performance of a set of models with 50% of weights removed vs. a set of non-pruned models.
-      Plum colored bars indicate that the change to class recall was significant relative to the drop in overall accuracy caused by pruning. These classes bear the brunt of the impact.
-      However, the directionality and magnitude of the impact is nuanced and surprising.</h5>
-      The model appears to cannibalize performance on some classes while retaining a relatively robust performance on others. </h5>
+      Plum colored bars indicate that the change to class recall was significant relative to the drop in overall accuracy caused by pruning. </h5>
     </div>
     </div>
   <div class="column_header sparsity_5">
   <div class="content">
-<h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
-  to a random sample of non-pie ImageNet images (teal). </h5>
+      <h5> The directionality and magnitude of the impact of pruning is nuanced and surprising.
+      The model appears to cannibalize performance on some classes while retaining a relatively robust performance on others. We call this "selective brain damage." More research is needed to understand these classes are impacted in different ways. </h5>
   </div>
     </div>
 <div class="column_header levels">
