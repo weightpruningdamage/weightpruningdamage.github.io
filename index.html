@@ -998,7 +998,7 @@
 <div class="description_">      
   <p>  PIEs are a subset of images that are most sensitive to varying the number of weights in a deep neural network.
     On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For these sensitive tasks, PIE provides a possible tool to become more familiar with the underlying data by surfacing a tractable subset to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
-    where certain atypical examples are re-routed for human inspection and judgement or to aid interpretability as a case based reasoning tool to explain model behavior.</p>
+    where certain atypical examples are re-routed for human inspection <dt-cite key=",,"></dt-cite> and judgement or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key=",,"></dt-cite>.</p>
  </div>
        <div class="descriptions_">  
 <h3>What class categories are impacted by pruning?</h3>
@@ -1011,27 +1011,32 @@
         <p>  This forms our null hypothesis, and we must decide for each class whether
         to reject the null hypothesis and accept the alternative -- the 
         change to class level recall differs from the change to overall accuracy
-        in a statistically significant way. We are basically asking -- "did the class perform better or worse than expected given the overall change in top-1 accuracy after pruning?"</p>
+        in a statistically significant way. This amounts to asking -- "did the class perform better or worse than expected given the overall change in top-1 accuracy after pruning?"</p>
        <p> Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key=",,"></dt-cite>. </p>
-        <p> In this work, we use a two-sample, two-tailed,
+        <p>In this work, we use a two-sample, two-tailed,
         independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and use apply the t-test
  to determine whether the means of the samples differ significantly.
-        This methodology allows us to identify a subset of classes that perform better or worse than expected.</p>
+        This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is overly sensitive to the reduction in capacity.</p>
        </div>
         <div class="content">
-        <h5>At all levels of pruning, some classes are impacted far more than others.
-      Plum colored bars indicate that the change to class recall was significant relative to the drop in overall accuracy caused by pruning. At higher levels of pruning, more classes are impacted and the absolute difference between class impact widens. </h5>
+        <h5>At all levels of pruning, some classes are impacted far more than others (the green  indicates that the change to recall was statistically significant).
+      Plum colored bars indicate that the change to class recall was significant relative to the drop in overall accuracy caused by pruning. At higher levels of pruning, more classes are impacted and the absolute % difference between the classes most and least impacted widens. </h5>
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Flimitless_loop_gif.gif?v=1574046728293"  style="width:100%">
-           <h5> The directionality and magnitude of the impact of pruning is nuanced and surprising.
-      The model cannibalizes performance on some classes while retaining a  robust performance (relative to overall accuracy degradation) on others." </h5>
+           <h5> 
+    Both  </h5>
     </div>
         <div class="description_">  
-      <p>Our results show that certain classes are relatively robust to the overall degradation experienced 
+      <p>The directionality and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are relatively robust to the overall degradation experienced 
         by the model whereas others degrade in performance far more than the model itself. This amounts to 
         <em>selective brain damage</em> with performance on certain classes evidencing far more sensitivity 
-        to the removal of model capacity. The classes that experience a significant <em>relative</em> decrease in accuracy are fewer at every level than those that recieve a relative boost, however the magnitude of class decreases is larger 
-        than the gains (which pulls overall accuracy downwards). This tells us that the losses of pruning are far more concentrated than the relative gains, with a few classes bearing the brunt of the degradation in generalization caused by weight removal.</p>
+        to the removal of model capacity.</p>
+        
+       <p>The classes that experience a significant <em>relative</em> decrease in accuracy are fewer at every level than those that recieve a relative boost, however the magnitude of class decreases is larger 
+        than the gains (which pulls overall accuracy downwards). 
+        This tells us that the losses of pruning are far more concentrated 
+        than the relative gains, with a few classes bearing
+        the brunt of the degradation in generalization caused by weight removal.</p>
   
 <div class="descriptions_">  
 <h3>What does this mean for the use of pruned models?</h3>
