@@ -315,6 +315,18 @@
   display: none; /* Hide columns by default */
 }
     
+    
+div_box {
+    display: none;
+    float: left;
+    width: 100.00%;
+    border:1px solid #000;
+    height:120px;
+}
+
+l:hover + div_box {
+    display: block;
+}
 /* Create three equal columns that floats next to each other */
 .column_portfolio_ {
   float: left;
@@ -530,8 +542,9 @@
 <div class="row">
   <div class="column_portfolio_ abstract">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="abstract_1" style="width:100%">
-    <h4>toilet tissue</h4>
+     <l><img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F38_toilet_tissue_bath_towel_great_white_shark.png?v=1573469368618" alt="abstract_1" style="width:100%"></l>
+      <div_box><h4>true label: toilet tissue</h4></div_box>
+      <h4>toilet tissue</h4>
       <p>bath towel</p>
       <p>great white shark</p>
     </div>
@@ -685,12 +698,11 @@
 </div>
   
 <div class="row">
-  
   <div class="column_portfolio_ abstract">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload_5.png?v=1573258926064" alt="abstract_2" style="width:100%">
-      <h4>cloak</h4>
-      <p>gas mask</p>
+      <p><a href=" " title="True Label: Cloak, Modal Pruned Prediction: " style="background-color:#FFFFFF;color:#000000;text-decoration:none">Cloak</a></p>
+      <p>True Label: Cloak, Modal Non-Pruned Prediction: Gas Mask, </p>
       <p>breastplate</p>
     </div>
   </div>
