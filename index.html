@@ -466,15 +466,13 @@
                 <p> PIEs are images where the most frequent prediction differs between a population of 
                   independently trained pruned and non-pruned models. 
  In this work, we focus on open source research datasets and find that for PIEs in the ImageNet test-set tend to over-index on poorly structured data. </p>
- <p> Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.
-                  These hard-to-generalize-to images tend to be mislabelled, of lower image quality, 
+ <p> Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models. We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
                   depict multiple objects or require fine-grained classification. </p>
 
   
   <div>
       <div class="content">
-    <h5>We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
-                  depict multiple objects or require fine-grained classification.</h5> <h5>Click on the buttons below to view a sample of PIEs in each category.</h5>
+    <h5>Click on the buttons below to view a sample of PIEs in each category. The labels below each image are in order: the true label, the modal predicted label from a non-pruned set of models, </h5>
   </div>
   
 <div id="myBtnContainer">
@@ -1038,11 +1036,6 @@ problem that is better addressed in the data cleaning pipeline.  </p>
     </div>
   </div>
   
-   
-  <div class="column_header levels">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fdownload.png?v=1573894529483" alt="abstract_1" style="width:100%">
-    </div>
   </div>
   
     <!-- END GRID -->
@@ -1108,12 +1101,12 @@ problem that is better addressed in the data cleaning pipeline.  </p>
    benefit the most from additional capacity. We believe this type of tooling is a valuable first step to help human experts understand the trade-offs incurred by pruning.</p>
         
 
-<div class="description_">   
-<p> We would welcome additional discussion and code contributions. A comprehensive introduction of the methodology,
+<p> We welcome additional discussion and code contributions on the topic of this work A comprehensive introduction of the methodology,
   experiment framework and results can be found in our <a href="https://arxiv.org/abs/1911.05248">paper</a> and <a href="https://github.com/google-research/google-research/tree/master/pruning_identified_exemplars">open source code</a>.
   There is substantial ground we were not able to address within the scope of this work, and underserved areas worthy of
   future consideration include evaluating the impact of pruning for additional domains such as language and audio,
-  different architectures and compare the relative trade-offs incurred by pruning with other popular compression techniques such as quantization.</p>
+  different architectures and compare the relative trade-offs incurred by pruning with other popular compression techniques such as quantization. 
+   </p>
 
 <script>
 filterSelection("abstract") // Execute the function and show all columns
