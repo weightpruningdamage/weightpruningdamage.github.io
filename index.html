@@ -170,7 +170,7 @@
       .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 500px;
       }
-      .column_portfolio_  .column_portfolio figcaption {
+      .column_portfolio_  .column_portfolio_final .column_portfolio figcaption {
         padding: 0;
         padding-top: 4px;
         word-wrap: break-word;
@@ -351,7 +351,7 @@
   display: none; /* Hide columns by default */
 }
     
-.column_portfolio_  .column_portfolio figcaption {
+.column_portfolio_ .column_portfolio_final  .column_portfolio figcaption {
       padding: 4px 8px;
       word-wrap: break-word;
       word-break: break-word;
@@ -365,6 +365,12 @@
   width: 33.33%;
   display: none; /* Hide columns by default */
 }
+    
+.column_portfoliofinal {
+  float: left;
+  width: 50.00%;
+  display: none; /* Hide columns by default */
+}
 
 .column_header {
   float: left;
@@ -373,6 +379,12 @@
 }
     
 .column_header_ {
+  float: left;
+  width: 100.00%;
+  display: none; /* Hide columns by default */
+}
+    
+.column_headerfinal {
   float: left;
   width: 100.00%;
   display: none; /* Hide columns by default */
@@ -1344,30 +1356,24 @@ problem that is better addressed in the data cleaning pipeline.  </p>
     where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
  </div>
 
-       <div class="descriptions_">  
+<div class="descriptions_">  
 <h3>What class categories are impacted by pruning?</h3>
   </div>
 <div class="description_">        
 <div id="myBtnContainer_3">
-<button class="btn active_" onclick="filterSelection_final('class')"> all classes </button>
-<button class="btn" onclick="filterSelection_final('stat')"> stat significant</button>
-<button class="btn" onclick="filterSelection_final('stat')"> stat significant</button>
-<button class="btn" onclick="filterSelection_final('stat')"> stat significant</button>
+<button class="btn active_" onclick="filterSelectionfinal('class')"> all classes </button>
+<button class="btn" onclick="filterSelectionfinal('stat')"> stat significant</button>
 <hr>
   
 <div class="row">
-  <div class="column_header class">
+  <div class="column_headerfinal class">
     <div class="content">
-    <h5>Inspecting PIE images can help us anticipate where models will fail to generalize in the real world.
-      PIE images are far more challenging for a model to classify. The average top-1 accuracy of a ResNet-50 deep neural network is far lower
-      on a random sample of PIE ImageNet images (green bar) relative to performance on
-      a random sample of images from the ImageNet test set (pink bar).</h5>
+    <h5></h5>
     </div>
     </div>
-  <div class="column_header stat">
+  <div class="column_headerfinal stat">
   <div class="content">
-<h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
-  to a random sample of non-pie ImageNet images (teal). </h5>
+<h5> </h5>
   </div>
     </div>
     <!-- END GRID -->
@@ -1375,24 +1381,23 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 </div>
   
   <div class="row">
-  <div class="column_header class">
+  <div class="column_portfoliofinal class">
   <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fpies_alone.png?v=1573780368491">
     </div>
   </div>
   
-  <div class="column_header stat">
+  <div class="column_portfoliofinal stat">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
     </div>
   </div>
-  
+
   
     <!-- END GRID -->
 </div>
 </div>  
   
-  </div>  
     <div class="description_">  
       <p> ImageNet has 1000 different class categories, which include both every day objects such as <i>cassette player</i> and more nuanced categories that refer to the texture of an object such as <i>velvet</i> or even person types such as <i>groom</i>. 
         If the impact of pruning was uniform across all classes, we would expect the model accuracy on each class to shift by the same 
@@ -1491,12 +1496,11 @@ function filterSelection_(c) {
   }
 }
   
-filterSelection_final("class") // Execute the function and show all columns
-function filterSelection_final(c) {
-  var x, y, z, i;
-  x = document.getElementsByClassName("column_portfolio");
-  y = document.getElementsByClassName("column_header");
-  z = document.getElementsByClassName("column_two_fig");
+filterSelectionfinal("class") // Execute the function and show all columns
+function filterSelectionfinal(c) {
+  var x, y, i;
+  x = document.getElementsByClassName("column_portfoliofinal");
+  y = document.getElementsByClassName("column_headerfinal");
   // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
@@ -1507,11 +1511,7 @@ function filterSelection_final(c) {
     RemoveClass(y[i], "show");
     if (y[i].className.indexOf(c) > -1) AddClass(y[i], "show");
   }
-  
-  for (i = 0; i < z.length; i++) {
-    RemoveClass(z[i], "show");
-    if (z[i].className.indexOf(c) > -1) AddClass(z[i], "show");
-  }
+ 
 }
   
 
