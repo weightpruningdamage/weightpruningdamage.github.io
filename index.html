@@ -167,7 +167,8 @@
     @media (min-width: 415px) {
       authors .authors-affiliations,
        .base-grid, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio {
+      .cover-container, .descriptions_,
+      .description_, .column_portfolio, .column_portfolio_, .column_header_final {
         width: 500px;
       }
       figcaption {
@@ -180,21 +181,21 @@
 
     @media (min-width: 768px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio,.column_portfolio_, .column_portfolio_1 {
+      .cover-container, .descriptions_, .description_, .column_portfolio,.column_portfolio_, .column_header_final {
         width: 650px;
       }
     }
 
     @media (min-width: 992px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio, .column_portfolio_, .column_portfolio_1 {
+      .cover-container, .descriptions_, .description_, .column_portfolio, .column_portfolio_, .column_header_final {
         width: 770px;
       }
     }
 
     @media (min-width: 1200px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio, .column_portfolio_, .column_portfolio_1 {
+      .cover-container, .descriptions_, .description_, .column_portfolio, .column_portfolio_, .column_header_final {
         width: 970px;
       }
     }
@@ -385,7 +386,7 @@
   display: none; /* Hide columns by default */
 }
     
-.column_header_1 {
+.column_header_final {
   float: left;
   width: 100.00%;
   display: none; /* Hide columns by default */
@@ -1370,11 +1371,11 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         overly sensitive to the reduction in capacity.</p>
 
   
-<div id="myBtnContainer3">
-<button class="btn " onclick="filterSelectionFinal('sparsity_30')">30% Pruned</button>
- <button class="btn" onclick="filterSelectionFinal('sparsity_50')"> 50% Pruned</button>
-  <button class="btn active_3" onclick="filterSelectionFinal('sparsity_70')"> 70% Pruned</button>
-  <button class="btn" onclick="filterSelectionFinal('sparsity_90')"> 90% Pruned</button>
+<div id="myBtnContainer_3">
+<button class="btn" onclick="filterSelectionFinal('sparsity_30')">30 Pruned</button>
+ <button class="btn" onclick="filterSelectionFinal('sparsity_50')"> 50 Pruned</button>
+  <button class="btn active_3" onclick="filterSelectionFinal('sparsity_70')">70 Pruned</button>
+  <button class="btn" onclick="filterSelectionFinal('sparsity_90')"> 90 Pruned</button>
 <hr>
 </div>
 
@@ -1530,7 +1531,7 @@ function filterSelection_(c) {
   
 }
   
-filterSelectionFinal("sparsity_70") // Execute the function and show all columns
+filterSelectionFinal("sparsity_30") // Execute the function and show all columns
 function filterSelectionFinal(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfolio_final");
