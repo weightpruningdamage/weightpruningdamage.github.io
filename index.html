@@ -1221,7 +1221,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   <div class="column_header pie">
     <div class="content">
     <h5>Inspecting PIE images can help us anticipate where models will fail to generalize in the real world.
-      PIE images are far more challenging for a model to classify. A ResNet-50 deep neural network performs significantly worse
+      PIE images are far more challenging for a model to classify. The average top-1 accuracy of a ResNet-50 deep neural network is far lower
       on a random sample of PIE ImageNet images (green bar) relative to performance on
       a random sample of images from the ImageNet test set (pink bar).</h5>
     </div>
@@ -1416,15 +1416,17 @@ for (var i = 0; i < btns2.length; i++) {
 <dt-appendix>
 <div class="description_">  
 <h3>Acknowledgments</h3>
-<p>We thank the generosity of our peers and colleagues for valuable input on earlier versions of this work. In particular, we would like to acknowledge the input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Hugo Larochelle, Dumitru Erhan, 
+  
+<p> A special thank you is due to James Wexler for some helpful suggestions about how to visualize and communicate our results in an interactive format.
+   This article was in part prepared using the <a href="https://pair-code.github.io/saliency/">Google AI Pair</a> template and style guide.
+   The citation management for this article uses the <a href="https://github.com/distillpub/template">template v1</a> of the Distill style script. </p>
+ 
+<p>We thank the generosity of our peers and colleagues for valuable feedback on earlier versions of this work. In particular, we would like to acknowledge the valuable input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Dumitru Erhan, Hugo Larochelle, 
   Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, 
   Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros and
   Prajit Ramachandran, Pieter Kindermans, Moustapha Cisse, Erich Elsen. </p>
   <p> We thank the institutional support and encouragement of Dan Nanas,
   Rita Ruiz, Sally Jesmonth and Alexander Popper. </p>
- <p> A special thank you is due to James Wexler for some helpful suggestions about how to visualize and communicate our results in an interactive format.
-   This article was in part prepared using the <a href="https://pair-code.github.io/saliency/">Google AI Pair</a> template and style guide.
-   The citation management for this article uses the <a href="https://github.com/distillpub/template">template v1</a> of the Distill style script. </p>
   
 <h3>Citation</h3>
 <pre class="citation long">@article{hooker2019selective,
