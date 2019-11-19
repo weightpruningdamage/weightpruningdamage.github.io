@@ -368,7 +368,7 @@
     
 .column_portfoliofinal {
   float: left;
-  width: 50.00%;
+  width: 100.00%;
   display: none; /* Hide columns by default */
 }
 
@@ -1361,17 +1361,29 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   </div>
 <div class="description_">        
 <div id="myBtnContainer_3">
-<button class="btn active_" onclick="filterSelectionfinal('class')"> all classes </button>
-<button class="btn" onclick="filterSelectionfinal('stat')"> stat significant</button>
+<button class="btn active_" onclick="filterSelectionfinal('thirty')"> all classes </button>
+<button class="btn" onclick="filterSelectionfinal('fifty')"> stat significant</button>
+<button class="btn" onclick="filterSelectionfinal('seventy')"> stat significant</button>
+<button class="btn" onclick="filterSelectionfinal('ninety')"> stat significant</button>
 <hr>
   
 <div class="row">
-  <div class="column_headerfinal class">
+  <div class="column_headerfinal thirty">
     <div class="content">
     <h5></h5>
     </div>
     </div>
-  <div class="column_headerfinal stat">
+  <div class="column_headerfinal fifty">
+  <div class="content">
+<h5> </h5>
+  </div>
+    </div>
+    <div class="column_headerfinal seventy">
+  <div class="content">
+<h5> </h5>
+  </div>
+    </div>
+    <div class="column_headerfinal ninety">
   <div class="content">
 <h5> </h5>
   </div>
@@ -1381,9 +1393,9 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 </div>
   
   <div class="row">
-  <div class="column_portfoliofinal class">
+  <div class="column_portfoliofinal thirty">
   <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fpies_alone.png?v=1573780368491">
+      <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F30_all.png?v=1574117622736">
     </div>
   </div>
   
@@ -1496,7 +1508,7 @@ function filterSelection_(c) {
   }
 }
   
-filterSelectionfinal("class") // Execute the function and show all columns
+filterSelectionfinal("seventy") // Execute the function and show all columns
 function filterSelectionfinal(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfoliofinal");
