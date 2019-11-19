@@ -1336,6 +1336,8 @@ problem that is better addressed in the data cleaning pipeline.  </p>
     <!-- END GRID -->
 </div>
 </div>
+      
+      
   
     <p> PIE provides one tool to become more familiar with the underlying data by surfacing
       a far smaller subset of examples the model finds challenging to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
@@ -1345,7 +1347,52 @@ problem that is better addressed in the data cleaning pipeline.  </p>
        <div class="descriptions_">  
 <h3>What class categories are impacted by pruning?</h3>
   </div>
-      
+<div class="description_">        
+<div id="myBtnContainer_3">
+<button class="btn active_" onclick="filterSelection_final('class')"> all classes </button>
+<button class="btn" onclick="filterSelection_final('stat')"> stat significant</button>
+<button class="btn" onclick="filterSelection_final('stat')"> stat significant</button>
+<button class="btn" onclick="filterSelection_final('stat')"> stat significant</button>
+<hr>
+  
+<div class="row">
+  <div class="column_header class">
+    <div class="content">
+    <h5>Inspecting PIE images can help us anticipate where models will fail to generalize in the real world.
+      PIE images are far more challenging for a model to classify. The average top-1 accuracy of a ResNet-50 deep neural network is far lower
+      on a random sample of PIE ImageNet images (green bar) relative to performance on
+      a random sample of images from the ImageNet test set (pink bar).</h5>
+    </div>
+    </div>
+  <div class="column_header stat">
+  <div class="content">
+<h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
+  to a random sample of non-pie ImageNet images (teal). </h5>
+  </div>
+    </div>
+    <!-- END GRID -->
+</div>
+</div>
+  
+  <div class="row">
+  <div class="column_header class">
+  <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fpies_alone.png?v=1573780368491">
+    </div>
+  </div>
+  
+  <div class="column_header stat">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+  
+  
+    <!-- END GRID -->
+</div>
+</div>  
+  
+  </div>  
     <div class="description_">  
       <p> ImageNet has 1000 different class categories, which include both every day objects such as <i>cassette player</i> and more nuanced categories that refer to the texture of an object such as <i>velvet</i> or even person types such as <i>groom</i>. 
         If the impact of pruning was uniform across all classes, we would expect the model accuracy on each class to shift by the same 
@@ -1443,6 +1490,30 @@ function filterSelection_(c) {
     if (z[i].className.indexOf(c) > -1) AddClass(z[i], "show");
   }
 }
+  
+filterSelection_final("class") // Execute the function and show all columns
+function filterSelection_final(c) {
+  var x, y, z, i;
+  x = document.getElementsByClassName("column_portfolio");
+  y = document.getElementsByClassName("column_header");
+  z = document.getElementsByClassName("column_two_fig");
+  // Add the "show" class (display:block) to the filtered elements,
+  // and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+  for (i = 0; i < y.length; i++) {
+    RemoveClass(y[i], "show");
+    if (y[i].className.indexOf(c) > -1) AddClass(y[i], "show");
+  }
+  
+  for (i = 0; i < z.length; i++) {
+    RemoveClass(z[i], "show");
+    if (z[i].className.indexOf(c) > -1) AddClass(z[i], "show");
+  }
+}
+  
 
 // Show filtered elements
 function AddClass(element, name) {
@@ -1487,6 +1558,17 @@ for (var i = 0; i < btns2.length; i++) {
   btns2[i].addEventListener("click", function(){
     var current2 = document.getElementsByClassName("active_");
     current2[0].className = current2[0].className.replace(" active_", "");
+    this.className += " active_";
+  });
+}
+  
+// Add active class to the current button (highlight it)
+var btnContainer3 = document.getElementById("myBtnContainer_3");
+var btns3 = btnContainer3.getElementsByClassName("btn");
+for (var i = 0; i < btns3.length; i++) {
+  btns3[i].addEventListener("click", function(){
+    var current3 = document.getElementsByClassName("active_");
+    current3[0].className = current3[0].className.replace(" active_", "");
     this.className += " active_";
   });
 }
