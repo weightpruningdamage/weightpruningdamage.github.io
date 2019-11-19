@@ -1364,7 +1364,257 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         <div class="content">
         <h5>At all levels of pruning, some classes are impacted far more than others (classes that are statistically significant indicated by pink and green). We plot both the absolute % change in class recall (pink) and
           the normalized accuracy relative to change in overall top-1 accuracy caused by pruning (green).</h5>
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ffigure_copy_50.png?v=1574041293486"  style="width:100%">
+
+<div id="myBtnContainer3">
+<button class="btn " onclick="filterSelection('sparsity_30')">30% Pruned</button>
+ <button class="btn" onclick="filterSelection('sparsity_50')"> 50% Pruned</button>
+  <button class="btn active" onclick="filterSelection('sparsity_70')"> 70% Pruned</button>
+  <button class="btn" onclick="filterSelection('sparsity_90')"> 90% Pruned</button>
+<hr>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+      
+<div class="row">
+  <div class="column_header_ sparsity_30">
+    <h5>PIEs where the class object is in an abstract form, such as a painting, drawing or rendering
+        using a different material.</h5>
+  </div>
+  <div class="column_header_ sparsity_50">
+    <div class="content">
+    <h5>PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
+    </div>
+  </div>
+  
+  <div class="column_header_ sparsity_70">
+    <div class="content">
+    <h5>PIEs where the image would be considered by a human to be an atypical examplar of the category of images.
+       </h5>
+    </div>
+  </div>
+  <div class="column_header_ sparsity_90">
+    <div class="content">
+    <h5>PIEs where the image depicts an object that is semantically close to 
+      various other classes present the data set (e.g.,
+      rock crab and fiddler crab, cuirass and breastplate).</h5>
+    </div>
+  </div>
+    <!-- END GRID -->
+</div>
+      
+<div class="row">
+  <div class="column_portfolio_ abstract">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fmaze_maze.png?v=1573664345071" alt="abstract_1" style="width:100%">
+          <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>maze</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>maze</strong_><br>
+         <code>Pruned:</code><strong_>crossword puzzle</strong_><br>
+       </div>
+    </div>
+  </div>
+  
+  <div class="column_portfolio_ abstract">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fbeer_bottle.png?v=1573670223987" alt="abstract_1" style="width:100%">
+            <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>beer bottle</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>beer bottle</strong_><br>
+         <code>Pruned:</code><strong_>sunscreen</strong_><br>
+       </div>
+    </div>
+  </div>
+  <div class="column_portfolio_ abstract">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fbottle.png?v=1573664743810" alt="abstract_1" style="width:100%">
+      <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>pop bottle</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>restaurant</strong_><br>
+         <code>Pruned:</code><strong_>barber shop</strong_><br>
+       </div>
+    </div>
+  </div>
+
+
+  <div class="column_portfolio_ atypical">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Flimo_snow.png?v=1573664910123" alt="atypical_" style="width:100%">
+      <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>limousine</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>bob sled</strong_><br>
+         <code>Pruned:</code><strong_>snowplow</strong_><br>
+       </div>
+    </div>
+  </div>
+ 
+  <div class="column_portfolio_ atypical">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Frocking_chair.png?v=1573662828317" alt="atypical_" style="width:100%">
+       <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>rocking chair</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>rocking chair</strong_><br>
+         <code>Pruned:</code><strong_>barber chair</strong_><br>
+       </div>
+    </div>
+  </div>
+ 
+    <div class="column_portfolio_ atypical">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fplastic_bag.png?v=1573663557120" alt="atypical_" style="width:100%">
+         <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>plastic bag</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>gown</strong_><br>
+         <code>Pruned:</code><strong_>plastic bag</strong_><br>
+       </div>
+    </div>
+  </div>
+ <div class="column_portfolio_ fine">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fcuirass.png?v=1573665382329" alt="fine_1" style="width:100%">
+        <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>cuirass</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>breastplate</strong_><br>
+         <code>Pruned:</code><strong_>cuirass</strong_><br>
+       </div>
+    </div>
+  </div>
+  
+  <div class="column_portfolio_ fine">
+    <div class="content">  
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F44_breakwater_lakeside_seashore.png?v=1573665679398" alt="fine_1" style="width:100%">
+         <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>breakwater</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>lakeside</strong_><br>
+         <code>Pruned:</code><strong_>seashore</strong_><br>
+       </div>
+    </div>
+  </div>
+
+  <div class="column_portfolio_ multiple">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fmulti_object.png?v=1573663218027" alt="multiple_1" style="width:100%">
+      <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>piggy bank</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>mushroom</strong_><br>
+         <code>Pruned:</code><strong_>jigsaw puzzle</strong_><br>
+       </div>
+    </div>
+  </div>
+      
+  <div class="column_portfolio_ multiple">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fguacamole.png?v=1573664193622" alt="multiple_1" style="width:100%">
+       <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>guacamole</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>mortar</strong_><br>
+         <code>Pruned:</code><strong_>guacamole</strong_><br>
+       </div>
+    </div>
+  </div>
+   
+  <div class="column_portfolio_ multiple">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fconfectionary.png?v=1573665859916" alt="multiple_1" style="width:100%">
+           <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>confectionary</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>packet</strong_><br>
+         <code>Pruned:</code><strong_>grocery store</strong_><br>
+       </div>
+    </div>
+  </div>
+   
+ <div class="column_portfolio_ frequently">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftennis.png?v=1573663366057" alt="multiple_1" style="width:100%">
+            <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>tennis ball</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>tennis ball</strong_><br>
+         <code>Pruned:</code><strong_>racket</strong_><br>
+       </div>
+    </div>
+  </div>
+  
+  <div class="column_portfolio_ frequently">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fcanoe.png?v=1573665479691" alt="multiple_1" style="width:100%">
+         <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>paddle</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>paddle</strong_><br>
+         <code>Pruned:</code><strong_>canoe</strong_><br>
+       </div>
+    </div>
+  </div>
+      
+  <div class="column_portfolio_ frequently">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F298_sandbar_seashore_sandbar.png?v=1573670132184" alt="multiple_1" style="width:100%">
+         <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>sandbar</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>seashore</strong_><br>
+         <code>Pruned:</code><strong_>sandbar</strong_><br>
+       </div>
+    </div>
+  </div>
+ 
+
+ <div class="column_portfolio_ incorrect">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fcrash_helmet.png?v=1573663972347" alt="incorrect_1" style="width:100%">
+        <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>crash helmet</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>gas mask</strong_><br>
+         <code>Pruned:</code><strong_>lens cap</strong_><br>
+       </div>
+    </div>
+  </div>
+ 
+  <div class="column_portfolio_ incorrect">
+    <div class="content">
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F197_envelope_dumbbell_maraca.png?v=1573669161285" alt="incorrect_1" style="width:100%">
+        <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>envelope</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>dumbbell</strong_><br>
+         <code>Pruned:</code><strong_>maraca</strong_><br>
+       </div>
+    </div>
+  </div>
+      
+<!-- END GRID -->
+</div>
+          
+          <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ffigure_copy_50.png?v=1574041293486"  style="width:100%">
            <h5> 
     
           At higher levels of pruning, more classes are impacted and the absolute % difference widens between the classes most and least impacted.   </h5>
@@ -1487,6 +1737,16 @@ for (var i = 0; i < btns2.length; i++) {
   btns2[i].addEventListener("click", function(){
     var current2 = document.getElementsByClassName("active_");
     current2[0].className = current2[0].className.replace(" active_", "");
+    this.className += " active_";
+  });
+  
+// Add active class to the current button (highlight it)
+var btnContainer3 = document.getElementById("myBtnContainer_3");
+var btns3 = btnContainer3.getElementsByClassName("btn");
+for (var i = 0; i < btns3.length; i++) {
+  btns3[i].addEventListener("click", function(){
+    var current3 = document.getElementsByClassName("active_");
+    current3[0].className = current3[0].className.replace(" active_", "");
     this.className += " active_";
   });
 }
