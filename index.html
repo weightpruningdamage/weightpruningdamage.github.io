@@ -1368,7 +1368,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 <div id="myBtnContainer3">
 <button class="btn " onclick="filterSelection('sparsity_30')">30% Pruned</button>
  <button class="btn" onclick="filterSelection('sparsity_50')"> 50% Pruned</button>
-  <button class="btn active" onclick="filterSelection('sparsity_70')"> 70% Pruned</button>
+  <button class="btn active_3" onclick="filterSelection('sparsity_70')"> 70% Pruned</button>
   <button class="btn" onclick="filterSelection('sparsity_90')"> 90% Pruned</button>
 <hr>
 </div>
@@ -1376,23 +1376,23 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 <!-- Portfolio Gallery Grid -->
       
 <div class="row">
-  <div class="column_header_ sparsity_30">
+  <div class="column_header_3 sparsity_30">
     <h5>PIEs where the class object is in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
   </div>
-  <div class="column_header_ sparsity_50">
+  <div class="column_header_3 sparsity_50">
     <div class="content">
     <h5>PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
     </div>
   </div>
   
-  <div class="column_header_ sparsity_70">
+  <div class="column_header_3 sparsity_70">
     <div class="content">
     <h5>PIEs where the image would be considered by a human to be an atypical examplar of the category of images.
        </h5>
     </div>
   </div>
-  <div class="column_header_ sparsity_90">
+  <div class="column_header_3 sparsity_90">
     <div class="content">
     <h5>PIEs where the image depicts an object that is semantically close to 
       various other classes present the data set (e.g.,
@@ -1523,7 +1523,6 @@ function filterSelection_(c) {
   var x, y, z, i;
   x = document.getElementsByClassName("column_portfolio");
   y = document.getElementsByClassName("column_header");
-  z = document.getElementsByClassName("column_two_fig");
   // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
@@ -1535,10 +1534,24 @@ function filterSelection_(c) {
     if (y[i].className.indexOf(c) > -1) AddClass(y[i], "show");
   }
   
-  for (i = 0; i < z.length; i++) {
-    RemoveClass(z[i], "show");
-    if (z[i].className.indexOf(c) > -1) AddClass(z[i], "show");
+}
+  
+filterSelection_3("sparsity_70") // Execute the function and show all columns
+function filterSelection_3(c) {
+  var x, y, z, i;
+  x = document.getElementsByClassName("column_two_fig");
+  y = document.getElementsByClassName("column_header_");
+  // Add the "show" class (display:block) to the filtered elements,
+  // and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
   }
+  for (i = 0; i < y.length; i++) {
+    RemoveClass(y[i], "show");
+    if (y[i].className.indexOf(c) > -1) AddClass(y[i], "show");
+  }
+  
 }
 
 // Show filtered elements
@@ -1592,9 +1605,9 @@ var btnContainer3 = document.getElementById("myBtnContainer_3");
 var btns3 = btnContainer3.getElementsByClassName("btn");
 for (var i = 0; i < btns3.length; i++) {
   btns3[i].addEventListener("click", function(){
-    var current3 = document.getElementsByClassName("active_");
-    current3[0].className = current3[0].className.replace(" active_", "");
-    this.className += " active_";
+    var current3 = document.getElementsByClassName("active_3");
+    current3[0].className = current3[0].className.replace(" active_3", "");
+    this.className += " active_3";
   });
 }
 </script> 
