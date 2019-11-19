@@ -510,7 +510,7 @@ figcaption .strong_, {
        </div>
              </div>
             
-            <p>In 1990, a popular paper was published titled Optimal Brain Damage 
+           <p>In 1990, a popular paper was published titled <i>Optimal Brain Damage</i> 
               <dt-cite key="Cun90optimalbrain"></dt-cite>. 
               The paper was amongst the first  <dt-cite key="Hassibi93secondorder,1992_nowlan_hinton,NIPS1990_Andreas_weight_elimination"></dt-cite> to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
               to our biological synaptic pruning. In deep neural networks, weights are pruned or removed by 
@@ -530,7 +530,7 @@ figcaption .strong_, {
                 pruning?</i></p>
             <p> An understanding of these trade-offs is critical when deep neural networks are used for sensitive tasks such 
               as hiring <dt-cite key="Dastin_2018,Harwell_2019"></dt-cite>, health care diagnostics <dt-cite key="2019Hongtao,Gruetzemacher20183DDL"></dt-cite> or self-driving cars <dt-cite key="2017Telsa,2019Uber"></dt-cite>. For these tasks, the introduction of pruning may be at odds with fairness objectives 
-              to avoid disparate treatment of protected attributes and/or the need to guarantee a certain level of recall for certain classes <dt-cite key="2016fair_prediction,2019arXiv190110566Z,NIPS2016_6316,2014certifying_removing_disparate_impact,false_discovery_rates"></dt-cite>. 
+              to avoid disparate treatment of protected attributes and/or the need to guarantee a level of recall for certain classes <dt-cite key="2016fair_prediction,2019arXiv190110566Z,NIPS2016_6316,2014certifying_removing_disparate_impact,false_discovery_rates"></dt-cite>. 
               Pruning is already commonly used in these domains, often driven by the resource constraints of deploying models to mobile phone or embedded devices <dt-cite key="2017Andre"></dt-cite>. </p>
       <div class="imgs-container">
           </div>
@@ -543,22 +543,16 @@ figcaption .strong_, {
             </div>
           </div>
           <div class="img-container">1. Pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.</div>
-          <div class="img-container">2. The examples most impacted by pruning, which we term Pruning Identified Exemplars (PIEs), are more challenging for both pruned and non-pruned models to classify.</div>
+           <div class="img-container">2. The examples most impacted by pruning, which we term <i>Pruning Identified Exemplars</i> (PIEs), are more challenging for both pruned and non-pruned models to classify.</div>
           <div class="img-container">3. Pruning significantly reduces robustness to image corruptions and natural adversarial images.</div>
       </div>
      </div>
     <div class="description_">
 
-            <p> In this work, we propose a framework to identify the classes and images where there is a high level of disagreement or difference in
+            <p> In this work, we propose a formal framework to identify the classes and images where there is a high level of disagreement or difference in
               generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), 
               and classes are systematically more impacted by the introduction of sparsity. </p>
              
-                <p> PIEs are images where the most frequent prediction differs
-                  between a population of 
-                  independently trained pruned and non-pruned models. 
- In this work, we focus on open source research datasets and find that for PIEs in the ImageNet test-set tend to over-index on poorly structured data. </p>
- <p> Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models. We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
-                  depict multiple objects or require fine-grained classification. </p>
 
   
   <div>
@@ -1314,8 +1308,15 @@ figcaption .strong_, {
 <!-- END GRID -->
 </div>
 </div>
+  
 <div class="description_">   
-   <p> PIEs are a subset of images that are more sensitive to varying the number of weights in a deep neural network. ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. 
+   <p> PIEs are images where the most frequent prediction differs
+                  between a population of 
+                  independently trained pruned and non-pruned models. This subset of images is more sensitive to varying the number of weights in a deep neural network. This naturally leads to a follow-up question of what makes PIE images more sensitive to varying capacity?  
+ In this work, we focus on open source research datasets and find that for PIEs in the ImageNet test-set tend to over-index on poorly structured data. </p>
+ <p> Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models. We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
+                  depict multiple objects or require fine-grained classification. </p>
+   <p> PIEs are a subset of images that  ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. 
  The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
 problem that is better addressed in the data cleaning pipeline.  </p>
   <p>  On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For sensitive tasks such as patient risk stratification or medical diagnoses <dt-cite key="NIPS2012_4525"></dt-cite>, our results suggest caution should be excercised before deploying pruned models. </p>
