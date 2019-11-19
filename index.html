@@ -421,15 +421,19 @@
 /* Style the buttons */
 .btn {
   border: none;
+  border-radius: 4px;
   outline: none;
   padding: 12px 16px;
-  cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   box-shadow: 0px 10px 14px -7px #276873;
   background-color:#599bb3;
   color:#ffffff;
   background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
   text-shadow:0px 1px 0px #3d768a;
+  margin-right: auto;
+  margin-left: auto;  
+   margin-bottom:5px;
+  cursor:pointer;
 }
 
 /* Add a grey background color on mouse-over */
@@ -561,7 +565,7 @@ figcaption .strong_, {
       <div class="content">
      <div class="figcaption">
          <strong_>Click on the buttons below to view a sample of ImageNet PIEs in each category. 
-      The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_><br>
+      The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_>
   </div>
   <hr>
 <div id="myBtnContainer">
@@ -578,38 +582,38 @@ figcaption .strong_, {
       
 <div class="row">
   <div class="column_header_ abstract">
-    <h5>PIEs where the class object is in an abstract form, such as a painting, drawing or rendering
+    <h5>abstract exemplars: a sample of PIEs where the class object is in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
   </div>
   <div class="column_header_ incorrect">
     <div class="content">
-    <h5>PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
+    <h5>incorrect or inadequate ground truth: a sample of PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
     </div>
   </div>
   
   <div class="column_header_ atypical">
     <div class="content">
-    <h5>PIEs where the image would be considered by a human to be an atypical examplar of the category of images.
+    <h5>atypical exemplars: a sample of PIEs where the image would be considered by a human to be an atypical unusual or outlier example from the distribution of images in a given category.
        </h5>
     </div>
   </div>
   <div class="column_header_ fine">
     <div class="content">
-    <h5>PIEs where the image depicts an object that is semantically close to 
+    <h5>fine grained classification: a sample of PIEs where the image depicts an object that is semantically close to 
       various other classes present the data set (e.g.,
       rock crab and fiddler crab, cuirass and breastplate).</h5>
     </div>
   </div>
   <div class="column_header_ multiple">
     <div class="content">
-    <h5>PIEs where the image depicts multiple objects, a human may consider several labels to be appropriate predictions (e.g.,
+    <h5>multiple objects: a sample of PIEs where the image depicts multiple objects, a human may consider several labels to be appropriate predictions (e.g.,
       desktop computer consisting of a screen, mouse and monitor, a barber chair in a barber shop,
       a wine bottle which is full of red wine).</h5>
     </div>
   </div>
  <div class="column_header_ frequently">
     <div class="content">
-<h5>PIEs where the image depicts object(s) from categories that frequently co-occur together. 
+<h5>frequently co-occuring classes: a sample of PIEs where the image depicts object(s) from categories that frequently co-occur together. 
   In some cases, this is because both labels are acceptable to describe the same object. </h5>
     </div>
   </div>
@@ -1321,7 +1325,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 
     
   <div id="myBtnContainer_2">
-  <button class="btn active_" onclick="filterSelection_('pie')"> pie </button>
+  <button class="btn active_" onclick="filterSelection_('pie')"> generalization to pie </button>
   <button class="btn" onclick="filterSelection_('without')"> excluding pie</button>
 <hr>
   
