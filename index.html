@@ -1349,8 +1349,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 </div>
 </div>
       
-      
-  
+
     <p> PIE provides one tool to become more familiar with the underlying data by surfacing
       a far smaller subset of examples the model finds challenging to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
     where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
@@ -1360,57 +1359,6 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 <h3>What class categories are impacted by pruning?</h3>
   </div>
 <div class="description_">        
-<div id="myBtnContainer_3">
-<button class="btn active_" onclick="filterSelectionfinal('thirty')"> all classes </button>
-<button class="btn" onclick="filterSelectionfinal('fifty')"> stat significant</button>
-<button class="btn" onclick="filterSelectionfinal('seventy')"> stat significant</button>
-<button class="btn" onclick="filterSelectionfinal('ninety')"> stat significant</button>
-<hr>
-  
-<div class="row">
-  <div class="column_headerfinal thirty">
-    <div class="content">
-    <h5></h5>
-    </div>
-    </div>
-  <div class="column_headerfinal fifty">
-  <div class="content">
-<h5> </h5>
-  </div>
-    </div>
-    <div class="column_headerfinal seventy">
-  <div class="content">
-<h5> </h5>
-  </div>
-    </div>
-    <div class="column_headerfinal ninety">
-  <div class="content">
-<h5> </h5>
-  </div>
-    </div>
-    <!-- END GRID -->
-</div>
-</div>
-  
-  <div class="row">
-  <div class="column_portfoliofinal thirty">
-  <div class="content">
-      <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F30_all.png?v=1574117622736">
-    </div>
-  </div>
-  
-  <div class="column_portfoliofinal stat">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
-    </div>
-  </div>
-
-  
-    <!-- END GRID -->
-</div>
-</div>  
-  
-    <div class="description_">  
       <p> ImageNet has 1000 different class categories, which include both every day objects such as <i>cassette player</i> and more nuanced categories that refer to the texture of an object such as <i>velvet</i> or even person types such as <i>groom</i>. 
         If the impact of pruning was uniform across all classes, we would expect the model accuracy on each class to shift by the same 
       number of percentage points as the difference in top-1 accuracy between the pruned and non-pruned model.</p>
@@ -1424,15 +1372,106 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and use apply the t-test
  to determine whether the means of the samples differ significantly.
         This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is overly sensitive to the reduction in capacity.</p>
-       </div>
-        <div class="content">
-        <h5>At all levels of pruning, some classes are impacted far more than others (classes that are statistically significant indicated by pink and green). We plot both the absolute % change in class recall (pink) and
+
+      
+  <div id="myBtnContainer_3">
+<button class="btn active_" onclick="filterSelectionfinal('thirty')"> 30% pruned </button>
+<button class="btn" onclick="filterSelectionfinal('fifty')"> 50% pruned </button>
+<button class="btn" onclick="filterSelectionfinal('seventy')"> 70% pruned</button>
+<button class="btn" onclick="filterSelectionfinal('ninety')"> 90% pruned </button>
+<hr>
+  
+<div class="row">
+  <div class="column_headerfinal thirty">
+    <div class="content">
+    <h5>At all levels of pruning, some classes are impacted far more than others (classes that are statistically significant indicated by pink and green). We plot both the absolute % change in class recall (pink) and
           the normalized accuracy relative to change in overall top-1 accuracy caused by pruning (green).</h5>
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ffigure_copy_50.png?v=1574041293486"  style="width:100%">
-           <h5> 
-    
-          At higher levels of pruning, more classes are impacted and the absolute % difference widens between the classes most and least impacted.   </h5>
     </div>
+    </div>
+  <div class="column_headerfinal fifty">
+  <div class="content">
+<h5>The directionality and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are relatively robust to the overall degradation experienced 
+        by the model whereas others degrade in performance far more than the model itself.  This amounts to 
+        <em>selective brain damage</em> with performance on certain classes evidencing far more sensitivity 
+        to the removal of model capacity.</h5>
+  </div>
+    </div>
+    <div class="column_headerfinal seventy">
+  <div class="content">
+<h5>The classes that experience a significant <em>relative</em> decrease in accuracy are fewer at every level than those that recieve a relative boost, however the magnitude of class decreases is larger 
+        than the gains (which pulls overall accuracy downwards). 
+        This tells us that the loss in generalization caused by pruning is far more concentrated 
+        than the relative gains, with fewer classes bearing
+        the brunt of the degradation caused by weight removal.</h5>
+  </div>
+    </div>
+    <div class="column_headerfinal ninety">
+  <div class="content">
+<h5> At higher levels of pruning, more classes are impacted and the absolute % difference widens between the classes most and least impacted.</h5>
+  </div>
+    </div>
+    <!-- END GRID -->
+</div>
+  
+  <div class="row">
+  <div class="column_portfoliofinal thirty">
+  <div class="content">
+      <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F30_all.png?v=1574117622736">
+    </div>
+  </div>
+  
+  <div class="column_portfoliofinal fifty">
+    <div class="content">
+      <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F50_all_.png?v=1574117629857" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+    
+  <div class="column_portfoliofinal seventy">
+    <div class="content">
+      <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F70_all.png?v=1574117642038" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+    
+  <div class="column_portfoliofinal ninety">
+    <div class="content">
+      <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F90_all.png?v=1574117649028" alt="abstract_1" style="width:100%">
+    </div>
+  </div>
+
+  
+    <!-- END GRID -->
+</div>
+  
+<div class="row">
+  <div class="column_headerfinal thirty">
+    <div class="content">
+    <h5> We indendently train a population of pruned and non-pruned models and apply the t-test
+ to determine whether the means of the samples differ significantly. In this chart, 30% of the weights are removed from the pruned models.</h5>
+    </div>
+    </div>
+  <div class="column_headerfinal fifty">
+  <div class="content">
+<h5>We indendently train a population of pruned and non-pruned models and apply the t-test
+ to determine whether the means of the samples differ significantly. In this chart, 50% of the weights are removed from the pruned models.</h5>
+  </div>
+    </div>
+    <div class="column_headerfinal seventy">
+  <div class="content">
+<h5>We indendently train a population of pruned and non-pruned models and apply the t-test
+ to determine whether the means of the samples differ significantly. In this chart, 70% of the weights are removed from the pruned models.</h5>
+  </div>
+    </div>
+    <div class="column_headerfinal ninety">
+  <div class="content">
+<h5>We indendently train a population of pruned and non-pruned models and apply the t-test
+ to determine whether the means of the samples differ significantly. In this chart, 90% of the weights are removed from the pruned models.</h5>
+  </div>
+    </div>
+    <!-- END GRID -->
+</div>
+</div>
+  
+  
         <div class="description_">  
       <p>The directionality and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are relatively robust to the overall degradation experienced 
         by the model whereas others degrade in performance far more than the model itself. This amounts to 
@@ -1508,7 +1547,7 @@ function filterSelection_(c) {
   }
 }
   
-filterSelectionfinal("seventy") // Execute the function and show all columns
+filterSelectionfinal("thirty") // Execute the function and show all columns
 function filterSelectionfinal(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfoliofinal");
