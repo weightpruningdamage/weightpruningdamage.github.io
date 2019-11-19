@@ -494,7 +494,7 @@ figcaption .strong_, {
             The phrase "use it or lose it" is frequently used to describe the environmental influence of the learning process
             on synaptic  pruning,
             however there is little scientific 
-            consensus on <em>what</em> exactly is lost. <dt-cite key="Sowell8223,CASEY2000241"></dt-cite></p> 
+            consensus on <em>what</em> exactly is lost <dt-cite key="Sowell8223,CASEY2000241"></dt-cite>.</p>
             
             <p>In 1990, a popular paper was published titled Optimal Brain Damage 
               <dt-cite key="Cun90optimalbrain"></dt-cite>. 
@@ -1371,7 +1371,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
        <p> Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key="1954anderson_darling,2002huber"></dt-cite>. </p>      
       <p>In this work, we use a two-sample, two-tailed,
-        independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and use apply the t-test
+        independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and apply the t-test
  to determine whether the means of the samples differ significantly.
         This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is overly sensitive to the reduction in capacity.</p>
 
@@ -1392,7 +1392,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
     </div>
   <div class="column_headerfinal fifty">
   <div class="content">
-<h5>The directionality and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are relatively robust to the overall degradation experienced 
+<h5>The direction and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are relatively robust to the overall degradation experienced 
         by the model whereas others degrade in performance far more than the model itself.  This amounts to 
         <em>selective brain damage</em> with performance on certain classes evidencing far more sensitivity 
         to the removal of model capacity.</h5>
@@ -1498,14 +1498,14 @@ problem that is better addressed in the data cleaning pipeline.  </p>
    impacts model generalization.   </p>
   <p> However, our methodology offers one way for humans to better understand 
    the trade-offs incurred by pruning and gain intuition about what classes 
-   benefit the most from additional capacity. We believe this type of tooling is a valuable first step to help human experts understand the trade-offs incurred by pruning.</p>
+   benefit the most from additional capacity. We believe this type of tooling is a valuable first step to help human experts understand the trade-offs incurred by pruning and surface challenging examples for human judgement.</p>
         
 
 <p> We welcome additional discussion and code contributions on the topic of this work A comprehensive introduction of the methodology,
   experiment framework and results can be found in our <a href="https://arxiv.org/abs/1911.05248">paper</a> and <a href="https://github.com/google-research/google-research/tree/master/pruning_identified_exemplars">open source code</a>.
   There is substantial ground we were not able to address within the scope of this work, and underserved areas worthy of
   future consideration include evaluating the impact of pruning for domains such as language and audio, a consideration of
-  different architectures and and compare the relative trade-offs incurred by pruning with other popular compression techniques such as quantization. 
+  different architectures and popular compression techniques such as quantization. 
    </p>
 
 <script>
@@ -1672,8 +1672,8 @@ doi = {10.1198/jasa.2009.0034}
 }
 
 @ARTICLE{2014certifying_removing_disparate_impact,
-       author = {{Feldman}, Michael and {Friedler}, Sorelle and {Moeller}, John and
-         {Scheidegger}, Carlos and {Venkatasubramanian}, Suresh},
+       author = {Feldman, Michael and Friedler, Sorelle and Moeller, John and
+         Scheidegger, Carlos and Venkatasubramanian, Suresh},
         title = "{Certifying and removing disparate impact}",
       journal = {arXiv e-prints},
      keywords = {Statistics - Machine Learning, Computer Science - Computers and Society},
@@ -1718,8 +1718,8 @@ archivePrefix = {arXiv},
 }
 
 @ARTICLE{2016fair_prediction,
-       author = {{Chouldechova}, Alexandra},
-        title = "{Fair prediction with disparate impact: A study of bias in recidivism prediction instruments}",
+       author = {Chouldechova, Alexandra},
+        title = {Fair prediction with disparate impact: A study of bias in recidivism prediction instruments},
       journal = {arXiv e-prints},
      keywords = {Statistics - Applications, Computer Science - Computers and Society, Statistics - Machine Learning},
          year = "2016",
