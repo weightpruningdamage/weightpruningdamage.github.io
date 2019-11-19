@@ -167,11 +167,10 @@
     @media (min-width: 415px) {
       authors .authors-affiliations,
        .base-grid, .imgs-container,
-      .cover-container, .descriptions_,
-      .description_, .column_portfolio {
+      .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 500px;
       }
-      figcaption {
+      .column_portfolio_  .column_portfolio figcaption {
         padding: 0;
         padding-top: 4px;
         word-wrap: break-word;
@@ -188,7 +187,7 @@
 
     @media (min-width: 992px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio {
+      .cover-container, .descriptions_, .description_, .column_portfolio  {
         width: 770px;
       }
     }
@@ -345,15 +344,6 @@
   padding: 3px;
 }
 
-
-    
-.column_portfolio_ figcaption {
-      padding: 4px 8px;
-      word-wrap: break-word;
-      word-break: break-word;
-  }
-    
-
 /* Create three equal columns that floats next to each other */
 .column_portfolio {
   float: left;
@@ -361,6 +351,13 @@
   display: none; /* Hide columns by default */
 }
     
+.column_portfolio_  .column_portfolio figcaption {
+      padding: 4px 8px;
+      word-wrap: break-word;
+      word-break: break-word;
+  }
+    
+
     
 /* Create three equal columns that floats next to each other */
 .column_portfolio_ {
@@ -368,15 +365,8 @@
   width: 33.33%;
   display: none; /* Hide columns by default */
 }
-    
-/* Create three equal columns that floats next to each other */
-.column_portfolio_final {
-  float: left;
-  width: 50.00%;
-  display: none; /* Hide columns by default */
-}
 
-.column_header  {
+.column_header {
   float: left;
   width: 100.00%;
   display: none; /* Hide columns by default */
@@ -387,14 +377,12 @@
   width: 100.00%;
   display: none; /* Hide columns by default */
 }
-
     
-.column_header_final  {
+.column_two_fig {
   float: left;
-  width: 100.00%;
+  width: 50.00%;
   display: none; /* Hide columns by default */
 }
-
 
 
 /* Clear floats after rows */
@@ -1371,77 +1359,17 @@ problem that is better addressed in the data cleaning pipeline.  </p>
       <p>In this work, we use a two-sample, two-tailed,
         independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and use apply the t-test
  to determine whether the means of the samples differ significantly.
-        This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is 
-        overly sensitive to the reduction in capacity.</p>
-  
-<!-- <div id="myBtnContainer3">
-<button class="btn" onclick="filterSelectionfinal('sparsity_thirty')">30 Pruned</button>
- <button class="btn" onclick="filterSelectionfinal('sparsity_fifty')"> 50 Pruned</button>
-  <button class="btn activefinal" onclick="filterSelectionfinal('sparsity_seventy')">70 Pruned</button>
-  <button class="btn" onclick="filterSelectionfinal('sparsity_ninety')"> 90 Pruned</button>
-<hr>
-</div>
-
-<!-- Portfolio Gallery Grid -->
-      
-<div class="row">
-  <div class="column_header_final sparsity_thirty">
-    <h5>PIEs where the class object is in an abstract form, such as a painting, drawing or rendering
-        using a different material.</h5>
-  </div>
-  <div class="column_header_final sparsity_fifty">
-    <div class="content">
-    <h5>PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
+        This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is overly sensitive to the reduction in capacity.</p>
+       </div>
+        <div class="content">
+        <h5>At all levels of pruning, some classes are impacted far more than others (classes that are statistically significant indicated by pink and green). We plot both the absolute % change in class recall (pink) and
+          the normalized accuracy relative to change in overall top-1 accuracy caused by pruning (green).</h5>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ffigure_copy_50.png?v=1574041293486"  style="width:100%">
+           <h5> 
+    
+          At higher levels of pruning, more classes are impacted and the absolute % difference widens between the classes most and least impacted.   </h5>
     </div>
-  </div>
-  
-  <div class="column_header_final sparsity_seventy">
-    <div class="content">
-    <h5>PIEs where the image would be considered by a human to be an atypical examplar of the category of images.
-       </h5>
-    </div>
-  </div>
-  <div class="column_header_final sparsity_ninety">
-    <div class="content">
-    <h5>PIEs where the image depicts an object that is semantically close to 
-      various other classes present the data set (e.g.,
-      rock crab and fiddler crab, cuirass and breastplate).</h5>
-    </div>
-  </div>
-    <!-- END GRID -->
-</div>
-      
-<div class="row">
-  <div class="column_portfolio_final sparsity_thirty">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fmaze_maze.png?v=1573664345071" alt="abstract_1" style="width:100%">
-    </div>
-  </div>
-  
-  <div class="column_portfolio_final sparsity_fifty">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fbeer_bottle.png?v=1573670223987" alt="abstract_1" style="width:100%">
-     </div>
-  </div>      
-  <div class="column_portfolio_final sparsity_seventy">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fbottle.png?v=1573664743810" alt="abstract_1" style="width:100%">
-     </div>
-  </div> 
-
-
-  <div class="column_portfolio_final sparsity_ninety">
-    <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Flimo_snow.png?v=1573664910123" alt="atypical_" style="width:100%">  
-    </div>
-  </div>
-      
-<!-- END GRID -->
-</div>
-</div>
-      -->
-
-    <div class="description_">  
+        <div class="description_">  
       <p>The directionality and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are relatively robust to the overall degradation experienced 
         by the model whereas others degrade in performance far more than the model itself. This amounts to 
         <em>selective brain damage</em> with performance on certain classes evidencing far more sensitivity 
@@ -1466,9 +1394,11 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   <p> However, our methodology offers one way for humans to better understand 
    the trade-offs incurred by pruning and gain intuition about what classes 
    benefit the most from additional capacity. We believe this type of tooling is a valuable first step to help human experts understand the trade-offs incurred by pruning.</p>
+        
+
 <p> We welcome additional discussion and code contributions on the topic of this work A comprehensive introduction of the methodology,
   experiment framework and results can be found in our <a href="https://arxiv.org/abs/1911.05248">paper</a> and <a href="https://github.com/google-research/google-research/tree/master/pruning_identified_exemplars">open source code</a>.
-  There is substantial ground we were not able to address within the scope of this initial work, and underserved areas worthy of
+  There is substantial ground we were not able to address within the scope of this work, and underserved areas worthy of
   future consideration include evaluating the impact of pruning for additional domains such as language and audio,
   different architectures and compare the relative trade-offs incurred by pruning with other popular compression techniques such as quantization. 
    </p>
@@ -1493,12 +1423,11 @@ function filterSelection(c) {
   
 filterSelection_("pie") // Execute the function and show all columns
 function filterSelection_(c) {
-  var x, y, i;
+  var x, y, z, i;
   x = document.getElementsByClassName("column_portfolio");
   y = document.getElementsByClassName("column_header");
+  z = document.getElementsByClassName("column_two_fig");
   // Add the "show" class (display:block) to the filtered elements,
-  // and remove the "show" class from the elements that are not selected
- // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
@@ -1509,27 +1438,11 @@ function filterSelection_(c) {
     if (y[i].className.indexOf(c) > -1) AddClass(y[i], "show");
   }
   
+  for (i = 0; i < z.length; i++) {
+    RemoveClass(z[i], "show");
+    if (z[i].className.indexOf(c) > -1) AddClass(z[i], "show");
+  }
 }
-  
-// filterSelection__("sparsity_thirty") // Execute the function and show all columns
-// function filterSelection__(c) {
-//   var x, y, i;
-//   x = document.getElementsByClassName("column_portfolio_final");
-//   y = document.getElementsByClassName("column_header_final");
-//   // Add the "show" class (display:block) to the filtered elements,
-//   // and remove the "show" class from the elements that are not selected
-//  // Add the "show" class (display:block) to the filtered elements,
-//   // and remove the "show" class from the elements that are not selected
-//   for (i = 0; i < x.length; i++) {
-//     RemoveClass(x[i], "show");
-//     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
-//   }
-//   for (i = 0; i < y.length; i++) {
-//     RemoveClass(y[i], "show");
-//     if (y[i].className.indexOf(c) > -1) AddClass(y[i], "show");
-//   }
-  
-// }
 
 // Show filtered elements
 function AddClass(element, name) {
@@ -1576,16 +1489,7 @@ for (var i = 0; i < btns2.length; i++) {
     current2[0].className = current2[0].className.replace(" active_", "");
     this.className += " active_";
   });
-  
-// // Add active class to the current button (highlight it)
-// var btnContainer3 = document.getElementById("myBtnContainer3");
-// var btns3 = btnContainer3.getElementsByClassName("btn");
-// for (var i = 0; i < btns3.length; i++) {
-//   btns3[i].addEventListener("click", function(){
-//     var current3 = document.getElementsByClassName("activefinal");
-//     current3[0].className = current3[0].className.replace(" activefinal", "");
-//     this.className += " activefinal";
-//   });
+}
 </script> 
   </div>
 
