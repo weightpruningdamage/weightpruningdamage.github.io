@@ -351,13 +351,11 @@
   display: none; /* Hide columns by default */
 }
     
-.column_portfolio_ .column_portfolio_final  .column_portfolio figcaption {
+.column_portfolio_  .column_portfolio .column_portfoliofinal figcaption {
       padding: 4px 8px;
       word-wrap: break-word;
       word-break: break-word;
   }
-    
-
     
 /* Create three equal columns that floats next to each other */
 .column_portfolio_ {
@@ -371,6 +369,13 @@
   width: 100.00%;
   display: none; /* Hide columns by default */
 }
+    
+.column_portfoliofinalfinal {
+  float: left;
+  width: 100.00%;
+  display: none; /* Hide columns by default */
+}
+
 
 .column_header {
   float: left;
@@ -389,6 +394,13 @@
   width: 100.00%;
   display: none; /* Hide columns by default */
 }
+    
+.column_headerfinalfinal {
+  float: left;
+  width: 100.00%;
+  display: none; /* Hide columns by default */
+}
+  
     
 .column_two_fig {
   float: left;
@@ -1312,13 +1324,33 @@ figcaption .strong_, {
 <div class="description_">   
    <p> PIEs are images where the most frequent prediction differs
                   between a population of 
-                  independently trained pruned and non-pruned models. This subset of images is more sensitive to varying the number of weights in a deep neural network. This naturally leads to a follow-up question of what makes PIE images more sensitive to varying capacity?  
- In this work, we focus on open source research datasets and find that for PIEs in the ImageNet test-set tend to over-index on poorly structured data. </p>
- <p> Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models. We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
+                  independently trained pruned and non-pruned models. This naturally leads to a follow-up question of what makes PIE images more sensitive to varying the number of weights in a deep neural network?
+     We conduct both qualitative and quantitative experiments to gain intuition about the properties of PIE images. </p>
+   <p> Deep neural networks appear to "forget" images that are already challenging to classify. Restricting the test-set to a random sample of PIE images sharply degrades top-1 accuracy. Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.  </p>
+
+ <p> PIE images are often viewed by humans as more challenging or poorly structured for a single classification task.
+   We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
                   depict multiple objects or require fine-grained classification. </p>
-   <p> PIEs are a subset of images that  ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. 
- The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
+  <p>  The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
 problem that is better addressed in the data cleaning pipeline.  </p>
+
+<div>
+      <div class="content">
+     <div class="figcaption">
+         <strong_>Click on the buttons below to view a sample of ImageNet PIEs in each category. 
+      The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_>
+  </div>
+  <hr>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('atypical')"> atypical examples</button>
+ <button class="btn" onclick="filterSelection('frequently')"> frequently co-occuring classes</button>
+  <button class="btn" onclick="filterSelection('incorrect')"> incorrect or inadequate ground truth</button>
+  <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
+  <button class="btn" onclick="filterSelection('multiple')"> multiple-object image</button>
+    <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
+<hr>
+</div>
+  
   <p>  On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For sensitive tasks such as patient risk stratification or medical diagnoses <dt-cite key="NIPS2012_4525"></dt-cite>, our results suggest caution should be excercised before deploying pruned models. </p>
      <p> PIE provides one tool to become more familiar with the underlying data by surfacing
       a far smaller subset of examples the model finds challenging to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
@@ -1628,6 +1660,17 @@ for (var i = 0; i < btns2.length; i++) {
   
 // Add active class to the current button (highlight it)
 var btnContainer3 = document.getElementById("myBtnContainer_3");
+var btns3 = btnContainer3.getElementsByClassName("btn");
+for (var i = 0; i < btns3.length; i++) {
+  btns3[i].addEventListener("click", function(){
+    var current3 = document.getElementsByClassName("active_");
+    current3[0].className = current3[0].className.replace(" active_", "");
+    this.className += " active_";
+  });
+}
+  
+// Add active class to the current button (highlight it)
+var btnContainer3 = document.getElementById("myBtnContainer_4");
 var btns3 = btnContainer3.getElementsByClassName("btn");
 for (var i = 0; i < btns3.length; i++) {
   btns3[i].addEventListener("click", function(){
