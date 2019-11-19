@@ -166,7 +166,7 @@
   
     @media (min-width: 415px) {
       authors .authors-affiliations,
-       .base-grid, .imgs-container,
+       .base-grid, .imgs-container
       .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 500px;
       }
@@ -179,21 +179,21 @@
     }
 
     @media (min-width: 768px) {
-      authors .authors-affiliations, .imgs-container,
+      authors .authors-affiliations, .imgs-container, 
       .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 650px;
       }
     }
 
     @media (min-width: 992px) {
-      authors .authors-affiliations, .imgs-container,
+      authors .authors-affiliations, .imgs-container, 
       .cover-container, .descriptions_, .description_, .column_portfolio  {
         width: 770px;
       }
     }
 
     @media (min-width: 1200px) {
-      authors .authors-affiliations, .imgs-container,
+      authors .authors-affiliations, .imgs-container, 
       .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 970px;
       }
@@ -496,9 +496,9 @@ figcaption .strong_, {
             however there is little scientific 
             consensus on <em>what</em> exactly is lost <dt-cite key="Sowell8223,CASEY2000241"></dt-cite>.</p>
            <div class="content">
-     <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2Fsynaptic_pruning_wo_title.png?v=1574187588012" alt="abstract_1" style="width:100%">
+     <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2Fsynaptic_pruning_clipped.png?v=1574189444005" alt="abstract_1" style="width:100%">
       <div class="figcaption">
-         <strong_>Synaptic pruning removes redundant neurons and strengthens connections that are most useful for the environment. (Figure courtesy of Seeman, 1999)</strong_><br>
+         <strong_>Proliferation and decline of synaptic connections in children. Synaptic pruning removes redundant neurons and strengthens connections that are most useful for the environment. (Figure courtesy of Seeman, 1999)</strong_><br>
        </div>
              </div>
             
@@ -1308,6 +1308,7 @@ figcaption .strong_, {
       
 <!-- END GRID -->
 </div>
+</div>
 <div class="description_">   
    <p> PIEs are a subset of images that are more sensitive to varying the number of weights in a deep neural network. ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. 
  The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
@@ -1360,13 +1361,11 @@ problem that is better addressed in the data cleaning pipeline.  </p>
     <!-- END GRID -->
 </div>
 </div>
-      
-
-  </div>
+</div>
 
 <div class="descriptions_">  
 <h3>What class categories are impacted by pruning?</h3>
-  </div>
+</div>
 <div class="description_">        
       <p> ImageNet has 1000 different class categories, which include both every day objects such as <i>cassette player</i> and more nuanced categories that refer to the texture of an object such as <i>velvet</i> or even person types such as <i>groom</i>. 
         If the impact of pruning was uniform across all classes, we would expect the model accuracy on each class to shift by the same 
@@ -1383,7 +1382,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is overly sensitive to the reduction in capacity.</p>
 
       
-  <div id="myBtnContainer_3">
+<div id="myBtnContainer_3">
 <button class="btn active_" onclick="filterSelectionfinal('thirty')"> 30% pruned </button>
 <button class="btn" onclick="filterSelectionfinal('fifty')"> 50% pruned </button>
 <button class="btn" onclick="filterSelectionfinal('seventy')"> 70% pruned</button>
@@ -1480,8 +1479,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 </div>
 </div>
   
-  
-        <div class="description_">  
+  <div class="description_">  
       <p>The directionality and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are relatively robust to the overall degradation experienced 
         by the model whereas others degrade in performance far more than the model itself. This amounts to 
         <em>selective brain damage</em> with performance on certain classes evidencing far more sensitivity 
@@ -1492,7 +1490,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         This tells us that the loss in generalization caused by pruning is far more concentrated 
         than the relative gains, with fewer classes bearing
         the brunt of the degradation caused by weight removal.</p>
-  
+ </div> 
 <div class="descriptions_">  
 <h3>What does this mean for the use of pruned models?</h3>
   </div>
@@ -1663,9 +1661,8 @@ for (var i = 0; i < btns3.length; i++) {
 }</pre>
 </div>
 </dt-appendix>
-</body>
-<script type="text/bibliography">
 
+<script type="text/bibliography">
 
 @article{false_discovery_rates,
 author = {Ridgeway, Greg and MacDonald, John},
