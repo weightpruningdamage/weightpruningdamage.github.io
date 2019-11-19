@@ -170,7 +170,7 @@
       .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 500px;
       }
-      .column_portfolio_  .column_portfolio figcaption {
+      .column_portfolio_ , .column_portfolio, .column_portfolio_3 figcaption {
         padding: 0;
         padding-top: 4px;
         word-wrap: break-word;
@@ -180,21 +180,21 @@
 
     @media (min-width: 768px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio {
+      .cover-container, .descriptions_, .description_, .column_portfolio,.column_portfolio_, .column_portfolio_3 {
         width: 650px;
       }
     }
 
     @media (min-width: 992px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio  {
+      .cover-container, .descriptions_, .description_, .column_portfolio, .column_portfolio_, .column_portfolio_3 {
         width: 770px;
       }
     }
 
     @media (min-width: 1200px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio {
+      .cover-container, .descriptions_, .description_, .column_portfolio, .column_portfolio_, .column_portfolio_3 {
         width: 970px;
       }
     }
@@ -351,7 +351,7 @@
   display: none; /* Hide columns by default */
 }
     
-.column_portfolio_  .column_portfolio figcaption {
+.column_portfolio_  .column_portfolio .column_portfolio_3 figcaption {
       padding: 4px 8px;
       word-wrap: break-word;
       word-break: break-word;
@@ -363,6 +363,13 @@
 .column_portfolio_ {
   float: left;
   width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+    
+/* Create three equal columns that floats next to each other */
+.column_portfolio_3 {
+  float: left;
+  width: 50.00%;
   display: none; /* Hide columns by default */
 }
 
@@ -378,9 +385,9 @@
   display: none; /* Hide columns by default */
 }
     
-.column_two_fig {
+.column_header_1 {
   float: left;
-  width: 50.00%;
+  width: 100.00%;
   display: none; /* Hide columns by default */
 }
 
@@ -1366,33 +1373,33 @@ problem that is better addressed in the data cleaning pipeline.  </p>
           the normalized accuracy relative to change in overall top-1 accuracy caused by pruning (green).</h5>
 
 <div id="myBtnContainer3">
-<button class="btn " onclick="filterSelection('sparsity_30')">30% Pruned</button>
- <button class="btn" onclick="filterSelection('sparsity_50')"> 50% Pruned</button>
-  <button class="btn active_3" onclick="filterSelection('sparsity_70')"> 70% Pruned</button>
-  <button class="btn" onclick="filterSelection('sparsity_90')"> 90% Pruned</button>
+<button class="btn " onclick="filterSelection_3('sparsity_30')">30% Pruned</button>
+ <button class="btn" onclick="filterSelection_3('sparsity_50')"> 50% Pruned</button>
+  <button class="btn active_3" onclick="filterSelection_3('sparsity_70')"> 70% Pruned</button>
+  <button class="btn" onclick="filterSelection_3('sparsity_90')"> 90% Pruned</button>
 <hr>
 </div>
 
 <!-- Portfolio Gallery Grid -->
       
 <div class="row">
-  <div class="column_header_3 sparsity_30">
+  <div class="column_header_1 sparsity_30">
     <h5>PIEs where the class object is in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
   </div>
-  <div class="column_header_3 sparsity_50">
+  <div class="column_header_1 sparsity_50">
     <div class="content">
     <h5>PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
     </div>
   </div>
   
-  <div class="column_header_3 sparsity_70">
+  <div class="column_header_1 sparsity_70">
     <div class="content">
     <h5>PIEs where the image would be considered by a human to be an atypical examplar of the category of images.
        </h5>
     </div>
   </div>
-  <div class="column_header_3 sparsity_90">
+  <div class="column_header_1 sparsity_90">
     <div class="content">
     <h5>PIEs where the image depicts an object that is semantically close to 
       various other classes present the data set (e.g.,
@@ -1403,7 +1410,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 </div>
       
 <div class="row">
-  <div class="column_two_fig sparsity_30">
+  <div class="column_portfolio_3 sparsity_30">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fmaze_maze.png?v=1573664345071" alt="abstract_1" style="width:100%">
           <div class="figcaption">  
@@ -1416,7 +1423,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
     </div>
   </div>
   
-  <div class="column_two_fig sparsity_50">
+  <div class="column_portfolio_3 sparsity_50">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fbeer_bottle.png?v=1573670223987" alt="abstract_1" style="width:100%">
             <div class="figcaption">  
@@ -1428,7 +1435,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
        </div>
     </div>
   </div>
-  <div class="column_two_fig sparsity_70">
+  <div class="column_portfolio_3 sparsity_70">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fbottle.png?v=1573664743810" alt="abstract_1" style="width:100%">
       <div class="figcaption">  
@@ -1442,7 +1449,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   </div>
 
 
-  <div class="column_two_fig sparsity_90">
+  <div class="column_portfolio_3 sparsity_90">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Flimo_snow.png?v=1573664910123" alt="atypical_" style="width:100%">
       <div class="figcaption">  
@@ -1539,8 +1546,8 @@ function filterSelection_(c) {
 filterSelection_3("sparsity_70") // Execute the function and show all columns
 function filterSelection_3(c) {
   var x, y, z, i;
-  x = document.getElementsByClassName("column_two_fig");
-  y = document.getElementsByClassName("column_header_");
+  x = document.getElementsByClassName("column_portfolio_3");
+  y = document.getElementsByClassName("column_header_1");
   // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
