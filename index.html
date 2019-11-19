@@ -536,7 +536,8 @@ figcaption .strong_, {
   
   <div>
       <div class="content">
-    <h5>Click on the buttons below to view a sample of PIEs in each category. The labels below each image are in order: the true label, the modal predicted label from a non-pruned set of models, </h5>
+    <h5>Click on the buttons below to view a sample of ImageNet PIEs in each category. 
+      The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned modal prediction , 3)  most frequent pruned prediction. 2) and 3) are evaluated across a population of 30 independently trained ResNet-50 models. </h5>
   </div>
   
 <div id="myBtnContainer">
@@ -956,73 +957,96 @@ figcaption .strong_, {
          <strong_>dock</strong_><br>
          <code>Non-Pruned:</code>
          <strong_>container ship</strong_><br>
-         <code>Pruned:</code><strong_>bakery</strong_><br>
+         <code>Pruned:</code><strong_>dock</strong_><br>
        </div>
-    </div>
-  </div>
-      
-      <h4></h4>
-      <p></p>
-      <p></p>
     </div>
   </div>
   <div class="column_portfolio_ multiple">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F273_hammer_carpenters_kit_hammer%20copy.png?v=1573660656896" alt="multiple_2" style="width:100%">
-      <h4>hammer</h4>
-      <p>carpenter's kit</p>
-      <p>hammer</p>
-  </div>
+        <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>hammer</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>carpenter's kit</strong_><br>
+         <code>Pruned:</code><strong_>hammer</strong_><br>
+       </div>
+    </div>
   </div>
   
 <div class="column_portfolio_ frequently">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F117_wine_bottle_red_wine_wine_bottle.png?v=1573506580293" alt="multiple_2" style="width:100%">
-      <h4>wine bottle</h4>
-      <p>red wine</p>
-      <p>wine bottle</p>
+         <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>wine bottle</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>red wine</strong_><br>
+         <code>Pruned:</code><strong_>wine bottle</strong_><br>
+       </div>
     </div>
   </div>
  <div class="column_portfolio_ frequently">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fmissile.png?v=1573508566845" alt="multiple_2" style="width:100%">
-      <p>projectile</p>
-      <p>missile</p>
-      <p>projectile</p>
-  </div>
+          <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>projectile</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>missile</strong_><br>
+         <code>Pruned:</code><strong_>projectile</strong_><br>
+       </div>
+    </div>
   </div>
   <div class="column_portfolio_ frequently">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F216_corn_corn_ear.png?v=1573658734126" alt="multiple_2" style="width:100%">
-      <h4>corn</h4>
-      <p>corn</p>
-      <p>ear (of corn)</p>
+       <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>corn</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>corn</strong_><br>
+         <code>Pruned:</code><strong_>ear (of corn)</strong_><br>
+       </div>
+    </div>
   </div>
-  </div>
+   
   
 <div class="column_portfolio_ incorrect">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F162_restaurant_meat_loaf_guacamole.png?v=1573494646093" alt="incorrect_2" style="width:100%">
-      <h4>restaurant</h4>
-      <p>meat loaf</p>
-      <p>guacamole</p>
+       <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>restaurant</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>meat loaf</strong_><br>
+         <code>Pruned:</code><strong_>guacamole</strong_><br>
+       </div>
     </div>
   </div>
   <div class="column_portfolio_ incorrect">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F243_wool_pole_wing.png?v=1573495209794" alt="incorrect_2" style="width:100%">
-      <h4>wool</h4>
-      <p>pole</p>
-      <p>wing</p>
+      <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>wool</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>pole</strong_><br>
+         <code>Pruned:</code><strong_>wing</strong_><br>
+       </div>
     </div>
   </div>
   <div class="column_portfolio_ incorrect">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F175_radio_radio_oscilloscope_.png?v=1573495405975" alt="incorrect_2" style="width:100%">
-      <p>radio</p>
-      <p>radio</p>
-      <p>oscilloscope</p>
-  </div>
+       <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>radio</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>radio</strong_><br>
+         <code>Pruned:</code><strong_>oscilloscope</strong_><br>
+       </div>
+    </div>
   </div>
 <!-- END GRID -->
 </div>
