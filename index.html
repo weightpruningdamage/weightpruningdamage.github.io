@@ -168,7 +168,7 @@
       authors .authors-affiliations,
        .base-grid, .imgs-container,
       .cover-container, .descriptions_,
-      .description_, .column_portfolio, .column_portfolio_, .column_header_final {
+      .description_, .column_portfolio {
         width: 500px;
       }
       figcaption {
@@ -181,21 +181,21 @@
 
     @media (min-width: 768px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio,.column_portfolio_, .column_header_final {
+      .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 650px;
       }
     }
 
     @media (min-width: 992px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio, .column_portfolio_, .column_header_final {
+      .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 770px;
       }
     }
 
     @media (min-width: 1200px) {
       authors .authors-affiliations, .imgs-container,
-      .cover-container, .descriptions_, .description_, .column_portfolio, .column_portfolio_, .column_header_final {
+      .cover-container, .descriptions_, .description_, .column_portfolio {
         width: 970px;
       }
     }
@@ -345,6 +345,15 @@
   padding: 3px;
 }
 
+
+    
+.column_portfolio_  .column_portfolio .column_portfolio_final figcaption {
+      padding: 4px 8px;
+      word-wrap: break-word;
+      word-break: break-word;
+  }
+    
+
 /* Create three equal columns that floats next to each other */
 .column_portfolio {
   float: left;
@@ -352,13 +361,6 @@
   display: none; /* Hide columns by default */
 }
     
-.column_portfolio_  .column_portfolio .column_portfolio_1 figcaption {
-      padding: 4px 8px;
-      word-wrap: break-word;
-      word-break: break-word;
-  }
-    
-
     
 /* Create three equal columns that floats next to each other */
 .column_portfolio_ {
@@ -374,7 +376,7 @@
   display: none; /* Hide columns by default */
 }
 
-.column_header {
+.column_header  {
   float: left;
   width: 100.00%;
   display: none; /* Hide columns by default */
@@ -385,12 +387,14 @@
   width: 100.00%;
   display: none; /* Hide columns by default */
 }
+
     
-.column_header_final {
+.column_header_final  {
   float: left;
   width: 100.00%;
   display: none; /* Hide columns by default */
 }
+
 
 
 /* Clear floats after rows */
@@ -1371,34 +1375,34 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         overly sensitive to the reduction in capacity.</p>
 
   
-<div id="myBtnContainer_3">
-<button class="btn" onclick="filterSelectionFinal('sparsity_30')">30 Pruned</button>
- <button class="btn" onclick="filterSelectionFinal('sparsity_50')"> 50 Pruned</button>
-  <button class="btn active_3" onclick="filterSelectionFinal('sparsity_70')">70 Pruned</button>
-  <button class="btn" onclick="filterSelectionFinal('sparsity_90')"> 90 Pruned</button>
+<div id="myBtnContainer3">
+<button class="btn" onclick="filterSelectionfinal('sparsity_30')">30 Pruned</button>
+ <button class="btn" onclick="filterSelectionfinal('sparsity_50')"> 50 Pruned</button>
+  <button class="btn activefinal" onclick="filterSelectionfinal('sparsity_70')">70 Pruned</button>
+  <button class="btn" onclick="filterSelectionfinal('sparsity_90')"> 90 Pruned</button>
 <hr>
 </div>
 
 <!-- Portfolio Gallery Grid -->
       
 <div class="row">
-  <div class="column_header_final sparsity_30">
+  <div class="column_header_final sparsity_thirty">
     <h5>PIEs where the class object is in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
   </div>
-  <div class="column_header_final sparsity_50">
+  <div class="column_header_final sparsity_fifty">
     <div class="content">
     <h5>PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
     </div>
   </div>
   
-  <div class="column_header_final sparsity_70">
+  <div class="column_header_final sparsity_seventy">
     <div class="content">
     <h5>PIEs where the image would be considered by a human to be an atypical examplar of the category of images.
        </h5>
     </div>
   </div>
-  <div class="column_header_final sparsity_90">
+  <div class="column_header_final sparsity_ninety">
     <div class="content">
     <h5>PIEs where the image depicts an object that is semantically close to 
       various other classes present the data set (e.g.,
@@ -1409,61 +1413,36 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 </div>
       
 <div class="row">
-  <div class="column_portfolio_final sparsity_30">
+  <div class="column_portfolio_final sparsity_thirty">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fmaze_maze.png?v=1573664345071" alt="abstract_1" style="width:100%">
-  
     </div>
   </div>
   
-  <div class="column_portfolio_final sparsity_50">
+  <div class="column_portfolio_final sparsity_fifty">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fbeer_bottle.png?v=1573670223987" alt="abstract_1" style="width:100%">
-            <div class="figcaption">  
-      <code>True Label:</code>
-         <strong_>beer bottle</strong_><br>
-         <code>Non-Pruned:</code>
-         <strong_>beer bottle</strong_><br>
-         <code>Pruned:</code><strong_>sunscreen</strong_><br>
-       </div>
-    </div>
-  </div>
-  <div class="column_portfolio_final sparsity_70">
+     </div>
+  </div>      
+  <div class="column_portfolio_final sparsity_seventy">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fbottle.png?v=1573664743810" alt="abstract_1" style="width:100%">
-      <div class="figcaption">  
-      <code>True Label:</code>
-         <strong_>pop bottle</strong_><br>
-         <code>Non-Pruned:</code>
-         <strong_>restaurant</strong_><br>
-         <code>Pruned:</code><strong_>barber shop</strong_><br>
-       </div>
-    </div>
-  </div>
+     </div>
+  </div> 
 
 
-  <div class="column_portfolio_final sparsity_90">
+  <div class="column_portfolio_final sparsity_ninety">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Flimo_snow.png?v=1573664910123" alt="atypical_" style="width:100%">
-      <div class="figcaption">  
-      <code>True Label:</code>
-         <strong_>limousine</strong_><br>
-         <code>Non-Pruned:</code>
-         <strong_>bob sled</strong_><br>
-         <code>Pruned:</code><strong_>snowplow</strong_><br>
-       </div>
+      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Flimo_snow.png?v=1573664910123" alt="atypical_" style="width:100%">  
     </div>
   </div>
  
-
-
       
 <!-- END GRID -->
 </div>
-          
-           <h5>  At higher levels of pruning, more classes are impacted and the absolute % difference widens between the classes most and least impacted.   </h5>
-    </div>
-        <div class="description_">  
+     
+
+    <div class="description_">  
       <p>The directionality and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are relatively robust to the overall degradation experienced 
         by the model whereas others degrade in performance far more than the model itself. This amounts to 
         <em>selective brain damage</em> with performance on certain classes evidencing far more sensitivity 
@@ -1531,8 +1510,8 @@ function filterSelection_(c) {
   
 }
   
-filterSelectionFinal("sparsity_30") // Execute the function and show all columns
-function filterSelectionFinal(c) {
+filterSelectionfinal("sparsity_thirty") // Execute the function and show all columns
+function filterSelectionfinal(c) {
   var x, y, i;
   x = document.getElementsByClassName("column_portfolio_final");
   y = document.getElementsByClassName("column_header_final");
@@ -1596,15 +1575,14 @@ for (var i = 0; i < btns2.length; i++) {
   });
   
 // Add active class to the current button (highlight it)
-var btnContainer3 = document.getElementById("myBtnContainer_3");
+var btnContainer3 = document.getElementById("myBtnContainer3");
 var btns3 = btnContainer3.getElementsByClassName("btn");
 for (var i = 0; i < btns3.length; i++) {
   btns3[i].addEventListener("click", function(){
-    var current3 = document.getElementsByClassName("active_3");
-    current3[0].className = current3[0].className.replace(" active_3", "");
-    this.className += " active_3";
+    var current3 = document.getElementsByClassName("activefinal");
+    current3[0].className = current3[0].className.replace(" activefinal", "");
+    this.className += " activefinal";
   });
-}
 </script> 
   </div>
 
