@@ -517,8 +517,7 @@ figcaption .strong_, {
             <p> An understanding of these trade-offs is critical when deep neural networks are used for sensitive tasks such 
               as hiring <dt-cite key="Dastin_2018,Harwell_2019"></dt-cite>, health care diagnostics <dt-cite key="2019Hongtao,Gruetzemacher20183DDL"></dt-cite> or self-driving cars <dt-cite key="2017Telsa,2019Uber"></dt-cite>. For these tasks, the introduction of pruning may be at odds with fairness objectives 
               to avoid disparate treatment of protected attributes and/or the need to guarantee a certain level of recall for certain classes <dt-cite key="2016fair_prediction,2019arXiv190110566Z,NIPS2016_6316,2014certifying_removing_disparate_impact,false_discovery_rates"></dt-cite>. 
-              Pruning is already commonly used in these domains, 
-           often driven by the resource constraints of deploying models to mobile phone or embedded devices <dt-cite key="2017Andre"></dt-cite>. </p>
+              Pruning is already commonly used in these domains, often driven by the resource constraints of deploying models to mobile phone or embedded devices <dt-cite key="2017Andre"></dt-cite>. </p>
       <div class="imgs-container">
           </div>
           <div class="imgs-container">
@@ -1303,10 +1302,14 @@ figcaption .strong_, {
 <!-- END GRID -->
 </div>
 <div class="description_">   
-   <p> PIEs are a subset of images that are most sensitive to varying the number of weights in a deep neural network. ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. 
+   <p> PIEs are a subset of images that are more sensitive to varying the number of weights in a deep neural network. ImageNet is a single object classification problem and yet many PIE images depict multiple objects where a few different labels may be considered appropriate or incorrectly labelled data. 
  The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
 problem that is better addressed in the data cleaning pipeline.  </p>
   <p>  On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For sensitive tasks such as patient risk stratification or medical diagnoses <dt-cite key="NIPS2012_4525"></dt-cite>, our results suggest caution should be excercised before deploying pruned models. </p>
+     <p> PIE provides one tool to become more familiar with the underlying data by surfacing
+      a far smaller subset of examples the model finds challenging to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
+    where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
+
     
   <div id="myBtnContainer_2">
   <button class="btn active_" onclick="filterSelection_('pie')"> pie </button>
@@ -1352,10 +1355,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 </div>
       
 
-    <p> PIE provides one tool to become more familiar with the underlying data by surfacing
-      a far smaller subset of examples the model finds challenging to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
-    where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
- </div>
+  </div>
 
 <div class="descriptions_">  
 <h3>What class categories are impacted by pruning?</h3>
