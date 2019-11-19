@@ -516,7 +516,7 @@ figcaption .strong_, {
                 pruning?</i></p>
             <p> An understanding of these trade-offs is critical when deep neural networks are used for sensitive tasks such 
               as hiring <dt-cite key="Dastin_2018,Harwell_2019"></dt-cite>, health care diagnostics <dt-cite key="2019Hongtao,Gruetzemacher20183DDL"></dt-cite> or self-driving cars <dt-cite key="2017Telsa,2019Uber"></dt-cite>. For these tasks, the introduction of pruning may be at odds with fairness objectives 
-              to treat protected attributes uniformly and/or the need to guarantee a certain level of recall for certain classes <dt-cite key="2016fair_prediction, 2019arXiv190110566Z,NIPS2016_6316, 2014certifying_removing_disparate_impact,false_discovery_rates"></dt-cite>. 
+              to avoid disparate treatment of protected attributes and/or the need to guarantee a certain level of recall for certain classes <dt-cite key="2016fair_prediction,2019arXiv190110566Z,NIPS2016_6316,2014certifying_removing_disparate_impact,false_discovery_rates"></dt-cite>. 
               Pruning is already commonly used in these domains, 
            often driven by the resource constraints of deploying models to mobile phone or embedded devices <dt-cite key="2017Andre"></dt-cite>. </p>
       <div class="imgs-container">
@@ -1659,6 +1659,79 @@ for (var i = 0; i < btns3.length; i++) {
 </body>
 <script type="text/bibliography">
 
+
+@article{false_discovery_rates,
+author = {Ridgeway, Greg and MacDonald, John},
+year = {2009},
+month = {06},
+pages = {661-668},
+title = {Doubly Robust Internal Benchmarking and False Discovery Rates for Detecting Racial Bias in Police Stops},
+volume = {104},
+journal = {Journal of the American Statistical Association},
+doi = {10.1198/jasa.2009.0034}
+}
+
+@ARTICLE{2014certifying_removing_disparate_impact,
+       author = {{Feldman}, Michael and {Friedler}, Sorelle and {Moeller}, John and
+         {Scheidegger}, Carlos and {Venkatasubramanian}, Suresh},
+        title = "{Certifying and removing disparate impact}",
+      journal = {arXiv e-prints},
+     keywords = {Statistics - Machine Learning, Computer Science - Computers and Society},
+         year = "2014",
+        month = "Dec",
+          eid = {arXiv:1412.3756},
+        pages = {arXiv:1412.3756},
+archivePrefix = {arXiv},
+       eprint = {1412.3756},
+ primaryClass = {stat.ML},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2014arXiv1412.3756F},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@incollection{NIPS2016_6316,
+title = {Satisfying Real-world Goals with Dataset Constraints},
+author = {Goh, Gabriel and Cotter, Andrew and Gupta, Maya and Friedlander, Michael P},
+booktitle = {Advances in Neural Information Processing Systems 29},
+editor = {D. D. Lee and M. Sugiyama and U. V. Luxburg and I. Guyon and R. Garnett},
+pages = {2415--2423},
+year = {2016},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/6316-satisfying-real-world-goals-with-dataset-constraints.pdf}
+}
+
+
+@ARTICLE{2019arXiv190110566Z,
+       author = {{Zink}, Anna and {Rose}, Sherri},
+        title = "{Fair Regression for Health Care Spending}",
+      journal = {arXiv e-prints},
+     keywords = {Statistics - Applications, Computer Science - Computers and Society, Statistics - Methodology, Statistics - Machine Learning},
+         year = "2019",
+        month = "Jan",
+          eid = {arXiv:1901.10566},
+        pages = {arXiv:1901.10566},
+archivePrefix = {arXiv},
+       eprint = {1901.10566},
+ primaryClass = {stat.AP},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2019arXiv190110566Z},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2016fair_prediction,
+       author = {{Chouldechova}, Alexandra},
+        title = "{Fair prediction with disparate impact: A study of bias in recidivism prediction instruments}",
+      journal = {arXiv e-prints},
+     keywords = {Statistics - Applications, Computer Science - Computers and Society, Statistics - Machine Learning},
+         year = "2016",
+        month = "Oct",
+          eid = {arXiv:1610.07524},
+        pages = {arXiv:1610.07524},
+archivePrefix = {arXiv},
+       eprint = {1610.07524},
+ primaryClass = {stat.AP},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016arXiv161007524C},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
 
 
 @incollection{NIPS2016_6300,
