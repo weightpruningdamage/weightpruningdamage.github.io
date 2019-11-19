@@ -542,11 +542,11 @@ figcaption .strong_, {
   
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('atypical')"> atypical examples</button>
-  <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
+ <button class="btn" onclick="filterSelection('frequently')"> frequently co-occuring classes</button>
   <button class="btn" onclick="filterSelection('incorrect')"> incorrect or inadequate ground truth</button>
   <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
-  <button class="btn" onclick="filterSelection('frequently')"> frequently co-occuring classes</button>
   <button class="btn" onclick="filterSelection('multiple')"> multiple-object image</button>
+    <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
 <hr>
 </div>
 
@@ -1219,54 +1219,73 @@ figcaption .strong_, {
        </div>
     </div>
   </div>
-      
-      <h4></h4>
-      <p>tennis ball</p>
-      <p></p>
-    </div>
-  </div>
+  
   <div class="column_portfolio_ frequently">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fcanoe.png?v=1573665479691" alt="multiple_1" style="width:100%">
-      <h4>paddle</h4>
-      <p>paddle</p>
-      <p>canoe</p>
+         <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>paddle</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>paddle</strong_><br>
+         <code>Pruned:</code><strong_>canoe</strong_><br>
+       </div>
+    </div>
   </div>
-  </div>
+      
   <div class="column_portfolio_ frequently">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F298_sandbar_seashore_sandbar.png?v=1573670132184" alt="multiple_1" style="width:100%">
-      <h4>sandbar</h4>
-      <p>seashore</p>
-      <p>sandbar</p>
+         <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>sandbar</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>seashore</strong_><br>
+         <code>Pruned:</code><strong_>sandbar</strong_><br>
+       </div>
+    </div>
   </div>
-  </div>
+ 
 
  <div class="column_portfolio_ incorrect">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Fcrash_helmet.png?v=1573663972347" alt="incorrect_1" style="width:100%">
-      <h4>crash helmet</h4>
-      <p>gas mask</p>
-      <p>lens cap</p>
+        <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>crash helmet</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>gas mask</strong_><br>
+         <code>Pruned:</code><strong_>lens cap</strong_><br>
+       </div>
     </div>
   </div>
+ 
   <div class="column_portfolio_ incorrect">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F197_envelope_dumbbell_maraca.png?v=1573669161285" alt="incorrect_1" style="width:100%">
-      <h4>envelope</h4>
-      <p>dumbbell</p>
-      <p>maraca</p>
+        <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>envelope</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>dumbbell</strong_><br>
+         <code>Pruned:</code><strong_>maraca</strong_><br>
+       </div>
     </div>
   </div>
+   
   <div class="column_portfolio_ incorrect">
     <div class="content">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F290_polecat_black_footed_ferret_malamute.png?v=1573670791482" alt="incorrect_1" style="width:100%">
-      <h4>polecat</h4>
-      <p>black footed ferret</p>
-      <p>malamute</p>
+       <div class="figcaption">  
+      <code>True Label:</code>
+         <strong_>envelope</strong_><br>
+         <code>Non-Pruned:</code>
+         <strong_>black footed ferret</strong_><br>
+         <code>Pruned:</code><strong_>malamute</strong_><br>
+       </div>
+    </div>
   </div>
-  </div>
-
+      
 <!-- END GRID -->
 </div>
 <div class="description_">   
