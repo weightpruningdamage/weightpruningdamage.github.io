@@ -288,7 +288,7 @@
       text-align: center;
       font-weight: bold;
       font-size: 14px;
-      padding-right: 0px;
+      padding-right: 6px;
       display: table-cell;
       width: 33%;
     }
@@ -566,35 +566,40 @@ figcaption .strong_, {
               as hiring <dt-cite key="Dastin_2018,Harwell_2019"></dt-cite>, health care diagnostics <dt-cite key="2019Hongtao,Gruetzemacher20183DDL"></dt-cite> or self-driving cars <dt-cite key="2017Telsa,2019Uber"></dt-cite>. For these tasks, the introduction of pruning may be at odds with fairness objectives 
               to avoid disparate treatment of protected attributes and/or the need to guarantee a level of recall for certain classes <dt-cite key="2016fair_prediction,2019arXiv190110566Z,NIPS2016_6316,2014certifying_removing_disparate_impact,false_discovery_rates"></dt-cite>. 
               Pruning is already commonly used in these domains, often driven by the resource constraints of deploying models to mobile phone or embedded devices <dt-cite key="2017Andre"></dt-cite>. </p>
-      <div class="imgs-container">
-          </div>
-          <div class="imgs-container">
-            <div class="img-container">
-            </div>
-            <div class="img-container">
-            </div>
-            <div class="img-container">
-            </div>
-          </div>
+       <p> In this work, we propose a formal framework to identify the classes and images where there is a high level of disagreement or difference in
+              generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), 
+              and classes are systematically more impacted by the introduction of sparsity. </p>
+  <div>
+           
+           <div class="imgs-container">
+        
+            <div class="descriptions_">
+              <p> The primary findings of our work can be summarized as follows: </p>
+
           <div class="img-container">1. Pruning has a non-uniform impact across classes; a fraction of classes are disproportionately and systematically impacted by the introduction of sparsity.</div>
            <div class="img-container">2. The examples most impacted by pruning, which we term <i>Pruning Identified Exemplars</i> (PIEs), are more challenging for both pruned and non-pruned models to classify.</div>
           <div class="img-container">3. Pruning significantly reduces robustness to image corruptions and natural adversarial images.</div>
       </div>
      </div>
-    <div class="description_">
-
-            <p> In this work, we propose a formal framework to identify the classes and images where there is a high level of disagreement or difference in
-              generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), 
-              and classes are systematically more impacted by the introduction of sparsity. </p>
-  <div>
+   
+   <div class="descriptions_">
+  <h3>PIE: Pruning Identified Exemplars</h3>
+     </div>
+   <div class="description_">
+     
+        <p> PIEs are images where the most frequent prediction differs between a population of independently trained pruned and non-pruned models. We focus on open source research datasets such as ImageNet and find that PIE images are more challenging for both pruned and non-pruned models.
+       Restricting the test-set to a random sample of PIE images sharply degrades top-1 accuracy.
+     Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.  </p>
+ 
       <div class="content">
   <hr>
      <div class="figcaption">
          <strong_>PIE images are more challenging for both pruned and non-pruned models to classify.
-           This suggests that pruning causes deep neural networks to "forget" the examples where there is already a high level of predictive uncertainty.
+           Pruning appears to cause deep neural networks to "forget" the examples where there is already a high level of predictive uncertainty.
            <br><br>
-           Click on the buttons below to view a sample of ImageNet PIEs in each category. 
-      The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_>
+           Go ahead and click on the buttons below to view a sample of ImageNet PIEs in each category. 
+      The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned 
+           modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_>
   </div>
   <hr>
 <div id="myBtnContainer">
@@ -985,11 +990,7 @@ figcaption .strong_, {
 </div>
 </div>
   
-<div class="description_">   
-     <p> PIEs are images where the most frequent prediction differs between a population of independently trained pruned and non-pruned models. We focus on open source research datasets such as ImageNet and find that PIE images are more challenging for both pruned and non-pruned models.
-       Restricting the test-set to a random sample of PIE images sharply degrades top-1 accuracy.
-     Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.  </p>
-  
+<div class="description_">    
    <p> To better understand why PIEs are more sensitive to capacity,
     we conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
                   depict multiple objects or require fine-grained classification. </p>
