@@ -1,4 +1,5 @@
-// modified distill.pub template v1 for world models.
+// modified distill.pub template v1 for pruning identified exemplers. This version of the
+// distill template is from the world models work by David Ha (https://worldmodels.github.io/).
 
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :

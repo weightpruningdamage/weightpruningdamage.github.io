@@ -453,33 +453,13 @@
 }
 
 /* Add a dark background color to the active button */
-.btn.active_1 {
-   background-color: #666;
-  color: white;
-  cursor:none;
-}
-   
+.btn.active_1, .btn.active_2, .btn.active_3, .btn.active_4, .btn:target
+{ background:linear-gradient(to right, #666 3%, #666  100%);
 
-/* Add a dark background color to the active button */
-.btn.active_2 {
-   background-color: #666;
   color: white;
   cursor:none;
 }
-    
-/* Add a dark background color to the active button */
-.btn.active_3 {
-  background-color: #666;
-  color: white;
-  cursor:none;
-}
-    
-/* Add a dark background color to the active button */
-.btn.active_4 {
-   background-color: #666;
-  color: white;
-  cursor:none;
-}
+
     
 figcaption,
 .figcaption {
@@ -601,7 +581,7 @@ figcaption .strong_, {
       The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned 
            modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_>
   </div>
-  <hr>
+<br>
 <div id="myBtnContainer">
   <button class="btn active_1" onclick="filterSelection('atypical')"> atypical examples</button>
   <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
@@ -1034,7 +1014,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   </div>
  <div class="column_headerfinalfinal frequently">
     <div class="content">
-<h5>frequently co-occuring labels: a sample of PIEs where multiple object(s) frequently co-occur together. 
+<h5>frequently co-occuring labels: a sample of PIEs where multiple object(s) frequently co-occur together in the same image. 
   In certain cases, such as <i>projectile</i> and <i>missile</i>, this is because both labels are acceptable to describe the same object. </h5>
     </div>
   </div>
@@ -1462,20 +1442,21 @@ problem that is better addressed in the data cleaning pipeline.  </p>
        <p> Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key="1954anderson_darling,2002huber"></dt-cite>. </p>      
       <p>To compare class level performance between pruned and non-pruned models, we use a two-sample, two-tailed,
-        independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and apply the t-test
+        independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We independently train a population of pruned and non-pruned models and apply the t-test
  to determine whether the means of the samples differ significantly.
         This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is overly sensitive to the reduction in capacity.</p>
 
      
       <div class="content">
      <div class="figcaption">
-      <strong_>  We indendently train a population of pruned and non-pruned models and apply the t-test to determine whether the means of the samples differ significantly. At all levels of pruning, some classes are impacted far more than others 
+       <hr>
+      <strong_>  We independently train a population of pruned and non-pruned models and apply the t-test to determine whether the means of the samples differ significantly. At all levels of pruning, some classes are impacted far more than others 
         (classes that are statistically significant indicated by pink vs. the classes in grey where the relative change in performance is not statistically significant). We plot both the absolute % change in class recall (grey and pink bars) and
           the normalized accuracy relative to change in overall top-1 accuracy caused by pruning (grey and green markers).
         <br><br>
         Click on the buttons below to view the classes with a statistically significant relative change in performance (purple bars). The % of weights removed from the model is indicated by the title of each chart.</strong_>
   </div>
-  <hr>
+  <br>
   
 <div id="myBtnContainer_3">
 <button class="btn active_3" onclick="filterSelectionfinal('thirty')"> 30% pruned </button>
