@@ -437,7 +437,6 @@
   outline: none;
   padding: 12px 16px;
   font-size: 14px;
-  box-shadow: 0px 10px 14px -7px #276873;
   background-color:#599bb3;
   color:#ffffff;
   background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
@@ -454,9 +453,31 @@
 }
 
 /* Add a dark background color to the active button */
-.btn.active {
+.btn.active_1 {
+   background-color: #666;
+  color: white;
+  cursor:none;
+}
+    
+/* Add a dark background color to the active button */
+.btn.active_2 {
+   background-color: #666;
+  color: white;
+  cursor:none;
+}
+    
+/* Add a dark background color to the active button */
+.btn.active_3 {
   background-color: #666;
-   color: white;
+  color: white;
+  cursor:none;
+}
+    
+/* Add a dark background color to the active button */
+.btn.active_4 {
+   background-color: #666;
+  color: white;
+  cursor:none;
 }
     
 figcaption,
@@ -576,7 +597,7 @@ figcaption .strong_, {
   </div>
   <hr>
 <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('atypical')"> atypical examples</button>
+  <button class="btn active_1" onclick="filterSelection('atypical')"> atypical examples</button>
   <button class="btn" onclick="filterSelection('fine')"> fine grained</button>
     <button class="btn" onclick="filterSelection('abstract')"> abstract classes</button>
 <hr>
@@ -986,7 +1007,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   </div>
   <hr>
 <div id="myBtnContainer_4">
- <button class="btn" onclick="filterSelectionfinalfinal('frequently')"> frequently co-occuring labels</button>
+ <button class="btn active" onclick="filterSelectionfinalfinal('frequently')"> frequently co-occuring labels</button>
   <button class="btn" onclick="filterSelectionfinalfinal('incorrect')"> incorrect or inadequate ground truth</button>
   <button class="btn" onclick="filterSelectionfinalfinal('multiple')"> multiple-object image</button>
 <hr>
@@ -1385,7 +1406,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 
     
   <div id="myBtnContainer_2">
-  <button class="btn active_" onclick="filterSelection_('pie')"> generalization to pie </button>
+  <button class="btn active_2" onclick="filterSelection_('pie')"> generalization to pie </button>
   <button class="btn" onclick="filterSelection_('without')"> generalization excluding pie</button>
 <hr>
   
@@ -1458,7 +1479,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   <hr>
   
 <div id="myBtnContainer_3">
-<button class="btn active_" onclick="filterSelectionfinal('thirty')"> 30% pruned </button>
+<button class="btn active_3" onclick="filterSelectionfinal('thirty')"> 30% pruned </button>
 <button class="btn" onclick="filterSelectionfinal('fifty')"> 50% pruned </button>
 <button class="btn" onclick="filterSelectionfinal('seventy')"> 70% pruned</button>
 <button class="btn" onclick="filterSelectionfinal('ninety')"> 90% pruned </button>
@@ -1669,9 +1690,9 @@ var btnContainer1 = document.getElementById("myBtnContainer");
 var btns1 = btnContainer1.getElementsByClassName("btn");
 for (var i = 0; i < btns1.length; i++) {
   btns1[i].addEventListener("click", function(){
-    var current1 = document.getElementsByClassName("active");
-    current1[0].className = current1[0].className.replace(" active", "");
-    this.className += " active";
+    var current1 = document.getElementsByClassName("active_1");
+    current1[0].className = current1[0].className.replace(" active_1", "");
+    this.className += " active_1";
   });
 }
   
@@ -1680,9 +1701,9 @@ var btnContainer2 = document.getElementById("myBtnContainer_2");
 var btns2 = btnContainer2.getElementsByClassName("btn");
 for (var i = 0; i < btns2.length; i++) {
   btns2[i].addEventListener("click", function(){
-    var current2 = document.getElementsByClassName("active_");
-    current2[0].className = current2[0].className.replace(" active_", "");
-    this.className += " active_";
+    var current2 = document.getElementsByClassName("active_2");
+    current2[0].className = current2[0].className.replace(" active_2", "");
+    this.className += " active_2";
   });
 }
   
@@ -1691,9 +1712,9 @@ var btnContainer3 = document.getElementById("myBtnContainer_3");
 var btns3 = btnContainer3.getElementsByClassName("btn");
 for (var i = 0; i < btns3.length; i++) {
   btns3[i].addEventListener("click", function(){
-    var current3 = document.getElementsByClassName("active_");
-    current3[0].className = current3[0].className.replace(" active_", "");
-    this.className += " active_";
+    var current3 = document.getElementsByClassName("active_3");
+    current3[0].className = current3[0].className.replace(" active_3", "");
+    this.className += " active_3";
   });
 }
   
@@ -1702,9 +1723,9 @@ var btnContainer4 = document.getElementById("myBtnContainer_4");
 var btns4 = btnContainer4.getElementsByClassName("btn");
 for (var i = 0; i < btns4.length; i++) {
   btns4[i].addEventListener("click", function(){
-    var current4 = document.getElementsByClassName("active_");
-    current4[0].className = current4[0].className.replace(" active_", "");
-    this.className += " active_";
+    var current4 = document.getElementsByClassName("active_4");
+    current4[0].className = current4[0].className.replace(" active_4", "");
+    this.className += " active_4";
   });
 }
 </script> 
