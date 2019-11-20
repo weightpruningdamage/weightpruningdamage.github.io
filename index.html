@@ -972,13 +972,15 @@ figcaption .strong_, {
    <p> PIEs are a subset of images that are more sensitive to varying the number of weights in a deep neural network. To better understand why PIEs are more sensitive to capacity,
     we conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
                   depict multiple objects or require fine-grained classification. </p>
-      <p> 71% of all PIE images are classified as either having incorrect ground  ImageNet is treated as a single image
-    classification problem and yet many PIE images depict multiple objects, incorrect ground truth or depict objects where more than one label category in the dataset could be considered appropriate by a human. The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
+      <p> Over half of all PIE images were classified by human participants as either having an incorrect ground truth label or depicting multiple objects. The over-indexing of poorly structured data hints that 
+        the explosion in number of parameters for single image classification tasks like ImageNet may be solving a
 problem that is better addressed in the data cleaning pipeline.  </p>
   <div>
       <div class="content">
      <div class="figcaption">
-      <strong_> PIEs overindex on poorly structured data for single image classification tasks. For these images, predicting the correct ground truth is likely an incomplete measure of the models ability to generalize to unseen data (as a huamn.
+      <strong_> PIEs overindex on data that is poorly structured for a single image classification tasks. For these images, predicting the correct ground truth may be an incomplete measure of generalization ability to unseen data. 
+        For example, a pruned model that predicts <i>suit</i> instead of the true label of <i>groom</i> would still be considered accurate by most humans. The <i>groom</i> is wearing a <i>suit</i> and thus both labels could be acceptable.
+        However, this prediction would be penalized by measures such as top-1 accuracy.
         <br><br>
         Click on the buttons below to view a sample of ImageNet PIEs in each category.
      The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_>
@@ -1440,7 +1442,7 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         in a statistically significant way. This amounts to asking -- <i>did the class perform better or worse than expected given the overall change in top-1 accuracy after pruning?</i></p>
        <p> Evaluating whether the difference between a sample of mean-shifted class accuracy from pruned and non-pruned models is
         “real” can be thought of as determining whether two data samples are drawn from the same underlying distribution, which is the subject of a large body of goodness of fit literature <dt-cite key="1954anderson_darling,2002huber"></dt-cite>. </p>      
-      <p>In this work, we use a two-sample, two-tailed,
+      <p>To compare class level performance between pruned and non-pruned models, we use a two-sample, two-tailed,
         independent Welch’s t-test <dt-cite key="1947welch"></dt-cite>. We indendently train a population of pruned and non-pruned models and apply the t-test
  to determine whether the means of the samples differ significantly.
         This methodology allows us to identify a subset of classes where model performance either remains relatively robust to the loss of model weights or is overly sensitive to the reduction in capacity.</p>
