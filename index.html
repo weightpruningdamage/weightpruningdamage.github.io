@@ -564,11 +564,6 @@ figcaption .strong_, {
             <p> In this work, we propose a formal framework to identify the classes and images where there is a high level of disagreement or difference in
               generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), 
               and classes are systematically more impacted by the introduction of sparsity. </p>
-                <p> PIEs are images where the most frequent prediction differs between a population of independently trained pruned and non-pruned models. We focus on open source research datasets and find that
-     PIEs in the ImageNet dataset tend to over-index on poorly structured data and more challenging examples.</p>
-   <p> PIE images are more challenging for both pruned and non-pruned models. Restricting the test-set to a random sample of PIE images sharply degrades top-1 accuracy.
-     Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.  </p>
-  
   <div>
       <div class="content">
   <hr>
@@ -968,8 +963,11 @@ figcaption .strong_, {
 </div>
   
 <div class="description_">   
+     <p> PIEs are images where the most frequent prediction differs between a population of independently trained pruned and non-pruned models. We focus on open source research datasets such as ImageNet and find that PIE images are more challenging for both pruned and non-pruned models.
+       Restricting the test-set to a random sample of PIE images sharply degrades top-1 accuracy.
+     Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.  </p>
   
-   <p> PIEs are a subset of images that are more sensitive to varying the number of weights in a deep neural network. To better understand why PIEs are more sensitive to capacity,
+   <p> To better understand why PIEs are more sensitive to capacity,
     we conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
                   depict multiple objects or require fine-grained classification. </p>
       <p> Over half of all PIE images were classified by human participants as either having an incorrect ground truth label or depicting multiple objects. The over-indexing of poorly structured data hints that 
@@ -1559,8 +1557,9 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   future consideration include evaluating the impact of pruning on additional domains such as language and audio, a consideration of
   different architectures and a comparison of the relative trade-offs incurred by pruning methods with other popular compression techniques such as quantization. 
    </p>
-
+</div>
 <script>
+
 filterSelection("atypical") // Execute the function and show all columns
 function filterSelection(c) {
   var x, y, i;
@@ -1721,8 +1720,8 @@ for (var i = 0; i < btns4.length; i++) {
  
 <p>We thank the generosity of our peers and colleagues for valuable feedback on earlier versions of this work. In particular, we would like to acknowledge the valuable input of Jonas Kemp, Simon Kornblith, Julius Adebayo, Dumitru Erhan, Hugo Larochelle, 
   Nicolas Papernot, Catherine Olsson, Cliff Young, Martin Wattenberg, 
-  Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros and
-  Prajit Ramachandran, Pieter Kindermans, Moustapha Cisse, Erich Elsen, Nyalleng Moorosi. </p>
+  Utku Evci, James Wexler, Trevor Gale,  Melissa Fabros,
+  Prajit Ramachandran, Pieter Kindermans, Moustapha Cisse, Erich Elsen and Nyalleng Moorosi. </p>
   <p> We thank the institutional support and encouragement of Dan Nanas,
   Rita Ruiz, Sally Jesmonth and Alexander Popper. </p>
   
@@ -2114,4 +2113,3 @@ journal = {American Journal of Psychiatry}
 </script> 
 
 <script language="javascript" type="text/javascript" src="lib/jquery-1.12.4.min.js"></script>
-</html>
