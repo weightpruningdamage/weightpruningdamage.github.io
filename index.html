@@ -458,7 +458,8 @@
   color: white;
   cursor:none;
 }
-    
+   
+
 /* Add a dark background color to the active button */
 .btn.active_2 {
    background-color: #666;
@@ -1395,11 +1396,8 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 <!-- END GRID -->
 </div>
 </div>
-
-
-  
-  
-  <p>  On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For sensitive tasks such as patient risk stratification or medical diagnoses <dt-cite key="NIPS2012_4525"></dt-cite>, our results suggest caution should be excercised before deploying pruned models. </p>
+  <div class="description_">   
+  <p> On real world datasets, the stakes are often much higher than correctly classifying a <i>paddle</i> or <i>guacamole</i>. For sensitive tasks such as patient risk stratification or medical diagnoses <dt-cite key="NIPS2012_4525"></dt-cite>, our results suggest caution should be excercised before deploying pruned models. </p>
      <p> PIE provides one tool to become more familiar with the underlying data by surfacing
       a far smaller subset of examples the model finds challenging to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
     where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
@@ -1590,6 +1588,7 @@ function filterSelection(c) {
   y = document.getElementsByClassName("column_header_");
   // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
+
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
@@ -1608,6 +1607,7 @@ function filterSelection_(c) {
   z = document.getElementsByClassName("column_two_fig");
   // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
+
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
@@ -1630,6 +1630,7 @@ function filterSelectionfinal(c) {
   y = document.getElementsByClassName("column_headerfinal");
   // Add the "show" class (display:block) to the filtered elements,
   // and remove the "show" class from the elements that are not selected
+
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
