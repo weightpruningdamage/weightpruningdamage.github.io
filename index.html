@@ -524,13 +524,13 @@ figcaption .strong_, {
             
            <p>In 1990, a popular paper was published titled <i>Optimal Brain Damage</i> 
               <dt-cite key="Cun90optimalbrain"></dt-cite>. 
-              The paper was amongst the first  <dt-cite key="Hassibi93secondorder,1992_nowlan_hinton,NIPS1990_Andreas_weight_elimination"></dt-cite> to propose that deep neural networks could be pruned of ``excess capacity'' in a similar way 
+              The paper was amongst the first  <dt-cite key="Hassibi93secondorder,1992_nowlan_hinton,NIPS1990_Andreas_weight_elimination"></dt-cite> to propose that deep neural networks could be pruned of "excess capacity" in a similar way 
               to our biological synaptic pruning. In deep neural networks, weights are pruned or removed by 
               from the network by setting the value to zero.
               Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone.</p>
              <p>  At face value, pruning does appear to promise you can can (almost) have it all. 
                State of art pruning methods remove the 
-               majority of the weights with minimal degradation to top-1 accuracy <dt-cite key="tgale_shooker_2019"></dt-cite>. 
+               majority of the weights with minimal degradation to top-1 accuracy. For example, remarkably it is possible to remove 90% of the weights of a ResNet-50 and lose less than 3% of top-1 accuracy on ImageNet <dt-cite key="tgale_shooker_2019"></dt-cite>. 
               These newly slimmed down networks require less memory, energy consumption 
                and are faster at producing predictions. 
                All these attributes make pruned models ideal for deploying deep neural networks to resource constrained environments.</p>
@@ -564,7 +564,7 @@ figcaption .strong_, {
             <p> In this work, we propose a formal framework to identify the classes and images where there is a high level of disagreement or difference in
               generalization performance between pruned and non-pruned models.  We find that certain examples, which we term pruning identified exemplars (PIEs), 
               and classes are systematically more impacted by the introduction of sparsity. </p>
-                <p> PIEs are images where the most frequent prediction differs between a population of independently trained pruned and non-pruned models. In this work, we focus on open source research datasets and find that
+                <p> PIEs are images where the most frequent prediction differs between a population of independently trained pruned and non-pruned models. We focus on open source research datasets and find that
      PIEs in the ImageNet dataset tend to over-index on poorly structured data and more challenging examples.</p>
    <p> PIE images are more challenging for both pruned and non-pruned models. Restricting the test-set to a random sample of PIE images sharply degrades top-1 accuracy.
      Removing PIEs from the test-set improves top-1 accuracy for both pruned and non-pruned models.  </p>
@@ -574,7 +574,8 @@ figcaption .strong_, {
   <hr>
      <div class="figcaption">
          <strong_>PIE images are more challenging for both pruned and non-pruned models to classify. This suggests that pruning causes deep neural networks to "forget" the examples where there is already a high level of predictive uncertainty.
-           Click on the buttons to view a sample of ImageNet PIEs in each category. 
+           <br><br>
+           Click on the buttons below to view a sample of ImageNet PIEs in each category. 
       The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_>
   </div>
   <hr>
@@ -592,15 +593,17 @@ figcaption .strong_, {
     <h5>abstract exemplars: a sample of PIEs where the class object is in an abstract form, such as a painting, drawing or rendering
         using a different material.</h5>
   </div>
-  <div class="column_header_ incorrect">
+    <div class="column_header_ fine">
     <div class="content">
-    <h5>incorrect or inadequate ground truth: a sample of PIEs where the ground truth label for the image is incorrect or there is insufficient information for a human to predict the correct ground truth label.</h5>
+    <h5>fine grained: a sample ofPIEs where the image depicts an object that is semantically close to 
+      various other classes present the data set (e.g.,
+      rock crab and fiddler crab, cuirass and breastplate).</h5>
     </div>
   </div>
   
   <div class="column_header_ atypical">
     <div class="content">
-    <h5>atypical exemplars: a sample of PIEs where the image would be considered by a human to be an atypical unusual or outlier example from the distribution of images in a given category.
+    <h5>atypical exemplars: a sample of PIEs where the image would be considered by a human to be an unusual or outlier example from the distribution of images in a given category.
        </h5>
     </div>
   </div>
@@ -974,7 +977,9 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   <div>
       <div class="content">
      <div class="figcaption">
-      <strong_> PIEs overindex on poorly structured data for single image classification tasks. For these images, predicting the correct ground truth is likely an incomplete measure of the models ability to generalize to unseen data (as a huamn. Click on the buttons below to view a sample of ImageNet PIEs in each category.
+      <strong_> PIEs overindex on poorly structured data for single image classification tasks. For these images, predicting the correct ground truth is likely an incomplete measure of the models ability to generalize to unseen data (as a huamn.
+        <br><br>
+        Click on the buttons below to view a sample of ImageNet PIEs in each category.
      The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_>
   </div>
   <hr>
