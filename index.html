@@ -599,7 +599,8 @@ figcaption .strong_, {
   
   <div class="column_header_ atypical">
     <div class="content">
-    <h5>atypical exemplars: a sample of PIEs where the image would be considered by a human to be an unusual or outlier example from the distribution of images in a given category.
+    <h5>atypical exemplars: a sample of PIEs where the image would be considered by a human to be an unusual 
+      or outlier example from the distribution of images in a given category.
        </h5>
     </div>
   </div>
@@ -1448,8 +1449,9 @@ problem that is better addressed in the data cleaning pipeline.  </p>
      
       <div class="content">
      <div class="figcaption">
-      <strong_>  We indendently train a population of pruned and non-pruned models and apply the t-test to determine whether the means of the samples differ significantly. At all levels of pruning, some classes are impacted far more than others (classes that are statistically significant indicated by pink and green). We plot both the absolute % change in class recall (pink) and
-          the normalized accuracy relative to change in overall top-1 accuracy caused by pruning (green).
+      <strong_>  We indendently train a population of pruned and non-pruned models and apply the t-test to determine whether the means of the samples differ significantly. At all levels of pruning, some classes are impacted far more than others 
+        (classes that are statistically significant indicated by pink vs. the classes in grey where the relative change in performance is not statistically significant). We plot both the absolute % change in class recall (grey and pink bars) and
+          the normalized accuracy relative to change in overall top-1 accuracy caused by pruning (grey and green markers).
         <br><br>
         Click on the buttons below to view the classes with a statistically significant relative change in performance (purple bars). The % of weights removed from the model is indicated by the title of each chart.</strong_>
   </div>
