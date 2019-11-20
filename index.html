@@ -353,8 +353,8 @@
     
 .column_portfolio_  .column_portfolio .column_portfoliofinal figcaption {
       padding: 4px 8px;
-      word-wrap: break-word;
-      word-break: break-word;
+     word-wrap: break-all;
+      word-break: break-all;
   }
     
 /* Create three equal columns that floats next to each other */
@@ -573,7 +573,8 @@ figcaption .strong_, {
       <div class="content">
   <hr>
      <div class="figcaption">
-         <strong_>PIE images are more challenging for both pruned and non-pruned models to classify. This suggests that pruning causes deep neural networks to "forget" the examples where there is already a high level of predictive uncertainty.
+         <strong_>PIE images are more challenging for both pruned and non-pruned models to classify.
+           This suggests that pruning causes deep neural networks to "forget" the examples where there is already a high level of predictive uncertainty.
            <br><br>
            Click on the buttons below to view a sample of ImageNet PIEs in each category. 
       The labels below each image are: 1) true ground truth ImageNet label, 2) baseline non-pruned modal prediction, 3)  most frequent prediction from a population of pruned ResNet-50 models.</strong_>
@@ -968,10 +969,10 @@ figcaption .strong_, {
   
 <div class="description_">   
   
-   <p> PIE images are often viewed by humans as more challenging or poorly structured for a single classification task.
-   We conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
+   <p> PIEs are a subset of images that are more sensitive to varying the number of weights in a deep neural network. To better understand why PIEs are more sensitive to capacity,
+    we conducted a limited human study (85 participants) and find that PIEs from the ImageNet test set are more likely to be mislabelled,
                   depict multiple objects or require fine-grained classification. </p>
-      <p> PIEs are a subset of images that are more sensitive to varying the number of weights in a deep neural network. ImageNet is treated as a single image
+      <p> 71% of all PIE images are classified as either having incorrect ground  ImageNet is treated as a single image
     classification problem and yet many PIE images depict multiple objects, incorrect ground truth or depict objects where more than one label category in the dataset could be considered appropriate by a human. The over-indexing of poorly structured data hints that the explosion in number of parameters for tasks like ImageNet may be solving a
 problem that is better addressed in the data cleaning pipeline.  </p>
   <div>
@@ -1009,8 +1010,8 @@ problem that is better addressed in the data cleaning pipeline.  </p>
   </div>
  <div class="column_headerfinalfinal frequently">
     <div class="content">
-<h5>frequently co-occuring labels: a sample of PIEs where the image depicts object(s) from categories that frequently co-occur together. 
-  In some cases, this is because both labels are acceptable to describe the same object. </h5>
+<h5>frequently co-occuring labels: a sample of PIEs where multiple object(s) frequently co-occur together. 
+  In certain cases, such as <i>projectile</i> and <i>missile</i>, this is because both labels are acceptable to describe the same object. </h5>
     </div>
   </div>
     <!-- END GRID -->
@@ -1069,13 +1070,13 @@ problem that is better addressed in the data cleaning pipeline.  </p>
       
   <div class="column_portfoliofinalfinal frequently">
     <div class="content">
-      <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2F83_breastplate_breastplate_cuirass.png?v=1573659152839" alt="multiple_1" style="width:100%">
+      <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F21_groom_groom_suit.png?v=1574211627482" alt="multiple_1" style="width:100%">
            <div class="figcaption">
       <code>True Label:</code>
-         <strong_>breastplate</strong_><br>
+         <strong_>groom</strong_><br>
          <code>Non-Pruned:</code>
-         <strong_>breastplate</strong_><br>
-         <code>Pruned:</code><strong_>cuirass</strong_><br>
+         <strong_>groom</strong_><br>
+         <code>Pruned:</code><strong_>suit</strong_><br>
        </div>
     </div>
        </div>
