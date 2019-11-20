@@ -153,8 +153,8 @@
       padding-top: 20px;
     }
     .cover-container, .descriptions_, .description_ {
-      padding-right: 10px;
-      padding-left: 10px;
+      padding-right: 5px;
+      padding-left: 5px;
       margin-right: auto;
       margin-left: auto;   
     }
@@ -514,12 +514,6 @@ figcaption .strong_, {
             on synaptic  pruning,
             however there is little scientific 
             consensus on <em>what</em> exactly is lost <dt-cite key="Sowell8223,CASEY2000241"></dt-cite>.</p>
-           <div class="content">
-     <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2Fsynaptic_pruning_clipped.png?v=1574189444005" alt="abstract_1" style="width:100%">
-      <div class="figcaption">
-         <strong_>Proliferation and decline of synaptic connections in children. Synaptic pruning removes redundant neurons and strengthens connections that are most useful for the environment. (Figure courtesy of Seeman, 1999)</strong_><br>
-       </div>
-             </div>
             
            <p>In 1990, a popular paper was published titled <i>Optimal Brain Damage</i> 
               <dt-cite key="Cun90optimalbrain"></dt-cite>. 
@@ -527,13 +521,21 @@ figcaption .strong_, {
               to our biological synaptic pruning. In deep neural networks, weights are pruned or removed by 
               from the network by setting the value to zero.
               Today there are many possible pruning methods to chose from, and pruned models likely drive many of the algorithms on your phone.</p>
+	   
              <p>  At face value, pruning does appear to promise you can can (almost) have it all. 
                State of art pruning methods remove the 
                majority of the weights with minimal degradation to top-1 accuracy<dt-cite key="tgale_shooker_2019"></dt-cite>.
               These newly slimmed down networks require less memory, energy consumption 
                and are faster at producing predictions. 
                All these attributes make pruned models ideal for deploying deep neural networks to resource constrained environments.</p>
-            <p> The ability to prune networks with seemingly so little degradation to generalization performance is puzzling. The cost
+                <div class="content">
+     <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2Fsynaptic_pruning_clipped.png?v=1574189444005" alt="abstract_1" style="width:100%">
+      <div class="figcaption">
+         <strong_>Proliferation and decline of synaptic connections in children. Synaptic pruning removes redundant neurons and strengthens connections that are most useful for the environment. (Figure courtesy of Seeman, 1999)</strong_><br>
+       </div>
+             </div>
+		 
+		 <p> However, the ability to prune networks with seemingly so little degradation to generalization performance is puzzling. The cost
               to top-1 accuracy appears minimal 
               if it is spread uniformally across all classes, but what if the cost is 
               concentrated in only a few classes? 
