@@ -429,6 +429,14 @@
   margin-left: auto;
   margin-right: auto;
 }
+    
+.content_reduced_slightly {
+  background-color: white;
+  padding: 2px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* The "show" class is added to the filtered elements */
 .show {
@@ -1390,46 +1398,59 @@ problem that is better addressed in the data cleaning pipeline.  </p>
       a far smaller subset of examples the model finds challenging to the human expert. This can be extremely valuable for creating human-in-the-loop decisions,
     where certain atypical examples are re-routed for human inspection <dt-cite key="Leibig2017"></dt-cite> or to aid interpretability as a case based reasoning tool to explain model behavior<dt-cite key="2017Gurumoorthy,Caruana2000,Hooker2019ABF,NIPS2016_6300"></dt-cite>.</p>
 
-    
+  
+   <div class="content">
+     <div class="figcaption">
+       <hr>
+<strong_>Inspecting PIE images can help us understand the types of inputs the model finds most challenging. PIE images are far harder for a model to classify. Removing PIE images improves top-1 generalization performance beyond the baseline.
+       <br><br>
+       
+       Go ahead and click the buttons below.</strong_>
+  </div>
+  <br>
   <div id="myBtnContainer_2">
   <button class="btn active_2" onclick="filterSelection_('pie')"> generalization to pie </button>
   <button class="btn" onclick="filterSelection_('without')"> generalization excluding pie</button>
 <hr>
-  
-<div class="row">
-  <div class="column_header pie">
-    <div class="content">
-    <h5>Inspecting PIE images can help us anticipate where models will fail to generalize in the real world.
-      PIE images are far more challenging for a model to classify. The average top-1 accuracy of a ResNet-50 deep neural network is far lower
-      on a random sample of PIE ImageNet images (green bar) relative to performance on
-      a random sample of images from the ImageNet test set (pink bar).</h5>
-    </div>
-    </div>
-  <div class="column_header without">
-  <div class="content">
-<h5>Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
-  to a random sample of non-pie ImageNet images (teal). </h5>
-  </div>
-    </div>
-    <!-- END GRID -->
-</div>
-</div>
+
   
   <div class="row">
   <div class="column_header pie">
-  <div class="content">
+  <div class="content_reduced_slightly">
       <img src="https://cdn.glitch.com/f1ebd1ee-d1ac-4538-8ad5-0034e332e4ae%2Fvs_random_sample.png?v=1574223373019">
     </div>
   </div>
   
   <div class="column_header without">
-    <div class="content">
+    <div class="content_reduced_slightly">
       <img src="https://cdn.glitch.com/a08d19a0-dea5-4f06-9627-caa859e2d931%2Ftop_1.png?v=1573779673537" alt="abstract_1" style="width:100%">
     </div>
   </div>
   
   </div>
   
+    <!-- END GRID -->
+</div>
+</div>
+    
+<div class="row">
+  <div class="column_header pie">
+    <div class="content">
+     <div class="figcaption">
+    The average top-1 accuracy of a ResNet-50 deep neural network is far lower
+      on a random sample of PIE ImageNet images (green bar) relative to performance on
+      a random sample of images from the ImageNet test set (pink bar).
+      </div>
+    </div>
+    </div>
+  <div class="column_header without">
+  <div class="content">
+  <div class="figcaption">
+Removing PIE images benefits generalization. Top-1 accuracy improves beyond baseline performance when the model is restricted
+  to a random sample of non-pie ImageNet images (teal). 
+  </div>
+   </div>
+    </div>
     <!-- END GRID -->
 </div>
 </div>
@@ -1461,10 +1482,10 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         (classes that are statistically significant indicated by pink vs. the classes in grey where the relative change in performance is not statistically significant). We plot both the absolute % change in class recall (grey and pink bars) and
           the normalized accuracy relative to change in overall top-1 accuracy caused by pruning (grey and green markers).
         <br><br>
-        Click on the buttons below to view the classes with a statistically significant relative change in performance (purple bars). The % of weights removed from the model is indicated by the title of each chart.</strong_>
+        Go ahead and click the buttons below.</strong_>
   </div>
   <br>
-  
+
 <div id="myBtnContainer_3">
 <button class="btn active_3" onclick="filterSelectionfinal('thirty')"> 30% pruned </button>
 <button class="btn" onclick="filterSelectionfinal('fifty')"> 50% pruned </button>
@@ -1472,58 +1493,28 @@ problem that is better addressed in the data cleaning pipeline.  </p>
 <button class="btn" onclick="filterSelectionfinal('ninety')"> 90% pruned </button>
 <hr>
   
-<div class="row">
-  <div class="column_headerfinal thirty">
-    <div class="content">
-    <h5>The direction and magnitude of the impact of pruning is nuanced and surprising. Our results show that certain classes are <i>relatively</i> robust to the overall degradation experienced 
-        by the model whereas others degrade in performance far more than the model itself.  This amounts to 
-        <em>selective brain damage</em> with performance on certain classes evidencing far more sensitivity 
-        to the removal of model capacity.</h5>
-    </div>
-    </div>
-  <div class="column_headerfinal fifty">
-  <div class="content">
-<h5>The classes that experience a significant <em>relative</em> decrease in accuracy are fewer at every level than those that recieve a relative boost, however the magnitude of class decreases is larger 
-        than the gains (which pulls overall accuracy downwards). 
-        This tells us that the loss in generalization caused by pruning is far more concentrated 
-        than the relative gains, with fewer classes bearing
-        the brunt of the degradation caused by weight removal.</h5>
-  </div>
-    </div>
-    <div class="column_headerfinal seventy">
-  <div class="content">
-<h5> At higher levels of pruning, more classes are impacted and the absolute % difference widens between the classes most and least impacted.</h5>
-  </div>
-    </div>
-    <div class="column_headerfinal ninety">
-  <div class="content">
-<h5> Most real world applications of pruning tend to prune above 50% in order to gain the returns in memory and efficiency. When 90% of the weights are removed, the relative change to 582 out of 1000 ImageNet classes is statistically significant. </h5>
-  </div>
-    </div>
-    <!-- END GRID -->
-</div>
-  
+
   <div class="row">
   <div class="column_portfoliofinal thirty">
-  <div class="content">
+  <div class="content_reduced_slightly">
       <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F30_all.png?v=1574117622736">
     </div>
   </div>
   
   <div class="column_portfoliofinal fifty">
-    <div class="content">
+    <div class="content_reduced_slightly">
       <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F50_all_.png?v=1574117629857" alt="abstract_1" style="width:100%">
     </div>
   </div>
     
   <div class="column_portfoliofinal seventy">
-    <div class="content">
+    <div class="content_reduced_slightly">
       <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F70_all.png?v=1574117642038" alt="abstract_1" style="width:100%">
     </div>
   </div>
     
   <div class="column_portfoliofinal ninety">
-    <div class="content">
+    <div class="content_reduced_slightly">
       <img src="https://cdn.glitch.com/02868eea-fe84-443e-964a-8f04885fa5fa%2F90_all.png?v=1574117649028" alt="abstract_1" style="width:100%">
     </div>
   </div>
@@ -1545,6 +1536,9 @@ problem that is better addressed in the data cleaning pipeline.  </p>
         This tells us that the loss in generalization caused by pruning is far more concentrated 
         than the relative gains, with fewer classes bearing
         the brunt of the degradation caused by weight removal.</p>
+      <p>At higher levels of pruning, more classes are impacted and the absolute % difference widens between the classes most and least impacted. Most real world applications of pruning tend to prune above 50% in order to gain the returns in memory and efficiency.
+       When 90% of the weights are removed, the relative change to 582 out 
+       of 1000 ImageNet classes is statistically significant. </p>
  </div> 
 <div class="descriptions_">  
 <h3>What does this mean for the use of pruned models?</h3>
